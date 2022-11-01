@@ -7,6 +7,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Provider } from 'react-redux'
 import store from './redux/store'
 import Counter from './UI/pages/Counter';
+import Card from './Shared/Card/Card';
+
 
 
 const LazyCoursePage = React.lazy(() => import('./UI/pages/CourcePage'));
@@ -32,7 +34,10 @@ function App() {
         </Routes>
 
       </Router>
+        <Card/>
     </Provider>
+
+
   );
 }
 

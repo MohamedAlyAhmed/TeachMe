@@ -1,0 +1,17 @@
+.duration {
+    background-color: rgba(116, 116, 116, 0.336) !important;
+    position: absolute;
+    top: 0%;
+    right: 0;
+    left: 0;
+    width: 100%;
+    visibility: hidden;
+    transition: 0.3s;
+    font-size: 14px;
+}
+.card:hover .duration {
+    top: -18%;
+    visibility: visible;
+    cursor: pointer;
+}
+

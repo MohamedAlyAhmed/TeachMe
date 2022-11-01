@@ -1,0 +1,31 @@
+{
+  "users": [
+    {
+      "userId": 1,
+      "name": "Mohamed",
+      "email": "mohamed@gmail.com",
+      "password": "12345678"
+    }
+  ],
+
+  "courses": [
+    {
+      "CourseId": 1,
+      "title": "Html 5",
+      "description": "Html 5 full course from Zero to Hero",
+      "duration": "2h 12m",
+      "lessons": 27,
+      "language": "Arabic",
+      "categories": "Web",
+      "img": "https://techbeacon.com/sites/default/files/styles/social/public/html5-mobile-app-native-hybrid-pros-cons.jpg?itok=R3pMKIzh"
+    }
+  ],
+  "enroll": [
+    {
+      "userId": 1,
+      "CourseId": 1,
+      "date": "1/11/2022",
+      "progress": "10"
+    }
+  ]
+}
