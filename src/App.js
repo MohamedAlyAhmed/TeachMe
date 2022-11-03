@@ -8,8 +8,8 @@ import { Provider } from 'react-redux'
 import store from './redux/store'
 import Counter from './UI/pages/Counter';
 import Card from './Shared/Card/Card';
-import Regestration from './UI/pages/regestration';
-
+import Regester from './UI/pages/Regester';
+import Login from './UI/pages/Login';
 
 
 const LazyCoursePage = React.lazy(() => import('./UI/pages/CourcePage'));
@@ -33,9 +33,14 @@ function App() {
               <LazyCoursePage />
             </React.Suspense>
           } />
-          <Route path='regestration' element={
+          <Route path='regester' element={
             <React.Suspense>
-              <Regestration />
+              <Regester />
+            </React.Suspense>
+          } />
+          <Route path='login' element={
+            <React.Suspense>
+              <Login />
             </React.Suspense>
           } />
         </Routes>
