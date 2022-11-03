@@ -8,7 +8,22 @@
       "gender": "male",
       "age": 27,
       "image": "https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg"
+    },
+    {
+      "first_name": "",
+      "last_name": "",
+      "password": "",
+      "email": "",
+      "id": 1
+    },
+    {
+      "first_name": "",
+      "last_name": "",
+      "password": "",
+      "email": "ah.diboo@gmail.com",
+      "id": 2
     }
+    
   ],
   "courses": [
     {
@@ -175,7 +190,7 @@
         {
           "id": "215984bb-9dcb-4627-8787-2adb0136227c",
           "name": "Fadi Serry Eldin",
-          "title": "Managing\u00A0Director\u00A0-\u00A0Scitron\u00A0Training",
+          "title": "Managing Director - Scitron Training",
           "description": "With over 18 years of experience in training solutions design and delivery, championing innovative training initiatives specifically tailored for some of the top Telecom.",
           "isAskMentor": false,
           "numberOfCourses": 8,
@@ -1242,7 +1257,7 @@
       "numberOfCourses": 8,
       "numberOfLearner": 0,
       "permanentLink": "Fadi-Eldin",
-      "title": "Managing\u00A0Director\u00A0-\u00A0Scitron\u00A0Training",
+      "title": "Managing Director - Scitron Training",
       "typeId": 1,
       "courseIds": [
         191,
