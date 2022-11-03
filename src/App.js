@@ -41,7 +41,7 @@ function App() {
         </Routes>
 
       </Router>
-        
+        <Card/>
     </Provider>
 
 
