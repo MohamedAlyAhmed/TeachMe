@@ -1,6 +1,7 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { decrement, increment } from '../../redux/reducers/counter'
+import { getCourses, getInstructors } from '../../redux/reducers/server'
 
 
 
@@ -29,6 +30,13 @@ export default function Counter() {
                     onClick={() => dispatch(decrement())}
                 >
                     Decrement
+                </button>
+                <button
+                    aria-label="getCourses"
+                    onClick={() =>
+                        dispatch(getCourses())}
+                >
+                    getCourses
                 </button>
             </div>
         </div>
