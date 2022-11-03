@@ -1,10 +1,3 @@
-import "./App.css";
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Provider } from "react-redux";
-import store from "./redux/store";
-import Counter from "./UI/pages/Counter";
-
 import './App.css';
 
 import React from 'react';
@@ -13,7 +6,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Provider } from 'react-redux'
 import store from './redux/store'
 import Counter from './UI/pages/Counter';
-import Card from './Shared/Card/Card';
 import Regestration from './UI/pages/regestration';
 
 
@@ -46,7 +38,6 @@ function App() {
           } />
         </Routes>
       </Router>
-        <Card/>
     </Provider>
   );
 }
