@@ -1,0 +1,27 @@
+.subBtn{
+ margin-top: 60px;
+ margin-bottom: 20px;
+justify-content: center !important;
+text-align: center !important;
+align-items: center !important;
+
+}
+.subBtn:hover{
+background-color: rgb(213, 206, 206) !important;
+outline: none;
+color: red !important;
+}
+
+.con
+{
+    background-image: url("./mapp.png") ;
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+}
+
+
+
+

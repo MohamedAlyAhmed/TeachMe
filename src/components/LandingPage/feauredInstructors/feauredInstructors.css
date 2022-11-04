@@ -1,0 +1,29 @@
+
+
+.vl{
+    border-left: 3px solid gray;
+    height: 23px;
+    margin-top: 14px;
+}
+
+.btn1{
+    font-size: 21px !important;
+    font-weight: 400 !important;
+
+}
+.btn1:hover, .btn1:focus, .btn1:active, .btn1:visited, .active { 
+    text-decoration: underline  ;
+    color:#000;
+}
+.picksHeader{
+    display: flex;
+}
+
+.space{
+    height: 100px;
+    width: 100%;
+}
+.categoryHeader{
+    font-size: 26px;
+    font-weight: bold;
+}
