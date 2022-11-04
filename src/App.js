@@ -3,18 +3,15 @@ import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Provider } from 'react-redux'
 import store from './redux/store'
-import Counter from './UI/pages/Counter';
-<<<<<<< HEAD
-import Card from './Shared/Card/Card';
+// import Counter from './UI/pages/Counter';
+// import Card from './Shared/Card/Card';
 import LandingPage from './components/LandingPage/langingPage';
-import Header from './components/Header/nav_Bar';
+// import Header from './components/Header/nav_Bar';
 import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-=======
+import "slick-carousel/slick/slick-theme.css"
 import Register from './UI/components/Register/Register';
 import Login from './UI/components/Login/Login';
-import jwtDecode from 'jwt-decode';
->>>>>>> 1cb3c3de4cfb24e8b9d4aef66db20742080aaea9
+// import jwtDecode from 'jwt-decode';
 
 
 const LazyCoursePage = React.lazy(() => import('./UI/pages/CourcePage'));
@@ -63,11 +60,9 @@ function App() {
           } />
         </Routes>
       </Router>
-<<<<<<< HEAD
+
       <LandingPage/>
         {/* <Card/> */}
-=======
->>>>>>> 1cb3c3de4cfb24e8b9d4aef66db20742080aaea9
     </Provider>
   );
 }
