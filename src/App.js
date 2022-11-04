@@ -6,7 +6,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Provider } from 'react-redux'
 import store from './redux/store'
 import Counter from './UI/pages/Counter';
-import Card from './Shared/Card/Card';
 import Regester from './UI/pages/Regester';
 import Login from './UI/pages/Login';
 
