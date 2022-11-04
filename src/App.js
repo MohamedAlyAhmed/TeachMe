@@ -8,7 +8,10 @@ import { Provider } from 'react-redux'
 import store from './redux/store'
 import Counter from './UI/pages/Counter';
 import Card from './Shared/Card/Card';
-
+import LandingPage from './components/LandingPage/langingPage';
+import Header from './components/Header/nav_Bar';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 
 const LazyCoursePage = React.lazy(() => import('./UI/pages/CourcePage'));
@@ -18,11 +21,13 @@ function App() {
     <Provider store={store}>
       <Router>
         {/* <Navbar /> */}
+        {/* <Header/> */}
+
         <Routes>
           {/* .... any other path routing create it here .... */}
           <Route path='' element={
             <React.Suspense>
-              <Counter />
+              {/* <Counter /> */}
             </React.Suspense>
 
           } />
@@ -34,7 +39,8 @@ function App() {
         </Routes>
 
       </Router>
-        <Card/>
+      <LandingPage/>
+        {/* <Card/> */}
     </Provider>
 
 
