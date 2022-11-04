@@ -5,29 +5,31 @@ import { Provider } from 'react-redux'
 import store from './redux/store'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css"
-import Register from './UI/components/Register/Register';
-import Login from './UI/components/Login/Login';
+import Register from './UI/pages/Register/Register';
+import Login from './UI/pages/Login/Login';
 import jwtDecode from 'jwt-decode';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import '@fortawesome/fontawesome-free/js/all.min.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
+import Counter from './redux/reducers/counter';
+import LandingPage from './UI/pages/LandingPage/langingPage';
 
 
 const LazyCoursePage = React.lazy(() => import('./UI/pages/CourcePage'));
 
-   
 
- 
+
+
 function App() {
-  const [userData , setUserData] = useState(null)
+  const [userData, setUserData] = useState(null)
 
-  function getUserData(){
-   let decodedToken = jwtDecode(localStorage.getItem('userToken'))
-   setUserData(decodedToken)
+  function getUserData() {
+    let decodedToken = jwtDecode(localStorage.getItem('userToken'))
+    setUserData(decodedToken)
   }
 
-  useEffect(()=>{console.log(userData)},[userData])
+  useEffect(() => { console.log(userData) }, [userData])
 
   return (
     <Provider store={store}>
@@ -35,12 +37,20 @@ function App() {
 
         <Routes>
           {/* .... any other path routing create it here .... */}
+
           <Route path='' element={
             <React.Suspense>
-
+              <Counter />
             </React.Suspense>
-
           } />
+
+          <Route path='' element={
+            <React.Suspense>
+              <LandingPage />
+            </React.Suspense>
+          } />
+
+
           <Route path='course' element={
             <React.Suspense>
               <LazyCoursePage />
@@ -53,13 +63,11 @@ function App() {
           } />
           <Route path='login' element={
             <React.Suspense>
-              <Login getUserData = {getUserData} />
+              <Login getUserData={getUserData} />
             </React.Suspense>
           } />
         </Routes>
       </Router>
-
-
 
     </Provider>
   );

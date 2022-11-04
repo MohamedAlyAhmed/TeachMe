@@ -1,9 +1,8 @@
 import React, { Component } from "react";
-import Card from "../../../Shared/Card/Card";
+import CourseCard from "../../../components/CourseCard/CourseCard";
 import { FeaturedCourses } from "../FeaturedCourses/FeaturedCourses";
 import { Button } from "react-bootstrap";
 import { HomeWrapper } from "../FeaturedCourses/FeaturedCourses";
-import CirculeCard from "../../../Shared/circleCard/circleCard";
 import { FeaturedInstructors } from "../feauredInstructors/feauredInstructors";
 class InstructorsPicks extends Component {
   render() {
