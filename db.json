@@ -1,31 +1,1484 @@
 {
   "users": [
     {
-      "userId": 1,
+      "id": 0,
       "name": "Mohamed",
       "email": "mohamed@gmail.com",
-      "password": "12345678"
+      "password": "12345678",
+      "gender": "male",
+      "age": 27,
+      "image": "https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg"
     }
+    
   ],
-
   "courses": [
     {
-      "CourseId": 1,
-      "title": "Html 5",
-      "description": "Html 5 full course from Zero to Hero",
-      "duration": "2h 12m",
-      "lessons": 27,
-      "language": "Arabic",
-      "categories": "Web",
-      "img": "https://techbeacon.com/sites/default/files/styles/social/public/html5-mobile-app-native-hybrid-pros-cons.jpg?itok=R3pMKIzh"
+      "id": 903,
+      "name": "Cinematic Lighting Masterclass",
+      "permanentLink": "Cinematic-Lighting-Masterclass",
+      "courseLanguage": 2,
+      "description": "Do you want to learn about the foundations of cinematic lighting introduced by Egypt's most distinguished directors of photography \"Ayman Abu al-Makarim\"? Throughout this course, you will learn a lot about the art of cinematic lighting, its principles and the history of its evolution. You will also be able to learn about the team of the director of photography, the types of lamps, lenses, camera movements and the impact of dramatic lighting on the viewer. ",
+      "numberOfLessons": 36,
+      "duration": 8801,
+      "level": 1,
+      "producerType": 1,
+      "isPremium": false,
+      "isSponsored": false,
+      "releasedAt": "2022-10-06T00:00:00",
+      "type": 1,
+      "statusTypeId": 1,
+      "videoId": "db19cb4f-fcbe-49b9-b92d-c4b4ca344745",
+      "learningOutcomes": [
+        {
+          "id": 4940,
+          "body": "All about the history of old and modern cinematic lighting, the role of photography director and the cinematic lighting steps you can follow to get a special cinematic work.",
+          "cellSpan": 1,
+          "isImage": false,
+          "order": 1
+        },
+        {
+          "id": 4941,
+          "body": "",
+          "cellSpan": 1,
+          "isImage": true,
+          "order": 2
+        },
+        {
+          "id": 4942,
+          "body": "Everything you need to know about using lighting to give different dramatic dimensions to the cinematic scene, in addition to learning about types of lenses, angles, lamps and camera movements.",
+          "cellSpan": 1,
+          "isImage": false,
+          "order": 3
+        },
+        {
+          "id": 4943,
+          "body": "Different ways of overcoming the challenges facing the director of photography through some unique scenes in popular egyptian films such as The Island, The Passage, The Treasure,  Escaping Tel Aviv and more.",
+          "cellSpan": 1,
+          "isImage": false,
+          "order": 4
+        },
+        {
+          "id": 4944,
+          "body": "",
+          "cellSpan": 2,
+          "isImage": true,
+          "order": 5
+        }
+      ],
+      "tags": [
+        62,
+        74
+      ],
+      "conversionRate": 24.25,
+      "currency": "EGP",
+      "discount": 0,
+      "discountedPrice": 0,
+      "finalPriceUSD": 1.2371134,
+      "originalPriceUSD": 1.2371134,
+      "price": 30,
+      "actualProgress": null,
+      "userScorePoints": null,
+      "totalScorePoints": null,
+      "inCart": false,
+      "inWishlist": false,
+      "isLocked": false,
+      "isPurchased": false,
+      "numberOfCompletedLessons": null,
+      "currentLesson": null,
+      "mentors": [
+        {
+          "id": "da206ace-6cd3-4ff3-8b53-ed50742623be",
+          "name": "Ayman Abou el Makarem",
+          "title": "Director Of Photography And Light Designer",
+          "description": "Professor at the Faculty of Cinema at Badr University and a member of the Council of the Film Professions Syndicate, who presented many successful and famous cinematic and television artworks as a director of photography and worked as a photographer and lighting designer in many programs and channels.",
+          "isAskMentor": false,
+          "numberOfCourses": 1,
+          "courseIds": [
+            903
+          ]
+        }
+      ]
+    },
+    {
+      "id": 908,
+      "name": "Workplace Conflict: Challenges or Opportunities?\t",
+      "permanentLink": "Workplace-Conflict-Challenges-or-Opportunities",
+      "courseLanguage": 2,
+      "description": "Conflict is inevitable. We all face conflict situations at some point in our personal or professional lives. Different personalities do clash sometimes, whether it is workplace stress, poor leadership, or just different points of view. The reasons are countless. Is conflict good or bad? And when does a situation qualify to be a workplace conflict? Our mentor (Fadi Serry Eldin), with over 23 years of experience in training solutions design and delivery, will answer these questions. By the end of this course, you will not only have answers to these questions but will also have a solid step-by-step conflict resolution process to more successfully resolve workplace conflict and help you build a positive work environment. ",
+      "numberOfLessons": 13,
+      "duration": 2795,
+      "level": 1,
+      "producerType": 1,
+      "isPremium": false,
+      "isSponsored": false,
+      "releasedAt": "2022-10-06T00:00:00",
+      "type": 2,
+      "statusTypeId": 1,
+      "videoId": "db2898ed-09cf-4fd0-b14a-9941a1a8da52",
+      "learningOutcomes": [
+        {
+          "id": 4965,
+          "body": "What is a conflict, when is the situation supposed to be a workplace conflict, what is the appropriate language you should use, and how to deal with this situation?",
+          "cellSpan": 1,
+          "isImage": false,
+          "order": 1
+        },
+        {
+          "id": 4966,
+          "body": "",
+          "cellSpan": 1,
+          "isImage": true,
+          "order": 2
+        },
+        {
+          "id": 4967,
+          "body": "How and when to use the six conflict language fundamentals to resolve workplace conflict issues?",
+          "cellSpan": 1,
+          "isImage": false,
+          "order": 3
+        },
+        {
+          "id": 4968,
+          "body": "What steps do you need to follow using the conflict resolution process to ensure the problem and conflict between you and your coworker gets resolved?",
+          "cellSpan": 1,
+          "isImage": false,
+          "order": 4
+        },
+        {
+          "id": 4969,
+          "body": "",
+          "cellSpan": 2,
+          "isImage": true,
+          "order": 5
+        }
+      ],
+      "tags": [
+        13,
+        25
+      ],
+      "conversionRate": 24.25,
+      "currency": "EGP",
+      "discount": 0,
+      "discountedPrice": 0,
+      "finalPriceUSD": 19.793402,
+      "originalPriceUSD": 19.793402,
+      "price": 479.99,
+      "actualProgress": null,
+      "userScorePoints": null,
+      "totalScorePoints": null,
+      "inCart": false,
+      "inWishlist": false,
+      "isLocked": false,
+      "isPurchased": false,
+      "numberOfCompletedLessons": null,
+      "currentLesson": null,
+      "mentors": [
+        {
+          "id": "215984bb-9dcb-4627-8787-2adb0136227c",
+          "name": "Fadi Serry Eldin",
+          "title": "Managing Director - Scitron Training",
+          "description": "With over 18 years of experience in training solutions design and delivery, championing innovative training initiatives specifically tailored for some of the top Telecom.",
+          "isAskMentor": false,
+          "numberOfCourses": 8,
+          "courseIds": [
+            10,
+            15,
+            21,
+            191,
+            276,
+            600,
+            907,
+            908
+          ]
+        }
+      ]
+    },
+    {
+      "id": 895,
+      "name": "Parents Back to School Guide",
+      "permanentLink": "Parents-back-to-school-guide",
+      "courseLanguage": 2,
+      "description": "Unlike many other duties, parenting is a 24/7 job with little-to-no breaks. Simply because parents have to be as much involved as they can to better shape their children’s future and help them become the persons they dream to be. In other words, they have to be there in every aspect of their children’s lives including, but not limited to, education. This training course will exclusively focus on the education-related challenges that many parents face with their children and how to effectively and efficiently tackle them. ",
+      "numberOfLessons": 23,
+      "duration": 4183,
+      "level": 1,
+      "producerType": 1,
+      "isPremium": false,
+      "isSponsored": false,
+      "releasedAt": "2022-10-06T00:00:00",
+      "type": 1,
+      "statusTypeId": 1,
+      "videoId": "50be9756-870e-4fa0-9c15-08323a2deeb7",
+      "learningOutcomes": [
+        {
+          "id": 5250,
+          "body": "How to set effective education goals and learning plans, support your children to love learning, encourage their curiosity, and be a role model they look up to.",
+          "cellSpan": 1,
+          "isImage": false,
+          "order": 1
+        },
+        {
+          "id": 5251,
+          "body": "",
+          "cellSpan": 1,
+          "isImage": true,
+          "order": 2
+        },
+        {
+          "id": 5252,
+          "body": "How to provide a safe home environment, engage your children in solving problems, give them an adequate level of attention, and establish a new routine with them.",
+          "cellSpan": 1,
+          "isImage": false,
+          "order": 3
+        },
+        {
+          "id": 5253,
+          "body": "What effective encouragement is and how it’s done, together with learning how to effectively observe your behaviors and monitor your child’s learning performance.",
+          "cellSpan": 1,
+          "isImage": false,
+          "order": 4
+        },
+        {
+          "id": 5254,
+          "body": "",
+          "cellSpan": 2,
+          "isImage": true,
+          "order": 5
+        }
+      ],
+      "tags": [
+        38,
+        72,
+        35,
+        17
+      ],
+      "conversionRate": 24.25,
+      "currency": "EGP",
+      "discount": 0,
+      "discountedPrice": 0,
+      "finalPriceUSD": 16.494432,
+      "originalPriceUSD": 16.494432,
+      "price": 399.99,
+      "actualProgress": null,
+      "userScorePoints": null,
+      "totalScorePoints": null,
+      "inCart": false,
+      "inWishlist": false,
+      "isLocked": false,
+      "isPurchased": false,
+      "numberOfCompletedLessons": null,
+      "currentLesson": null,
+      "mentors": [
+        {
+          "id": "e58099bd-bb7e-4969-a159-160dd5981d23",
+          "name": "Ivon Moharram",
+          "title": "Positive Discipline Parent Educator",
+          "description": " Ivon is a Family Change Agent and Positive Discipline Parent Educator (Certified from Positive Discipline Organization, U.S.A.). \n She holds a Bsc in Electronics and Communication Engineering and was former Local Delivery Manager at Orange Business Services. Since 2013 Ivon has delivered many parenting workshops and sessions in Egypt and Online. She has trained hundreds of mothers and has established one of the First Mothers' Support Community in Egypt. \n(Parenting 2 Win Community) ",
+          "isAskMentor": false,
+          "numberOfCourses": 2,
+          "courseIds": [
+            731,
+            895
+          ]
+        }
+      ]
+    },
+    {
+      "id": 873,
+      "name": "Professional Scrum Master",
+      "permanentLink": "Professional-Scrum-Master",
+      "courseLanguage": 2,
+      "description": "Regardless of your organization’s field or industry, chances are that they’re either adopting the Scrum methodology or on the verge of implementing it. So, if you want to take advantage of such a change and serve as a Scrum Master in one of the projects or join the Scrum team, you should embark upon this learning journey. By the end of the training course, not only will you be familiar with Scrum values, principles, and aspects, but also have the sufficient knowledge that qualifies you to take and pass the Certified Scrum Master",
+      "numberOfLessons": 28,
+      "duration": 5768,
+      "level": 2,
+      "producerType": 1,
+      "isPremium": false,
+      "isSponsored": false,
+      "releasedAt": "2022-05-17T00:00:00",
+      "type": 1,
+      "statusTypeId": 1,
+      "videoId": "6d8f0d90-890c-428e-9249-70466989dc17",
+      "learningOutcomes": [
+        {
+          "id": 4715,
+          "body": "A comprehensive overview of Scrum and the reason why it’s getting more popular, together with learning about its aspects, principles, values, and frameworks.",
+          "cellSpan": 1,
+          "isImage": false,
+          "order": 1
+        },
+        {
+          "id": 4716,
+          "body": "",
+          "cellSpan": 1,
+          "isImage": true,
+          "order": 2
+        },
+        {
+          "id": 4717,
+          "body": "The tasks and responsibilities of the Scrum team, Scrum Master, and Product Owner, in addition to getting acquainted with the different Scrum phases and processes.",
+          "cellSpan": 1,
+          "isImage": false,
+          "order": 3
+        },
+        {
+          "id": 4718,
+          "body": "The definition of some must-know terminologies and jargon, as well as learning about the advantages of Scrum and how Scrum meetings and events are facilitated.",
+          "cellSpan": 1,
+          "isImage": false,
+          "order": 4
+        },
+        {
+          "id": 4719,
+          "body": "",
+          "cellSpan": 2,
+          "isImage": true,
+          "order": 5
+        }
+      ],
+      "tags": [
+        11,
+        80,
+        151,
+        111
+      ],
+      "conversionRate": 24.25,
+      "currency": "EGP",
+      "discount": 0,
+      "discountedPrice": 0,
+      "finalPriceUSD": 26.80371,
+      "originalPriceUSD": 26.80371,
+      "price": 649.99,
+      "actualProgress": null,
+      "userScorePoints": null,
+      "totalScorePoints": null,
+      "inCart": false,
+      "inWishlist": false,
+      "isLocked": false,
+      "isPurchased": false,
+      "numberOfCompletedLessons": null,
+      "currentLesson": null,
+      "mentors": [
+        {
+          "id": "58316254-9170-44d8-a1db-1aff1ac36881",
+          "name": "Hebatalla Abdel-halim Mahmoud",
+          "title": "Architect, Teaching Assistant & Scientific Counselor",
+          "description": "Heba is an international authorized Scrum trainer and practitioner since 2016. She is an architectural engineer with more than 15 years of experience in project management, architectural design, and execution supervision. Besides, Heba is a Scientific Counselor at Egypt Scholars Organization,  she pursues her academic career and research in designing sustainable buildings as a Ph.D. Researcher & Teaching Assistant at the Faculty of Engineering, Cairo University.\nHeba has trained many trainees from local and international organizations and universities including Orange, Vodafone, IBM, Emaar, AL Futtaim, Secure Misr, and The American University in Cairo.\nHeba holds the following qualifications:\n- Scrum Certified Trainer, Scrum Study, The US\n- Scrum Master Certified, Scrum Study, The US\n- Scrum Product Owner Certified, Scrum Study, The US\n- Certified Passive House Designer, Passive House Institute, Germany\n- Master of Science of Architectural Engineering, Architectural Department, Faculty",
+          "isAskMentor": false,
+          "numberOfCourses": 1,
+          "courseIds": [
+            873
+          ]
+        }
+      ]
+    },
+    {
+      "id": 725,
+      "name": "Master Playing The Oud",
+      "permanentLink": "Master-Playing-The-Oud",
+      "courseLanguage": 2,
+      "description": "Both Eastern and Western musicians love oud. Praising it, the Portuguese musician Jorge Sentieiro says, \"It is beautiful in its appearance, and enchanting in the melodies it produces”. Meanwhile, it has been the favorite companion of all time to a number of musicians in Egypt and the Arab world like Mohamed Abdel Wahab, Farid Al Atrash, Riyad Al Sunbati, and many others. That’s why if you have the passion of mastering this instrument, this course is your gateway to fulfill it. Start learning now!",
+      "numberOfLessons": 11,
+      "duration": 4076,
+      "level": 1,
+      "producerType": 1,
+      "isPremium": false,
+      "isSponsored": false,
+      "releasedAt": "2021-12-01T00:00:00",
+      "type": 1,
+      "statusTypeId": 1,
+      "videoId": "42ae1f11-79ca-49b3-b63d-7c98067db544",
+      "learningOutcomes": [
+        {
+          "id": 4840,
+          "body": "All about the oud’s history and its development over the years together with a detailed anatomy of its parts and how to properly hold it and start playing it.",
+          "cellSpan": 1,
+          "isImage": false,
+          "order": 1
+        },
+        {
+          "id": 4841,
+          "body": "",
+          "cellSpan": 1,
+          "isImage": true,
+          "order": 2
+        },
+        {
+          "id": 4842,
+          "body": "All the needed practices to master playing oud including an exercise for each hand and exercises on different oriental maqam families such as Nahawand, Hijaz, and more.",
+          "cellSpan": 1,
+          "isImage": false,
+          "order": 3
+        },
+        {
+          "id": 4843,
+          "body": "All about strings including names and materials, how to use each hand while playing, and the practices and exercises one should follow to smoothly play oud.",
+          "cellSpan": 1,
+          "isImage": false,
+          "order": 4
+        },
+        {
+          "id": 4844,
+          "body": "",
+          "cellSpan": 2,
+          "isImage": true,
+          "order": 5
+        }
+      ],
+      "tags": [
+        109,
+        83,
+        147,
+        62,
+        115
+      ],
+      "conversionRate": 24.25,
+      "currency": "EGP",
+      "discount": 0,
+      "discountedPrice": 0,
+      "finalPriceUSD": 22.68,
+      "originalPriceUSD": 22.68,
+      "price": 549.99,
+      "actualProgress": null,
+      "userScorePoints": null,
+      "totalScorePoints": null,
+      "inCart": false,
+      "inWishlist": false,
+      "isLocked": false,
+      "isPurchased": false,
+      "numberOfCompletedLessons": null,
+      "currentLesson": null,
+      "mentors": [
+        {
+          "id": "257df85d-639e-4def-a517-aff05ceed659",
+          "name": "Ahmed Gamal",
+          "title": "Singer",
+          "description": "Ahmed is an Egyptian singer who rose to fame as the runner-up of the second season of Arab Idol 2013, broadcast by the MBC network. Gamal was among the top three who reached the finals, but he ended up in second place. Despite his ending as a runner-up, he won the hearts of millions around the Arab world. Before Arab Idol, Gamal caught the attention of many big musicians such as Ammar El Sherei, Hany Mahanna, and Mohammed Elhelw.[6] Gamal likes both Eastern and Western music, especially Egyptian Folk music and House Music. Most of his songs are of his composition. Gamal was distinguished in Arab Idol with his deep strong sensitive voice, which one of the critics said: \"his voice is like a violin and doesn't need music while singing\".",
+          "isAskMentor": false,
+          "numberOfCourses": 2,
+          "courseIds": [
+            725,
+            729
+          ]
+        }
+      ]
+    },
+    {
+      "id": 666,
+      "name": "Digital Strategy 4.0",
+      "permanentLink": "Digital-Strategy-4",
+      "courseLanguage": 2,
+      "description": "In the framework of keeping pace with the fickle nature of digital marketing, this course will be your gateway to be up to date. The course will cover the key elements of digital marketing including the basics of writing a brief, developing a successful strategy, understanding the KPIs settings, strategy measuring tools, and how to achieve a positive ROI. Moreover, you will be equipped with several ways to set up your budget together with the thought process one can follow to execute a remarkable campaign. Don’t hesitate, unleash your digital marketing passion, and start exploring now!",
+      "numberOfLessons": 103,
+      "duration": 19973,
+      "level": 2,
+      "producerType": 2,
+      "isPremium": false,
+      "isSponsored": false,
+      "releasedAt": "2021-08-20T02:00:00",
+      "type": 1,
+      "statusTypeId": 1,
+      "videoId": "b9a4f677-8fd1-4a6c-b806-f64235547871",
+      "learningOutcomes": [
+        {
+          "id": 3446,
+          "body": "How to craft a comprehensive digital marketing strategy together with customizing it to properly manage your business and the team responsible for it.",
+          "cellSpan": 1,
+          "isImage": false,
+          "order": 1
+        },
+        {
+          "id": 3447,
+          "body": null,
+          "cellSpan": 1,
+          "isImage": true,
+          "order": 2
+        },
+        {
+          "id": 3448,
+          "body": "How to lead an end-to-end digital marketing project including, but not limited to, content creation, media buying, channel strategy, and determining the right budget.",
+          "cellSpan": 1,
+          "isImage": false,
+          "order": 3
+        },
+        {
+          "id": 3449,
+          "body": "How top-notch brands lead their analytics activities to ensure the performance is well tracked together with how they implement complete CRM strategies.",
+          "cellSpan": 1,
+          "isImage": false,
+          "order": 4
+        },
+        {
+          "id": 3450,
+          "body": null,
+          "cellSpan": 2,
+          "isImage": true,
+          "order": 5
+        }
+      ],
+      "tags": [
+        91,
+        60,
+        11,
+        32
+      ],
+      "conversionRate": 24.25,
+      "currency": "EGP",
+      "discount": 0,
+      "discountedPrice": 0,
+      "finalPriceUSD": 37.11299,
+      "originalPriceUSD": 37.112988,
+      "price": 899.99,
+      "actualProgress": null,
+      "userScorePoints": null,
+      "totalScorePoints": null,
+      "inCart": false,
+      "inWishlist": false,
+      "isLocked": false,
+      "isPurchased": false,
+      "numberOfCompletedLessons": null,
+      "currentLesson": null,
+      "mentors": [
+        {
+          "id": "2010f3d1-9b60-4558-ae5e-3f603a29ee09",
+          "name": "Amir Hassan",
+          "title": "Head of Digital Marketing and E-Commerce",
+          "description": "Amir Hassan / Strategic marketing expert with extensive digital experience in the areas of growth demand generation and engagement strategies across different verticals and regions. Currently, he is heading digital marketing and E-Commerce for Philips and its brands all across Africa.",
+          "isAskMentor": true,
+          "numberOfCourses": 2,
+          "courseIds": [
+            595,
+            666
+          ]
+        }
+      ]
+    },
+    {
+      "id": 313,
+      "name": "Master Storytelling in Presentations",
+      "permanentLink": "Master-Storytelling-in-Presentations",
+      "courseLanguage": 2,
+      "description": "A great story can engage listeners, build loyalty among customers, and strengthen an organisation's culture. No matter what the goal is, strong leaders know how to harness the power of stories to their advantage. This course explores the value of stories, reasons to use them, methods for collecting tales, narrative patterns, character construction, and delivery skills. In this course, you will also learn how to plan a story inventory and build a library of narratives.",
+      "numberOfLessons": 23,
+      "duration": 6153,
+      "level": 1,
+      "producerType": 1,
+      "isPremium": true,
+      "isSponsored": false,
+      "releasedAt": "2020-08-31T01:00:00",
+      "type": 1,
+      "statusTypeId": 1,
+      "videoId": "ce77be55-c620-4bf0-bd67-e9dc42bde7ea",
+      "learningOutcomes": [
+        {
+          "id": 991,
+          "body": "The set of skills that enable you to create a story from real events or from your imagination and the skills that qualify you to add spirit to your presentation.",
+          "cellSpan": 1,
+          "isImage": false,
+          "order": 1
+        },
+        {
+          "id": 993,
+          "body": "How to master making presentations to reflect all your thoughts and messages interestingly through storytelling.",
+          "cellSpan": 1,
+          "isImage": false,
+          "order": 3
+        },
+        {
+          "id": 994,
+          "body": "That storytelling is a really effective tool that greatly impacts the listeners and how it causes chemical, physical, and emotional responses in listeners.",
+          "cellSpan": 1,
+          "isImage": false,
+          "order": 4
+        },
+        {
+          "id": 2477,
+          "body": null,
+          "cellSpan": 1,
+          "isImage": true,
+          "order": 2
+        },
+        {
+          "id": 2478,
+          "body": null,
+          "cellSpan": 2,
+          "isImage": true,
+          "order": 5
+        }
+      ],
+      "tags": [
+        22,
+        90,
+        22,
+        76,
+        90
+      ],
+      "conversionRate": 24.25,
+      "currency": "EGP",
+      "discount": 0,
+      "discountedPrice": 0,
+      "finalPriceUSD": 19.793402,
+      "originalPriceUSD": 19.793402,
+      "price": 479.99,
+      "actualProgress": null,
+      "userScorePoints": null,
+      "totalScorePoints": null,
+      "inCart": false,
+      "inWishlist": false,
+      "isLocked": false,
+      "isPurchased": false,
+      "numberOfCompletedLessons": null,
+      "currentLesson": null,
+      "mentors": [
+        {
+          "id": "512dbe94-b1c4-4c05-aeeb-edd2063783d4",
+          "name": "Ahmad Aly El Dabaa",
+          "title": "Managing Director",
+          "description": "Ahmad Eldabaa is the Managing Director of Ajax Business Solutions Company www.ajaxsolutions-eg.com, specializing in Training & Consulting.",
+          "isAskMentor": true,
+          "numberOfCourses": 5,
+          "courseIds": [
+            313,
+            319,
+            403,
+            737,
+            738
+          ]
+        }
+      ]
+    },
+    {
+      "id": 234,
+      "name": "VFX On-Set",
+      "permanentLink": "VFX-On-Set",
+      "courseLanguage": 2,
+      "description": "The entertainment industry has entered a new era of unprecedented possibilities thanks to technological tricks and visual effects. Visual effects have become a unique tool used by entertainment makers to create entire worlds, transforming human imagination into an artistic reality that can be embodied and seen on the screen. This task, of course, falls on the shoulders of visual effects experts. In this course, you will learn the fundamental role of a VFX artist and take advantage of all the elements of a set in the shortest time to use it at the stage of visual effects.",
+      "numberOfLessons": 23,
+      "duration": 9865,
+      "level": 2,
+      "producerType": 1,
+      "isPremium": false,
+      "isSponsored": false,
+      "releasedAt": "2019-05-27T13:15:00",
+      "type": 1,
+      "statusTypeId": 1,
+      "videoId": "e6846bea-dcaf-4f28-a8b2-a1a109724afc",
+      "learningOutcomes": [
+        {
+          "id": 731,
+          "body": "What are the tasks and vision required from the VFX artist on the filming site; you will also explore the qualifications needed to transform this vision into reality.",
+          "cellSpan": 1,
+          "isImage": false,
+          "order": 1
+        },
+        {
+          "id": 733,
+          "body": "How to explore the filming location to identify the dimensions of the site and the locations of the cameras, you will also learn how to break down a scene.",
+          "cellSpan": 1,
+          "isImage": false,
+          "order": 3
+        },
+        {
+          "id": 734,
+          "body": "How to have a good understanding of image scanning and composition to save time and effort during production; you will also know which tools do you need on the location.",
+          "cellSpan": 1,
+          "isImage": false,
+          "order": 4
+        },
+        {
+          "id": 2927,
+          "body": null,
+          "cellSpan": 1,
+          "isImage": true,
+          "order": 2
+        },
+        {
+          "id": 2928,
+          "body": null,
+          "cellSpan": 2,
+          "isImage": true,
+          "order": 5
+        }
+      ],
+      "tags": [
+        127,
+        114,
+        127,
+        114,
+        65
+      ],
+      "conversionRate": 24.25,
+      "currency": "EGP",
+      "discount": 0,
+      "discountedPrice": 0,
+      "finalPriceUSD": 26.80371,
+      "originalPriceUSD": 26.80371,
+      "price": 649.99,
+      "actualProgress": null,
+      "userScorePoints": null,
+      "totalScorePoints": null,
+      "inCart": false,
+      "inWishlist": false,
+      "isLocked": false,
+      "isPurchased": false,
+      "numberOfCompletedLessons": null,
+      "currentLesson": null,
+      "mentors": [
+        {
+          "id": "b1e6741e-541d-492e-b9ea-dd495277c383",
+          "name": "Ahmed Gobba",
+          "title": "VFX Director",
+          "description": "Ahmed Gobba is a Filmmaker. He works as a film director and VFX director in high-end Film/TV productions.",
+          "isAskMentor": false,
+          "numberOfCourses": 1,
+          "courseIds": [
+            234
+          ]
+        }
+      ]
+    },
+    {
+      "id": 279,
+      "name": "Wealthy Teacher Key Skills",
+      "permanentLink": "Wealthy-Teacher-Key-Skills",
+      "courseLanguage": 2,
+      "description": "Teaching is a challenging profession, which requires teachers to regularly develop themselves to keep up with the up-to-date ever-changing educational environment. In this training course, you will learn about the different challenges teachers face daily, including interacting with school administration, students, and parents. Besides, you will learn how to handle the curriculum difficulties, prepare before sessions, and more! In the end, you will be equipped with everything you need to become a Wealthy Teacher.",
+      "numberOfLessons": 26,
+      "duration": 7429,
+      "level": 1,
+      "producerType": 1,
+      "isPremium": false,
+      "isSponsored": false,
+      "releasedAt": "2020-02-19T19:19:00",
+      "type": 1,
+      "statusTypeId": 1,
+      "videoId": "f2b8c95a-4bb5-4bad-a8ae-0b931ad9b9ba",
+      "learningOutcomes": [
+        {
+          "id": 886,
+          "body": "What are the different challenges that face teachers, how you can effectively tackle these challenges one by one, and the advantages of being a teacher.",
+          "cellSpan": 1,
+          "isImage": false,
+          "order": 1
+        },
+        {
+          "id": 888,
+          "body": "How you can increase your students' participation in class, how to correctly plan and prepare for lessons, and avoid students' disruptions all year long.",
+          "cellSpan": 1,
+          "isImage": false,
+          "order": 3
+        },
+        {
+          "id": 889,
+          "body": "How you can create practical assessments, communicate constructively with parents and school administration, and deal with the idea of incentive rewards.",
+          "cellSpan": 1,
+          "isImage": false,
+          "order": 4
+        },
+        {
+          "id": 2979,
+          "body": null,
+          "cellSpan": 1,
+          "isImage": true,
+          "order": 2
+        },
+        {
+          "id": 2980,
+          "body": null,
+          "cellSpan": 2,
+          "isImage": true,
+          "order": 5
+        }
+      ],
+      "tags": [
+        35,
+        97,
+        15
+      ],
+      "conversionRate": 24.25,
+      "currency": "EGP",
+      "discount": 0,
+      "discountedPrice": 0,
+      "finalPriceUSD": 22.68,
+      "originalPriceUSD": 22.68,
+      "price": 549.99,
+      "actualProgress": null,
+      "userScorePoints": null,
+      "totalScorePoints": null,
+      "inCart": false,
+      "inWishlist": false,
+      "isLocked": false,
+      "isPurchased": false,
+      "numberOfCompletedLessons": null,
+      "currentLesson": null,
+      "mentors": [
+        {
+          "id": "1f528ba2-28f7-4735-be62-d5ce52bcf762",
+          "name": "Noha Zahra",
+          "title": "Educational Consultant & Author",
+          "description": "With over 15 years of experience, Zahra has held various positions in the field of education both at the administrative and teaching levels, during which she made many contributions in the field of teacher training.",
+          "isAskMentor": false,
+          "numberOfCourses": 3,
+          "courseIds": [
+            279,
+            401,
+            402
+          ]
+        }
+      ]
+    },
+    {
+      "id": 229,
+      "name": "20 Keys For Establishing A Successful Restaurant",
+      "permanentLink": "20-Keys-For-Establishing-A-successful-Restaurant",
+      "courseLanguage": 2,
+      "description": "Built on 18 years of experience managing international restaurants, this course is your ultimate guide to running a restaurant business. You will learn about 20 major topics in the restaurant field, starting from idea to execution methods and evaluation. The course is ideal for restaurant owners, restaurant owners, operations managers, and area managers. You will learn the common mistakes made by entrepreneurs and restaurant owners when opening a new restaurant without proper planning and execution.",
+      "numberOfLessons": 42,
+      "duration": 18010,
+      "level": 2,
+      "producerType": 1,
+      "isPremium": false,
+      "isSponsored": false,
+      "releasedAt": "2019-05-12T16:01:00",
+      "type": 1,
+      "statusTypeId": 1,
+      "videoId": "197c3c4d-71e5-468d-9529-86a7bfa1a52b",
+      "learningOutcomes": [
+        {
+          "id": 4189,
+          "body": "How to plan well for openning a restaurant in detail with the skills that you need to manage the project, also the first steps that you should to start a new restaurant.",
+          "cellSpan": 1,
+          "isImage": false,
+          "order": 1
+        },
+        {
+          "id": 4190,
+          "body": "",
+          "cellSpan": 1,
+          "isImage": true,
+          "order": 2
+        },
+        {
+          "id": 4191,
+          "body": "How to trends and gaps in the marketplace, solving problems and the market segmentation, in addition to different management skills and hiring system.",
+          "cellSpan": 1,
+          "isImage": false,
+          "order": 3
+        },
+        {
+          "id": 4192,
+          "body": "About supply chain, forecasting, ordering system, food safety management system and the integration between IT and technology in developing restaurants business.",
+          "cellSpan": 1,
+          "isImage": false,
+          "order": 4
+        },
+        {
+          "id": 4193,
+          "body": "",
+          "cellSpan": 2,
+          "isImage": true,
+          "order": 5
+        }
+      ],
+      "tags": [
+        36,
+        11,
+        86
+      ],
+      "conversionRate": 24.25,
+      "currency": "EGP",
+      "discount": 0,
+      "discountedPrice": 0,
+      "finalPriceUSD": 28.865566,
+      "originalPriceUSD": 28.865566,
+      "price": 699.99,
+      "actualProgress": null,
+      "userScorePoints": null,
+      "totalScorePoints": null,
+      "inCart": false,
+      "inWishlist": false,
+      "isLocked": false,
+      "isPurchased": false,
+      "numberOfCompletedLessons": null,
+      "currentLesson": null,
+      "mentors": [
+        {
+          "id": "dc906a3f-e583-46dc-8b87-f1f8c741520e",
+          "name": "Amr Moustafa",
+          "title": "Consultant & Specialist in Hospitality Industry",
+          "description": "Amr Moustafa is the founder of ''Amr Moustafa Hospitality Management Solutions'' holds MBA (Master of Business Administration) From Eslsca Business School Paris, his Major is General Business Management Track.\nHe has BA in Hotels Management, Faculty of tourism and hotels Alexandria university.  Now he is preparing DBA (Doctoral of Business Administration) in the faculty of commerce Ain Shams University.",
+          "isAskMentor": true,
+          "numberOfCourses": 2,
+          "courseIds": [
+            229,
+            282
+          ]
+        }
+      ]
+    },
+    {
+      "id": 695,
+      "name": "Social Media Marketing",
+      "permanentLink": "Social-Media-Marketing",
+      "courseLanguage": 2,
+      "description": "Without a doubt, there is no hitting your target in the absence of a well-prepared marketing plan. That’s why this course aims at equipping you with all you need to know about digital marketing and how to make the most out of it. You will learn about different marketing channels and which one to use to market which product together with the YG eight-step framework that precedes launching your campaigns. You will also learn how to choose your target audience and how to culminate a win-win relationship while collaborating with influencers and public figures.",
+      "numberOfLessons": 15,
+      "duration": 6239,
+      "level": 1,
+      "producerType": 1,
+      "isPremium": true,
+      "isSponsored": false,
+      "releasedAt": "2021-10-31T00:00:00",
+      "type": 1,
+      "statusTypeId": 1,
+      "videoId": "45e53f46-2f59-41c7-b720-4144cbcbfc60",
+      "learningOutcomes": [
+        {
+          "id": 3608,
+          "body": "All about digital marketing including its concept and how to distinguish it from digital transformation together with a brief overview of social media platforms.",
+          "cellSpan": 1,
+          "isImage": false,
+          "order": 1
+        },
+        {
+          "id": 3609,
+          "body": null,
+          "cellSpan": 1,
+          "isImage": true,
+          "order": 2
+        },
+        {
+          "id": 3610,
+          "body": "How to choose the right marketing channel for the right target audience, how to meet your audience expectations and needs, and how to collaborate with public figures.",
+          "cellSpan": 1,
+          "isImage": false,
+          "order": 3
+        },
+        {
+          "id": 3611,
+          "body": "How to create a Facebook ad from scratch together with the common mistakes marketers usually make while marketing their products and how to avoid them.",
+          "cellSpan": 1,
+          "isImage": false,
+          "order": 4
+        },
+        {
+          "id": 3612,
+          "body": null,
+          "cellSpan": 2,
+          "isImage": true,
+          "order": 5
+        }
+      ],
+      "tags": [
+        60,
+        91,
+        31
+      ],
+      "conversionRate": 24.25,
+      "currency": "EGP",
+      "discount": 0,
+      "discountedPrice": 0,
+      "finalPriceUSD": 26.80371,
+      "originalPriceUSD": 26.80371,
+      "price": 649.99,
+      "actualProgress": null,
+      "userScorePoints": null,
+      "totalScorePoints": null,
+      "inCart": false,
+      "inWishlist": false,
+      "isLocked": false,
+      "isPurchased": false,
+      "numberOfCompletedLessons": null,
+      "currentLesson": null,
+      "mentors": [
+        {
+          "id": "e9b3ff57-67c5-4723-a02e-0998d7e9b175",
+          "name": "Yasser Ghallab",
+          "title": "Digital Marketing Coach",
+          "description": "Yasser Ghallab is an MBA holder, certified professional coach, and academic tutor in the American University in Cairo, and formerly in Cairo University. Yasser has had many remarkable accomplishments in the world of business. He is the head of digital marketing of multiple multinational companies, a business transformation consultant for more than 70 local and international companies, and an expert international trainer who has achieved success in training 45000 leaders from 37 nationalities since 2009. Moreover, he is a certified consultant for several international entities like the United Nations, International Trade Center, and the European Bank for Reconstruction and Development.",
+          "isAskMentor": false,
+          "numberOfCourses": 1,
+          "courseIds": [
+            695
+          ]
+        }
+      ]
+    },
+    {
+      "id": 157,
+      "name": "Self-Esteem",
+      "permanentLink": "Self-Esteem",
+      "courseLanguage": 2,
+      "description": "A healthy self-esteem is essential for growth and the achievement of success. Of all the judgments you make in life, none is as important as the ones you make about yourself. Without some measure of self-worth, life can be painful and unrelenting. In this course, you will discover important techniques that can dramatically change how you feel about yourself, and how you approach the world to get the things that you want.",
+      "numberOfLessons": 21,
+      "duration": 7716,
+      "level": 1,
+      "producerType": 1,
+      "isPremium": false,
+      "isSponsored": false,
+      "releasedAt": "2017-12-30T00:00:00",
+      "type": 1,
+      "statusTypeId": 1,
+      "videoId": "a75269ab-a253-4ee5-8470-05321167dd2c",
+      "learningOutcomes": [
+        {
+          "id": 386,
+          "body": "How to discover your core self to find your passion and reach true happiness.",
+          "cellSpan": 1,
+          "isImage": false,
+          "order": 1
+        },
+        {
+          "id": 388,
+          "body": "How to improve your self-esteem by identifying and challenging your negative beliefs, and identifying your positive attributes.",
+          "cellSpan": 1,
+          "isImage": false,
+          "order": 3
+        },
+        {
+          "id": 389,
+          "body": "How to become more assertive, and learn how to say \"no\" to others.",
+          "cellSpan": 1,
+          "isImage": false,
+          "order": 4
+        },
+        {
+          "id": 2827,
+          "body": null,
+          "cellSpan": 1,
+          "isImage": true,
+          "order": 2
+        },
+        {
+          "id": 2828,
+          "body": null,
+          "cellSpan": 2,
+          "isImage": true,
+          "order": 5
+        }
+      ],
+      "tags": [
+        152,
+        153,
+        81
+      ],
+      "conversionRate": 24.25,
+      "currency": "EGP",
+      "discount": 0,
+      "discountedPrice": 0,
+      "finalPriceUSD": 28.865566,
+      "originalPriceUSD": 28.865566,
+      "price": 699.99,
+      "actualProgress": null,
+      "userScorePoints": null,
+      "totalScorePoints": null,
+      "inCart": false,
+      "inWishlist": false,
+      "isLocked": false,
+      "isPurchased": false,
+      "numberOfCompletedLessons": null,
+      "currentLesson": null,
+      "mentors": [
+        {
+          "id": "ffcadff1-6833-4699-970d-07a39e2bcee7",
+          "name": "Heba El Sawah",
+          "title": "Life Coach/Author",
+          "description": "Researcher, writer and family relations and self-realization life coach, Heba El Sawah is well-known for her “Living on Purpose” training course and “Soulmates” marital workshop.",
+          "isAskMentor": false,
+          "numberOfCourses": 3,
+          "courseIds": [
+            157,
+            265,
+            267
+          ]
+        }
+      ]
     }
   ],
-  "enroll": [
+  "instructors": [
     {
-      "userId": 1,
-      "CourseId": 1,
-      "date": "1/11/2022",
+      "id": "da206ace-6cd3-4ff3-8b53-ed50742623be",
+      "mainUserId": 19469,
+      "name": "Ayman Abou el Makarem",
+      "description": "Professor at the Faculty of Cinema at Badr University and a member of the Council of the Film Professions Syndicate, who presented many successful and famous cinematic and television artworks as a director of photography and worked as a photographer and lighting designer in many programs and channels.",
+      "numberOfCourses": 1,
+      "numberOfLearner": 0,
+      "permanentLink": "Ayman-Abou-elMakarem",
+      "title": "Director Of Photography And Light Designer",
+      "typeId": 1,
+      "courseIds": [
+        903
+      ],
+      "socialChannels": [
+        "",
+        "",
+        "",
+        null,
+        "",
+        ""
+      ],
+      "mentorXP": [],
+      "pageViews": 0
+    },
+    {
+      "id": "7f9b11be-403b-44eb-934d-b52d3e6ca982",
+      "mainUserId": 120,
+      "name": "Ahmed Fikry",
+      "description": "Ahmed Fikry is a Digital Strategy Thought Leader with more than 10 years of experience in digital strategy, portfolio management, customer experience, and emerging technologies serving clients of two of the big four offices in the Middle East, accelerating vision 2030 realization for governments via digital transformation roadmap definition and execution.",
+      "numberOfCourses": 2,
+      "numberOfLearner": 0,
+      "permanentLink": "Ahmed-Fikry",
+      "title": "Digital Strategy & Transformation Thought Leader",
+      "typeId": 1,
+      "courseIds": [
+        333,
+        677
+      ],
+      "socialChannels": [],
+      "mentorXP": [],
+      "pageViews": 0
+    },
+    {
+      "id": "c0a7343a-d120-4b77-b447-34f9058ba389",
+      "mainUserId": 128,
+      "name": "Doha Moustafa",
+      "description": "Doha Moustafa graduated from the Faculty of Fine Arts, Helwan University, in 2011. She worked in the field of fashion design and advertising before moving to the field of arts education. She provided many courses and pieces of training for people of several ages and organized many arts festivals and exhibitions in different cities. Currently, she has her own studio to teach the basics of various arts in the field of plastic art and handicrafts. She continually works hard to raise awareness of the importance of practicing arts to boost psychological health as well as the role and impact of art on our lives.",
+      "numberOfCourses": 2,
+      "numberOfLearner": 0,
+      "permanentLink": "Doha-Moustafa",
+      "title": "Art Teacher & Visual Artist",
+      "typeId": 1,
+      "courseIds": [
+        381,
+        422
+      ],
+      "socialChannels": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "mentorXP": [],
+      "pageViews": 0
+    },
+    {
+      "id": "1e3b02c6-8027-4dee-a045-96532e1a5c33",
+      "mainUserId": 76,
+      "name": "Nashwa El Fooly",
+      "description": "Nashwa graduated BSc in Mechanical Power Engineering at Ain Shams University. She is a Positive Discipline in the Classroom Educator at the American Association for Positive Discipline, an Accessing Personal Genius Practitioner at the International Society of Neuro-Semantics, a Group Coach at the International Coaching Federation, a Time Line Therapy Practitioner at The Time Line Therapy Association, and Creator of \"Mama Pristo\" Book Philosophy and Coauthor.\nShe also worked in the Field of piping management in many Power Plant Projects in Egypt, as a designer for character-building and personal development programs in Schools.\nShe trained many teachers and school staff on how to apply Positive Discipline in the Classroom and manage the school.",
+      "numberOfCourses": 1,
+      "numberOfLearner": 0,
+      "permanentLink": "Nashwa-El-Fooly",
+      "title": "Life Coach",
+      "typeId": 1,
+      "courseIds": [
+        902
+      ],
+      "socialChannels": [
+        "",
+        "",
+        "",
+        null,
+        "",
+        ""
+      ],
+      "mentorXP": [],
+      "pageViews": 0
+    },
+    {
+      "id": "1aaa02f0-f1c5-42f7-8487-6b4c16164948",
+      "mainUserId": 166,
+      "name": "Mohammed Essam",
+      "description": "Mohamed Essam/ Has five years of teaching computer science and AI in a big Programs like Harvard's cs50x and in Egyptian universities.\nhe also works as an associate member at the Faculty of Computers and Information at Modern Academy, in addition to his master’s studies at the Faculty of Artificial Intelligence, Benha University.\n\n",
+      "numberOfCourses": 1,
+      "numberOfLearner": 0,
+      "permanentLink": "Mohamed-Essam",
+      "title": "Researcher & Assistant Teacher in the field of computer Science and AI",
+      "typeId": 1,
+      "courseIds": [
+        745
+      ],
+      "socialChannels": [
+        null,
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "mentorXP": [],
+      "pageViews": 0
+    },
+    {
+      "id": "58316254-9170-44d8-a1db-1aff1ac36881",
+      "mainUserId": 213,
+      "name": "Hebatalla Abdel-halim Mahmoud",
+      "description": "Heba is an international authorized Scrum trainer and practitioner since 2016. She is an architectural engineer with more than 15 years of experience in project management, architectural design, and execution supervision. Besides, Heba is a Scientific Counselor at Egypt Scholars Organization,  she pursues her academic career and research in designing sustainable buildings as a Ph.D. Researcher & Teaching Assistant at the Faculty of Engineering, Cairo University.\nHeba has trained many trainees from local and international organizations and universities including Orange, Vodafone, IBM, Emaar, AL Futtaim, Secure Misr, and The American University in Cairo.\nHeba holds the following qualifications:\n- Scrum Certified Trainer, Scrum Study, The US\n- Scrum Master Certified, Scrum Study, The US\n- Scrum Product Owner Certified, Scrum Study, The US\n- Certified Passive House Designer, Passive House Institute, Germany\n- Master of Science of Architectural Engineering, Architectural Department, Faculty",
+      "numberOfCourses": 1,
+      "numberOfLearner": 0,
+      "permanentLink": "Heb-Abdel-halim",
+      "title": "Architect, Teaching Assistant & Scientific Counselor",
+      "typeId": 1,
+      "courseIds": [
+        873
+      ],
+      "socialChannels": [
+        "",
+        "",
+        "",
+        null,
+        "",
+        ""
+      ],
+      "mentorXP": [],
+      "pageViews": 0
+    },
+    {
+      "id": "215984bb-9dcb-4627-8787-2adb0136227c",
+      "mainUserId": 476,
+      "name": "Fadi Serry Eldin",
+      "description": "With over 18 years of experience in training solutions design and delivery, championing innovative training initiatives specifically tailored for some of the top Telecom.",
+      "numberOfCourses": 8,
+      "numberOfLearner": 0,
+      "permanentLink": "Fadi-Eldin",
+      "title": "Managing Director - Scitron Training",
+      "typeId": 1,
+      "courseIds": [
+        191,
+        21,
+        15,
+        276,
+        10,
+        600,
+        907,
+        908
+      ],
+      "socialChannels": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "mentorXP": [
+        {
+          "body": ""
+        }
+      ],
+      "pageViews": 0
+    },
+    {
+      "id": "46cc1be9-8748-4013-a3fe-213a5f7e9af7",
+      "mainUserId": 423,
+      "name": "Khaled Habib",
+      "description": "Khaled Habib is a senior management and Human resources executive as well as a well-rounded academic, enjoying a rich profile of regional and global expertise, with a proven track record in organization design, development, change and performance management, as well as restructuring, talent management, and executive leadership coaching.",
+      "numberOfCourses": 3,
+      "numberOfLearner": 0,
+      "permanentLink": "Khaled-Habib",
+      "title": "Professor of Marketing and Management",
+      "typeId": 1,
+      "courseIds": [
+        264,
+        4,
+        5
+      ],
+      "socialChannels": [],
+      "mentorXP": [
+        {
+          "body": ""
+        }
+      ],
+      "pageViews": 0
+    },
+    {
+      "id": "e58099bd-bb7e-4969-a159-160dd5981d23",
+      "mainUserId": 177,
+      "name": "Ivon Moharram",
+      "description": " Ivon is a Family Change Agent and Positive Discipline Parent Educator (Certified from Positive Discipline Organization, U.S.A.). \n She holds a Bsc in Electronics and Communication Engineering and was former Local Delivery Manager at Orange Business Services. Since 2013 Ivon has delivered many parenting workshops and sessions in Egypt and Online. She has trained hundreds of mothers and has established one of the First Mothers' Support Community in Egypt. \n(Parenting 2 Win Community) ",
+      "numberOfCourses": 2,
+      "numberOfLearner": 0,
+      "permanentLink": "Ivon-Moharram",
+      "title": "Positive Discipline Parent Educator",
+      "typeId": 1,
+      "courseIds": [
+        731,
+        895
+      ],
+      "socialChannels": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "mentorXP": [],
+      "pageViews": 0
+    },
+    {
+      "id": "dc1c0ab6-a62d-40cc-801f-01a93835d50a",
+      "mainUserId": 235,
+      "name": "Mahmoud Qaisiya",
+      "description": "Mahmoud Qaisiya is an engineer in the field of mechatronics engineering with more than 5 years of experience in programming and engineering design.",
+      "numberOfCourses": 5,
+      "numberOfLearner": 0,
+      "permanentLink": "Mahmoud-Qaisiya",
+      "title": "Mechatronics Engineer",
+      "typeId": 1,
+      "courseIds": [
+        806,
+        840,
+        841,
+        973,
+        972
+      ],
+      "socialChannels": [
+        "",
+        "",
+        "",
+        null,
+        "",
+        ""
+      ],
+      "mentorXP": [],
+      "pageViews": 0
+    },
+    {
+      "id": "159a4309-e33a-41c7-8105-224f35522ece",
+      "mainUserId": 379,
+      "name": "Abdelghany Shoair",
+      "description": "Abdelghany Shoair is an Egyptian calligrapher and typographer. At a very young age, he was mentored by many great calligraphers. Their help and support along with his passion for calligraphy led him to his first position at ALMAJD TV station as a calligrapher.",
+      "numberOfCourses": 4,
+      "numberOfLearner": 0,
+      "permanentLink": "Abdelghany-Shoair",
+      "title": "Calligrapher and Typographer",
+      "typeId": 1,
+      "courseIds": [
+        227,
+        214,
+        761,
+        762
+      ],
+      "socialChannels": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "mentorXP": [],
+      "pageViews": 0
+    },
+    {
+      "id": "be537717-4862-44ef-8d36-30cab5ec50f1",
+      "mainUserId": 505,
+      "name": "Rania Abu Rabia",
+      "description": "Rania is an executive coach, facilitator of leadership and team transformation, and keynote speaker.  She has a record of 5200+ coaching hours, working with leaders in Egypt and around the world.  Rania is Past President of the International Coach Federation (ICF) Egypt Chapter, and a faculty member of ICF-credentialed coaching programs.",
+      "numberOfCourses": 4,
+      "numberOfLearner": 0,
+      "permanentLink": "Rania-Abu-Rabia",
+      "title": "Leadership Transformation Specialist & Positive Psychology Coach",
+      "typeId": 1,
+      "courseIds": [
+        278,
+        277,
+        421,
+        474
+      ],
+      "socialChannels": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "mentorXP": [
+        {
+          "body": ""
+        }
+      ],
+      "pageViews": 0
+    }
+  ],
+  "enrolls": [
+    {
+      "id": 0,
+      "user_id": 0,
+      "course_id": 0,
+      "date": "30 October 2022 14:48 UTC",
       "progress": "10"
+    }
+  ],
+  "CourseCategories": [
+    {
+      "id": 12,
+      "name": "Languages",
+      "permanentLink": "Languages"
+    },
+    {
+      "id": 2,
+      "name": "Arts & Design",
+      "permanentLink": "Arts-&-Design"
+    },
+    {
+      "id": 3,
+      "name": "Soft Skills",
+      "permanentLink": "Soft-Skills"
+    },
+    {
+      "id": 4,
+      "name": "Media, Photography & Film",
+      "permanentLink": "Media,-Photography-&-Film"
+    },
+    {
+      "id": 5,
+      "name": "Business Management",
+      "permanentLink": "Business-Management"
+    },
+    {
+      "id": 6,
+      "name": "Sales & Marketing",
+      "permanentLink": "Sales-&-Marketing"
+    },
+    {
+      "id": 7,
+      "name": "Technology, Science & Productivity",
+      "permanentLink": "Technology,-Science-&-Productivity"
+    },
+    {
+      "id": 8,
+      "name": "Parenting & Relationships",
+      "permanentLink": "Parenting-&-Relationships"
+    },
+    {
+      "id": 9,
+      "name": "Kids Development",
+      "permanentLink": "Kids-Development"
+    },
+    {
+      "id": 10,
+      "name": "Lifestyle & Health",
+      "permanentLink": "Lifestyle-&-Health"
+    },
+    {
+      "id": 11,
+      "name": "Entrepreneurship",
+      "permanentLink": "Entrepreneurship"
+    },
+    {
+      "id": 1,
+      "name": "Mental Health & Wellness",
+      "permanentLink": "Mental-Health-&-Wellness"
+    },
+    {
+      "id": 13,
+      "name": "Education",
+      "permanentLink": "Education"
     }
   ]
 }

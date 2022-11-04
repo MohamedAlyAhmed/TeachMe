@@ -1,0 +1,17 @@
+.head-text {
+  position: relative;
+  cursor: pointer;
+}
+.text-on-image {
+  position: absolute;
+  left: 0%;
+  bottom: 0%;
+}
+.gradient {
+  width: 14rem;
+  height: 8rem;
+  background-image: linear-gradient(
+    rgba(83, 83, 83, 0.171),
+    rgba(0, 0, 0, 0.491)
+  );
+}

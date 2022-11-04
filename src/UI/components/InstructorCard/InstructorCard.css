@@ -1,0 +1,21 @@
+img {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+}
+
+h6 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  width: 9rem;
+}
+
+p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  width: 9rem;
+}

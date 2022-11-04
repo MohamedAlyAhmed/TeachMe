@@ -5,15 +5,24 @@
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
+<<<<<<< HEAD
     "@mui/material": "^5.10.12",
     "@mui/styled-engine-sc": "^5.10.6",
+=======
+    "@fortawesome/fontawesome-free": "^6.2.0",
+    "@fortawesome/free-regular-svg-icons": "^6.2.0",
+    "@fortawesome/free-solid-svg-icons": "^6.2.0",
+    "@mui/material": "^5.10.12",
+>>>>>>> 1cb3c3de4cfb24e8b9d4aef66db20742080aaea9
     "@reduxjs/toolkit": "^1.8.6",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "animate.css": "^4.1.1",
+    "axios": "^1.1.3",
     "bootstrap": "^5.2.2",
-    "fontawesome-free": "^1.0.4",
+    "joi": "^17.7.0",
+    "jwt-decode": "^3.1.2",
     "react": "^18.2.0",
     "react-bootstrap": "^2.5.0",
     "react-dom": "^18.2.0",
@@ -26,7 +35,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "set PORT=4000 && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
