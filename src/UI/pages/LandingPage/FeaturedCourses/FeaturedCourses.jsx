@@ -6,35 +6,6 @@ import styled from "styled-components";
 import CourseCard from "../../../components/CourseCard/CourseCard";
 import axios from "axios";
 
-<<<<<<< HEAD
-export class FeaturedCourses extends Component {
-  render() {
-    const settings = {
-      dots: false,
-      focusOnSelect: true,
-      infinite: true,
-      slidesToShow: 4,
-      slidesToScroll: 1,
-      speed: 500,
-     
-    };
-    return (
-      <div style={{margin:"12px"}}>
-        <Slider {...settings}>
-          <CourseCard />
-          <CourseCard />
-          <CourseCard />
-          <CourseCard />
-          <CourseCard />
-          <CourseCard />
-          <CourseCard />
-          <CourseCard />
-          <CourseCard />
-        </Slider>
-      </div>
-    );
-  }
-=======
 export const FeaturedCourses = () => {
 
   const [courses, setCourses] = useState([]);
@@ -69,7 +40,6 @@ export const FeaturedCourses = () => {
       </Slider>
     </div>
   );
->>>>>>> 9bdba3014d0b447feb821fd4a53dfa8f37eaf4ee
 }
 
 export const HomeWrapper = styled.div`
