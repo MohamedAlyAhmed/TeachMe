@@ -1,13 +1,9 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
-import CourseCard from "../../../components/CourseCard/CourseCard";
-import { Button, NavLink } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import styled from "styled-components"
-import CirculeCard from "../../../components/CourseCard/CourseCard";
+import styled from "styled-components";
+import InstructorCard from "../../../components/InstructorCard/InstructorCard";
 
 export class FeaturedInstructors extends Component {
-
   render() {
     const settings = {
       dots: false,
@@ -19,18 +15,15 @@ export class FeaturedInstructors extends Component {
     };
     return (
       <div>
-
-
         <Slider {...settings}>
-
-          <CirculeCard />
-          <CirculeCard />
-          <CirculeCard />
-          <CirculeCard />
-          <CirculeCard />
-          <CirculeCard />
-          <CirculeCard />
-
+          <InstructorCard />
+          <InstructorCard />
+          <InstructorCard />
+          <InstructorCard />
+          <InstructorCard />
+          <InstructorCard />
+          <InstructorCard />
+          <InstructorCard />
         </Slider>
       </div>
     );
@@ -38,13 +31,9 @@ export class FeaturedInstructors extends Component {
 }
 
 export const HomeWrapper = styled.div`
-
-.slick-arrow
-{
-  background-color:#979A9A;
-  height:220px;
-  width:30px
-
-}
-`
-  ;
+  .slick-arrow {
+    background-color: #979a9a;
+    height: 220px;
+    width: 30px;
+  }
+`;

@@ -1,10 +1,10 @@
-img {
+.instructor-img {
   width: 8rem;
   height: 8rem;
   border-radius: 50%;
 }
 
-h6 {
+.instructor-name {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
@@ -12,7 +12,7 @@ h6 {
   width: 9rem;
 }
 
-p {
+.instructor-title {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;

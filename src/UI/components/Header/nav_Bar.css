@@ -1,146 +1,129 @@
-
-
-
-
-.main{
-    margin-top: 4px;
-    background-color: rgb(247, 243, 243);
-    justify-content: space-between;
-width: 320px;
-padding: 8px;
-border-radius: 5px;
-display: flex;
-
+.main {
+  margin-top: 4px;
+  background-color: rgb(247, 243, 243);
+  justify-content: space-between;
+  width: 320px;
+  padding: 8px;
+  border-radius: 5px;
+  display: flex;
 }
-input{
-    background-color: rgb(247, 243, 243);
-    border: 0px;
-    outline: 0px;
-    color: black;
-     font-style: italic;
+input {
+  background-color: rgb(247, 243, 243);
+  border: 0px;
+  outline: 0px;
+  color: black;
+  font-style: italic;
 }
 
-
-.icon{
-    top: 50px;
-    right: 23px;
+.icon {
+  top: 50px;
+  right: 23px;
 }
-.icon-search{
-    color: rgb(226, 15, 15);
-    font-size: 18;
-}
-
-
-.hero{
-    width: 100%;
-    min-width: 100vh;
-    background-color: #eceaff;
-    color: #525252;
-
-}
-nav{
-    background-color:#fff ;
-    width: 100%;
-    padding: 10px 10px;
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    align-items: center;
-    position: sticky !important;
-    top: 0 !important;
-    z-index: 10000;
-}
-nav ul{
-    width: 100%;
-    text-align: right;
-
-}
-nav ul li{
-    display: inline-block;
-    list-style: none;
-margin: 10px 20px;    
+.icon-search {
+  color: rgb(226, 15, 15);
+  font-size: 18;
 }
 
-.user-pic{
-    width: 120px;
-    margin-left: 30px;
+.hero {
+  width: 100%;
+  min-width: 100vh;
+  background-color: #eceaff;
+  color: #525252;
 }
-.sub-menu-wrap{
-    position: absolute;
-    
-    top: 3.2rem;
-    left: 20.5rem;
-    width: 390px;
-    overflow: hidden;
-    max-height: 0px;
-    transition: max-height 0.5s;
+nav {
+  background-color: #fff;
+  width: 100%;
+  padding: 10px 10px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  align-items: center;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 10000;
 }
-.sub-menu-wrap.open-menu{
-    max-height: 900px;
+nav ul {
+  width: 100%;
+  text-align: right;
 }
-.sub-menu{
-    background: rgb(246, 239, 239);
-    padding: 20px;
-    margin: 10px;
-    border-radius: 10px;
-
-}
-.user-info{
-    display: flex;
-    align-items: center;
-
-}
-.user-info h3{
-    font-weight: bold;
-    text-align: left;
-    color:gray;
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 10px 20px;
 }
 
+.user-pic {
+  width: 120px;
+  margin-left: 30px;
+}
+.sub-menu-wrap {
+  position: absolute;
 
-.sub-menu hr{
-border: 0;
-height: 1px;
-width: 100%;
-background-color: black;
-margin: 15px 0 10px;
+  top: 3.2rem;
+  left: 20.5rem;
+  width: 390px;
+  overflow: hidden;
+  max-height: 0px;
+  transition: max-height 0.5s;
 }
-.sub-menu-link{
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    margin: 12px 0;
-
+.sub-menu-wrap.open-menu {
+  max-height: 900px;
 }
-.ss{
-    display: flex;
-    width: 100%;
+.sub-menu {
+  background: rgb(246, 239, 239);
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
 }
-.sub-menu-link p{
-    width: 100%;
-    color: rgb(27, 23, 23);
+.user-info {
+  display: flex;
+  align-items: center;
 }
-.sub-menu-link span{
-    color: gray;
-    font-size: 22;
-transition: transform .3s;
-}
-.sub-menu-link :hover span{
-transform: translateX(5px);
-}
-.sub-menu-link:hover p{
-font-weight: 600;
+.user-info h3 {
+  font-weight: bold;
+  text-align: left;
+  color: gray;
 }
 
-.ss:hover{
-background-color: rgb(246, 239, 239)!important;
-outline: none;
-color: red !important;
+.sub-menu hr {
+  border: 0;
+  height: 1px;
+  width: 100%;
+  background-color: black;
+  margin: 15px 0 10px;
+}
+.sub-menu-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  margin: 12px 0;
+}
+.ss {
+  display: flex;
+  width: 100%;
+}
+.sub-menu-link p {
+  width: 100%;
+  color: rgb(27, 23, 23);
+}
+.sub-menu-link span {
+  color: gray;
+  font-size: 22;
+  transition: transform 0.3s;
+}
+.sub-menu-link :hover span {
+  transform: translateX(5px);
+}
+.sub-menu-link:hover p {
+  font-weight: 600;
 }
 
+.ss:hover {
+  background-color: rgb(246, 239, 239) !important;
+  outline: none;
+  color: red !important;
+}
 
-
-
-
-
-
-
+img {
+    width: 8%;
+}

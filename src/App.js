@@ -14,6 +14,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import Counter from './redux/reducers/counter';
 import LandingPage from './UI/pages/LandingPage/langingPage';
+import Header from './UI/components/Header/nav_Bar';
 
 
 const LazyCoursePage = React.lazy(() => import('./UI/pages/CourcePage'));
@@ -32,17 +33,19 @@ function App() {
   useEffect(() => { console.log(userData) }, [userData])
 
   return (
+    <div>
+    <Header />
     <Provider store={store}>
       <Router>
 
         <Routes>
           {/* .... any other path routing create it here .... */}
 
-          <Route path='' element={
+          {/* <Route path='' element={
             <React.Suspense>
               <Counter />
             </React.Suspense>
-          } />
+          } /> */}
 
           <Route path='' element={
             <React.Suspense>
@@ -56,11 +59,13 @@ function App() {
               <LazyCoursePage />
             </React.Suspense>
           } />
+
           <Route path='register' element={
             <React.Suspense>
               <Register />
             </React.Suspense>
           } />
+
           <Route path='login' element={
             <React.Suspense>
               <Login getUserData={getUserData} />
@@ -70,6 +75,7 @@ function App() {
       </Router>
 
     </Provider>
+    </div>
   );
 }
 
