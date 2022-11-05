@@ -13,6 +13,7 @@ import '@fortawesome/fontawesome-free/js/all.min.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import Header from './UI/components/Header/nav_Bar';
+import Footer from './UI/components/Footer/Footer';
 
 
 const LazyCoursePage = React.lazy(() => import('./UI/pages/CourcePage'));
@@ -71,7 +72,7 @@ function App() {
             } />
           </Routes>
         </Router>
-
+<Footer/>
       </Provider>
     </div>
   );

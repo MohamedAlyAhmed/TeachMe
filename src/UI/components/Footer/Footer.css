@@ -1,0 +1,10 @@
+.footerlogo{
+    font-size: 1.2rem;
+    color: rgb(146, 25, 25);
+}
+.footerlinks{
+    text-decoration: none;
+}
+.footerlinks:hover{
+    text-decoration: underline;
+}

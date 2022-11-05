@@ -5,6 +5,7 @@ import Picks from "./Picks/Picks";
 import { Map } from "./map/map";
 import InstructorsPicks from "./InstructorPicks/InstructorsPicks";
 import axios from "axios";
+import MyButton from "../../components/Button/Button";
 import { BASE_ULR } from "../../../redux/reducers/server";
 //import { FeaturedCourses, HomeWrapper } from "./FeaturedCourses/FeaturedCourses";
 
@@ -25,7 +26,7 @@ function LandingPage() {
                   Only for <span> 91.67 EGP</span> /month
                 </h4>
                 <p>Billed yearly</p>
-                <Button variant="danger btn">Subscribe now</Button>
+                <MyButton value="Subscribe now"  styleClass="btn-danger "/>
               </div>
             </div>
           </div>

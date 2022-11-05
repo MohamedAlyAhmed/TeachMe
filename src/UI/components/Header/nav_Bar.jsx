@@ -8,7 +8,7 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
 import "./nav_Bar.css";
-
+import MyButton from "../Button/Button";
 
 
 const Header = () => {
@@ -132,12 +132,13 @@ const Header = () => {
 
                     <i className="fa-solid fa-arrow-right"></i>
                   </Button>
+   
+
                 </div>
               </div>
             </div>
-            <Button className="ms-4 ss" variant="outline-danger">
-              Subscribe
-            </Button>
+         
+          <MyButton value="Subscribe" styleClass="btn-outline-secondary"/>
           </Nav>
 
           <form className="form">
@@ -167,9 +168,8 @@ const Header = () => {
       `}
           </style>
           <a href="/login">
-            <Button className="me-4" variant="flat">
-              Sign Up
-            </Button>
+           
+            <MyButton value="sign up" styleClass="btn-danger" />
           </a>
         </Navbar.Collapse>
       </Container>
