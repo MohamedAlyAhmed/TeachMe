@@ -8,7 +8,7 @@
 
 import { createSlice } from '@reduxjs/toolkit'
 
-const BASE_ULR = "http://localhost:3000";
+export const BASE_ULR = "http://localhost:3000";
 
 export const server = createSlice({
     name: 'server',
@@ -41,6 +41,13 @@ export const server = createSlice({
                     console.log(data);
                     state.CourseCategories = data
                 });
+        },
+
+
+        setNewUser: (state, userData) => {
+            //
+
+            //
         },
     },
 })

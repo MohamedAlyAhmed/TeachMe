@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./landingPage.css";
 import { Button } from "react-bootstrap";
 import Picks from "./Picks/Picks";
 import { Map } from "./map/map";
 import InstructorsPicks from "./InstructorPicks/InstructorsPicks";
+import axios from "axios";
+import { BASE_ULR } from "../../../redux/reducers/server";
 //import { FeaturedCourses, HomeWrapper } from "./FeaturedCourses/FeaturedCourses";
 
 function LandingPage() {
+
+
+
   return (
     <>
       <header>

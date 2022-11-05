@@ -1,12 +1,12 @@
 import React from "react";
 import "./CourseCard.css";
 
-export default function CourseCard() {
+export default function CourseCard({ course }) {
   return (
     <div>
       <div className="card shadow-sm rounded-3" style={{ width: "15rem" }}>
         <img
-          src="/assets/html5.jpg"
+          src={course.image}
           className="card-img-top "
           alt="course image"
         />
@@ -14,13 +14,13 @@ export default function CourseCard() {
           <div className=" text-light duration animate__fadeInRightBig">
             h min / lessons
           </div>
-          <p className="card-title mb-2 fw-bold">Html5</p>
+          <p className="card-title mb-2 fw-bold">{course.name}</p>
           <div className="d-flex justify-content-between align-items-center">
             <p
               className="card-text align-self-center mb-0 text-secondary"
               style={{ fontSize: 14 }}
             >
-              Mohamed
+              {course.mentors[0].name}
             </p>
             <button
               className="btn btn-light rounded-5 border"
