@@ -13,9 +13,10 @@ export class FeaturedCourses extends Component {
       slidesToShow: 4,
       slidesToScroll: 1,
       speed: 500,
+     
     };
     return (
-      <div>
+      <div style={{margin:"12px"}}>
         <Slider {...settings}>
           <CourseCard />
           <CourseCard />
@@ -35,7 +36,7 @@ export class FeaturedCourses extends Component {
 export const HomeWrapper = styled.div`
   .slick-arrow {
     background-color: #f3f1f1;
-    height: 220px;
+    height: 207px;
     width: 30px;
-  }
+ }
 `;

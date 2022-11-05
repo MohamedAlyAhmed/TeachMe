@@ -37,9 +37,11 @@ export default class FeaturedCategory extends Component {
     export const HomeWrapper = styled.div`
       .slick-arrow {
         background-color: #f3f1f1;
-        height: 220px;
+        height: 100px;
         width: 30px;
-      }
+        align-items: center;
+        justify-content: center;
+            }
     `;
 
 

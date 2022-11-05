@@ -4,7 +4,7 @@ import "./CourseCard.css";
 export default function CourseCard() {
   return (
     <div>
-      <div className="card shadow-sm rounded-3" style={{ width: "15rem" }}>
+      <div className="  card shadow-sm rounded-3" style={{ width: "14rem",margin:"13px" }}>
         <img
           src="/assets/html5.jpg"
           className="card-img-top "

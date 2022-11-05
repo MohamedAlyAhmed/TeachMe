@@ -17,16 +17,16 @@ function Picks() {
                 <Button className="btn1" variant="text">
                   Featured Courses
                 </Button>
-                <div className="vl"></div>
-                <Button className="btn1" variant="text ">
+                {/* <div className="vl"></div> */}
+                {/* <Button className="btn1" variant="text ">
                   {" "}
                   Most Viewed
-                </Button>
-                <div className="vl"></div>
+                </Button> */}
+                {/* <div className="vl"></div>
                 <Button className="btn1" variant="text ">
                   {" "}
                   New Courses
-                </Button>
+                </Button> */}
               </div>
               <HomeWrapper>
                 <FeaturedCourses />
