@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 import "./nav_Bar.css";
 import MyButton from "../Button/Button";
 
-const Header = () => {
+const Header = (props) => {
   // const navegator = useNavigate();
 
   const toggleMenus = () => {
@@ -18,6 +18,11 @@ const Header = () => {
 
     subMenu.classList.toggle("open-menu");
   };
+
+  const toggleProfile = ()=>{
+    let subProfileMenu = document.getElementById("subProfileMenu");
+    subProfileMenu.classList.toggle("open-menu")
+  }
 
   return (
     <Navbar bg="#fff" expand="lg">
@@ -52,37 +57,37 @@ const Header = () => {
                   <a href="#" className="sub-menu-link">
                     <div className="ss">
                       <p>Languages</p>
-                     
+
                     </div>
                   </a>
                   <a href="#" className="sub-menu-link">
                     <div className="ss">
                       <p>Arts & Design</p>
-                    
+
                     </div>
                   </a>
                   <a href="#" className="sub-menu-link">
                     <div className="ss">
                       <p>Soft Skills</p>
-                     
+
                     </div>
                   </a>
                   <a href="#" className="sub-menu-link">
                     <div className="ss">
                       <p>Medis, Phogrphy & Film</p>
-                     
+
                     </div>
                   </a>
                   <a href="#" className="sub-menu-link">
                     <div className="ss">
                       <p>Business Management</p>
-                      
+
                     </div>
                   </a>
                   <a href="#" className="sub-menu-link">
                     <div className="ss">
                       <p>Sales & Marketing</p>
-                      
+
                     </div>
                   </a>
                   <a href="#" className="sub-menu-link">
@@ -96,13 +101,13 @@ const Header = () => {
                   <a href="#" className="sub-menu-link">
                     <div className="ss">
                       <p>Parenting & Relationships</p>
-                      
+
                     </div>
                   </a>
                   <a href="#" className="sub-menu-link">
                     <div className="ss">
                       <p>Kids Development</p>
-                      
+
                     </div>
                   </a>
                   <MyButton >
@@ -113,8 +118,8 @@ const Header = () => {
               </div>
             </div>
 
-            <MyButton  isOutline={true} >
-            Subscribe
+            <MyButton isOutline={true} >
+              Subscribe
             </MyButton>
           </Nav>
 
@@ -130,14 +135,68 @@ const Header = () => {
               </a>
             </div>
           </form>
-          <Button variant="link">Login</Button>
-        
-          <a href="/login">
-            <MyButton  isOutline={false}>
-            sign up
+          {
+            props.userData ? <>
+              <Button onClick={toggleProfile} className="user-pic" variant="">
+                <img src="assets/default-avatar.jpg" alt="" className="avatar" />
+              </Button>
+              <div className="sub-profile-wrap" id="subProfileMenu">
+                <div className="sub-menu">
+                  <div className="user-info">
+                    <h3>ahmed hamdy</h3>
+                  </div>
+                  <a href="#" className="sub-menu-link">
+                    <div className="ss">
+                      <p>My Progress</p>
 
-            </MyButton>
-          </a>
+                    </div>
+                  </a>
+                  <a href="#" className="sub-menu-link">
+                    <div className="ss">
+                      <p>Saved Courses</p>
+
+                    </div>
+                  </a>
+                  <a href="#" className="sub-menu-link">
+                    <div className="ss">
+                      <p>Certificates</p>
+
+                    </div>
+                  </a>
+                  <a href="#" className="sub-menu-link">
+                    <div className="ss">
+                      <p>Account setting</p>
+
+                    </div>
+                  </a>
+                  <a href="#" className="sub-menu-link">
+                    <div className="ss">
+                      <p>Messages</p>
+
+                    </div>
+                  </a>
+                  <a href="/">
+                  <MyButton isOutline={false} onClick={props.LogOut}>
+                    Logout
+                  </MyButton>
+                  </a>
+                </div>
+              </div>
+
+
+            </> :
+              <>
+                <Button variant="link"><a href="/login">Login</a></Button>
+
+                <a href="/register">
+                  <MyButton isOutline={false}>
+                    sign up
+
+                  </MyButton>
+                </a>
+
+              </>
+          }
 
         </Navbar.Collapse>
       </Container>
