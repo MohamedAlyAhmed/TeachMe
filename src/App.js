@@ -13,6 +13,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 import Header from "./UI/components/Header/nav_Bar";
 import DataProvider from "./DataContext";
 import Footer from "./UI/components/Footer/Footer";
+import {InstructorsPage} from "./UI/pages/InstructorsPage/InstructorsPage";
 
 const LazyLandingPage = React.lazy(() =>
   import("./UI/pages/LandingPage/langingPage")
@@ -61,6 +62,14 @@ function App() {
               element={
                 <React.Suspense>
                   <Login getUserData={getUserData} />
+                </React.Suspense>
+              }
+            />
+             <Route
+              path="instructorsPage"
+              element={
+                <React.Suspense>
+                  <InstructorsPage />
                 </React.Suspense>
               }
             />

@@ -1,0 +1,14 @@
+.header h2{
+    display:  flex;
+    font-weight: 500;
+    font-size: 1.6rem;
+    margin-top: 3rem;
+    margin-left: 6rem;
+}
+.carousel{
+    padding-left: 3rem;
+    margin-left: 4rem;
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+}
