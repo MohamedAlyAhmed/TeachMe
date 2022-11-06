@@ -26,25 +26,3 @@
 .container{
     width: 70% !important;
 }
-.buttoncontrol{
-    width: 100%;
-}
-.button{
-    color: #FFF;
-    background-color: #4267b2 !important;
-    border: none;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-    -ms-flex-align: center;
-    align-items: center;
-    padding: 0 !important;
-
-}
-.ficon{
-    fill: currentColor;
-    width: 45px;
-    position: relative;
-    margin: 0!important;
-}

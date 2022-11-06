@@ -8,7 +8,6 @@ import "bootstrap-social/bootstrap-social.css"
 import "bootstrap-social/bootstrap-social.less"
 
 
-
 function loginValidtion(user) {
     const schema = Joi.object({
 
@@ -59,7 +58,8 @@ export default function Login(props) {
                 localStorage.setItem('userToken', data.token)
                 setIsLoading(false)
                 props.getUserData()
-                navigate('/home')
+                navigate('/')
+
 
             }
             else {
@@ -75,14 +75,14 @@ export default function Login(props) {
                 <div className="container d-flex center flex-column align-content-center align-items-center ">
                     <h2>Login </h2>
                     <p>Access Your Existing Account</p>
-                    <div className='d-flex row buttoncontrol' >
-                        <button className='btn btn-primary button fbutton col'>
-                            <i className='fa-brands fa-facebook-f ficon'></i>
-                            facebook login
+                    <div className='d-flex ' >
+                        <button className='btn btn-primary '>
+                            <div><i className='fa-brands fa-facebook-f '></i></div>
+                           <span> facebook login</span>
                         </button>
                         <button className='btn btn-primary button gbutton col'>
                             <i className='fa-brands fa-google ficon'></i>
-                            google login
+                           <span> google login</span>
                         </button></div>
                     <form onSubmit={submitLogin} className='d-flex flex-column' >
 
