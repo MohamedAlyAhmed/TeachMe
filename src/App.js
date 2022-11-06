@@ -18,6 +18,10 @@ const LazyLandingPage = React.lazy(() =>
   import("./UI/pages/LandingPage/langingPage")
 );
 
+const LazyCoursePage = React.lazy(() =>
+  import("./UI/pages/course page/CoursePage")
+);
+
 function App() {
   const [userData, setUserData] = useState(null);
 
@@ -27,7 +31,7 @@ function App() {
   }
 
   useEffect(() => {
-    console.log(userData);
+    // console.log(userData);
   }, [userData]);
 
   return (
@@ -61,6 +65,15 @@ function App() {
               element={
                 <React.Suspense>
                   <Login getUserData={getUserData} />
+                </React.Suspense>
+              }
+            />
+
+            <Route
+              path="course/:id"
+              element={
+                <React.Suspense>
+                  <LazyCoursePage />
                 </React.Suspense>
               }
             />
