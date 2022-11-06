@@ -9,8 +9,8 @@ export const FeaturedCourses = () => {
   let { courses } = useContext(DataContext);
 
   const settings = {
+    
     dots: false,
-    focusOnSelect: true,
     infinite: true,
     slidesToShow: 4,
     slidesToScroll: 1,
@@ -31,7 +31,8 @@ export const FeaturedCourses = () => {
 export const HomeWrapper = styled.div`
   .slick-arrow {
     background-color: #f3f1f1;
-    height: 207px;
+    height: 225px;
     width: 30px;
+    border-radius: 5px;
   }
 `;

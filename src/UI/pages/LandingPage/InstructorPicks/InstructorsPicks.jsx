@@ -12,9 +12,7 @@ class InstructorsPicks extends Component {
               <HomeWrapper>
                 <FeaturedInstructors />
                 <div class="text-center">
-                  <MyButton isOutline={true}>
-                    See all instructors
-                  </MyButton>
+                  <MyButton isOutline={true}>See all instructors</MyButton>
                 </div>
               </HomeWrapper>
             </div>
