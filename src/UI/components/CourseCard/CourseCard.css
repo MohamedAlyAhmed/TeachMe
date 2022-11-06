@@ -11,7 +11,7 @@
 }
 
 .card:hover .duration {
-  top: -20%;
+  top: -17%;
   visibility: visible;
   cursor: pointer;
 }
@@ -19,8 +19,9 @@
 .card-title {
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1;
+  -webkit-line-clamp: 2;
   overflow: hidden;
+  height: 50px !important;
 }
 
 .instructor_name {
@@ -28,4 +29,10 @@
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
   overflow: hidden;
+}
+
+.course-image {
+  width: 100% !important;
+  height: 120px !important;
+  object-fit: cover;
 }

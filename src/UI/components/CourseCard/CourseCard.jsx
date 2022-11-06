@@ -16,9 +16,13 @@ export default function CourseCard({ course }) {
     <div>
       <div
         className="card shadow-sm rounded-3 m-3"
-        style={{ width: "14rem", height: "14rem" }}
+        style={{ width: "15rem", height: "16rem" }}
       >
-        <img src={course.image} className="card-img-top " alt="course image" />
+        <img
+          src={course.image}
+          className="card-img-top course-image"
+          alt="course image"
+        />
         <div className="card-body position-relative">
           <div className=" text-light duration d-flex ">
             <div className="mx-1">
