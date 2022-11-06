@@ -1,18 +1,11 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./landingPage.css";
-import { Button } from "react-bootstrap";
 import Picks from "./Picks/Picks";
 import { Map } from "./map/map";
 import InstructorsPicks from "./InstructorPicks/InstructorsPicks";
-import axios from "axios";
 import MyButton from "../../components/Button/Button";
-import { BASE_ULR } from "../../../redux/reducers/server";
-//import { FeaturedCourses, HomeWrapper } from "./FeaturedCourses/FeaturedCourses";
 
 function LandingPage() {
-
-
-
   return (
     <>
       <header>
@@ -22,12 +15,9 @@ function LandingPage() {
               <div className="col-lg-12 background head">
                 <h1 className="display-2 fw-bold">Learn Online</h1>
                 <p>From the biggest Arabic library of video-based courses</p>
-              
-                <p>Billed yearly</p>
-                <MyButton >
 
-                Subscribe now
-                </MyButton>
+                <p>Billed yearly</p>
+                <MyButton>Subscribe now</MyButton>
               </div>
             </div>
           </div>

@@ -14,7 +14,6 @@ import Header from "./UI/components/Header/nav_Bar";
 import DataProvider from "./DataContext";
 import Footer from "./UI/components/Footer/Footer";
 
-const LazyCoursePage = React.lazy(() => import("./UI/pages/CourcePage"));
 const LazyLandingPage = React.lazy(() =>
   import("./UI/pages/LandingPage/langingPage")
 );
@@ -39,26 +38,11 @@ function App() {
           <Routes>
             {/* .... any other path routing create it here .... */}
 
-            {/* <Route path='' element={
-            <React.Suspense>
-              <Counter />
-            </React.Suspense>
-          } /> */}
-
             <Route
-              path=""
+              path="/"
               element={
                 <React.Suspense>
                   <LazyLandingPage />
-                </React.Suspense>
-              }
-            />
-
-            <Route
-              path="course"
-              element={
-                <React.Suspense>
-                  <LazyCoursePage />
                 </React.Suspense>
               }
             />
@@ -82,9 +66,8 @@ function App() {
             />
           </Routes>
         </Router>
-        <Footer/>
+        <Footer />
       </DataProvider>
-     
     </div>
   );
 }
