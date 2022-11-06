@@ -3,7 +3,7 @@ import { FeaturedCourses } from "../FeaturedCourses/FeaturedCourses";
 import "./Picks.css";
 import { Button } from "react-bootstrap";
 import { HomeWrapper } from "../FeaturedCourses/FeaturedCourses";
-import FeaturedCategory from "../FeaturedCategory/FeaturedCategory";
+import { FeaturedCategory } from "../FeaturedCategory/FeaturedCategory";
 
 function Picks() {
   return (
@@ -17,16 +17,6 @@ function Picks() {
                 <Button className="btn1" variant="text">
                   Featured Courses
                 </Button>
-                {/* <div className="vl"></div> */}
-                {/* <Button className="btn1" variant="text ">
-                  {" "}
-                  Most Viewed
-                </Button> */}
-                {/* <div className="vl"></div>
-                <Button className="btn1" variant="text ">
-                  {" "}
-                  New Courses
-                </Button> */}
               </div>
               <HomeWrapper>
                 <FeaturedCourses />
@@ -36,7 +26,7 @@ function Picks() {
                     Course Categories
                   </h4>
                 </div>
-                <FeaturedCategory/>
+                <FeaturedCategory />
               </HomeWrapper>
             </div>
           </div>

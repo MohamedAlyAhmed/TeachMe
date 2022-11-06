@@ -1,10 +1,12 @@
-import React, { Component } from "react";
+import React, { useContext } from "react";
 import Slider from "react-slick";
 import styled from "styled-components";
 import InstructorCard from "../../../components/InstructorCard/InstructorCard";
+import { DataContext } from "../../../../DataContext";
 
-export class FeaturedInstructors extends Component {
-  render() {
+export  const   FeaturedInstructors = () => {
+  let { instructors } = useContext(DataContext);
+
     const settings = {
       dots: false,
       focusOnSelect: true,
@@ -16,19 +18,14 @@ export class FeaturedInstructors extends Component {
     return (
       <div>
         <Slider {...settings}>
-          <InstructorCard />
-          <InstructorCard />
-          <InstructorCard />
-          <InstructorCard />
-          <InstructorCard />
-          <InstructorCard />
-          <InstructorCard />
-          <InstructorCard />
+          {instructors.map((e) => (
+            <InstructorCard instructor={e} />
+          ))}
         </Slider>
       </div>
     );
   }
-}
+
 
 export const HomeWrapper = styled.div`
   .slick-arrow {

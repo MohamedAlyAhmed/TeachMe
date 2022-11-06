@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-import { Button } from "react-bootstrap";
 import { HomeWrapper } from "../FeaturedCourses/FeaturedCourses";
 import { FeaturedInstructors } from "../feauredInstructors/feauredInstructors";
-
+import MyButton from "../../../components/Button/Button";
 class InstructorsPicks extends Component {
   render() {
     return (
@@ -13,9 +12,9 @@ class InstructorsPicks extends Component {
               <HomeWrapper>
                 <FeaturedInstructors />
                 <div class="text-center">
-                  <Button className=" subBtn" variant="outline-danger">
+                  <MyButton isOutline={true}>
                     See all instructors
-                  </Button>
+                  </MyButton>
                 </div>
               </HomeWrapper>
             </div>

@@ -1,0 +1,22 @@
+.outlineBtn{
+border: 1px solid #EB2027 !important;
+background-color: #fff;
+color: #EB2027;
+
+}
+.outlineBtn:hover{
+background-color:#EB2027 !important;
+color: #fff;
+}
+
+.solidBtn{
+    border: 1px solid #EB2027 !important;
+    background-color:#EB2027 !important;
+color: #fff;
+}
+.solidBtn:hover{
+  
+    background-color: #fff !important;
+    color: #EB2027 !important;
+
+}

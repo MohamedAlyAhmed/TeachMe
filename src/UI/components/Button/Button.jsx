@@ -1,13 +1,18 @@
 import React from "react";
-import { Button } from "react-bootstrap";  
-const MyButton = ({styleClass,value,onclick}) => {
-   
-    return (
-       <button className={`btn ${styleClass}`} onClick={onclick}>
+import { Button } from "react-bootstrap";
+import "./Button.css"
 
-{value}
-       </button>
-    );
+const MyButton = ({ onClick, isOutline = false, children }) => {
+
+
+  return (
+    <Button 
+      className={isOutline ? "outlineBtn" : "solidBtn"}
+      onClick={onClick}
+    >
+      {children}
+    </Button>
+  );
 };
-  
+
 export default MyButton;

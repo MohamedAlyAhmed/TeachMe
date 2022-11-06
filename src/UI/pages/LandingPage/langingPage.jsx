@@ -22,11 +22,12 @@ function LandingPage() {
               <div className="col-lg-12 background head">
                 <h1 className="display-2 fw-bold">Learn Online</h1>
                 <p>From the biggest Arabic library of video-based courses</p>
-                <h4>
-                  Only for <span> 91.67 EGP</span> /month
-                </h4>
+              
                 <p>Billed yearly</p>
-                <MyButton value="Subscribe now"  styleClass="btn-danger "/>
+                <MyButton >
+
+                Subscribe now
+                </MyButton>
               </div>
             </div>
           </div>

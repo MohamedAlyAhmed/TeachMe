@@ -1,6 +1,7 @@
 import React,{Component} from "react";
 import { Button } from "react-bootstrap";
 import "./map.css"
+import MyButton from "../../../components/Button/Button";
 export class Map extends Component
 {
     render()
@@ -8,17 +9,17 @@ export class Map extends Component
         return(
             <div>
          
-              <div class="text-center">
-              <Button className=" subBtn" variant="outline-danger">
+              <div class="text-center mt-5">
+              <MyButton isOutline={true} >
                 Browse Courses
-              </Button></div>
+              </MyButton></div>
               <div className="con">
             
         </div> 
         <div class="text-center">
-        <Button className="me-4" variant="danger">
+        <MyButton >
         Browse Courses
-            </Button>
+            </MyButton>
               </div>
            
                </div>
