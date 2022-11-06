@@ -51,73 +51,57 @@ const Header = () => {
                   <a href="#" className="sub-menu-link">
                     <div className="ss">
                       <p>Languages</p>
-                      <span>
-                        <i className="fa-solid fa-angle-right"></i>
-                      </span>
+                     
                     </div>
                   </a>
                   <a href="#" className="sub-menu-link">
                     <div className="ss">
                       <p>Arts & Design</p>
-                      <span>
-                        <i className="fa-solid fa-angle-right"></i>
-                      </span>
+                    
                     </div>
                   </a>
                   <a href="#" className="sub-menu-link">
                     <div className="ss">
                       <p>Soft Skills</p>
-                      <span>
-                        <i className="fa-solid fa-angle-right"></i>
-                      </span>
+                     
                     </div>
                   </a>
                   <a href="#" className="sub-menu-link">
                     <div className="ss">
                       <p>Medis, Phogrphy & Film</p>
-                      <span>
-                        <i className="fa-solid fa-angle-right"></i>
-                      </span>
+                     
                     </div>
                   </a>
                   <a href="#" className="sub-menu-link">
                     <div className="ss">
                       <p>Business Management</p>
-                      <span>
-                        <i className="fa-solid fa-angle-right"></i>
-                      </span>
+                      
                     </div>
                   </a>
                   <a href="#" className="sub-menu-link">
                     <div className="ss">
                       <p>Sales & Marketing</p>
-                      <span>
-                        <i className="fa-solid fa-angle-right"></i>
-                      </span>
+                      
                     </div>
                   </a>
                   <a href="#" className="sub-menu-link">
                     <div className="ss">
                       <p>Technology, Science & Productivity</p>
-                      <span>
+                      {/* <span>
                         <i className="fa-solid fa-angle-right"></i>
-                      </span>
+                      </span> */}
                     </div>
                   </a>
                   <a href="#" className="sub-menu-link">
                     <div className="ss">
                       <p>Parenting & Relationships</p>
-                      <span>
-                        <i className="fa-solid fa-angle-right"></i>
-                      </span>
+                      
                     </div>
                   </a>
                   <a href="#" className="sub-menu-link">
                     <div className="ss">
                       <p>Kids Development</p>
-                      <span>
-                        <i className="fa-solid fa-angle-right"></i>
-                      </span>
+                      
                     </div>
                   </a>
                   <MyButton >

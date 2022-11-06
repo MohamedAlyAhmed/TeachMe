@@ -5,6 +5,7 @@ header {
   height: 100vh;
   overflow: hidden;
   text-align: left;
+  background-size: cover;
 }
 
 header h1 {

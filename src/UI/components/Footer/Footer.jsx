@@ -2,6 +2,8 @@ import React from 'react';
 import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
 import Nav from 'react-bootstrap/Nav';
 import "./Footer.css"
+import MyButton from "../Button/Button";
+import ButtonToTop from '../ButtonScrollToTop/ButtonScrollToTop';
 export default function Footer() {
   return (
     <MDBFooter bgColor='light' className='text-center text-lg-start text-muted'>
@@ -9,7 +11,7 @@ export default function Footer() {
 
       <section className=''>
         <MDBContainer className='text-center text-md-start mt-5'>
-          <MDBRow className='mt-3'>
+          <MDBRow className='mt-4'>
           <MDBCol md="2" lg="2" xl="2" className='mx-auto mb-4'>
               <h6 className='text-uppercase fw-bold mb-4 footerlogo'>
 Teach Me
@@ -67,40 +69,14 @@ Teach Me
                   Become an instructor
                 </a>
               </p>
-              <p>
-                <a href='#!' className='text-reset'>
-                  Settings
-                </a>
-              </p>
-              <p>
-                <a href='#!' className='text-reset'>
-                  Orders
-                </a>
-              </p>
-              <p>
-                <a href='#!' className='text-reset'>
-                  Help
-                </a>
-              </p>
+             <MyButton isOutline={true}>
+              Train your team
+              </MyButton>
+             
+             
             </MDBCol>
 
-            <MDBCol md="4" lg="3" xl="3" className='mx-auto mb-md-0 mb-4'>
-              <h6 className='text-uppercase fw-bold mb-4'>Contact</h6>
-              <p>
-                <MDBIcon icon="home" className="me-2" />
-                New York, NY 10012, US
-              </p>
-              <p>
-                <MDBIcon icon="envelope" className="me-3" />
-                info@example.com
-              </p>
-              <p>
-                <MDBIcon icon="phone" className="me-3" /> + 01 234 567 88
-              </p>
-              <p>
-                <MDBIcon icon="print" className="me-3" /> + 01 234 567 89
-              </p>
-            </MDBCol>
+         
           </MDBRow>
         </MDBContainer>
       </section>
@@ -136,6 +112,7 @@ Teach Me
           <a href='' className='me-4 text-reset'>
             <MDBIcon fab icon="github" />
           </a>
+          <ButtonToTop/>
         </div>
       </section>
      
