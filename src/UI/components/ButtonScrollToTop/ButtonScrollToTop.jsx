@@ -1,5 +1,5 @@
-import React from 'react';
-import { MDBBtn, MDBContainer, MDBIcon } from 'mdb-react-ui-kit';
+import React from "react";
+import { MDBBtn, MDBContainer, MDBIcon } from "mdb-react-ui-kit";
 
 function ButtonToTop() {
   let mybutton;
@@ -27,25 +27,21 @@ function ButtonToTop() {
 
   return (
     <MDBContainer fluid>
-
       <MDBBtn
         onClick={backToTop}
-        id='btn-back-to-top'
+        id="btn-back-to-top"
         style={{
           position: "fixed",
-          bottom: "20px",
-          right: "20px",
+          bottom: "1.2rem",
+          right: "1.2rem",
           display: "none",
         }}
-        className='btn-floating'
-        color='secondary'
-        size='lg'>
+        className="btn-floating"
+        color="secondary"
+        size="lg"
+      >
         <MDBIcon fas icon="arrow-up" />
       </MDBBtn>
-
-
-    
-
     </MDBContainer>
   );
 }
