@@ -8,6 +8,20 @@
       "gender": "male",
       "age": 27,
       "image": "https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg"
+    },
+    {
+      "first_name": "ahmed",
+      "last_name": "diboo",
+      "password": "123",
+      "email": "ahmed.diboo@gmail.com",
+      "id": 1
+    },
+    {
+      "first_name": "ahmed",
+      "last_name": "magdy",
+      "password": "123",
+      "email": "ahmed.magdy@gmail.com",
+      "id": 2
     }
   ],
   "courses": [

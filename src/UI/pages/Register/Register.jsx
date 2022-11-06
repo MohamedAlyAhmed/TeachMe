@@ -5,6 +5,10 @@ import Joi from 'joi';
 import { useNavigate } from 'react-router-dom';
 import "./Register.css"
 
+
+export const BASE_URL = "http://localhost:3000";
+
+
 function registerValidtion(user) {
     const schema = Joi.object({
         first_name: Joi.string().alphanum().min(3).max(30).required(),
@@ -53,9 +57,11 @@ export default function Register() {
             let { data } = await axios.post(`https://route-egypt-api.herokuapp.com/signup`, user);
             console.log(data);
 
+
             if(data.message === 'success'){
                 setIsLoading(false)                
                 navigate('/login')
+                let {data}= await axios.post(`${BASE_URL}/users`,user)
 
             }
             else{
