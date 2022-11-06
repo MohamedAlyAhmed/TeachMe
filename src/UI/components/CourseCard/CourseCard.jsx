@@ -21,7 +21,6 @@ export default function CourseCard({ course }) {
         <img src={course.image} className="card-img-top " alt="course image" />
         <div className="card-body position-relative">
           <div className=" text-light duration d-flex ">
-            {" "}
             <div className="mx-1">
               <i class="fa-regular fa-clock"></i>
             </div>
