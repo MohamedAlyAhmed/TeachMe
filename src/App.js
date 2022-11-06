@@ -18,6 +18,11 @@ const LazyLandingPage = React.lazy(() =>
   import("./UI/pages/LandingPage/langingPage")
 );
 
+//Category LazyLoading Page
+const LazyCategoryPage = React.lazy(() =>
+  import("./UI/pages/CategoryPage/CategoryPage")
+);
+
 function App() {
   const [userData, setUserData] = useState(null);
 
@@ -61,6 +66,15 @@ function App() {
               element={
                 <React.Suspense>
                   <Login getUserData={getUserData} />
+                </React.Suspense>
+              }
+            />
+
+            <Route
+              path="category"
+              element={
+                <React.Suspense>
+                  <LazyCategoryPage />
                 </React.Suspense>
               }
             />
