@@ -13,7 +13,7 @@ export class Map extends Component
               <MyButton isOutline={true} >
                 Browse Courses
               </MyButton></div>
-              <div className="con">
+              <div className="mapImg">
             
         </div> 
         <div class="text-center">
