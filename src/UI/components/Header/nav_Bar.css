@@ -112,18 +112,9 @@ nav ul li {
 
 .sub-menu-wrap {
   position: absolute;
-<<<<<<< HEAD
-  top: 3.2rem;
-  right: 0.5rem;
-  width: 19.5rem;
-  /*width: 30px;
-  */
-=======
   top: 3.1rem;
   left: 14.5rem;
   width: 23.5rem;
-  
->>>>>>> 669f11e889e6c08f0a9ad6a0d85af2fd0df6ac5e
   overflow: hidden;
   max-height: 0px;
   transition: max-height 0.5s;
