@@ -31,7 +31,7 @@ export const FeaturedCourses = () => {
 export const HomeWrapper = styled.div`
   .slick-arrow {
     background-color: #f3f1f1;
-    height: 225px;
+    height: 260px;
     width: 30px;
     border-radius: 5px;
   }

@@ -16,14 +16,14 @@ input {
   font-style: italic;
 }
 
-.avatar {
+/* .avatar {
   width: 40px;
   height: 40px;
   border-radius: 50%;
   object-fit: cover;
   cursor: pointer;
   margin-left: 10px;
-}
+} */
 
 /* .icon {
   top: 4rem;
@@ -97,17 +97,17 @@ nav ul li {
 }
 .sub-menu-wrap {
   position: absolute;
-  top: 3.2rem;
-  right: 0.5rem;
-  width: 19.5rem;
-  /*width: 30px;
-  */overflow: hidden;
+  top: 3.1rem;
+  left: 14.5rem;
+  width: 23.5rem;
+  
+  overflow: hidden;
   max-height: 0px;
   transition: max-height 0.5s;
-  -webkit-transition: max-height 0.5s;
+  /* -webkit-transition: max-height 0.5s;
   -moz-transition: max-height 0.5s;
   -ms-transition: max-height 0.5s;
-  -o-transition: max-height 0.5s;
+  -o-transition: max-height 0.5s; */
 }
 
 .sub-menu-wrap.open-menu {
@@ -122,18 +122,15 @@ nav ul li {
   padding: 1.2rem;
   margin: 1rem;
   border-radius: 0.6rem;
-  -webkit-border-radius: 0.6rem;
-  -moz-border-radius: 0.6rem;
-  -ms-border-radius: 0.6rem;
-  -o-border-radius: 0.6rem;
+  
 }
 
-.user-info {
+.header {
   display: flex;
   align-items: center;
 }
 
-.user-info h3 {
+.header h3 {
   font-weight: bold;
   text-align: left;
   color: gray;
@@ -148,49 +145,43 @@ nav ul li {
 
 .sub-menu-link {
   display: flex;
+  justify-content: center;
   align-items: center;
   text-decoration: none;
   margin: 0.6rem 0;
 }
 
-.ss {
-  display: flex;
-  width: 100%;
-}
+
 
 .sub-menu-link p {
   width: 100%;
   color: rgb(27, 23, 23);
 }
 
-.sub-menu-link span {
+/* .sub-menu-link span {
   color: gray;
   font-size: 22;
   transition: transform 0.3s;
-}
+} */
 
-.sub-menu-link :hover span {
-  transform: translateX(5px);
-}
 
 .sub-menu-link:hover p {
   font-weight: 600;
+  transition: transform 0.3s;
+
 }
 
-.ss:hover {
+/* .ss:hover {
   background-color: rgb(246, 239, 239) !important;
   outline: none;
   color: red !important;
-}
+} */
 
 img {
   width: 8%;
 }
 
 .logo {
-  background-color: #f1ebeb;
-  border: 1px solid #bc090f;
-  border-radius: 2rem;
   font-size: 1.4rem;
   font-family: "Poppins", sans-serif;
   margin-top: 0.8rem;

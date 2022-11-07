@@ -13,24 +13,31 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 import Header from "./UI/components/Header/nav_Bar";
 import DataProvider from "./DataContext";
 import Footer from "./UI/components/Footer/Footer";
+import {InstructorsPage} from "./UI/pages/InstructorsPage/InstructorsPage";
 
 const LazyLandingPage = React.lazy(() =>
   import("./UI/pages/LandingPage/langingPage")
 );
 
+const LazyCoursePage = React.lazy(() =>
+  import("./UI/pages/course page/CoursePage"));
 //Category LazyLoading Page
 const LazyCategoryPage = React.lazy(() =>
   import("./UI/pages/CategoryPage/CategoryPage")
 );
+//Instructors LazyLoading Page
+// const LazyInstructorsPage = React.lazy(() =>
+//   import("./UI/pages/InstructorsPage/InstructorsPage")
+// );
 
 function App() {
 
   const [userData, setUserData] = useState(null);
-  useEffect(()=>{
-    if(localStorage.getItem('userToken')){
+  useEffect(() => {
+    if (localStorage.getItem('userToken')) {
       getUserData()
     }
-  },[])
+  }, [])
 
   function getUserData() {
     let decodedToken = jwtDecode(localStorage.getItem("userToken"));
@@ -40,17 +47,17 @@ function App() {
   useEffect(() => { console.log(userData) }, [userData]);
 
 
-function LogOut(){
-  localStorage.removeItem('userToken');
-  setUserData(null)
-  useNavigate('/login')
-}
+  function LogOut() {
+    localStorage.removeItem('userToken');
+    setUserData(null)
+    useNavigate('/login')
+  }
 
 
   return (
     <div>
       <DataProvider>
-        <Header userData={userData} LogOut={LogOut}/>
+        <Header userData={userData} LogOut={LogOut} />
         <Router>
           <Routes>
             {/* .... any other path routing create it here .... */}
@@ -82,11 +89,29 @@ function LogOut(){
               }
             />
 
+
+            <Route
+              path="course/:id"
+              element={
+                <React.Suspense>
+                  <LazyCoursePage />
+                </React.Suspense>
+              }
+            />
+
             <Route
               path="category"
               element={
                 <React.Suspense>
                   <LazyCategoryPage />
+                </React.Suspense>
+              }
+            />
+             <Route
+              path="instructors"
+              element={
+                <React.Suspense>
+                  <InstructorsPage />
                 </React.Suspense>
               }
             />
