@@ -13,6 +13,8 @@ function Counter() {
           start={3000000}
           end={3453140}
           duration={6}
+          
+          separator=","
         />    
       </div>
     </div>
