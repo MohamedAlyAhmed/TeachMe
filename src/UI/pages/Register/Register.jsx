@@ -61,7 +61,7 @@ export default function Register() {
             if(data.message === 'success'){
                 setIsLoading(false)                
                 navigate('/login')
-                let {data}= await axios.post(`${BASE_URL}/users`,user)
+                
 
             }
             else{

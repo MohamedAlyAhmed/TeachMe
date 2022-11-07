@@ -6,9 +6,13 @@ import { useNavigate } from 'react-router-dom';
 import "./Login.css"
 import "bootstrap-social/bootstrap-social.css"
 import "bootstrap-social/bootstrap-social.less"
+import { useEffect } from 'react';
 
 
-function loginValidtion(user) {
+function LoginValidtion(user) {
+
+   
+
     const schema = Joi.object({
 
         password: Joi.string()
@@ -23,6 +27,9 @@ function loginValidtion(user) {
 
 export default function Login(props) {
 
+    
+
+
     let navigate = useNavigate()
     const [isLoading, setIsLoading] = useState(false)
     const [errorList, setErrorList] = useState([])
@@ -33,6 +40,13 @@ export default function Login(props) {
         email: ""
     })
 
+
+
+    useEffect(()=>{
+        if(localStorage.getItem('userToken')){
+          navigate('/')
+        }
+      },[])
     function getUser(e) {
         let myUSer = { ...user };
         myUSer[e.target.name] = e.target.value;
@@ -42,7 +56,7 @@ export default function Login(props) {
     async function submitLogin(e) {
         e.preventDefault();
 
-        let valedtion = loginValidtion(user)
+        let valedtion = LoginValidtion(user)
         console.log(valedtion);
 
 
