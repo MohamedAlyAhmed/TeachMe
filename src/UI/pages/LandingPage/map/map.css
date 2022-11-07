@@ -12,16 +12,85 @@ outline: none;
 color: red !important;
 }
 
-.mapImg
-{
-    background-image: url("./mapp.png") ;
-    height: 100vh;
+
+.myHeader {
+    background: url("/public/assets/map.svg") center no-repeat;
     width: 100%;
-    background-repeat: no-repeat;
+    max-width: 200%;
+    height: 100vh;
+    overflow: hidden;
+    text-align: left;
     background-size: cover;
-   
+    opacity: .8;
+  }
+  
+  .myHeader h1 {
+    color: rgb(54, 40, 40);
+    font-weight: bold;
+    margin: 25px 0px;
+  }
+  
+ 
+
+.head span{
+    position:absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    top: 270%;
+    left: 30%;
+    background-color: rgb(90, 19, 19);
+    animation: highlight 2.5s linear infinite;
 }
 
+@keyframes highlight {
+   100%{
+    transform:scale(3) ;
+    opacity: 0;
+   } 
+}
+ span.marker2{
+    left: 70%;
+    top: 280%;
+    animation-delay: .5s;
+}
+span.marker3{
+    left: 70%;
+    top: 280%;
+    animation-delay: .5s;
+}
+span.marker4{
+    left: 90%;
+    top: 260%;
+    animation-delay: 1s;
+}
+span.marker5{
+    left: 70%;
+    top: 280%;
+    animation-delay: .3s;
+}
+span.marker6{
+    left: 70%;
+    top: 230%;
+    animation-delay: .5s;
+}
+span.marker7{
+    left: 56%;
+    top: 250%;
+    animation-delay: .5s;
+}
+span.marker2{
+    left:77%;
+    top: 290%;
+    animation-delay: .5s;
+}
+.arrowbtn{
+    color: rgb(164, 9, 9);
+}
+.myCounter{
+    color: rgb(54, 40, 40);
+    font-size: .3rem !important;
+    padding-left: 14rem;
+    padding-top: 4rem;
 
-
-
+}

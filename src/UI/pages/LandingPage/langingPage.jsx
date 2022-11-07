@@ -27,10 +27,9 @@ function LandingPage() {
       <Map />
       <div class="col-sm-12 col-md-12 mb-4">
         <h3 class="text-center mt-4 text-secondary">Our instructors</h3>
-        <p className="header text-center">
+        <p className="headerText ">
           Our instructors are real world experts bringing real knowledge and
-          offering unique experiences that will help you reach your personal and
-          career goals
+          offering unique experiences .
         </p>
       </div>
       <InstructorsPicks />

@@ -69,8 +69,8 @@ export default function Footer() {
             <MDBCol md="3" lg="2" xl="2" className="mx-auto mb-4">
               <h6 className="text-uppercase fw-bold mb-4">Buisness</h6>
               <p>
-                <a href="#!" className="text-reset">
-                  Become an instructor
+                <a href="#!" className="d-flex text-reset footerlinks">
+                 Become instructor
                 </a>
               </p>
               <MyButton isOutline={true}>Train your team</MyButton>
@@ -106,15 +106,11 @@ export default function Footer() {
           <a href="" className="me-4 text-reset">
             <MDBIcon fab icon="google" />
           </a>
-          <a href="" className="me-4 text-reset">
-            <MDBIcon fab icon="instagram" />
-          </a>
+         
           <a href="" className="me-4 text-reset">
             <MDBIcon fab icon="linkedin" />
           </a>
-          <a href="" className="me-4 text-reset">
-            <MDBIcon fab icon="github" />
-          </a>
+        
           <ButtonToTop />
         </div>
       </section>

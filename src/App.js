@@ -1,6 +1,6 @@
 import "./App.css";
 import React, { useEffect, useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Register from "./UI/pages/Register/Register";
@@ -19,22 +19,43 @@ const LazyLandingPage = React.lazy(() =>
   import("./UI/pages/LandingPage/langingPage")
 );
 
+//Category LazyLoading Page
+const LazyCategoryPage = React.lazy(() =>
+  import("./UI/pages/CategoryPage/CategoryPage")
+);
+//Instructors LazyLoading Page
+// const LazyInstructorsPage = React.lazy(() =>
+//   import("./UI/pages/InstructorsPage/InstructorsPage")
+// );
+
 function App() {
+
   const [userData, setUserData] = useState(null);
+  useEffect(()=>{
+    if(localStorage.getItem('userToken')){
+      getUserData()
+    }
+  },[])
 
   function getUserData() {
     let decodedToken = jwtDecode(localStorage.getItem("userToken"));
     setUserData(decodedToken);
   }
 
-  useEffect(() => {
-    console.log(userData);
-  }, [userData]);
+  useEffect(() => { console.log(userData) }, [userData]);
+
+
+function LogOut(){
+  localStorage.removeItem('userToken');
+  setUserData(null)
+  useNavigate('/login')
+}
+
 
   return (
     <div>
       <DataProvider>
-        <Header />
+        <Header userData={userData} LogOut={LogOut}/>
         <Router>
           <Routes>
             {/* .... any other path routing create it here .... */}
@@ -65,8 +86,17 @@ function App() {
                 </React.Suspense>
               }
             />
+
+            <Route
+              path="category"
+              element={
+                <React.Suspense>
+                  <LazyCategoryPage />
+                </React.Suspense>
+              }
+            />
              <Route
-              path="instructorsPage"
+              path="instructors"
               element={
                 <React.Suspense>
                   <InstructorsPage />
