@@ -107,6 +107,15 @@ function App() {
                 </React.Suspense>
               }
             />
+              <Route
+              path="category/:category"
+              element={
+                <React.Suspense>
+                  <LazyCategoryPage />
+                </React.Suspense>
+              }
+            />
+             
              <Route
               path="instructors"
               element={
