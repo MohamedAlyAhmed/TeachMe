@@ -22,6 +22,13 @@
       "password": "123",
       "email": "ahmed.magdy@gmail.com",
       "id": 2
+    },
+    {
+      "first_name": "Mohamed",
+      "last_name": "Aly",
+      "password": "123456",
+      "email": "MohamedAlyAhmed@Aol.com",
+      "id": 3
     }
   ],
   "courses": [
