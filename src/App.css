@@ -1,7 +1,8 @@
 :root {
-  --primaryColor: #fff;
+  --primaryColor: #EB2027;
   --accentColor: #5d6666;
   --backgroundColor: #fff;
+  --aboutColor: #EEEEEE;
 }
 
 .tx-primary {
@@ -46,3 +47,28 @@
 
 
 /* //////////////////////////// */
+
+.tx-aboutColor {
+  color: var(--aboutColor) !important;
+}
+
+.bag-aboutColor {
+  background-color: var(--aboutColor) !important;
+}
+
+.border_aboutColor {
+  border: var(--aboutColor) !important;
+}
+
+/* //////////////////////////// */
+
+.max-line-5 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  /* number of lines to show */
+  line-clamp: 5;
+  -webkit-box-orient: vertical;
+
+}

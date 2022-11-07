@@ -26,10 +26,14 @@ function LoginValidtion(user) {
 
 
 export default function Login(props) {
+<<<<<<< HEAD
 
     
 
 
+=======
+    document.title = `Login`;
+>>>>>>> 669f11e889e6c08f0a9ad6a0d85af2fd0df6ac5e
     let navigate = useNavigate()
     const [isLoading, setIsLoading] = useState(false)
     const [errorList, setErrorList] = useState([])

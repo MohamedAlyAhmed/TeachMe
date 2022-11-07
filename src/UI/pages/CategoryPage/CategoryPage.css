@@ -1,4 +1,63 @@
 .gradient-div {
-    width: 100%;
-    height: 1rem;
+  width: 100% !important;
+  height: 15rem !important;
+  background-image: linear-gradient(
+    180deg,
+    #add1d7,
+    #adced483,
+    rgba(255, 255, 255, 0.158)
+  ) !important;
+  padding: 4rem !important;
+}
+
+.category-name {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.bg-new-color {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+@media only screen and (max-width: 500px) {
+  .bg-new-color {
+    display: flex !important;
+    flex-direction: column;
+    font-size: 12px !important;
+    font-weight: bold;
+    text-align: center;
+  }
+  .category-name {
+    text-align: center;
+  }
+  .gradient-div {
+    margin-bottom: 4rem !important;
+  }
+}
+
+@media only screen and (max-width: 580px) {
+  .small-screen {
+    display: flex !important;
+    justify-content: center !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .option-sm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 3rem;
+  }
+  .option-small {
+    width: 50% !important;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
 }
