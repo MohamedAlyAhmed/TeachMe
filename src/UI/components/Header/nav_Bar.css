@@ -8,6 +8,9 @@ p {
   margin: 0;
   padding: 0;
 }
+a{
+  text-decoration: none;
+}
 
 
 .main {
@@ -28,19 +31,11 @@ input {
   font-style: italic;
 }
 
-/* .avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  object-fit: cover;
-  cursor: pointer;
-  margin-left: 10px;
-} */
-
-/* .icon {
-  top: 4rem;
-  right: 1.3rem;
-} */
+    
+    /* .icon {
+      top: 4rem;
+      right: 1.3rem;
+    } */
 .icon-search {
   color: rgb(226, 15, 15);
   font-size: 1.2rem;
@@ -96,19 +91,6 @@ nav ul li {
   -o-transition: max-height 0.5s;
 }
 
-.sub-profile-wrap {
-  position: absolute;
-  top: 3.2rem;
-  right: 1.5rem;
-  width: 20rem;
-  overflow: hidden;
-  max-height: 0px;
-  transition: max-height 0.5s;
-  -webkit-transition: max-height 0.5s;
-  -moz-transition: max-height 0.5s;
-  -ms-transition: max-height 0.5s;
-  -o-transition: max-height 0.5s;
-}
 
 .sub-menu-wrap {
   position: absolute;
@@ -128,9 +110,7 @@ nav ul li {
   max-height: 70rem;
 }
 
-.sub-profile-wrap.open-menu {
-  max-height: 70rem;
-}
+
 
 .sub-menu {
   background: rgb(255, 255, 255);
@@ -208,6 +188,32 @@ img {
 }
 
 
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.sub-profile-wrap.open-menu {
+  max-height: 70rem;
+}
+.sub-profile-wrap {
+  position: absolute;
+  top: 3.2rem;
+  right: 0.3rem;
+  width: 20rem;
+  overflow: hidden;
+  max-height: 0px;
+  transition: max-height 0.5s;
+  -webkit-transition: max-height 0.5s;
+  -moz-transition: max-height 0.5s;
+  -ms-transition: max-height 0.5s;
+  -o-transition: max-height 0.5s;
+}
 .user-profile-container {
   display: flex;
   flex-direction: column;
@@ -367,4 +373,7 @@ img {
   ;
   outline: none;
   text-decoration: none;
+}
+.loginlink{
+  margin: 0 10px;
 }

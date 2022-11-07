@@ -19,7 +19,7 @@ const Header = (props) => {
     subMenu.classList.toggle("open-menu");
   };
 
-  const toggleProfile = ()=>{
+  const toggleProfile = () => {
     let subProfileMenu = document.getElementById("subProfileMenu");
     subProfileMenu.classList.toggle("open-menu")
   }
@@ -55,33 +55,33 @@ const Header = (props) => {
                     <h3>Categories</h3>
                   </div>
                   <a href="#" className="sub-menu-link">
-                       <p>Languages</p>
-                   </a>
-                  <a href="#" className="sub-menu-link">
-                       <p>Arts & Design</p>
-                   </a>
-                  <a href="#" className="sub-menu-link">
-                       <p>Soft Skills</p>
-                   </a>
-                  <a href="#" className="sub-menu-link">
-                       <p>Medis, Phogrphy & Film</p>
-                   </a>
-                  <a href="#" className="sub-menu-link">
-                      <p>Business Management</p>
+                    <p>Languages</p>
                   </a>
                   <a href="#" className="sub-menu-link">
-                      <p>Sales & Marketing</p>
+                    <p>Arts & Design</p>
                   </a>
                   <a href="#" className="sub-menu-link">
-                    
-                      <p>Technology, Science & Productivity</p>
-              
+                    <p>Soft Skills</p>
                   </a>
                   <a href="#" className="sub-menu-link">
-                      <p>Parenting & Relationships</p>
+                    <p>Medis, Phogrphy & Film</p>
                   </a>
                   <a href="#" className="sub-menu-link">
-                      <p>Kids Development</p>
+                    <p>Business Management</p>
+                  </a>
+                  <a href="#" className="sub-menu-link">
+                    <p>Sales & Marketing</p>
+                  </a>
+                  <a href="#" className="sub-menu-link">
+
+                    <p>Technology, Science & Productivity</p>
+
+                  </a>
+                  <a href="#" className="sub-menu-link">
+                    <p>Parenting & Relationships</p>
+                  </a>
+                  <a href="#" className="sub-menu-link">
+                    <p>Kids Development</p>
                   </a>
                   <MyButton>
                     Browse Courses &nbsp;
@@ -116,63 +116,81 @@ const Header = (props) => {
                 />
               </Button>
               <div className="sub-profile-wrap" id="subProfileMenu">
-                <div className="sub-menu">
-                  <div className="user-info">
-                    <h3>ahmed hamdy</h3>
+                <div className="user-profile-menu-container mat-menu-panel">
+
+                  <div className="user-profile-container">
+                    <div className="user-info-card d-flex">
+                      <div className="profile-avatar">
+                        <img src="assets/default-avatar.jpg" className="avatar" alt="" />
+                      </div>
+                      <div className="info-details">
+                        <h6>{props.userData.first_name} {props.userData.last_name}</h6>
+                        <p>{props.userData.email}</p>
+                      </div>
+
+                    </div>
                   </div>
-                  <a href="#" className="sub-menu-link">
-                    <div className="ss">
+                  <div className="user-profile-subscribed ng-star-inserted">
+                    <button routerlink="" className="btn btn-outline-light user-profile-subscribe-btn" >
+                      Subscribe
+                    </button>
+                  </div>
+                  <div class="user-profile-card__options-menu-list-container">
+                  <div class="user-profile-card__user-options-menu-list">
+                    <a class="user-profile-card__user-option-item" href="">
+                      <i class="fa-regular fa-circle-play"></i>
                       <p>My Progress</p>
+                    </a>
+                    <a class="user-profile-card__user-option-item" href="">
+                      <i class="fa-regular fa-bookmark"></i>
+                      <p >Saved Courses</p>
+                    </a>
 
-                    </div>
-                  </a>
-                  <a href="#" className="sub-menu-link">
-                    <div className="ss">
-                      <p>Saved Courses</p>
+                    <a class="user-profile-card__user-option-item" href="">
+                      <i class="fa-solid fa-certificate"></i>
+                      <p >Certificates</p>
+                    </a>
+                    <a class="user-profile-card__user-option-item " href="">
+                      <i class="fa-solid fa-gear"></i>
+                      <p >Account settings</p>
+                    </a>
+                    <a class="user-profile-card__user-option-item " href="">
+                      <i class="fa-solid fa-comments"></i>
+                      <p >Messages</p>
 
-                    </div>
-                  </a>
-                  <a href="#" className="sub-menu-link">
-                    <div className="ss">
-                      <p>Certificates</p>
-
-                    </div>
-                  </a>
-                  <a href="#" className="sub-menu-link">
-                    <div className="ss">
-                      <p>Account setting</p>
-
-                    </div>
-                  </a>
-                  <a href="#" className="sub-menu-link">
-                    <div className="ss">
-                      <p>Messages</p>
-
-                    </div>
-                  </a>
-                  <a href="/">
-                  <MyButton isOutline={false} onClick={props.LogOut}>
-                    Logout
-                  </MyButton>
+                    </a>
+                  </div>
+                  <a class="user-profile-card__purchase-log user-profile-card__user-option-item " href="">
+                    <i class="fa-solid fa-clipboard"></i>
+                    <p> Purchase Log </p>
                   </a>
                 </div>
+                <div className="btn-logout ">
+                  <a class="btn btn-link user-profile-card__user-option-item user-profile-card__btn-logout" onClick={props.LogOut}>
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <p>Logout</p>
+                  </a>
+                </div>
+                </div>
+                
               </div>
-            </>
-          ) : (
-            <>
-              <Button variant="link">
-                <a href="/login">Login</a>
-              </Button>
+            
+                </>
+        ) : (
+        <>
+          <Button variant="link" >
+            <a href="/login" className="loginlink">Login</a>
+          </Button>
 
-              <a href="/register">
-                <MyButton isOutline={false}>sign up</MyButton>
-              </a>
-            </>
+          <a href="/register">
+            <MyButton isOutline={false}>sign up</MyButton>
+          </a>
+        </>
           )}
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
-  );
+      </Navbar.Collapse>
+    </Container>
+    </Navbar >
+        );
 };
 
 export default Header;
