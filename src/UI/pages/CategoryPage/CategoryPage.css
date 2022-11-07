@@ -40,12 +40,24 @@
   }
 }
 
-@media only screen and (max-width: 580px){
-   .small-screen {
-    width: 100% !important;
+@media only screen and (max-width: 580px) {
+  .small-screen {
     display: flex !important;
     justify-content: center !important;
-    align-items: center !important;
-} 
+  }
 }
 
+@media only screen and (max-width: 768px) {
+  .option-sm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 3rem;
+  }
+  .option-small {
+    width: 50% !important;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+}
