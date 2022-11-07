@@ -22,7 +22,7 @@ function loginValidtion(user) {
 
 
 export default function Login(props) {
-
+    document.title = `Login`;
     let navigate = useNavigate()
     const [isLoading, setIsLoading] = useState(false)
     const [errorList, setErrorList] = useState([])

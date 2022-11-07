@@ -8,7 +8,7 @@ import MyButton from '../../components/Button/Button';
 import AboutThisCourseDetails from './AboutThisCourseDetails';
 
 export const CoursePage = () => {
-
+    document.title = `Course`;
     let { id } = useParams();
     const [course, setCourse] = useState({});
     const [menetor, setMenetor] = useState({});

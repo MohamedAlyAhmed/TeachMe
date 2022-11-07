@@ -5,8 +5,11 @@ import CourseCard from "../../components/CourseCard/CourseCard";
 import "./CategoryPage.css";
 
 export default function CategoryPage() {
+  
   let { courses } = useContext(DataContext);
-
+  
+  document.title = `Category`;
+  
   const [courseFilter, setCourseFilter] = useState(courses);
 
   // Filter By ( Level & Language )
