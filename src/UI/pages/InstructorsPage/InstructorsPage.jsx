@@ -7,6 +7,7 @@ import React, { useContext } from "react";
 import { DataContext } from "../../../DataContext";
 
 export const InstructorsPage = () => {
+  document.title = `Instructors`;
   let { instructors } = useContext(DataContext);
   return (
     <div>

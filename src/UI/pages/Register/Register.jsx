@@ -24,7 +24,7 @@ function registerValidtion(user) {
 
 
 export default function Register() {
-
+    document.title = `Sign up for free`;
     let navigate = useNavigate()
     const [isLoading,setIsLoading] = useState(false)
     const [errorList , setErrorList]= useState([])
@@ -61,7 +61,7 @@ export default function Register() {
             if(data.message === 'success'){
                 setIsLoading(false)                
                 navigate('/login')
-                let {data}= await axios.post(`${BASE_URL}/users`,user)
+                
 
             }
             else{
@@ -75,7 +75,7 @@ export default function Register() {
         
          <div>
             <div className=' d-flex center flex-column align-content-center align-items-center box'>
-                <h2>Register </h2>
+                <h2>Sign up for free </h2>
                 <form onSubmit={submitRegister}  className='d-flex flex-column' >
                     <TextField id="first_name" label="First Name" variant="standard" name='first_name' onChange={getUser} />
                     <TextField className='mt-3' id="last_name" label="Last Name" variant="standard" name='last_name' onChange={getUser} />

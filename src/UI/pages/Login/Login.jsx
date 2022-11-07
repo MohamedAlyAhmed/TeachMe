@@ -1,4 +1,4 @@
-import { scopedCssBaselineClasses, TextField } from '@mui/material'
+import { Input, scopedCssBaselineClasses, TextField } from '@mui/material'
 import React, { useState } from 'react'
 import axios from 'axios';
 import Joi from 'joi';
@@ -6,9 +6,15 @@ import { useNavigate } from 'react-router-dom';
 import "./Login.css"
 import "bootstrap-social/bootstrap-social.css"
 import "bootstrap-social/bootstrap-social.less"
+import { useEffect } from 'react';
 
 
-function loginValidtion(user) {
+
+
+function LoginValidtion(user) {
+
+
+
     const schema = Joi.object({
 
         password: Joi.string()
@@ -22,7 +28,7 @@ function loginValidtion(user) {
 
 
 export default function Login(props) {
-
+    document.title = `Login`;
     let navigate = useNavigate()
     const [isLoading, setIsLoading] = useState(false)
     const [errorList, setErrorList] = useState([])
@@ -33,6 +39,13 @@ export default function Login(props) {
         email: ""
     })
 
+
+
+    useEffect(() => {
+        if (localStorage.getItem('userToken')) {
+            navigate('/')
+        }
+    }, [])
     function getUser(e) {
         let myUSer = { ...user };
         myUSer[e.target.name] = e.target.value;
@@ -42,7 +55,7 @@ export default function Login(props) {
     async function submitLogin(e) {
         e.preventDefault();
 
-        let valedtion = loginValidtion(user)
+        let valedtion = LoginValidtion(user)
         console.log(valedtion);
 
 
@@ -71,35 +84,62 @@ export default function Login(props) {
 
     return (
         <div>
-            <div className='d-flex center flex-column align-content-center align-items-center box'>
-                <div className="container d-flex center flex-column align-content-center align-items-center ">
-                    <h2>Login </h2>
-                    <p>Access Your Existing Account</p>
-                    <div className='d-flex ' >
-                        <button className='btn btn-primary '>
-                            <div><i className='fa-brands fa-facebook-f '></i></div>
-                           <span> facebook login</span>
-                        </button>
-                        <button className='btn btn-primary button gbutton col'>
-                            <i className='fa-brands fa-google ficon'></i>
-                           <span> google login</span>
-                        </button></div>
+            <div className='d-flex  box'>
+                <div className="container d-flex  login-container ">
+                    <div className='login-header'>
+                        <h5 className='login-tittle'>Login </h5>
+                        <p>Access Your Existing Account</p>
+                    </div>
+                    <div className='d-flex row mt-3' >
+                        <div className=' d-flex justify-content-center mt-2 col-12 col-md-6 social-button-container'>
+                            <button className='btn social-button fbutton '>
+                                <div><i className='fa-brands fa-facebook-f '></i></div>
+                                <span> facebook login</span>
+                            </button>
+                        </div>
+                        <div className=' d-flex justify-content-center mt-2 col-12 col-md-6 social-button-container'>
+                            <button className='btn social-button gbutton '>
+                                <i className='fa-brands fa-google ficon'></i>
+                                <span> google login</span>
+                            </button>
+                        </div>
+                    </div>
+                    <p className='or'><span>OR</span></p>
+
                     <form onSubmit={submitLogin} className='d-flex flex-column' >
 
-                        <TextField className='mt-2' id="email" label="Email" variant="standard" name='email' onChange={getUser} />
-                        <TextField
-                            className='mt-2'
-                            id="password"
-                            label="Password"
-                            type="password"
-                            autoComplete="current-password"
-                            variant="standard"
-                            name='password'
-                            onChange={getUser}
-                        />
-                        <button type='submit' className='btn btn-outline-info mt-3'>
-                            {isLoading ? <i className='fas fa-spinner fa-spin'></i> : 'Login'}
-                        </button>
+                        <div className='d-flex flex-column mb-3'>
+                            <TextField className='mt-2' id="email" label="Email" variant="filled" name='email' onChange={getUser} />
+                            <TextField
+                                className='mt-3'
+                                id="password"
+                                label="Password"
+                                type="password"
+                                autoComplete="current-password"
+                                variant="filled"
+                                name='password'
+                                onChange={getUser}
+                            />
+                        </div>
+                        <div className='text-center btn-container'>
+                            <button type='submit' className='btn btn-danger mt-3 submit-btn d-flex justify-content-center align-items-center'>
+                                {isLoading ? <i className='fas fa-spinner fa-spin'></i> :
+                                    <>
+                                        <i class="fa-regular fa-envelope"></i>
+                                        <div>Login with your email</div>
+                                        
+                                    </>}
+                            </button>
+                        </div>
+                        <div className="d-flex justify-content-center forget-link">
+                            <button type="button" className="btn btn-link link-underline"> Forgot your password? </button>
+                        </div>
+                        <div className="goto-signup">
+                            <p className="goto-signup-text">
+                               <span>Don't have an account?    </span>  
+                                <button className="btn btn-link">  Sign up</button>
+                            </p>
+                        </div>
                     </form>
                     {error ? <div className='alert alert-danger' >{error} </div> : ''}
                     {errorList.map((error, index) => {

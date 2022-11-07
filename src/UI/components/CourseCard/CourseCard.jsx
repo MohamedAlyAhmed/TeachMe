@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./CourseCard.css";
 
 export default function CourseCard({ course }) {
@@ -14,39 +15,44 @@ export default function CourseCard({ course }) {
   }
   return (
     <div>
-      <div
-        className="card shadow-sm rounded-3 m-3"
-        style={{ width: "15rem", height: "16rem" }}
+      <Link
+        to={`/course/${course.id}`}
+        style={{ textDecoration: "none", color: "black" }}
       >
-        <img
-          src={course.image}
-          className="card-img-top course-image"
-          alt="course image"
-        />
-        <div className="card-body position-relative">
-          <div className=" text-light duration d-flex ">
-            <div className="mx-1">
-              <i class="fa-regular fa-clock"></i>
+        <div
+          className="card shadow-sm rounded-3 m-3"
+          style={{ width: "15rem", height: "16rem" }}
+        >
+          <img
+            src={course.image}
+            className="card-img-top course-image"
+            alt="course image"
+          />
+          <div className="card-body position-relative">
+            <div className=" text-light duration d-flex ">
+              <div className="mx-1">
+                <i class="fa-regular fa-clock"></i>
+              </div>
+              {secondsToHms(course.duration)} / {course.numberOfLessons} lessons
             </div>
-            {secondsToHms(course.duration)} / {course.numberOfLessons} lessons
-          </div>
-          <p className="card-title mb-2 fw-bold">{course.name}</p>
-          <div className="d-flex justify-content-between align-items-center">
-            <p
-              className="card-text align-self-center mb-0 text-secondary instructor_name"
-              style={{ fontSize: 14 }}
-            >
-              {course.mentors[0].name}
-            </p>
-            <button
-              className="btn btn-light rounded-5 border"
-              title="Save for later"
-            >
-              <i className="fa-regular fa-bookmark"></i>
-            </button>
+            <p className="card-title mb-2 fw-bold">{course.name}</p>
+            <div className="d-flex justify-content-between align-items-center">
+              <p
+                className="card-text align-self-center mb-0 text-secondary instructor_name"
+                style={{ fontSize: 14 }}
+              >
+                {course.mentors[0].name}
+              </p>
+              <button
+                className="btn btn-light rounded-5 border"
+                title="Save for later"
+              >
+                <i className="fa-regular fa-bookmark"></i>
+              </button>
+            </div>
           </div>
         </div>
-      </div>
+      </Link>
     </div>
   );
 }

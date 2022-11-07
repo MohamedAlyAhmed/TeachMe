@@ -11,7 +11,7 @@
 }
 
 .card:hover .duration {
-  top: -17%;
+  top: -16%;
   visibility: visible;
   cursor: pointer;
 }
