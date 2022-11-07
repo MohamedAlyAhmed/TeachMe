@@ -3,19 +3,19 @@ import "./map.css"
 import MyButton from "../../../components/Button/Button";
 import React,{Fragment,useState} from 'react'
 import ReactVisibilitySensor from "react-visibility-sensor";
-// import CountUp from 'react-countup';
+ import CountUp from 'react-countup';
 
 function Counter() {
   return (
     <div >
-      <div style={{fontSize:'150px' }}>
-        {/* <CountUp
+      <div style={{fontSize:'100px' }}>
+        <CountUp
           start={3000000}
           end={3453140}
           duration={6}
           
           separator=","
-        />     */}
+        />    
       </div>
     </div>
   );
