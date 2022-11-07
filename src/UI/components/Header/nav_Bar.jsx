@@ -161,7 +161,7 @@ const Header = (props) => {
           ) : (
             <>
               <Button variant="link">
-                <a href="/login">Login</a>
+                <a className="px-3 tx-accentColor" href="/login">Login</a>
               </Button>
 
               <a href="/register">

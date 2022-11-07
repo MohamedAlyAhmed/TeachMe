@@ -4,7 +4,6 @@ import { DataContext } from "../../../DataContext";
 import CourseCard from "../../components/CourseCard/CourseCard";
 import "./CategoryPage.css";
 import { useParams } from "react-router-dom";
-import { useEffect } from "react";
 
 export default function CategoryPage() {
   const { courses } = useContext(DataContext);
@@ -16,83 +15,27 @@ export default function CategoryPage() {
     document.title = `Category`;
   }
 
-  const [courseFilter, setCourseFilter] = useState(courses);
-  const [coursesCategory, setCoursesCategory] = useState({});
-
-  useEffect(() => {
-    console.log(category);
-    if (category == "Languages") {
-      setCoursesCategory(courses.filter((e) => e.category == "Languages"));
-    } else if (category == "Soft-Skills") {
-      setCoursesCategory(courses.filter((e) => e.category == "Soft-Skills"));
-    } else if (category == "Arts-&-Design") {
-      setCoursesCategory(courses.filter((e) => e.category == "Arts-&-Design"));
-    } else if (category == "Media,-Photography-&-Film") {
-      setCoursesCategory(
-        courses.filter((e) => e.category == "Media,-Photography-&-Film")
-      );
-    } else if (category == "Business-Management") {
-      setCoursesCategory(
-        courses.filter((e) => e.category == "Business-Management")
-      );
-    } else if (category == "Sales-&-Marketing") {
-      setCoursesCategory(
-        courses.filter((e) => e.category == "Sales-&-Marketing")
-      );
-    } else if (category == "Technology,-Science-&-Productivity") {
-      setCoursesCategory(
-        courses.filter(
-          (e) => e.category == "Technology,-Science-&-Productivity"
-        )
-      );
-    } else if (category == "Parenting-&-Relationships") {
-      setCoursesCategory(
-        courses.filter((e) => e.category == "Parenting-&-Relationships")
-      );
-    } else if (category == "Kids-Development") {
-      setCoursesCategory(
-        courses.filter((e) => e.category == "Kids-Development")
-      );
-    } else if (category == "Lifestyle-&-Health") {
-      setCoursesCategory(
-        courses.filter((e) => e.category == "Lifestyle-&-Health")
-      );
-    } else if (category == "Entrepreneurship") {
-      setCoursesCategory(
-        courses.filter((e) => e.category == "Entrepreneurship")
-      );
-    } else if (category == "Mental-Health-&-Wellness") {
-      setCoursesCategory(
-        courses.filter((e) => e.category == "Mental-Health-&-Wellness")
-      );
-    } else if (category == "Education") {
-      setCoursesCategory(courses.filter((e) => e.category == "Education"));
-    }
-  }, []);
+  const coursesCategory = courses.filter((e) => e.category == category);
+  const [courseFilter, setCourseFilter] = useState(coursesCategory);
 
   // Filter By ( Level & Language )
   const optionSelected = () => {
-    let LevelOption = document.querySelector("#levelFilter");
-    let level = LevelOption.value;
 
-    let LanguageOption = document.querySelector("#LanguageFilter");
-    let language = LanguageOption.value;
+    let level = document.querySelector("#levelFilter").value;
+    let language = document.querySelector("#LanguageFilter").value;
 
-    if ((level == 1 || level == 2) && (language == 1 || language == 2)) {
-      setCourseFilter(
-        coursesCategory.filter(
-          (e) => e.level == level && e.courseLanguage == language
-        )
-      );
-    } else if (level == 1 || level == 2) {
-      setCourseFilter(coursesCategory.filter((e) => e.level == level));
-    } else if (language == 1 || language == 2) {
-      setCourseFilter(
-        coursesCategory.filter((e) => e.courseLanguage == language)
-      );
-    } else {
-      setCourseFilter(coursesCategory);
+    let finalRes = coursesCategory;
+
+    if (level != 0) {
+      finalRes = finalRes.filter((e) => e.level == level);
     }
+
+    if (language != 0) {
+      finalRes = finalRes.filter((e) => e.courseLanguage == language);
+    }
+
+    setCourseFilter(finalRes);
+
   };
 
   return (
@@ -118,7 +61,9 @@ export default function CategoryPage() {
               className="form-select w-25 h-25 me-3 option-small"
               onChange={() => optionSelected()}
             >
-              <option selected="selected">All Levels</option>
+              <option value={0} selected="selected">
+                All Levels
+              </option>
               <option value={1}>Level 1</option>
               <option value={2}>Level 2</option>
             </select>
@@ -128,7 +73,9 @@ export default function CategoryPage() {
               className="form-select w-25 h-25 me-3 option-small"
               onChange={() => optionSelected()}
             >
-              <option selected="selected">All languages</option>
+              <option value={0} selected="selected">
+                All languages
+              </option>
               <option value={1}>Language 1</option>
               <option value={2}>Language 2</option>
             </select>
