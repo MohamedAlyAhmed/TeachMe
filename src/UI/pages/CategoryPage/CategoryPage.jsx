@@ -12,7 +12,7 @@ export default function CategoryPage() {
   if (category !== undefined) {
     document.title = `${category}`;
   } else {
-    document.title = `Category`;
+    document.title = `All Courses`;
   }
 
   const coursesCategory = courses.filter((e) => e.category == category);
