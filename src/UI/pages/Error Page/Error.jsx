@@ -2,6 +2,7 @@ import React from "react";
 import "./Error.css";
 
 export default function Error() {
+  document.title = `Error 404`;
   return (
     <div>
       <section class="page_404">
