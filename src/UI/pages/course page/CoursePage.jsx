@@ -1,17 +1,19 @@
 import { Grid } from '@mui/material';
 import { fontSize } from '@mui/system';
 import axios from 'axios';
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 import { BASE_URL } from '../../../DataContext';
 import MyButton from '../../components/Button/Button';
 import AboutThisCourseDetails from './AboutThisCourseDetails';
+import { DataContext } from "../../../DataContext";
 
 export const CoursePage = () => {
     document.title = `Course`;
     let { id } = useParams();
     const [course, setCourse] = useState({});
     const [menetor, setMenetor] = useState({});
+    let { sections } = useContext(DataContext);
 
     const [isLoading, setisLoading] = useState(false);
 
@@ -50,12 +52,12 @@ export const CoursePage = () => {
             {
                 isLoading ?
                     <div className="container ">
-                        <div className="row my-5" style={{ height: 400 }}>
-                            <div className="col-8 h-100 " >
+                        <div className="row my-5" >
+                            <div className="col-12  col-lg-8 " style={{ height: 400 }} >
                                 <img className='w-100 h-100 rounded-3' src={course.image} alt={course.name} style={{ objectFit: "cover" }} />
                             </div>
-                            <div className="col-4 h-100">
-                                <div className='ms-4 shadow h-100 body rounded-3 p-3'  >
+                            <div className=" col-12 col-lg-4 mt-5 mt-lg-0  " style={{ height: 400 }}>
+                                <div className=' shadow h-100  rounded-3 p-3' style={{ fontSize: 14 }} >
                                     <h2 className=' text-start fw-bold'>{course.name}</h2>
                                     <div>
                                         <span>
@@ -173,9 +175,26 @@ export const CoursePage = () => {
                         </section>
 
 
+                        <section>
+                            {sections.map(e =>
+                                <div className='shadow-lg h-100  rounded-3 p-3 my-5'>
+                                    <p className='fs-5'>{e.title}</p>
+                                    {e.lessons.map((l, i) =>
+                                        <div>
+                                            <p className='mt-3 fw-light'>Lesson {i}: {l.title}</p>
+                                            {
+                                                i != e.lessons.length - 1 ? <hr /> : ''
+                                            }
+                                        </div>
+                                    )}
+                                </div>
+                            )}
+                        </section>
+
                     </div>
                     :
                     <h2>Is Loading</h2>
+
             }
         </div >
     );

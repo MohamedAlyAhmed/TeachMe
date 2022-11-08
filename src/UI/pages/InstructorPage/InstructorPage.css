@@ -1,0 +1,88 @@
+*{
+  padding: 0px;
+  margin: 0px; 
+  box-sizing: border-box; 
+}
+
+.myontainer1{
+    /* background-color: burlywood; */
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+}
+
+.item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+
+}
+.cardInfo{
+background-color: #EEEEEE;
+border-radius: 10px;
+border: none;
+}
+.myrow{
+
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+.viewRow{
+    display: flex;
+    margin-right: 6rem;
+}
+
+.icon1{
+    font-size: 20px;
+margin-right: 17px;
+}
+.icon2{
+    font-size: 20px;
+margin-right: 11px;
+margin-left: 11px;
+}
+/* ** */
+.myontainer2{
+    display: block;
+    
+    height: 200px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    padding-left: 240px;
+}
+.myontainer2 h3{
+    font-size: 23px;
+    margin-top: 20px;
+  
+}
+
+.myontainer2 p{
+    width: 70%;
+}
+
+    
+ 
+    
+  .read-or-hide{
+    color: rgb(5, 105, 110);
+    cursor: pointer;
+  }
+
+  .myontainer3{
+    background-color: burlywood;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+}

@@ -91,7 +91,10 @@ const Header = (props) => {
               </div>
             </div>
 
-            <MyButton isOutline={true}>Subscribe</MyButton>
+            {/* <MyButton isOutline={true}>Subscribe</MyButton> */}
+            <a href="/instructor">
+              <MyButton isOutline={true}>Subscribe</MyButton>
+            </a>&nbsp;
           </Nav>
 
           <form className="form">

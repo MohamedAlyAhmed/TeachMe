@@ -14,6 +14,8 @@ import Header from "./UI/components/Header/nav_Bar";
 import DataProvider from "./DataContext";
 import Footer from "./UI/components/Footer/Footer";
 import {InstructorsPage} from "./UI/pages/InstructorsPage/InstructorsPage";
+import InstructorCard from "./UI/components/InstructorCard/InstructorCard";
+import {InstructorPage} from "./UI/pages/InstructorPage/InstructorPage";
 
 const LazyLandingPage = React.lazy(() =>
   import("./UI/pages/LandingPage/langingPage")
@@ -121,6 +123,14 @@ function App() {
               element={
                 <React.Suspense>
                   <InstructorsPage />
+                </React.Suspense>
+              }
+            />
+            <Route
+              path="instructor"
+              element={
+                <React.Suspense>
+                  <InstructorPage />
                 </React.Suspense>
               }
             />
