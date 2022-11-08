@@ -3,9 +3,13 @@ import MyButton from "../../components/Button/Button";
 import { Card } from "react-bootstrap";
 import InstructorCard from "../../components/InstructorCard/InstructorCard";
 import Picks from "../LandingPage/Picks/Picks";
-import React, { useContext,useState } from "react";
+import React, { useContext,useState,useEffect } from "react";
 import { DataContext } from "../../../DataContext";
 import CourseCard from "../../components/CourseCard/CourseCard";
+import { useParams } from "react-router-dom";
+import { BASE_URL } from '../../../DataContext';
+import axios from 'axios';
+
 
 const ReadMore = ({ children }) => {
     const text = children;
@@ -24,14 +28,35 @@ const ReadMore = ({ children }) => {
   };
 
 export const InstructorPage = () => {
-   let { courses } = useContext(DataContext);
+  document.title = `Instructor`;
+
+   const { instructors } = useContext(DataContext);
+  
+  let { mainUserId } = useParams();
+  const [instructor, setInstructor] = useState({});
+
+
+  useEffect(() => {
+      
+
+          axios.get(`${BASE_URL}/instructors/${mainUserId}`).then((instructors) => {
+            setInstructor(instructors.data);
+          });
+
+
+     
+
+
+  }, [])
+ 
+
   return (
     <>
 <div className="myontainer1">
     <div className="item">
-    <img src="https://static.toiimg.com/photo/83890830/83890830.jpg?v=3" alt="instructor" className="mb-3 instructor-img"/>
-    <h4 className="fw-bold mb-3 ">Khaled Habib </h4>
-    <p className="tx-accentColor ">Professor of Marketing and Management</p>
+    <img src={instructor.image} alt={instructor.name} className="mb-3 instructor-img"/>
+    <h4 className="fw-bold mb-3 ">{instructor.name}</h4>
+    <p className="tx-accentColor ">{instructor.title}</p>
 
     </div>
      <Card
@@ -74,14 +99,17 @@ export const InstructorPage = () => {
       
      <h5>
         <ReadMore>
-        Khaled Habib is a senior management and Human resources executive as well as a well-rounded academic, enjoying a rich profile of regional and global expertise, with a proven track record in organization design, development, change and performance management, as well as restructuring, talent management,
-         and executive leadership coaching.
+          pjesaipfipwe
+          {/* <div>
+          {instructor.description}
+
+          </div> */}
         </ReadMore>
       </h5>
      </div>
 </div>
 
-<div className="container w-100">
+{/* <div className="container w-100">
           <div className="row ">
             {courses.map((e) => (
               <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 small-screen">
@@ -89,7 +117,7 @@ export const InstructorPage = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
      </>
 
        

@@ -17,20 +17,30 @@ import { InstructorsPage } from "./UI/pages/InstructorsPage/InstructorsPage";
 import InstructorCard from "./UI/components/InstructorCard/InstructorCard";
 import { InstructorPage } from "./UI/pages/InstructorPage/InstructorPage";
 
+//Landing Page LazyLoading 
 const LazyLandingPage = React.lazy(() =>
   import("./UI/pages/LandingPage/langingPage")
 );
-
+// Course Page LazyLoading
 const LazyCoursePage = React.lazy(() =>
   import("./UI/pages/course page/CoursePage"));
-//Category LazyLoading Page
+//Category LazyLoading 
 const LazyCategoryPage = React.lazy(() =>
   import("./UI/pages/CategoryPage/CategoryPage")
 );
 
+<<<<<<< HEAD
 const LazyWatchPage = React.lazy(() =>
   import("./UI/pages/watch page/WatchPage")
 );
+=======
+//Error LazyLoading 
+const LazyErrorPage = React.lazy(() =>
+  import("./UI/pages/Error Page/Error")
+);
+
+
+>>>>>>> e2f0d0e7b7e66bb34b6c4cc1d5e0884b86eef1c3
 //Instructors LazyLoading Page
 // const LazyInstructorsPage = React.lazy(() =>
 //   import("./UI/pages/InstructorsPage/InstructorsPage")
@@ -131,7 +141,7 @@ function App() {
               }
             />
             <Route
-              path="instructor/:id"
+              path="instructor/:mainUserId"
               element={
                 <React.Suspense>
                   <InstructorPage />
@@ -140,6 +150,7 @@ function App() {
             />
 
             <Route
+<<<<<<< HEAD
               path="watch/:id"
               element={
                 <React.Suspense>
@@ -147,6 +158,18 @@ function App() {
                 </React.Suspense>
               }
             />
+=======
+              path="*"
+              element={
+                <React.Suspense>
+                  <LazyErrorPage/>
+                </React.Suspense>
+              }
+            />
+
+
+
+>>>>>>> e2f0d0e7b7e66bb34b6c4cc1d5e0884b86eef1c3
           </Routes>
         </Router>
         <Footer />

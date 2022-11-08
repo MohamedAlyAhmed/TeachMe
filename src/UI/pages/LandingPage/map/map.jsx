@@ -29,9 +29,10 @@ export function Map  ()
             <div>
          
               <div class="text-center mt-5">
+                <a href="http://localhost:4000/category">
               <MyButton isOutline={true} >
                 Browse Courses
-              </MyButton></div>
+              </MyButton></a></div>
 
           <header className="myHeader">
          
