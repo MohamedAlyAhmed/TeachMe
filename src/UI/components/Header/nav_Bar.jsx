@@ -97,7 +97,7 @@ const Header = (props) => {
                   <a href={`${BASE_CATEGORY}/Education`} className="sub-menu-link">
                     <p>Education</p>
                   </a>
-                  <a href="#">
+                  <a href={`${BASE_CATEGORY}`}>
                   <MyButton>
                     Browse Courses &nbsp;
                     <i className="fa-solid fa-arrow-right"></i>

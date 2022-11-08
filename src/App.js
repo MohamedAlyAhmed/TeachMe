@@ -31,7 +31,7 @@ const LazyCategoryPage = React.lazy(() =>
 
 //Error LazyLoading 
 const LazyErrorPage = React.lazy(() =>
-  import("./UI/pages/CategoryPage/CategoryPage")
+  import("./UI/pages/Error Page/Error")
 );
 
 
