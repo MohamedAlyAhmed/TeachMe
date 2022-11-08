@@ -92,7 +92,7 @@ const Header = (props) => {
             </div>
 
             {/* <MyButton isOutline={true}>Subscribe</MyButton> */}
-            <a href="/instructor">
+            <a href="#">
               <MyButton isOutline={true}>Subscribe</MyButton>
             </a>&nbsp;
           </Nav>

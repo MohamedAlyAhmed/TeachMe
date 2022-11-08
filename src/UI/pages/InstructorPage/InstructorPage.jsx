@@ -24,7 +24,7 @@ const ReadMore = ({ children }) => {
   };
 
 export const InstructorPage = () => {
-//   let { instructor } = useContext(DataContext);
+   let { courses } = useContext(DataContext);
   return (
     <>
 <div className="myontainer1">
@@ -70,25 +70,26 @@ export const InstructorPage = () => {
 <div className="myontainer2">
     <h3 className="fw-bold ">About Mentor</h3>
    
-     
-      <h5>
+     <div className="instructorInfo">
+      
+     <h5>
         <ReadMore>
         Khaled Habib is a senior management and Human resources executive as well as a well-rounded academic, enjoying a rich profile of regional and global expertise, with a proven track record in organization design, development, change and performance management, as well as restructuring, talent management,
          and executive leadership coaching.
         </ReadMore>
       </h5>
-</div>
-<div className="myontainer3">
-    <div className="item">
-    <img src="https://static.toiimg.com/photo/83890830/83890830.jpg?v=3" alt="instructor" className="mb-3 instructor-img"/>
-    <h4 className="fw-bold mb-3 ">Khaled Habib </h4>
-<div>
-<p className="tx-accentColor ">Professor of Marketing and Management</p>
-
-</div>
-    </div>
+     </div>
 </div>
 
+<div className="container w-100">
+          <div className="row ">
+            {courses.map((e) => (
+              <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 small-screen">
+                <CourseCard course={e} />
+              </div>
+            ))}
+          </div>
+        </div>
      </>
 
        
