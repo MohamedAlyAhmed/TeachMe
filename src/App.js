@@ -17,7 +17,6 @@ import {InstructorsPage} from "./UI/pages/InstructorsPage/InstructorsPage";
 import InstructorCard from "./UI/components/InstructorCard/InstructorCard";
 import {InstructorPage} from "./UI/pages/InstructorPage/InstructorPage";
 
-
 //Landing Page LazyLoading 
 const LazyLandingPage = React.lazy(() =>
   import("./UI/pages/LandingPage/langingPage")
@@ -32,7 +31,7 @@ const LazyCategoryPage = React.lazy(() =>
 
 //Error LazyLoading 
 const LazyErrorPage = React.lazy(() =>
-  import("./UI/pages/Error Page/Error")
+  import("./UI/pages/CategoryPage/CategoryPage")
 );
 
 
