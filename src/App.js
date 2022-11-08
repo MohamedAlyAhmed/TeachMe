@@ -13,9 +13,9 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 import Header from "./UI/components/Header/nav_Bar";
 import DataProvider from "./DataContext";
 import Footer from "./UI/components/Footer/Footer";
-import {InstructorsPage} from "./UI/pages/InstructorsPage/InstructorsPage";
+import { InstructorsPage } from "./UI/pages/InstructorsPage/InstructorsPage";
 import InstructorCard from "./UI/components/InstructorCard/InstructorCard";
-import {InstructorPage} from "./UI/pages/InstructorPage/InstructorPage";
+import { InstructorPage } from "./UI/pages/InstructorPage/InstructorPage";
 
 const LazyLandingPage = React.lazy(() =>
   import("./UI/pages/LandingPage/langingPage")
@@ -26,6 +26,10 @@ const LazyCoursePage = React.lazy(() =>
 //Category LazyLoading Page
 const LazyCategoryPage = React.lazy(() =>
   import("./UI/pages/CategoryPage/CategoryPage")
+);
+
+const LazyWatchPage = React.lazy(() =>
+  import("./UI/pages/watch page/WatchPage")
 );
 //Instructors LazyLoading Page
 // const LazyInstructorsPage = React.lazy(() =>
@@ -109,7 +113,7 @@ function App() {
                 </React.Suspense>
               }
             />
-              <Route
+            <Route
               path="category/:category"
               element={
                 <React.Suspense>
@@ -117,8 +121,8 @@ function App() {
                 </React.Suspense>
               }
             />
-             
-             <Route
+
+            <Route
               path="instructors"
               element={
                 <React.Suspense>
@@ -131,6 +135,15 @@ function App() {
               element={
                 <React.Suspense>
                   <InstructorPage />
+                </React.Suspense>
+              }
+            />
+
+            <Route
+              path="watch/:id"
+              element={
+                <React.Suspense>
+                  <LazyWatchPage />
                 </React.Suspense>
               }
             />
