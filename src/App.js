@@ -127,7 +127,7 @@ function App() {
               }
             />
             <Route
-              path="instructor/:id"
+              path="instructor/:mainUserId"
               element={
                 <React.Suspense>
                   <InstructorPage />
