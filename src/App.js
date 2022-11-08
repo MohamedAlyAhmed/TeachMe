@@ -29,18 +29,15 @@ const LazyCategoryPage = React.lazy(() =>
   import("./UI/pages/CategoryPage/CategoryPage")
 );
 
-<<<<<<< HEAD
 const LazyWatchPage = React.lazy(() =>
   import("./UI/pages/watch page/WatchPage")
 );
-=======
-//Error LazyLoading 
+//Error LazyLoading
 const LazyErrorPage = React.lazy(() =>
   import("./UI/pages/Error Page/Error")
 );
 
 
->>>>>>> e2f0d0e7b7e66bb34b6c4cc1d5e0884b86eef1c3
 //Instructors LazyLoading Page
 // const LazyInstructorsPage = React.lazy(() =>
 //   import("./UI/pages/InstructorsPage/InstructorsPage")
@@ -150,7 +147,6 @@ function App() {
             />
 
             <Route
-<<<<<<< HEAD
               path="watch/:id"
               element={
                 <React.Suspense>
@@ -158,18 +154,17 @@ function App() {
                 </React.Suspense>
               }
             />
-=======
+            <Route
               path="*"
               element={
                 <React.Suspense>
-                  <LazyErrorPage/>
+                  <LazyErrorPage />
                 </React.Suspense>
               }
             />
 
 
 
->>>>>>> e2f0d0e7b7e66bb34b6c4cc1d5e0884b86eef1c3
           </Routes>
         </Router>
         <Footer />
