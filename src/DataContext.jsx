@@ -10,6 +10,7 @@ export default function DataProvider(props) {
   let [instructors, setInstructors] = useState([]);
   let [users, setUsers] = useState([]);
   let [enrolls, setEnrolls] = useState([]);
+  let [sections, setSections] = useState([]);
 
   useEffect(() => {
     //get Courses Data
@@ -32,11 +33,16 @@ export default function DataProvider(props) {
     axios.get(`${BASE_URL}/enrolls`).then((res) => {
       setEnrolls(res.data);
     });
+    //get sections Data
+    axios.get(`${BASE_URL}/sections`).then((res) => {
+      setSections(res.data);
+    });
+
   }, []);
 
   return (
     <DataContext.Provider
-      value={{ courses, categories, instructors, users, enrolls }}
+      value={{ courses, categories, instructors, users, enrolls, sections }}
     >
       {props.children}
     </DataContext.Provider>
