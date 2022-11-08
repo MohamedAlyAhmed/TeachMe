@@ -17,16 +17,25 @@ import {InstructorsPage} from "./UI/pages/InstructorsPage/InstructorsPage";
 import InstructorCard from "./UI/components/InstructorCard/InstructorCard";
 import {InstructorPage} from "./UI/pages/InstructorPage/InstructorPage";
 
+
+//Landing Page LazyLoading 
 const LazyLandingPage = React.lazy(() =>
   import("./UI/pages/LandingPage/langingPage")
 );
-
+// Course Page LazyLoading
 const LazyCoursePage = React.lazy(() =>
   import("./UI/pages/course page/CoursePage"));
-//Category LazyLoading Page
+//Category LazyLoading 
 const LazyCategoryPage = React.lazy(() =>
   import("./UI/pages/CategoryPage/CategoryPage")
 );
+
+//Error LazyLoading 
+const LazyErrorPage = React.lazy(() =>
+  import("./UI/pages/Error Page/Error")
+);
+
+
 //Instructors LazyLoading Page
 // const LazyInstructorsPage = React.lazy(() =>
 //   import("./UI/pages/InstructorsPage/InstructorsPage")
@@ -134,6 +143,18 @@ function App() {
                 </React.Suspense>
               }
             />
+
+            <Route
+              path="*"
+              element={
+                <React.Suspense>
+                  <LazyErrorPage/>
+                </React.Suspense>
+              }
+            />
+
+
+
           </Routes>
         </Router>
         <Footer />
