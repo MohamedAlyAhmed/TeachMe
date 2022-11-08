@@ -29,7 +29,7 @@ const Header = (props) => {
     <Navbar bg="#fff" expand="lg">
       <Container
         fluid
-        className="d-flex justify-content-center align-items-center"
+        className="d-flex justify-content-between align-items-center"
       >
         <a href="http://localhost:4000/"> <p className="logo">
           Teach <span>Me</span>&nbsp;&nbsp;&nbsp;
@@ -45,14 +45,15 @@ const Header = (props) => {
             <a href="/instructors" style={{ color: "black", textDecoration : "none" }}>
               <Button variant="">Instructors</Button>
             </a>&nbsp;
-            <div>
+            
+            <div >
               <Button onClick={toggleMenus} className="user-pic" variant="">
                 Courses &nbsp;
                 <i class="fa-solid fa-angle-down"></i>
               </Button>&nbsp;&nbsp;&nbsp;&nbsp;
 
-              <div className="sub-menu-wrap" id="subMenu">
-                <div className="sub-menu">
+              <div className="sub-menu-wrap " id="subMenu">
+                <div className="sub-menu shadow">
                   <div className="header">
                     <h3>Categories</h3>
                   </div>
