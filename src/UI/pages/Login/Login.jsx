@@ -46,6 +46,11 @@ export default function Login(props) {
             navigate('/')
         }
     }, [])
+
+
+    function gotoSignup(){
+        navigate('/register')
+    }
     function getUser(e) {
         let myUSer = { ...user };
         myUSer[e.target.name] = e.target.value;
@@ -137,7 +142,7 @@ export default function Login(props) {
                         <div className="goto-signup">
                             <p className="goto-signup-text">
                                <span>Don't have an account?    </span>  
-                                <button className="btn btn-link">  Sign up</button>
+                                <button className="btn btn-link" onClick={gotoSignup}>  Sign up</button>
                             </p>
                         </div>
                     </form>
