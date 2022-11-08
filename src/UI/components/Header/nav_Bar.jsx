@@ -11,6 +11,7 @@ import "./nav_Bar.css";
 import MyButton from "../Button/Button";
 
 const Header = (props) => {
+  const BASE_CATEGORY = 'http://localhost:4000/category';
   // const navegator = useNavigate();
 
   const toggleMenus = () => {
@@ -30,9 +31,10 @@ const Header = (props) => {
         fluid
         className="d-flex justify-content-center align-items-center"
       >
-        <p className="logo">
+        <a href="http://localhost:4000/"> <p className="logo">
           Teach <span>Me</span>&nbsp;&nbsp;&nbsp;
-        </p>
+        </p></a>
+       
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -40,7 +42,7 @@ const Header = (props) => {
             // style={{ maxHeight: "100px" }}
             navbarScroll
           >
-            <a href="/instructors">
+            <a href="/instructors" style={{ color: "black", textDecoration : "none" }}>
               <Button variant="">Instructors</Button>
             </a>&nbsp;
             <div>
@@ -54,39 +56,53 @@ const Header = (props) => {
                   <div className="header">
                     <h3>Categories</h3>
                   </div>
-                  <a href="#" className="sub-menu-link">
+                  <a href={`${BASE_CATEGORY}/Languages`} className="sub-menu-link">
                     <p>Languages</p>
                   </a>
-                  <a href="#" className="sub-menu-link">
+                  <a href={`${BASE_CATEGORY}/Arts-&-Design`} className="sub-menu-link">
                     <p>Arts & Design</p>
                   </a>
-                  <a href="#" className="sub-menu-link">
+                  <a href={`${BASE_CATEGORY}/Soft-Skills`} className="sub-menu-link">
                     <p>Soft Skills</p>
                   </a>
-                  <a href="#" className="sub-menu-link">
+                  <a href={`${BASE_CATEGORY}/Media,-Photography-&-Film`} className="sub-menu-link">
                     <p>Medis, Phogrphy & Film</p>
                   </a>
-                  <a href="#" className="sub-menu-link">
+                  <a href={`${BASE_CATEGORY}/Business-Management`} className="sub-menu-link">
                     <p>Business Management</p>
                   </a>
-                  <a href="#" className="sub-menu-link">
+                  <a href={`${BASE_CATEGORY}/Sales-&-Marketing`} className="sub-menu-link">
                     <p>Sales & Marketing</p>
                   </a>
-                  <a href="#" className="sub-menu-link">
+                  <a href={`${BASE_CATEGORY}/Technology,-Science-&-Productivity`} className="sub-menu-link">
 
                     <p>Technology, Science & Productivity</p>
 
                   </a>
-                  <a href="#" className="sub-menu-link">
+                  <a href={`${BASE_CATEGORY}/Parenting-&-Relationships`} className="sub-menu-link">
                     <p>Parenting & Relationships</p>
                   </a>
-                  <a href="#" className="sub-menu-link">
+                  <a href={`${BASE_CATEGORY}/Kids-Development`} className="sub-menu-link">
                     <p>Kids Development</p>
                   </a>
+                  <a href={`${BASE_CATEGORY}/Lifestyle-&-Health`} className="sub-menu-link">
+                    <p>Lifestyle & Health</p>
+                  </a>
+                  <a href={`${BASE_CATEGORY}/Entrepreneurship`} className="sub-menu-link">
+                    <p>Entrepreneurship</p>
+                  </a>
+                  <a href={`${BASE_CATEGORY}/Mental-Health-&-Wellness`} className="sub-menu-link">
+                    <p>Mental Health & Wellness</p>
+                  </a>
+                  <a href={`${BASE_CATEGORY}/Education`} className="sub-menu-link">
+                    <p>Education</p>
+                  </a>
+                  <a href="#">
                   <MyButton>
                     Browse Courses &nbsp;
                     <i className="fa-solid fa-arrow-right"></i>
                   </MyButton>
+                  </a>
                 </div>
               </div>
             </div>
