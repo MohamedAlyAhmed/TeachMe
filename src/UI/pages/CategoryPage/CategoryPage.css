@@ -10,6 +10,18 @@
   padding: 4rem !important;
 }
 
+.gradient-div1 {
+  width: 100% !important;
+  height: 9rem !important;
+  background-image: linear-gradient(
+    180deg,
+    #add1d7,
+    #adced483,
+    rgba(255, 255, 255, 0.158)
+  ) !important;
+  padding: 4rem !important;
+}
+
 .category-name {
   font-size: 1.5rem;
   font-weight: 500;

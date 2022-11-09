@@ -59,6 +59,16 @@ margin-left: 11px;
     align-content: center;
     padding-left: 240px;
 }
+.instructorInfo{
+    padding: 5vw;
+
+}
+.instructorInfo h5{
+margin: 0;
+padding: 0;
+
+}
+
 .myontainer2 h3{
     font-size: 23px;
     margin-top: 20px;

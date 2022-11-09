@@ -5,7 +5,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Register from "./UI/pages/Register/Register";
 import Login from "./UI/pages/Login/Login";
-import jwtDecode from "jwt-decode";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "@fortawesome/fontawesome-free/js/all.min.js";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -13,22 +12,33 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 import Header from "./UI/components/Header/nav_Bar";
 import DataProvider from "./DataContext";
 import Footer from "./UI/components/Footer/Footer";
-import {InstructorsPage} from "./UI/pages/InstructorsPage/InstructorsPage";
+import { InstructorsPage } from "./UI/pages/InstructorsPage/InstructorsPage";
 import InstructorCard from "./UI/components/InstructorCard/InstructorCard";
 import {InstructorPage} from "./UI/pages/InstructorPage/InstructorPage";
 import UserProfile from "./UI/pages/UserProfile/UserProfile";
 
 
+//Landing Page LazyLoading 
 const LazyLandingPage = React.lazy(() =>
   import("./UI/pages/LandingPage/langingPage")
 );
-
+// Course Page LazyLoading
 const LazyCoursePage = React.lazy(() =>
   import("./UI/pages/course page/CoursePage"));
-//Category LazyLoading Page
+//Category LazyLoading 
 const LazyCategoryPage = React.lazy(() =>
   import("./UI/pages/CategoryPage/CategoryPage")
 );
+
+const LazyWatchPage = React.lazy(() =>
+  import("./UI/pages/watch page/WatchPage")
+);
+//Error LazyLoading
+const LazyErrorPage = React.lazy(() =>
+  import("./UI/pages/Error Page/Error")
+);
+
+
 //Instructors LazyLoading Page
 // const LazyInstructorsPage = React.lazy(() =>
 //   import("./UI/pages/InstructorsPage/InstructorsPage")
@@ -36,32 +46,14 @@ const LazyCategoryPage = React.lazy(() =>
 
 function App() {
 
-  const [userData, setUserData] = useState(null);
-  useEffect(() => {
-    if (localStorage.getItem('userToken')) {
-      getUserData()
-    }
-  }, [])
-
-  function getUserData() {
-    let decodedToken = jwtDecode(localStorage.getItem("userToken"));
-    setUserData(decodedToken);
-  }
-
-  useEffect(() => { console.log(userData) }, [userData]);
 
 
-  function LogOut() {
-    localStorage.removeItem('userToken');
-    setUserData(null)
-    useNavigate('/login')
-  }
 
 
   return (
     <div>
       <DataProvider>
-        <Header userData={userData} LogOut={LogOut} />
+        <Header />
         <Router>
           <Routes>
             {/* .... any other path routing create it here .... */}
@@ -88,7 +80,7 @@ function App() {
               path="login"
               element={
                 <React.Suspense>
-                  <Login getUserData={getUserData} />
+                  <Login />
                 </React.Suspense>
               }
             />
@@ -111,7 +103,7 @@ function App() {
                 </React.Suspense>
               }
             />
-              <Route
+            <Route
               path="category/:category"
               element={
                 <React.Suspense>
@@ -119,8 +111,8 @@ function App() {
                 </React.Suspense>
               }
             />
-             
-             <Route
+
+            <Route
               path="instructors"
               element={
                 <React.Suspense>
@@ -129,7 +121,7 @@ function App() {
               }
             />
             <Route
-              path="instructor"
+              path="instructor/:mainUserId"
               element={
                 <React.Suspense>
                   <InstructorPage />
@@ -145,6 +137,26 @@ function App() {
               }
             />
             
+
+            <Route
+              path="watch/:courseId/:vedioID"
+              element={
+                <React.Suspense>
+                  <LazyWatchPage />
+                </React.Suspense>
+              }
+            />
+            <Route
+              path="*"
+              element={
+                <React.Suspense>
+                  <LazyErrorPage />
+                </React.Suspense>
+              }
+            />
+
+
+
           </Routes>
         </Router>
         <Footer />

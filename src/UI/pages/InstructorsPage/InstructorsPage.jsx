@@ -25,7 +25,7 @@ export const InstructorsPage = () => {
         </div>
       </div>
 
-        <div className="text myDiv text-secondary shadow mb-4 rounded-3 d-flex  align-items-center p-4">
+        <div className="text myDiv text-secondary shadow mb-4 d-flex  align-items-center p-4">
         <h2>Want To Become an Instructor?</h2>
           <MyButton >Apply now</MyButton>
         </div>

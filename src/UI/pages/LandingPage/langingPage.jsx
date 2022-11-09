@@ -25,8 +25,8 @@ function LandingPage() {
       </header>
       <Picks />
       <Map />
-      <div class="col-sm-12 col-md-12 mb-4">
-        <h3 class="text-center mt-4 text-secondary">Our instructors</h3>
+      <div className="col-sm-12 col-md-12 mb-4">
+        <h3 className="text-center mt-4 text-secondary">Our instructors</h3>
         <p className="headerText ">
           Our instructors are real world experts bringing real knowledge and
           offering unique experiences .

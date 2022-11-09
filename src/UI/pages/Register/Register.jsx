@@ -43,7 +43,7 @@ export default function Register() {
 
     }
 
-    function gotoLogin(){
+    function gotoLogin() {
         navigate('/login')
     }
 
@@ -120,7 +120,7 @@ export default function Register() {
                     <button type='submit' className='btn btn-danger mt-3 signup-btn d-flex justify-content-center align-items-center'>
                         {isLoading ? <i className='fas fa-spinner fa-spin'></i> : <>
 
-                            <i class="fa-regular fa-envelope"></i>
+                            <i className="fa-regular fa-envelope"></i>
                             <div>Sign up with your email</div>
 
                         </>}

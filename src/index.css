@@ -21,3 +21,20 @@ body {
     monospace;
 } */
 
+
+/* Scroll bar  */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #d1d1d1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #222; 
+}
