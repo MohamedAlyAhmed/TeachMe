@@ -1,51 +1,50 @@
 import { Button } from "react-bootstrap";
 import "./map.css"
 import MyButton from "../../../components/Button/Button";
-import React,{Fragment,useState} from 'react'
+import React, { Fragment, useState } from 'react'
 import ReactVisibilitySensor from "react-visibility-sensor";
- import CountUp from 'react-countup';
+import CountUp from 'react-countup';
 
 function Counter() {
   return (
     <div >
-      <div style={{fontSize:'100px' }}>
+      <div style={{ fontSize: '100px' }}>
         <CountUp
           start={3000000}
           end={3453140}
           duration={6}
-          
+
           separator=","
-        />    
+        />
       </div>
     </div>
   );
 }
 
 
-export function Map  ()
-{
-   
-        return(
-            <div>
-         
-              <div class="text-center mt-5">
-                <a href="http://localhost:4000/category">
-              <MyButton isOutline={true} >
-                Browse Courses
-              </MyButton></a></div>
+export function Map() {
 
-          <header className="myHeader">
-         
+  return (
+    <div>
+
+      <div className="text-center mt-5">
+        <a href="http://localhost:4000/category">
+          <MyButton isOutline={true} >
+            Browse Courses
+          </MyButton></a></div>
+
+      <header className="myHeader">
+
         <div className="header-overlay">
-        <div className="myCounter">  
-              <Counter/>
-</div>
-       
+          <div className="myCounter">
+            <Counter />
+          </div>
+
           <div className="container">
             <div className="row">
               <div className="  col-lg-12 background head">
 
-<h1>Learning experiences worldwide.</h1>
+                <h1>Learning experiences worldwide.</h1>
 
                 <h2>& counting...</h2>
                 <span className="marker1"> </span>
@@ -61,9 +60,9 @@ export function Map  ()
           </div>
         </div>
       </header>
-       
-           
-               </div>
-        );
-    
+
+
+    </div>
+  );
+
 }

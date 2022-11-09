@@ -1,25 +1,33 @@
-import { current } from '@reduxjs/toolkit';
+
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 import YouTube from 'react-youtube';
 import { BASE_URL } from '../Register/Register';
 
-
 export default function WatchPage() {
 
-    const { id } = useParams();
+    const { courseId, vedioID } = useParams();
     let [selectedVedio, setselectedVedio] = useState('');
     let [containt, setContaint] = useState([]);
 
 
 
     useEffect(() => {
-        axios.get(BASE_URL + "/courseContaint?  =" + id).then(data => {
-            console.log(data.data);
+        axios.get(BASE_URL + "/courseContaint?courseID=" + courseId).then(data => {
             setContaint(data.data[0].containt);
-            setselectedVedio(data.data[0].containt[0])
+            if (vedioID) {
+                for (let i = 0; i < data.data[0].containt.length; i++) {
+                    if (data.data[0].containt[i].id == vedioID) {
+                        setselectedVedio(data.data[0].containt[i])
+                    }
+
+                }
+            } else {
+                setselectedVedio(data.data[0].containt[0])
+            }
         });
+
     }, [])
 
 
@@ -36,11 +44,11 @@ export default function WatchPage() {
         e.target.pauseVideo();
     }
 
-
-    const changeVedio = (containtindex) => {
-        setselectedVedio(containt[containtindex]);
-        console.log(containtindex);
+    const goToOtherVedio = (VID) => {
+        // navigate(`/watch/${courseId}/${VID}`);
+        // window.location.reload();
     }
+
 
     return (
         < div className="row mx-1" >
@@ -52,8 +60,11 @@ export default function WatchPage() {
 
                     {
                         containt.map((e, i) =>
-                            <div>
-                                <a onClick={() => { changeVedio(i) }}>
+                            <div key={i}>
+                                <a
+                                    href={`/watch/${courseId}/${e.id}`}
+                                    className={e.id == selectedVedio.id ? 'tx-primary' : ''}
+                                >
                                     {e.title}
                                 </a>
                                 {i != containt.length - 1 ? <hr /> : ''}

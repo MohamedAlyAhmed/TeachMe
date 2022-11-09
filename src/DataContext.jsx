@@ -1,10 +1,12 @@
 import React, { createContext, useState, useEffect } from "react";
+import { useNavigate } from 'react-router-dom'
 import axios from "axios";
-
+import jwtDecode from "jwt-decode";
 export const BASE_URL = "http://localhost:3000";
 export let DataContext = createContext([]);
 
 export default function DataProvider(props) {
+  const [userData, setUserData] = useState(null);
   let [courses, setCourses] = useState([]);
   let [categories, setCourseCategories] = useState([]);
   let [instructors, setInstructors] = useState([]);
@@ -38,11 +40,27 @@ export default function DataProvider(props) {
       setSections(res.data);
     });
 
+    getUserData()
+
   }, []);
+
+
+  const getUserData = () => {
+    if (localStorage.getItem('userToken')) {
+      let decodedToken = jwtDecode(localStorage.getItem("userToken"));
+      setUserData(decodedToken);
+    }
+  }
+
+  const LogOut = () => {
+    localStorage.removeItem('userToken');
+    setUserData(null)
+    useNavigate('/login')
+  }
 
   return (
     <DataContext.Provider
-      value={{ courses, categories, instructors, users, enrolls, sections }}
+      value={{ userData, courses, categories, instructors, users, enrolls, sections, LogOut, getUserData }}
     >
       {props.children}
     </DataContext.Provider>

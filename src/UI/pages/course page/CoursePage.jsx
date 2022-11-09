@@ -13,8 +13,7 @@ export const CoursePage = () => {
     let { id } = useParams();
     const [course, setCourse] = useState({});
     const [menetor, setMenetor] = useState({});
-    let { sections } = useContext(DataContext);
-
+    let { userData, sections } = useContext(DataContext);
     const [isLoading, setisLoading] = useState(false);
 
     useEffect(() => {
@@ -43,6 +42,15 @@ export const CoursePage = () => {
         var hDisplay = h > 0 ? h + (h == 1 ? "h " : "h ") : "";
         var mDisplay = m > 0 ? m + (m == 1 ? "m " : "m ") : "";
         return hDisplay + mDisplay;
+    }
+
+    const onClickEnroll = () => {
+        axios.post(`${BASE_URL}/enrolls`, {
+            "user_id": userData._id,
+            "course_id": id,
+            "date": new Date().toISOString(),
+            "progress": 0
+        });
     }
 
 
@@ -80,7 +88,7 @@ export const CoursePage = () => {
                                         <p className='d-inline ms-2'>Course Language: Arabic</p>
                                     </div>
                                     <div className='mt-5'>
-                                        <MyButton fillWidth={true} >Subscribe now</MyButton>
+                                        <MyButton onClick={onClickEnroll} fillWidth={true} >Entoll now</MyButton>
                                     </div>
                                     <p className='text-center mt-2' style={{ fontSize: 10 }}>Get access to all courses only for 91.67 EGP /mo</p>
                                     <hr />

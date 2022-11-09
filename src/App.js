@@ -5,7 +5,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Register from "./UI/pages/Register/Register";
 import Login from "./UI/pages/Login/Login";
-import jwtDecode from "jwt-decode";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "@fortawesome/fontawesome-free/js/all.min.js";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -45,32 +44,14 @@ const LazyErrorPage = React.lazy(() =>
 
 function App() {
 
-  const [userData, setUserData] = useState(null);
-  useEffect(() => {
-    if (localStorage.getItem('userToken')) {
-      getUserData()
-    }
-  }, [])
-
-  function getUserData() {
-    let decodedToken = jwtDecode(localStorage.getItem("userToken"));
-    setUserData(decodedToken);
-  }
-
-  useEffect(() => { console.log(userData) }, [userData]);
 
 
-  function LogOut() {
-    localStorage.removeItem('userToken');
-    setUserData(null)
-    useNavigate('/login')
-  }
 
 
   return (
     <div>
       <DataProvider>
-        <Header userData={userData} LogOut={LogOut} />
+        <Header />
         <Router>
           <Routes>
             {/* .... any other path routing create it here .... */}
@@ -97,7 +78,7 @@ function App() {
               path="login"
               element={
                 <React.Suspense>
-                  <Login getUserData={getUserData} />
+                  <Login />
                 </React.Suspense>
               }
             />
@@ -147,7 +128,7 @@ function App() {
             />
 
             <Route
-              path="watch/:id"
+              path="watch/:courseId/:vedioID"
               element={
                 <React.Suspense>
                   <LazyWatchPage />

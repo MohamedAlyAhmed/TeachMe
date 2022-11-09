@@ -31,7 +31,7 @@ export default function CourseCard({ course }) {
           <div className="card-body position-relative">
             <div className=" text-light duration d-flex ">
               <div className="mx-1">
-                <i class="fa-regular fa-clock"></i>
+                <i className="fa-regular fa-clock"></i>
               </div>
               {secondsToHms(course.duration)} / {course.numberOfLessons} lessons
             </div>
