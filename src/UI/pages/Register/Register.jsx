@@ -127,7 +127,7 @@ export default function Register() {
                     </button>
                     <div className="goto-signup">
                         <p className="goto-signup-text">
-                            <span>Don't have an account?    </span>
+                            <span>Already have an account? </span>
                             <button className="btn btn-link" onClick={gotoLogin}>  Login</button>
                         </p>
                     </div>

@@ -10,8 +10,9 @@ import { Link } from "react-router-dom";
 import "./nav_Bar.css";
 import MyButton from "../Button/Button";
 
+
+
 const Header = (props) => {
-  // const navegator = useNavigate();
 
   const toggleMenus = () => {
     let subMenu = document.getElementById("subMenu");
@@ -123,9 +124,12 @@ const Header = (props) => {
 
                   <div className="user-profile-container">
                     <div className="user-info-card d-flex">
-                      <div className="profile-avatar">
-                        <img src="assets/default-avatar.jpg" className="avatar" alt="" />
+                      <div className="profile-avatar" >
+                        
+                        <a href="/profile"><img src="assets/default-avatar.jpg" className="avatar" alt="" /></a>
+                        
                       </div>
+
                       <div className="info-details">
                         <h6>{props.userData.first_name} {props.userData.last_name}</h6>
                         <p>{props.userData.email}</p>
@@ -139,61 +143,61 @@ const Header = (props) => {
                     </button>
                   </div>
                   <div class="user-profile-card__options-menu-list-container">
-                  <div class="user-profile-card__user-options-menu-list">
-                    <a class="user-profile-card__user-option-item" href="">
-                      <i class="fa-regular fa-circle-play"></i>
-                      <p>My Progress</p>
-                    </a>
-                    <a class="user-profile-card__user-option-item" href="">
-                      <i class="fa-regular fa-bookmark"></i>
-                      <p >Saved Courses</p>
-                    </a>
+                    <div class="user-profile-card__user-options-menu-list">
+                      <a class="user-profile-card__user-option-item" href="">
+                        <i class="fa-regular fa-circle-play"></i>
+                        <p>My Progress</p>
+                      </a>
+                      <a class="user-profile-card__user-option-item" href="">
+                        <i class="fa-regular fa-bookmark"></i>
+                        <p >Saved Courses</p>
+                      </a>
 
-                    <a class="user-profile-card__user-option-item" href="">
-                      <i class="fa-solid fa-certificate"></i>
-                      <p >Certificates</p>
-                    </a>
-                    <a class="user-profile-card__user-option-item " href="">
-                      <i class="fa-solid fa-gear"></i>
-                      <p >Account settings</p>
-                    </a>
-                    <a class="user-profile-card__user-option-item " href="">
-                      <i class="fa-solid fa-comments"></i>
-                      <p >Messages</p>
+                      <a class="user-profile-card__user-option-item" href="">
+                        <i class="fa-solid fa-certificate"></i>
+                        <p >Certificates</p>
+                      </a>
+                      <a class="user-profile-card__user-option-item " href="">
+                        <i class="fa-solid fa-gear"></i>
+                        <p >Account settings</p>
+                      </a>
+                      <a class="user-profile-card__user-option-item " href="">
+                        <i class="fa-solid fa-comments"></i>
+                        <p >Messages</p>
 
+                      </a>
+                    </div>
+                    <a class="user-profile-card__purchase-log user-profile-card__user-option-item " href="">
+                      <i class="fa-solid fa-clipboard"></i>
+                      <p> Purchase Log </p>
                     </a>
                   </div>
-                  <a class="user-profile-card__purchase-log user-profile-card__user-option-item " href="">
-                    <i class="fa-solid fa-clipboard"></i>
-                    <p> Purchase Log </p>
-                  </a>
+                  <div className="btn-logout ">
+                    <a class="btn btn-link user-profile-card__user-option-item user-profile-card__btn-logout" onClick={props.LogOut}>
+                      <i class="fa-solid fa-right-from-bracket"></i>
+                      <p>Logout</p>
+                    </a>
+                  </div>
                 </div>
-                <div className="btn-logout ">
-                  <a class="btn btn-link user-profile-card__user-option-item user-profile-card__btn-logout" onClick={props.LogOut}>
-                    <i class="fa-solid fa-right-from-bracket"></i>
-                    <p>Logout</p>
-                  </a>
-                </div>
-                </div>
-                
-              </div>
-              
-                </>
-        ) : (
-        <>
-          <Button variant="link" >
-            <a href="/login" className="loginlink">Login</a>
-          </Button>
 
-          <a href="/register">
-            <MyButton isOutline={false}>sign up</MyButton>
-          </a>
-        </>
+              </div>
+
+            </>
+          ) : (
+            <>
+              <Button variant="link" >
+                <a href="/login" className="loginlink">Login</a>
+              </Button>
+
+              <a href="/register">
+                <MyButton isOutline={false}>sign up</MyButton>
+              </a>
+            </>
           )}
-      </Navbar.Collapse>
-    </Container>
+        </Navbar.Collapse>
+      </Container>
     </Navbar >
-        );
+  );
 };
 
 export default Header;

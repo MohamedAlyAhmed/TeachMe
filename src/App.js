@@ -16,6 +16,8 @@ import Footer from "./UI/components/Footer/Footer";
 import {InstructorsPage} from "./UI/pages/InstructorsPage/InstructorsPage";
 import InstructorCard from "./UI/components/InstructorCard/InstructorCard";
 import {InstructorPage} from "./UI/pages/InstructorPage/InstructorPage";
+import UserProfile from "./UI/pages/UserProfile/UserProfile";
+
 
 const LazyLandingPage = React.lazy(() =>
   import("./UI/pages/LandingPage/langingPage")
@@ -134,6 +136,15 @@ function App() {
                 </React.Suspense>
               }
             />
+            <Route
+              path="profile"
+              element={
+                <React.Suspense>
+                  <UserProfile userData={userData} />
+                </React.Suspense>
+              }
+            />
+            
           </Routes>
         </Router>
         <Footer />
