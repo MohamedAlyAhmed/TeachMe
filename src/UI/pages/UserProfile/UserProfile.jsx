@@ -2,24 +2,16 @@ import "./UserProfile.css"
 import React, { Component, useEffect } from "react";
 import { Navigate } from "react-router-dom";
 import TextField from '@mui/material/TextField';
+import { DataContext } from '../../../DataContext';
 
 
 
 
 
-export default function UserProfile(props) {
-    console.log(props.userData)
-    let fullName;
-
-    function Fname(){
-        if (props.userData) {
-             fullName = props.userData.first_name + " " + props.userData.last_name }
-    }
-    let male = document.getElementById('male')
-    let female = document.getElementById('female')
-    if(male){
-
-    }
+export default function UserProfile() {
+    
+    let { getUserData } = useContext(DataContext);
+    
 
     return (
         <>

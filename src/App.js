@@ -132,7 +132,7 @@ function App() {
               path="profile"
               element={
                 <React.Suspense>
-                  <UserProfile userData={userData} />
+                  <UserProfile />
                 </React.Suspense>
               }
             />
