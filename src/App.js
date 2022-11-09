@@ -12,9 +12,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 import Header from "./UI/components/Header/nav_Bar";
 import DataProvider from "./DataContext";
 import Footer from "./UI/components/Footer/Footer";
-import { InstructorsPage } from "./UI/pages/InstructorsPage/InstructorsPage";
-import InstructorCard from "./UI/components/InstructorCard/InstructorCard";
-import {InstructorPage} from "./UI/pages/InstructorPage/InstructorPage";
+import { InstructorPage } from "./UI/pages/InstructorPage/InstructorPage";
 import UserProfile from "./UI/pages/UserProfile/UserProfile";
 
 
@@ -22,34 +20,32 @@ import UserProfile from "./UI/pages/UserProfile/UserProfile";
 const LazyLandingPage = React.lazy(() =>
   import("./UI/pages/LandingPage/langingPage")
 );
+
 // Course Page LazyLoading
 const LazyCoursePage = React.lazy(() =>
   import("./UI/pages/course page/CoursePage"));
+
 //Category LazyLoading 
 const LazyCategoryPage = React.lazy(() =>
   import("./UI/pages/CategoryPage/CategoryPage")
 );
 
+//watch LazyLoading
 const LazyWatchPage = React.lazy(() =>
   import("./UI/pages/watch page/WatchPage")
 );
+
 //Error LazyLoading
 const LazyErrorPage = React.lazy(() =>
   import("./UI/pages/Error Page/Error")
 );
 
-
 //Instructors LazyLoading Page
-// const LazyInstructorsPage = React.lazy(() =>
-//   import("./UI/pages/InstructorsPage/InstructorsPage")
-// );
+const LazyInstructorsPage = React.lazy(() =>
+  import("./UI/pages/InstructorsPage/InstructorsPage")
+);
 
 function App() {
-
-
-
-
-
   return (
     <div>
       <DataProvider>
@@ -116,7 +112,7 @@ function App() {
               path="instructors"
               element={
                 <React.Suspense>
-                  <InstructorsPage />
+                  <LazyInstructorsPage />
                 </React.Suspense>
               }
             />
@@ -132,11 +128,11 @@ function App() {
               path="profile"
               element={
                 <React.Suspense>
-                  <UserProfile userData={userData} />
+                  <UserProfile />
                 </React.Suspense>
               }
             />
-            
+
 
             <Route
               path="watch/:courseId/:vedioID"

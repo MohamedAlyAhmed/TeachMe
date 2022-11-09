@@ -15,12 +15,13 @@ import { DataContext } from "../../../DataContext";
 
 const Header = (props) => {
   // const navegator = useNavigate();
-
+  const BASE_CATEGORY = 'http://localhost:4000/category';
   const toggleMenus = () => {
     let subMenu = document.getElementById("subMenu");
 
     subMenu.classList.toggle("open-menu");
   };
+  const { userData, LogOut } = useContext(DataContext);
 
   const toggleProfile = () => {
     let subProfileMenu = document.getElementById("subProfileMenu");
@@ -33,8 +34,8 @@ const Header = (props) => {
         fluid
         className="d-flex justify-content-between align-items-center"
       >
-        <a href="http://localhost:4000/"> <p className="logo">
-          Teach <span>Me</span>&nbsp;&nbsp;&nbsp;
+        <a href="http://localhost:4000/"> <p className="logo mx-4">
+          Teach <span>Me</span>
         </p></a>
 
         <Navbar.Toggle aria-controls="navbarScroll" />
@@ -143,9 +144,9 @@ const Header = (props) => {
                   <div className="user-profile-container">
                     <div className="user-info-card d-flex">
                       <div className="profile-avatar" >
-                        
+
                         <a href="/profile"><img src="assets/default-avatar.jpg" className="avatar" alt="" /></a>
-                        
+
                       </div>
 
                       <div className="info-details">
@@ -197,7 +198,7 @@ const Header = (props) => {
                     </a>
                   </div>
                 </div>
-                
+
               </div>
 
             </>
