@@ -16,6 +16,8 @@ export const CoursePage = () => {
     let { userData, sections } = useContext(DataContext);
     const [isLoading, setisLoading] = useState(false);
 
+
+
     useEffect(() => {
         axios.get(`${BASE_URL}/courses/${id}`).then((data) => {
             setCourse(data.data);
@@ -88,7 +90,7 @@ export const CoursePage = () => {
                                         <p className='d-inline ms-2'>Course Language: Arabic</p>
                                     </div>
                                     <div className='mt-5'>
-                                        <MyButton onClick={onClickEnroll} fillWidth={true} >Entoll now</MyButton>
+                                        <MyButton onClick={onClickEnroll} fillWidth={true} >Enroll now</MyButton>
                                     </div>
                                     <p className='text-center mt-2' style={{ fontSize: 10 }}>Get access to all courses only for 91.67 EGP /mo</p>
                                     <hr />

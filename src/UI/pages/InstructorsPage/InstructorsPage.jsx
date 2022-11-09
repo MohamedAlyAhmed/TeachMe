@@ -6,7 +6,7 @@ import InstructorCard from "../../components/InstructorCard/InstructorCard";
 import React, { useContext } from "react";
 import { DataContext } from "../../../DataContext";
 
-export const InstructorsPage = () => {
+export default function InstructorsPage() {
   document.title = `Instructors`;
   let { instructors } = useContext(DataContext);
   return (
@@ -25,10 +25,10 @@ export const InstructorsPage = () => {
         </div>
       </div>
 
-        <div className="text myDiv text-secondary shadow mb-4 d-flex  align-items-center p-4">
+      <div className="text myDiv text-secondary shadow mb-4 d-flex  align-items-center p-4">
         <h2>Want To Become an Instructor?</h2>
-          <MyButton >Apply now</MyButton>
-        </div>
+        <MyButton >Apply now</MyButton>
+      </div>
     </div>
   );
 };

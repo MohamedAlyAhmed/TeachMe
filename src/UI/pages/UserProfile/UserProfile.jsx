@@ -1,17 +1,29 @@
 import "./UserProfile.css"
-import React, { Component, useEffect } from "react";
+import React, { Component, useContext, useEffect } from "react";
 import { Navigate } from "react-router-dom";
 import TextField from '@mui/material/TextField';
 import { DataContext } from '../../../DataContext';
+import { DataContext } from "../../../DataContext";
 
 
 
 
 
 export default function UserProfile() {
-    
-    let { getUserData } = useContext(DataContext);
-    
+    const { userData } = useContext(DataContext);
+    console.log(userData)
+    let fullName;
+
+    function Fname() {
+        if (userData) {
+            fullName = userData.first_name + " " + userData.last_name
+        }
+    }
+    let male = document.getElementById('male')
+    let female = document.getElementById('female')
+    if (male) {
+
+    }
 
     return (
         <>
@@ -24,14 +36,14 @@ export default function UserProfile() {
                                 <img src="assets/default-avatar.jpg" />
                             </div>
                             <div className="user-profile-info-details">
-                                {props.userData ?
+                                {userData ?
                                     <>
-                                        <h2>{props.userData.first_name} {props.userData.last_name}</h2>
+                                        <h2>{userData.first_name} {userData.last_name}</h2>
                                         <p>
-                                            {props.userData.email}
+                                            {userData.email}
                                         </p>
                                     </>
-                                    :<></>}
+                                    : <></>}
 
 
                             </div>
@@ -68,40 +80,40 @@ export default function UserProfile() {
                                     <div className="d-inline-flex align-items-center section-name">
                                         <p className="col-md-3">Name</p>
                                         <div className="input-feild">
-                                            {props.userData ?
-                                            <>
-                                            {Fname()}                                   
-                                            <input type="text"  placeholder={fullName}/>
-                                            </>
-                                            :<></>}
-                                            
+                                            {userData ?
+                                                <>
+                                                    {Fname()}
+                                                    <input type="text" placeholder={fullName} />
+                                                </>
+                                                : <></>}
+
 
                                         </div>
                                     </div>
                                     <div className="d-inline-flex align-items-center section-name">
                                         <p className="col-md-3">Gender</p>
-                                        <div className="input-gender d-flex">                             
+                                        <div className="input-gender d-flex">
                                             <input type="radio" name="gender" id="male" />
                                             <label htmlFor="male" id="formale" className="btn btn-outline-tangerine">Male</label>
-                                            <input type="radio" name="gender" id="female"/>
+                                            <input type="radio" name="gender" id="female" />
                                             <label htmlFor="female" id="forfemale" className="btn btn-outline-tangerine">Female</label>
                                         </div>
                                     </div>
                                     <div className="d-inline-flex align-items-center section-name">
                                         <p className="col-md-3">Age</p>
-                                        <div className="d-flex">                             
+                                        <div className="d-flex">
                                             <input type="number " id="age" />
                                         </div>
                                     </div>
                                     <div className="d-inline-flex align-items-center section-name">
                                         <p className="col-md-3">country</p>
-                                        <div className="d-flex">                             
+                                        <div className="d-flex">
                                             <input type="select " id="country" />
                                         </div>
                                     </div>
                                     <div className="d-inline-flex align-items-center section-name">
                                         <p className="col-md-3">city</p>
-                                        <div className="d-flex">                             
+                                        <div className="d-flex">
                                             <input type="number " id="city" />
                                         </div>
                                     </div>
