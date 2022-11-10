@@ -28,6 +28,8 @@ const Header = (props) => {
     subProfileMenu.classList.toggle("open-menu")
   }
 
+  console.log(DataContext)
+
   return (
     <Navbar bg="#fff" expand="lg">
       <Container
