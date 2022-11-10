@@ -1479,7 +1479,7 @@
   ],
   "CourseCategories": [
     {
-      "id": 12,
+      "id": 1,
       "name": "Languages",
       "image": "http://electrastreet.net/wp-content/uploads/2015/04/hello-wordle.png?fa7b5c",
       "permanentLink": "Languages"
@@ -1545,7 +1545,7 @@
       "permanentLink": "Entrepreneurship"
     },
     {
-      "id": 1,
+      "id": 12,
       "name": "Mental Health & Wellness",
       "image": "https://chicagorealtor.com/wp-content/uploads/2020/10/mentalwellness_articleCR.jpg",
       "permanentLink": "Mental-Health-&-Wellness"
@@ -1555,6 +1555,12 @@
       "name": "Education",
       "image": "https://www.educationcorner.com/images/featured-importance-education.png",
       "permanentLink": "Education"
+    },
+    {
+      "name": "SpaceX",
+      "image": "https://img.freepik.com/free-photo/cool-geometric-triangular-figure-neon-laser-light-great-backgrounds-wallpapers_181624-9331.jpg?w=2000",
+      "permanentLink": "spaceX",
+      "id": 14
     }
   ],
   "sections": [
