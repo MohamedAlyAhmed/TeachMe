@@ -51,10 +51,12 @@ export default function WatchPage() {
     const UpdateCourseProgres = (newVar) => {
         setTimeout(() => {
             console.log(enroll);
-            axios.put(BASE_URL + "/enrolls/" + enroll.id, {
-                ...enroll,
-                progress: newVar,
-            }).then(e => console.log(e));
+            if (enroll.progress < newVar) {
+                axios.put(BASE_URL + "/enrolls/" + enroll.id, {
+                    ...enroll,
+                    progress: newVar,
+                });
+            }
         }, 2000);
     }
 
