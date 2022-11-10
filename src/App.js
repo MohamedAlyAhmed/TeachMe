@@ -14,6 +14,10 @@ import DataProvider from "./DataContext";
 import Footer from "./UI/components/Footer/Footer";
 import { InstructorPage } from "./UI/pages/InstructorPage/InstructorPage";
 import UserProfile from "./UI/pages/UserProfile/UserProfile";
+import Dashboard from "./UI/pages/Dashboard/Dashboard";
+import CoursesPanel from "./UI/pages/Dashboard/Courses Panel/CoursesPanel";
+import InstructorsPanel from "./UI/pages/Dashboard/Instructors Panel/InstructorsPanel";
+import CategoryPanel from "./UI/pages/Dashboard/Category Panel/CategoryPanel";
 
 
 //Landing Page LazyLoading 
@@ -142,6 +146,19 @@ function App() {
                 </React.Suspense>
               }
             />
+
+            <Route path='dashboard' element={<Dashboard/>}>
+              <Route path='courses_panel' element={<CoursesPanel/>}/>
+              <Route path='category_panel' element={<CategoryPanel/>}/>
+              <Route path='instructors_panel' element={<InstructorsPanel/>}/>
+            </Route>
+
+
+
+
+
+
+
             <Route
               path="*"
               element={

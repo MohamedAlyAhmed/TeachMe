@@ -115,9 +115,13 @@ const Header = (props) => {
             <a href="#">
               <MyButton isOutline={true}>Subscribe</MyButton>
             </a>&nbsp;
+            <a href="http://localhost:4000/dashboard/">
+              <MyButton isOutline={true}>DASHBOARD</MyButton>
+            </a>&nbsp;
           </Nav>
 
           <form className="form">
+            
             <div className="main">
               <input
                 type="text"
@@ -160,6 +164,7 @@ const Header = (props) => {
                     <button routerlink="" className="btn btn-outline-light user-profile-subscribe-btn" >
                       Subscribe
                     </button>
+                    
                   </div>
                   <div className="user-profile-card__options-menu-list-container">
                     <div className="user-profile-card__user-options-menu-list">
