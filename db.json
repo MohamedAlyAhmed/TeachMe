@@ -1467,14 +1467,21 @@
       "user_id": 0,
       "course_id": 0,
       "date": "2022-11-09T16:51:28.066Z",
-      "progress": "10"
+      "progress": 10
+    },
+    {
+      "user_id": "6367b173719d000015f8a8c8",
+      "course_id": "908",
+      "date": "2022-11-10T12:32:26.886Z",
+      "progress": 0,
+      "id": 2
     },
     {
       "user_id": "6367b173719d000015f8a8c8",
       "course_id": "903",
-      "date": "2022-11-09T21:42:01.811Z",
-      "progress": 1,
-      "id": 1
+      "date": "2022-11-10T18:29:02.363Z",
+      "progress": 2,
+      "id": 3
     }
   ],
   "CourseCategories": [

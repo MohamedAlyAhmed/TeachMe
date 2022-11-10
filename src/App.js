@@ -147,10 +147,19 @@ function App() {
               }
             />
 
-            <Route path='dashboard' element={<Dashboard/>}>
-              <Route path='courses_panel' element={<CoursesPanel/>}/>
-              <Route path='category_panel' element={<CategoryPanel/>}/>
-              <Route path='instructors_panel' element={<InstructorsPanel/>}/>
+            <Route
+              path="watch/:courseId"
+              element={
+                <React.Suspense>
+                  <LazyWatchPage />
+                </React.Suspense>
+              }
+            />
+
+            <Route path='dashboard' element={<Dashboard />}>
+              <Route path='courses_panel' element={<CoursesPanel />} />
+              <Route path='category_panel' element={<CategoryPanel />} />
+              <Route path='instructors_panel' element={<InstructorsPanel />} />
             </Route>
 
 

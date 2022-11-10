@@ -11,8 +11,8 @@ export default function DataProvider(props) {
   let [categories, setCourseCategories] = useState([]);
   let [instructors, setInstructors] = useState([]);
   let [users, setUsers] = useState([]);
-  let [enrolls, setEnrolls] = useState([]);
   let [sections, setSections] = useState([]);
+  let [myEnrollsCourses, setMyEnrollsCourses] = useState([]);
 
   useEffect(() => {
     //get Courses Data
@@ -31,10 +31,6 @@ export default function DataProvider(props) {
     axios.get(`${BASE_URL}/users`).then((res) => {
       setUsers(res.data);
     });
-    //get enrolls Data
-    axios.get(`${BASE_URL}/enrolls`).then((res) => {
-      setEnrolls(res.data);
-    });
     //get sections Data
     axios.get(`${BASE_URL}/sections`).then((res) => {
       setSections(res.data);
@@ -49,7 +45,18 @@ export default function DataProvider(props) {
     if (localStorage.getItem('userToken')) {
       let decodedToken = jwtDecode(localStorage.getItem("userToken"));
       setUserData(decodedToken);
+      setEnrollsCourses(decodedToken._id);
     }
+  }
+
+  const setEnrollsCoursesWithUserID = () => {
+    setEnrollsCourses(userData._id);
+  }
+
+  const setEnrollsCourses = (userID) => {
+    axios.get(`${BASE_URL}/enrolls?user_id=${userID}`).then((res) => {
+      setMyEnrollsCourses(res.data);
+    });
   }
 
   const LogOut = () => {
@@ -60,7 +67,7 @@ export default function DataProvider(props) {
 
   return (
     <DataContext.Provider
-      value={{ userData, courses, categories, instructors, users, enrolls, sections, LogOut, getUserData }}
+      value={{ userData, courses, categories, instructors, users, sections, LogOut, getUserData, myEnrollsCourses, setEnrollsCoursesWithUserID }}
     >
       {props.children}
     </DataContext.Provider>

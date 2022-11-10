@@ -28,7 +28,6 @@ const Header = (props) => {
     subProfileMenu.classList.toggle("open-menu")
   }
 
-  console.log(DataContext)
 
   return (
     <Navbar bg="#fff" expand="lg">
@@ -123,7 +122,7 @@ const Header = (props) => {
           </Nav>
 
           <form className="form">
-            
+
             <div className="main">
               <input
                 type="text"
@@ -166,7 +165,7 @@ const Header = (props) => {
                     <button routerlink="" className="btn btn-outline-light user-profile-subscribe-btn" >
                       Subscribe
                     </button>
-                    
+
                   </div>
                   <div className="user-profile-card__options-menu-list-container">
                     <div className="user-profile-card__user-options-menu-list">
