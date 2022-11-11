@@ -21,7 +21,7 @@ export default function CourseCard({ course }) {
       >
         <div
           className="card shadow-sm rounded-3 m-3"
-          style={{ width: "15rem", height: "16rem" }}
+          style={{ width: "14.5rem", height: "16rem" }}
         >
           <img
             src={course.image}

@@ -14,7 +14,7 @@ export default function InstructorCard({instructor}) {
         <h6 className="fw-bold mb-3 instructor-name">{instructor.name}</h6>
         <p className="tx-accentColor instructor-title">{instructor.title}</p>
       </div>
-      </Link>
+       </Link>
     </div>
   );
 }

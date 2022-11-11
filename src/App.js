@@ -36,10 +36,15 @@ const LazyErrorPage = React.lazy(() =>
 );
 
 
-//Instructors LazyLoading Page
+// //Instructors LazyLoading Page
 // const LazyInstructorsPage = React.lazy(() =>
 //   import("./UI/pages/InstructorsPage/InstructorsPage")
 // );
+// //Instructors LazyLoading Page
+// const LazyInstructorPage = React.lazy(() =>
+//   import("./UI/pages/InstructorPage/InstructorPage")
+// );
+
 
 function App() {
 
@@ -131,7 +136,7 @@ function App() {
               path="instructors"
               element={
                 <React.Suspense>
-                  <InstructorsPage />
+                  <InstructorsPage/>
                 </React.Suspense>
               }
             />

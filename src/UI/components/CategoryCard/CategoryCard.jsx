@@ -6,7 +6,7 @@ export default function CategoryCard({ category }) {
   return (
     <div>
       <Link to={`/category/${category.permanentLink}`}>
-      <div className="card m-2" style={{ width: "14rem" }}>
+      <div className="card m-2" style={{ width: "15rem" }}>
         <div className="linear-grad ">
           <img
             src={category.image}

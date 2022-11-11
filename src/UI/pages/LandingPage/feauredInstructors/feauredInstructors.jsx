@@ -7,15 +7,58 @@ import { DataContext } from "../../../../DataContext";
 export const FeaturedInstructors = () => {
   let { instructors } = useContext(DataContext);
 
+
   const settings = {
-  
-    dots: false,
-    infinite: true,
+    dots: true,
+    infinite: false,
+    speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
-    speed: 500,
-  //   
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1250,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: false,
+        },
+      },
+      {
+        breakpoint: 1300,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: false,
+        },
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: false,
+        },
+      },
+      {
+        breakpoint: 590,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: false,
+          dots: false,
+        },
+      },
+     
+     
+    ],
   };
+
+ 
+
   return (
     <div>
       <Slider {...settings}>
@@ -25,13 +68,5 @@ export const FeaturedInstructors = () => {
       </Slider>
     </div>
   );
-};
+}
 
-// export const HomeWrapper = styled.div`
-//   .slick-arrow {
-//     background-color: #979a9a;
-//     height: 220px;
-//     width: 30px;
-//     border-radius: 5px;
-//   }
-// `;

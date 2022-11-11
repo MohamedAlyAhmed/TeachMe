@@ -8,8 +8,8 @@ import {
 } from "mdb-react-ui-kit";
 import Nav from "react-bootstrap/Nav";
 import "./Footer.css";
-import MyButton from "../Button/Button";
-import ButtonToTop from "../ButtonScrollToTop/ButtonScrollToTop";
+import ScrollToTop from "react-scroll-to-top";
+
 export default function Footer() {
   return (
     <MDBFooter bgColor="light" className="text-center text-lg-start text-muted">
@@ -73,7 +73,6 @@ export default function Footer() {
                  Become instructor
                 </a>
               </p>
-              <MyButton isOutline={true}>Train your team</MyButton>
             </MDBCol>
           </MDBRow>
         </MDBContainer>
@@ -110,8 +109,7 @@ export default function Footer() {
           <a href="" className="me-4 text-reset">
             <MDBIcon fab icon="linkedin" />
           </a>
-        
-          <ButtonToTop />
+          <ScrollToTop smooth color="black"  />
         </div>
       </section>
     </MDBFooter>
