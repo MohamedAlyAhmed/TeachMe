@@ -1482,11 +1482,18 @@
       "date": "2022-11-10T18:29:02.363Z",
       "progress": 3,
       "id": 3
+    },
+    {
+      "user_id": "63688395f045c50015f60d17",
+      "course_id": "908",
+      "date": "2022-11-10T20:36:25.532Z",
+      "progress": 0,
+      "id": 4
     }
   ],
   "CourseCategories": [
     {
-      "id": 12,
+      "id": 1,
       "name": "Languages",
       "image": "http://electrastreet.net/wp-content/uploads/2015/04/hello-wordle.png?fa7b5c",
       "permanentLink": "Languages"
@@ -1552,7 +1559,7 @@
       "permanentLink": "Entrepreneurship"
     },
     {
-      "id": 1,
+      "id": 12,
       "name": "Mental Health & Wellness",
       "image": "https://chicagorealtor.com/wp-content/uploads/2020/10/mentalwellness_articleCR.jpg",
       "permanentLink": "Mental-Health-&-Wellness"
@@ -1562,6 +1569,12 @@
       "name": "Education",
       "image": "https://www.educationcorner.com/images/featured-importance-education.png",
       "permanentLink": "Education"
+    },
+    {
+      "name": "SpaceX",
+      "image": "https://img.freepik.com/free-photo/cool-geometric-triangular-figure-neon-laser-light-great-backgrounds-wallpapers_181624-9331.jpg?w=2000",
+      "permanentLink": "spaceX",
+      "id": 14
     }
   ],
   "sections": [
