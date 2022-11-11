@@ -44,6 +44,10 @@ const LazyErrorPage = React.lazy(() =>
 const LazyInstructorsPage = React.lazy(() =>
   import("./UI/pages/InstructorsPage/InstructorsPage")
 );
+//userProfile LazyLoading Page
+const LazyUserProfilePage = React.lazy(() =>
+  import("./UI/pages/UserProfile/UserProfile")
+);
 
 function App() {
   return (
@@ -128,7 +132,7 @@ function App() {
               path="profile"
               element={
                 <React.Suspense>
-                  <UserProfile />
+                  <LazyUserProfilePage />
                 </React.Suspense>
               }
             />
