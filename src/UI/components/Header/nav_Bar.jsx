@@ -28,7 +28,6 @@ const Header = (props) => {
     subProfileMenu.classList.toggle("open-menu")
   }
 
-  console.log(DataContext)
 
   return (
     <Navbar bg="#fff" expand="lg">
@@ -114,25 +113,28 @@ const Header = (props) => {
                 </div>
               </div>
 
-              {/* <MyButton isOutline={true}>Subscribe</MyButton> */}
-              <a href="#">
-                <MyButton isOutline={true}>Subscribe</MyButton>
-              </a>&nbsp;
-            </Nav>
+            {/* <MyButton isOutline={true}>Subscribe</MyButton> */}
+            <a href="#">
+              <MyButton isOutline={true}>Subscribe</MyButton>
+            </a>&nbsp;
+            <a href="http://localhost:4000/dashboard/">
+              <MyButton isOutline={true}>DASHBOARD</MyButton>
+            </a>&nbsp;
+          </Nav>
 
-            <form className="form">
-              <div className="main">
-                <input
-                  type="text"
-                  name=""
-                  placeholder="search courses ,topics .."
-                />
-                <a href="#">
-                  <i className="fa fa-search icon-search"></i>
-                </a>
-              </div>
-            </form>
-          </Navbar.Collapse>
+          <form className="form">
+
+            <div className="main">
+              <input
+                type="text"
+                name=""
+                placeholder="search courses ,topics .."
+              />
+              <a href="#">
+                <i className="fa fa-search icon-search"></i>
+              </a>
+            </div>
+          </form>
           {userData ? (
             <>
               <Button onClick={toggleProfile} className="user-pic" variant="">
@@ -164,6 +166,7 @@ const Header = (props) => {
                     <button routerlink="" className="btn btn-outline-light user-profile-subscribe-btn" >
                       Subscribe
                     </button>
+
                   </div>
                   <div className="user-profile-card__options-menu-list-container">
                     <div className="user-profile-card__user-options-menu-list">

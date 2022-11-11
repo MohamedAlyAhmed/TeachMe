@@ -2,27 +2,26 @@ import { Grid } from '@mui/material';
 import { fontSize } from '@mui/system';
 import axios from 'axios';
 import React, { useContext, useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { BASE_URL } from '../../../DataContext';
 import MyButton from '../../components/Button/Button';
 import AboutThisCourseDetails from './AboutThisCourseDetails';
 import { DataContext } from "../../../DataContext";
 
 export const CoursePage = () => {
-    document.title = `Course`;
     let { id } = useParams();
     const [course, setCourse] = useState({});
     const [menetor, setMenetor] = useState({});
-    let { userData, sections } = useContext(DataContext);
+    let { userData, sections, myEnrollsCourses, setEnrollsCoursesWithUserID } = useContext(DataContext);
     const [isLoading, setisLoading] = useState(false);
+    const navigate = useNavigate();
 
 
 
     useEffect(() => {
         axios.get(`${BASE_URL}/courses/${id}`).then((data) => {
             setCourse(data.data);
-            console.log(course);
-
+            document.title = data.data.name;
             axios.get(`${BASE_URL}/instructors/${data.data.mentors[0].id}`).then((mentorRes) => {
                 setMenetor(mentorRes.data);
                 setisLoading(true);
@@ -47,15 +46,30 @@ export const CoursePage = () => {
     }
 
     const onClickEnroll = () => {
+        console.log("onClickEnroll");
         axios.post(`${BASE_URL}/enrolls`, {
             "user_id": userData._id,
             "course_id": id,
             "date": new Date().toISOString(),
             "progress": 0
+        }).then(() => {
+            setEnrollsCoursesWithUserID();
         });
     }
 
 
+    const isCourseEnroled = () => {
+        for (let i = 0; i < myEnrollsCourses.length; i++) {
+            if (id == myEnrollsCourses[i].course_id) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    const onClickContenueWatch = () => {
+        navigate(`/watch/${id}`);
+    }
 
     return (
         <div>
@@ -90,7 +104,7 @@ export const CoursePage = () => {
                                         <p className='d-inline ms-2'>Course Language: Arabic</p>
                                     </div>
                                     <div className='mt-5'>
-                                        <MyButton onClick={onClickEnroll} fillWidth={true} >Enroll now</MyButton>
+                                        <MyButton onClick={isCourseEnroled() ? onClickContenueWatch : onClickEnroll} fillWidth={true} >{isCourseEnroled() ? "continue watching" : "Enroll now"}</MyButton>
                                     </div>
                                     <p className='text-center mt-2' style={{ fontSize: 10 }}>Get access to all courses only for 91.67 EGP /mo</p>
                                     <hr />
@@ -146,7 +160,7 @@ export const CoursePage = () => {
                                         return null
                                     } else {
                                         return (
-                                            <div className='col'  >
+                                            <div key={e.id} className='col'  >
                                                 <AboutThisCourseDetails hasMaxHeight={true}>
                                                     {e.body}
                                                 </AboutThisCourseDetails>
@@ -186,11 +200,11 @@ export const CoursePage = () => {
 
 
                         <section>
-                            {sections.map(e =>
-                                <div className='shadow-lg h-100  rounded-3 p-3 my-5'>
+                            {sections.map((e, n) =>
+                                <div key={n} className='shadow-lg h-100  rounded-3 p-3 my-5'>
                                     <p className='fs-5'>{e.title}</p>
                                     {e.lessons.map((l, i) =>
-                                        <div>
+                                        <div key={i}>
                                             <p className='mt-3 fw-light'>Lesson {i}: {l.title}</p>
                                             {
                                                 i != e.lessons.length - 1 ? <hr /> : ''
