@@ -3,7 +3,6 @@ import React, { Component, useContext, useEffect, useState, useMemo } from "reac
 import { Navigate } from "react-router-dom";
 import TextField from '@mui/material/TextField';
 import { DataContext } from '../../../DataContext';
-import Select from 'react-select'
 import countryList from 'react-select-country-list'
 
 
@@ -18,7 +17,7 @@ export default function UserProfile() {
         setValue(value)
     }
 
-    
+
 
     const { userData } = useContext(DataContext);
     let fullName;
@@ -110,7 +109,7 @@ export default function UserProfile() {
                                 <div class="form-group row cursor-pointer">
                                     <label for="email" class="col-sm-4 col-form-label cursor-pointer"> Email </label>
                                     <div class="col-sm-7 col-10 cursor-pointer">
-                                        <input type="email" id="email" value={userData.email}  class="form-control cursor-pointer ng-untouched ng-pristine ng-valid"/>
+                                        <input type="email" id="email" value={userData.email} class="form-control cursor-pointer ng-untouched ng-pristine ng-valid" />
                                     </div>
                                     <div class="col-sm-1 col-2 cursor-pointer">
 
@@ -119,7 +118,7 @@ export default function UserProfile() {
                                 <div class="form-group row cursor-pointer">
                                     <label for="email" class="col-sm-4 col-form-label cursor-pointer"> Password </label>
                                     <div class="col-sm-7 col-10 cursor-pointer">
-                                        <input type="password" id="password" value={userData.password}  class="form-control cursor-pointer ng-untouched ng-pristine ng-valid"/>
+                                        <input type="password" id="password" value={userData.password} class="form-control cursor-pointer ng-untouched ng-pristine ng-valid" />
                                     </div>
                                     <div class="col-sm-1 col-2 cursor-pointer">
 
@@ -128,7 +127,7 @@ export default function UserProfile() {
                                 <div class="form-group row cursor-pointer">
                                     <label for="email" class="col-sm-4 col-form-label cursor-pointer"> Mobile Number </label>
                                     <div class="col-sm-7 col-10 cursor-pointer">
-                                        <input type="number" id="mobile-number" value={userData.password}  class="form-control cursor-pointer ng-untouched ng-pristine ng-valid"/>
+                                        <input type="number" id="mobile-number" value={userData.password} class="form-control cursor-pointer ng-untouched ng-pristine ng-valid" />
                                     </div>
                                     <div class="col-sm-1 col-2 cursor-pointer">
 
