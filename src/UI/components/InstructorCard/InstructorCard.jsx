@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function InstructorCard({instructor}) {
   return (
     <div>
-          <Link to={`/instructor/${instructor.id}`}>
+          <Link to={`/instructor/${instructor.id}`} style={{ color: "black" }}>
 
       <div
         className=" d-flex flex-column justify-content-center align-items-center p-4 text-center"

@@ -11,10 +11,10 @@ class InstructorsPicks extends Component {
             <div className="col--ld-12 col-md-12 ">
               <HomeWrapper>
                 <FeaturedInstructors />
-                <div class="text-center mt-5 ">
-                <a href="/instructors" style={{ color: "black", textDecoration : "none" }}>
-                <MyButton  isOutline={true}>See all instructors</MyButton>
-            </a>
+                <div className="text-center">
+                  <a href="http://localhost:4000/instructors">
+                    <MyButton isOutline={true}>See all instructors</MyButton>
+                  </a>
                 </div>
               </HomeWrapper>
             </div>

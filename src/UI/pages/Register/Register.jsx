@@ -1,10 +1,9 @@
 import { TextField } from '@mui/material'
-import React, { useState } from 'react'
+import React, { useState, useMemo } from 'react'
 import axios from 'axios';
 import Joi from 'joi';
 import { Navigate, useNavigate } from 'react-router-dom';
 import "./Register.css"
-
 
 export const BASE_URL = "http://localhost:3000";
 
@@ -16,7 +15,10 @@ function registerValidtion(user) {
         password: Joi.string()
             .pattern(new RegExp('^[a-zA-Z0-9]{3,30}$')),
         email: Joi.string()
-            .email({ minDomainSegments: 2, tlds: { allow: ['com', 'net'] } })
+            .email({ minDomainSegments: 2, tlds: { allow: ['com', 'net'] } }),
+
+        age: Joi.string()
+
     });
     return schema.validate(user, { abortEarly: false })
 }
@@ -33,17 +35,21 @@ export default function Register() {
         first_name: "",
         last_name: "",
         password: "",
-        email: ""
+        email: "",
+        age: "",
     })
 
     function getUser(e) {
         let myUSer = { ...user };
         myUSer[e.target.name] = e.target.value;
         setUser(myUSer);
+        console.log(e.target)
+
 
     }
 
-    function gotoLogin(){
+
+    function gotoLogin() {
         navigate('/login')
     }
 
@@ -75,6 +81,9 @@ export default function Register() {
             }
         }
     }
+
+
+
 
     return (
 
@@ -116,33 +125,39 @@ export default function Register() {
                             name='password'
                             onChange={getUser}
                         />
+                        <div className='mt-3'>
+                            <p className="col-md-3">Age</p>
+                            <input type="number" name="age" id="age" label="age" className='col-md-12' onChange={getUser} />
+                        </div>
                     </div>
                     <button type='submit' className='btn btn-danger mt-3 signup-btn d-flex justify-content-center align-items-center'>
                         {isLoading ? <i className='fas fa-spinner fa-spin'></i> : <>
 
-                            <i class="fa-regular fa-envelope"></i>
+                            <i className="fa-regular fa-envelope"></i>
                             <div>Sign up with your email</div>
 
                         </>}
                     </button>
                     <div className="goto-signup">
                         <p className="goto-signup-text">
-                            <span>Don't have an account?    </span>
+                            <span>Already have an account? </span>
                             <button className="btn btn-link" onClick={gotoLogin}>  Login</button>
                         </p>
                     </div>
                 </form>
                 {error ? <div className='alert alert-danger' >{error} </div> : ''}
-                {errorList.map((error, index) => {
+                {
+                    errorList.map((error, index) => {
 
-                    if (error.context.key == 'password') {
-                        return <div key={index} className='alert alert-danger' >Wrong Password</div>
-                    }
-                    else {
-                        return <div key={index} className='alert alert-danger' >{error.message} </div>
-                    }
-                })}
-            </div>
-        </div>
+                        if (error.context.key == 'password') {
+                            return <div key={index} className='alert alert-danger' >Wrong Password</div>
+                        }
+                        else {
+                            return <div key={index} className='alert alert-danger' >{error.message} </div>
+                        }
+                    })
+                }
+            </div >
+        </div >
     )
 }

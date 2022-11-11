@@ -86,9 +86,9 @@ export default function Footer() {
         <Nav.Item>
           <Nav.Link eventKey="link-1">Privacy policy</Nav.Link>
         </Nav.Item>
-        <Nav.Item>
+        {/* <Nav.Item>
           <Nav.Link eventKey="link-1">Terms of use</Nav.Link>
-        </Nav.Item>
+        </Nav.Item> */}
         <span>
           {" "}
           <a className="text-reset fw-bold" href="#">

@@ -16,7 +16,7 @@ function Counter() {
 export function Map() {
   return (
     <div>
-      <div class="text-center mt-5">
+      <div class="text-center mt-5 mb-3">
         <MyButton isOutline={true}>Browse Courses</MyButton>
       </div>
 

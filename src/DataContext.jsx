@@ -1,16 +1,18 @@
 import React, { createContext, useState, useEffect } from "react";
+import { useNavigate } from 'react-router-dom'
 import axios from "axios";
-
+import jwtDecode from "jwt-decode";
 export const BASE_URL = "http://localhost:3000";
 export let DataContext = createContext([]);
 
 export default function DataProvider(props) {
+  const [userData, setUserData] = useState(null);
   let [courses, setCourses] = useState([]);
   let [categories, setCourseCategories] = useState([]);
   let [instructors, setInstructors] = useState([]);
   let [users, setUsers] = useState([]);
-  let [enrolls, setEnrolls] = useState([]);
   let [sections, setSections] = useState([]);
+  let [myEnrollsCourses, setMyEnrollsCourses] = useState([]);
 
   useEffect(() => {
     //get Courses Data
@@ -29,20 +31,43 @@ export default function DataProvider(props) {
     axios.get(`${BASE_URL}/users`).then((res) => {
       setUsers(res.data);
     });
-    //get enrolls Data
-    axios.get(`${BASE_URL}/enrolls`).then((res) => {
-      setEnrolls(res.data);
-    });
     //get sections Data
     axios.get(`${BASE_URL}/sections`).then((res) => {
       setSections(res.data);
     });
 
+    getUserData()
+
   }, []);
+
+
+  const getUserData = () => {
+    if (localStorage.getItem('userToken')) {
+      let decodedToken = jwtDecode(localStorage.getItem("userToken"));
+      setUserData(decodedToken);
+      setEnrollsCourses(decodedToken._id);
+    }
+  }
+
+  const setEnrollsCoursesWithUserID = () => {
+    setEnrollsCourses(userData._id);
+  }
+
+  const setEnrollsCourses = (userID) => {
+    axios.get(`${BASE_URL}/enrolls?user_id=${userID}`).then((res) => {
+      setMyEnrollsCourses(res.data);
+    });
+  }
+
+  const LogOut = () => {
+    localStorage.removeItem('userToken');
+    setUserData(null)
+    useNavigate('/login')
+  }
 
   return (
     <DataContext.Provider
-      value={{ courses, categories, instructors, users, enrolls, sections }}
+      value={{ userData, courses, categories, instructors, users, sections, LogOut, getUserData, myEnrollsCourses, setEnrollsCoursesWithUserID }}
     >
       {props.children}
     </DataContext.Provider>

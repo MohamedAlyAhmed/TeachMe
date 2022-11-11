@@ -63,3 +63,10 @@
     height: 22px;
     margin-right: 10px;
 }
+
+.signup-btn input#age{ 
+    height: 50px;
+    margin-top: 30px;
+    background-color: rgba(0, 0, 0, 0.06);
+    padding: 6px;
+}

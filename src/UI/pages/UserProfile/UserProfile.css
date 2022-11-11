@@ -1,0 +1,248 @@
+.profile-page {
+    width: 90%;
+    margin: 0 auto;
+
+}
+p {
+    margin-top: 0;
+    margin-bottom: 0rem;
+}
+.card-profile {
+    padding-bottom: 175px;
+}
+
+.user-info-container {
+    box-shadow: 0 3px 25px 0 rgb(0 0 0 / 10%);
+    background-color: #FFF;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    border-radius: 10px;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 20px auto;
+    align-items: center;
+}
+
+.user-profile-info {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+   
+}
+
+.user-profile-info-details {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.user-profile-info-details h2 {
+    font-size: 24px;
+    color: #000;
+    margin-bottom: 6px;
+    font-weight: 700;
+}
+
+.user-profile-info-details p {
+    font-size: 18px;
+    color: #5d6666;
+    margin-bottom: 8px;
+
+}
+
+.user-profile-avatar {
+    width: 133px;
+    height: 133px;
+    position: relative;
+    border-radius: 50%;
+}
+
+.user-profile-avatar img {
+    border-radius: 50%;
+    width: 100%;
+}
+
+.user-subscription-plan {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    color: #000;
+    max-width: 290px;
+    background-color: rgba(10, 141, 177, 0.11);
+    border-radius: 10px;
+    padding: 20px;
+
+}
+
+.user-subscription-plan p {
+    margin-bottom: 6px;
+    line-height: 1.33;
+}
+
+.user-subscription-plan h3 {
+    font-size: 16px;
+    line-height: 1.31;
+    font-weight: 700;
+}
+
+.subscripe-btn {
+    padding: 5px 25px 6px;
+    font-size: 14px;
+    line-height: 1.36;
+    margin-top: 6px;
+}
+
+.subscripe-btn-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.settings-page_title {
+    display: flex;
+    align-items: center;
+    margin: 40px 0;
+    color: #000;
+}
+
+.settings-page_title h1 {
+    margin-bottom: 40px;
+    font-size: 24px;
+}
+
+.setting-page-content {
+    display: flex;
+}
+
+.side-menu {
+    box-shadow: 0 0 12px 0 rgb(0 0 0 / 16%);
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: #FFF;
+    width: 243px;
+    padding: 32px 0;
+}
+
+.side-page-item {
+    cursor: pointer;
+    color: #000;
+    font-size: 16px;
+    padding: 15px 25px;
+    text-decoration: none;
+    text-align: left;
+}
+
+.active-tab {
+    border-right: none;
+    border-left: 3px solid #eb2027;
+    font-weight: 500;
+    background-color: rgba(222, 226, 230, 0.5);
+}
+
+.setting-page-main-page {
+    width: 100%;
+    padding: 0 35px;
+}
+.main-page{
+    padding: 60px;
+    box-shadow: 0 0 12px 0 rgb(0 0 0 / 16%);
+}
+.personal-page-content{
+    width: 100%;
+}
+.personal-page-content-title h2{
+    font-size: 22px;
+    font-weight: 700;
+}
+.personal-info-form{
+    margin-top: 50px;
+}
+.section-name{
+    width: 100%;
+    font-size: 18px;
+}
+.input-feild , .MuiFormControl-root{
+    width: 100%;
+}
+.input-feild input{
+    height: 45px;
+    border-radius: 4px;
+    width: 100%;
+    padding: 10px;
+
+}
+.input-gender{
+    height: 45px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.input-gender label{
+    padding: 10px 0!important;
+    position: relative;
+    flex: 1 1 auto;
+    color: #ff907e;
+    border-color: #ff907e;
+    cursor: pointer;
+    border-radius: 0.25rem 0 0 0.25rem;
+}
+.input-gender label:hover{
+    background-color: #ff907e;
+    color: #000;
+}
+.input-gender input[type=radio] {
+    position: absolute;
+    opacity: 0;
+    left: 0;
+    z-index: -1;
+}
+.label-checked{
+    background-color: #ff907e;
+    color: #000;
+}
+input[type=radio]+label:hover,
+.input-gender input[type=radio]:checked+label,
+.input-gender input[type=radio]:hover+label {
+    background-color: #ff907e;
+    color: #000;
+}
+.section-name input {
+    height: 45px;
+   
+}
+.css-1s2u09g-control {
+background-color:hsl(0deg 4% 95%) !important;
+border: none !important;
+color: #000;
+}
+.css-1s2u09g-control svg{
+    color: #000;
+}
+input#age{ 
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.06);
+    padding: 6px;
+}
+
+
+/******************/
+.acount-page-content-title h2{
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 50px;
+
+}
+.form-group{
+    cursor: pointer!important;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.form-group input{
+    background-color: rgb(241, 241, 241);
+    border: none;
+}

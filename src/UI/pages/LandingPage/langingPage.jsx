@@ -8,50 +8,50 @@ import Search from "../../components/Search/Search";
 import { useState, useEffect } from "react";
 import axios from "axios";
 function LandingPage() {
-  const [data, setData] = useState([]);
-  //search
-  useEffect(() => {
-    loadBlogsData();
-  }, []);
+  // const [data, setData] = useState([]);
+  // //search
+  // useEffect(() => {
+  //   loadBlogsData();
+  // }, []);
 
-  const loadBlogsData = async () => {
-    const response = await axios.get("http://localhost:5000/blogs");
-    if (response.status === 200) {
-      setData(response.data);
-    } else {
-      console.log("error");
-    }
-  };
-  const [searchValue, setSearchValue] = useState("");
+  // const loadBlogsData = async () => {
+  //   const response = await axios.get("http://localhost:5000/blogs");
+  //   if (response.status === 200) {
+  //     setData(response.data);
+  //   } else {
+  //     console.log("error");
+  //   }
+  // };
+  // const [searchValue, setSearchValue] = useState("");
 
-  const onInputChange = (e) => {
-    if (!e.target.value) {
-      <LandingPage />;
-      loadBlogsData();
-    }
-    setSearchValue(e.target.value);
-  };
-  const handleSearch = async (e) => {
-    e.preventDefault();
-    const response = await axios.get(
-      `http://localhost:3000/courses?q=${searchValue}`
-    );
-    if (response.status === 200) {
-      console.log('====================================');
-      console.log(response.data);
-      console.log('====================================');
-      setData(response.data);
-    } else {
-      console.log("errrorrrr");
-    }
-  };
+  // const onInputChange = (e) => {
+  //   if (!e.target.value) {
+  //     <LandingPage />;
+  //     loadBlogsData();
+  //   }
+  //   setSearchValue(e.target.value);
+  // };
+  // const handleSearch = async (e) => {
+  //   e.preventDefault();
+  //   const response = await axios.get(
+  //     `http://localhost:3000/courses?q=${searchValue}`
+  //   );
+  //   if (response.status === 200) {
+  //     console.log('====================================');
+  //     console.log(response.data);
+  //     console.log('====================================');
+  //     setData(response.data);
+  //   } else {
+  //     console.log("errrorrrr");
+  //   }
+  // };
   return (
     <>
-      <Search
+      {/* <Search
         searchValue={searchValue}
         onInputChange={onInputChange}
         handleSearch={handleSearch}
-      />
+      /> */}
       <header>
         <div className="hero-image">
           <div className="hero-content">

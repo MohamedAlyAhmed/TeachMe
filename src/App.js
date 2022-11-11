@@ -5,7 +5,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Register from "./UI/pages/Register/Register";
 import Login from "./UI/pages/Login/Login";
-import jwtDecode from "jwt-decode";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "@fortawesome/fontawesome-free/js/all.min.js";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -13,67 +12,53 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 import Header from "./UI/components/Header/nav_Bar";
 import DataProvider from "./DataContext";
 import Footer from "./UI/components/Footer/Footer";
-import {InstructorsPage} from "./UI/pages/InstructorsPage/InstructorsPage";
-import InstructorCard from "./UI/components/InstructorCard/InstructorCard";
-import {InstructorPage} from "./UI/pages/InstructorPage/InstructorPage";
+import { InstructorPage } from "./UI/pages/InstructorPage/InstructorPage";
+import UserProfile from "./UI/pages/UserProfile/UserProfile";
+import Dashboard from "./UI/pages/Dashboard/Dashboard";
+import CoursesPanel from "./UI/pages/Dashboard/Courses Panel/CoursesPanel";
+import InstructorsPanel from "./UI/pages/Dashboard/Instructors Panel/InstructorsPanel";
+import CategoryPanel from "./UI/pages/Dashboard/Category Panel/CategoryPanel";
+import Search from "./UI/components/Search/Search";
 
 
 //Landing Page LazyLoading 
 const LazyLandingPage = React.lazy(() =>
   import("./UI/pages/LandingPage/langingPage")
 );
+
 // Course Page LazyLoading
 const LazyCoursePage = React.lazy(() =>
   import("./UI/pages/course page/CoursePage"));
+
 //Category LazyLoading 
 const LazyCategoryPage = React.lazy(() =>
   import("./UI/pages/CategoryPage/CategoryPage")
 );
 
-//Error LazyLoading 
+//watch LazyLoading
+const LazyWatchPage = React.lazy(() =>
+  import("./UI/pages/watch page/WatchPage")
+);
+
+//Error LazyLoading
 const LazyErrorPage = React.lazy(() =>
   import("./UI/pages/Error Page/Error")
 );
 
-
-// //Instructors LazyLoading Page
-// const LazyInstructorsPage = React.lazy(() =>
-//   import("./UI/pages/InstructorsPage/InstructorsPage")
-// );
-// //Instructors LazyLoading Page
-// const LazyInstructorPage = React.lazy(() =>
-//   import("./UI/pages/InstructorPage/InstructorPage")
-// );
-
+//Instructors LazyLoading Page
+const LazyInstructorsPage = React.lazy(() =>
+  import("./UI/pages/InstructorsPage/InstructorsPage")
+);
+//userProfile LazyLoading Page
+const LazyUserProfilePage = React.lazy(() =>
+  import("./UI/pages/UserProfile/UserProfile")
+);
 
 function App() {
-
-  const [userData, setUserData] = useState(null);
-  useEffect(() => {
-    if (localStorage.getItem('userToken')) {
-      getUserData()
-    }
-  }, [])
-
-  function getUserData() {
-    let decodedToken = jwtDecode(localStorage.getItem("userToken"));
-    setUserData(decodedToken);
-  }
-
-  useEffect(() => { console.log(userData) }, [userData]);
-
-
-  function LogOut() {
-    localStorage.removeItem('userToken');
-    setUserData(null)
-    useNavigate('/login')
-  }
-
-
   return (
     <div>
       <DataProvider>
-        <Header userData={userData} LogOut={LogOut} />
+        <Header />
         <Router>
           <Routes>
             {/* .... any other path routing create it here .... */}
@@ -100,7 +85,7 @@ function App() {
               path="login"
               element={
                 <React.Suspense>
-                  <Login getUserData={getUserData} />
+                  <Login />
                 </React.Suspense>
               }
             />
@@ -123,7 +108,7 @@ function App() {
                 </React.Suspense>
               }
             />
-              <Route
+            <Route
               path="category/:category"
               element={
                 <React.Suspense>
@@ -131,12 +116,12 @@ function App() {
                 </React.Suspense>
               }
             />
-             
-             <Route
+
+            <Route
               path="instructors"
               element={
                 <React.Suspense>
-                  <InstructorsPage/>
+                  <LazyInstructorsPage />
                 </React.Suspense>
               }
             />
@@ -148,12 +133,59 @@ function App() {
                 </React.Suspense>
               }
             />
+            <Route
+              path="profile"
+              element={
+                <React.Suspense>
+                  <LazyUserProfilePage />
+                </React.Suspense>
+              }
+            />
+
+
+            <Route
+              path="watch/:courseId/:vedioID"
+              element={
+                <React.Suspense>
+                  <LazyWatchPage />
+                </React.Suspense>
+              }
+            />
+
+            <Route
+              path="watch/:courseId"
+              element={
+                <React.Suspense>
+                  <LazyWatchPage />
+                </React.Suspense>
+              }
+            />
+             <Route
+              path="/search"
+              element={
+                <React.Suspense>
+                  <Search />
+                </React.Suspense>
+              }
+            />
+
+            <Route path='dashboard' element={<Dashboard />}>
+              <Route path='courses_panel' element={<CoursesPanel />} />
+              <Route path='category_panel' element={<CategoryPanel />} />
+              <Route path='instructors_panel' element={<InstructorsPanel />} />
+            </Route>
+
+
+
+
+
+
 
             <Route
               path="*"
               element={
                 <React.Suspense>
-                  <LazyErrorPage/>
+                  <LazyErrorPage />
                 </React.Suspense>
               }
             />

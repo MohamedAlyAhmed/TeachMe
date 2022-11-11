@@ -6,7 +6,6 @@
 
 .myontainer1 {
   /* background-color: burlywood; */
-
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;

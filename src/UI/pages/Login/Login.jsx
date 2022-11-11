@@ -1,5 +1,5 @@
 import { Input, scopedCssBaselineClasses, TextField } from '@mui/material'
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import axios from 'axios';
 import Joi from 'joi';
 import { useNavigate } from 'react-router-dom';
@@ -7,6 +7,7 @@ import "./Login.css"
 import "bootstrap-social/bootstrap-social.css"
 import "bootstrap-social/bootstrap-social.less"
 import { useEffect } from 'react';
+import { DataContext } from '../../../DataContext';
 
 
 
@@ -27,7 +28,7 @@ function LoginValidtion(user) {
 
 
 
-export default function Login(props) {
+export default function Login() {
     document.title = `Login`;
     let navigate = useNavigate()
     const [isLoading, setIsLoading] = useState(false)
@@ -38,6 +39,7 @@ export default function Login(props) {
         password: "",
         email: ""
     })
+    let { getUserData } = useContext(DataContext);
 
 
 
@@ -48,7 +50,7 @@ export default function Login(props) {
     }, [])
 
 
-    function gotoSignup(){
+    function gotoSignup() {
         navigate('/register')
     }
     function getUser(e) {
@@ -75,7 +77,7 @@ export default function Login(props) {
             if (data.message === 'success') {
                 localStorage.setItem('userToken', data.token)
                 setIsLoading(false)
-                props.getUserData()
+                getUserData()
                 navigate('/')
 
 
@@ -130,9 +132,9 @@ export default function Login(props) {
                             <button type='submit' className='btn btn-danger mt-3 submit-btn d-flex justify-content-center align-items-center'>
                                 {isLoading ? <i className='fas fa-spinner fa-spin'></i> :
                                     <>
-                                        <i class="fa-regular fa-envelope"></i>
+                                        <i className="fa-regular fa-envelope"></i>
                                         <div>Login with your email</div>
-                                        
+
                                     </>}
                             </button>
                         </div>
@@ -141,7 +143,7 @@ export default function Login(props) {
                         </div>
                         <div className="goto-signup">
                             <p className="goto-signup-text">
-                               <span>Don't have an account?    </span>  
+                                <span>Don't have an account?    </span>
                                 <button className="btn btn-link" onClick={gotoSignup}>  Sign up</button>
                             </p>
                         </div>
