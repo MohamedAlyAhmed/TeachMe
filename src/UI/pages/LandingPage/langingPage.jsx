@@ -4,7 +4,7 @@ import Picks from "./Picks/Picks";
 import { Map } from "./map/map";
 import InstructorsPicks from "./InstructorPicks/InstructorsPicks";
 import MyButton from "../../components/Button/Button";
-import Search from "../../components/Search/Search";
+// import Search from "../../components/Search/Search";
 import { useState, useEffect } from "react";
 import axios from "axios";
 function LandingPage() {

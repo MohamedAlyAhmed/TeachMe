@@ -14,13 +14,13 @@ function Picks() {
             <div className="col--ld-12 col-md-12 ">
               {/* <h4>Picks</h4> */}
               <div className="picksHeader">
-              <h4 className="float-left categoryHeader">
-                   Featured Courses
-                  </h4>
+                <h4 className="float-left categoryHeader">
+                  Featured Courses
+                </h4>
               </div>
-            
-             
-                <HomeWrapper>
+
+
+              <HomeWrapper>
                 <FeaturedCourses />
                 <div className="space"></div>
                 <div className="clearfix mt-5 mb-5">
