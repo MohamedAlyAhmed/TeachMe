@@ -19,6 +19,7 @@ import CoursesPanel from "./UI/pages/Dashboard/Courses Panel/CoursesPanel";
 import InstructorsPanel from "./UI/pages/Dashboard/Instructors Panel/InstructorsPanel";
 import CategoryPanel from "./UI/pages/Dashboard/Category Panel/CategoryPanel";
 import Search from "./UI/components/Search/Search";
+import DashboardHome from "./UI/pages/Dashboard/Dashboard Home/DashboardHome";
 
 
 //Landing Page LazyLoading 
@@ -170,6 +171,7 @@ function App() {
             />
 
             <Route path='dashboard' element={<Dashboard />}>
+              <Route path='home' element={<DashboardHome />} />
               <Route path='courses_panel' element={<CoursesPanel />} />
               <Route path='category_panel' element={<CategoryPanel />} />
               <Route path='instructors_panel' element={<InstructorsPanel />} />

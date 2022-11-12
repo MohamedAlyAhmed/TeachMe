@@ -117,7 +117,7 @@ const Header = (props) => {
             {/* <a href="/search">
               <MyButton isOutline={true}>Subscribe</MyButton>
             </a>&nbsp; */}
-            <a href="http://localhost:4000/dashboard/">
+            <a href="http://localhost:4000/dashboard/home">
               <MyButton isOutline={true}>DASHBOARD</MyButton>
             </a>&nbsp;
           </Nav>

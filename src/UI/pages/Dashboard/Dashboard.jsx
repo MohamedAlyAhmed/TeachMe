@@ -16,7 +16,7 @@ export default function Dashboard() {
       <nav className="main-menu shadow">
         <ul>
           <li>
-            <Link to="/dashboard">
+            <Link to="home">
               <i className="fa fa-home fa-2x"></i>
               <span className="nav-text">Dashboard</span>
             </Link>
