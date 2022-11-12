@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 import "./nav_Bar.css";
 import MyButton from "../Button/Button";
 import { DataContext } from "../../../DataContext";
+import Search from "../Search/Search";
 
 
 
@@ -47,13 +48,13 @@ const Header = (props) => {
             // style={{ maxHeight: "100px" }}
             navbarScroll
           >
-            <a href="/instructors" style={{ color: "black", textDecoration: "none" }}>
+            <a href="/instructors" style={{ color: "black", textDecoration: "none" , marginLeft:"1rem"}}>
               <Button variant="">Instructors</Button>
-            </a>&nbsp;
+            </a>
 
             <div >
-              <Button onClick={toggleMenus} className="us er-pic" variant="">
-                Courses &nbsp;
+              <Button onClick={toggleMenus} className="us er-pic" variant="" style={{marginRight:"1rem", marginLeft:"1rem"}}>
+                Courses
                 <i className="fa-solid fa-angle-down"></i>
               </Button>&nbsp;&nbsp;&nbsp;&nbsp;
               <div className="sub-menu-wrap " id="subMenu">
@@ -113,27 +114,18 @@ const Header = (props) => {
             </div>
 
             {/* <MyButton isOutline={true}>Subscribe</MyButton> */}
-            <a href="#">
+            {/* <a href="/search">
               <MyButton isOutline={true}>Subscribe</MyButton>
-            </a>&nbsp;
+            </a>&nbsp; */}
             <a href="http://localhost:4000/dashboard/">
               <MyButton isOutline={true}>DASHBOARD</MyButton>
             </a>&nbsp;
           </Nav>
-
-          <form className="form">
-
-            <div className="main">
-              <input
-                type="text"
-                name=""
-                placeholder="search courses ,topics .."
-              />
-              <a href="#">
+         
+          <a href="/search" style={{marginRight:"1rem"}}>
                 <i className="fa fa-search icon-search"></i>
               </a>
-            </div>
-          </form>
+       
           {userData ? (
             <>
               <Button onClick={toggleProfile} className="user-pic" variant="">
@@ -210,11 +202,11 @@ const Header = (props) => {
             </>
           ) : (
             <>
-              <Button variant="link" >
+              <Button variant="link"  style={{marginRight:"1rem"}}>
                 <a href="/login" className="loginlink">Login</a>
               </Button>
 
-              <a href="/register">
+              <a style={{marginRight:"1rem"}} href="/register">
                 <MyButton isOutline={false}>sign up</MyButton>
               </a>
             </>

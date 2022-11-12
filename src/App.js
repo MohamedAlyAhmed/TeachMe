@@ -18,6 +18,7 @@ import Dashboard from "./UI/pages/Dashboard/Dashboard";
 import CoursesPanel from "./UI/pages/Dashboard/Courses Panel/CoursesPanel";
 import InstructorsPanel from "./UI/pages/Dashboard/Instructors Panel/InstructorsPanel";
 import CategoryPanel from "./UI/pages/Dashboard/Category Panel/CategoryPanel";
+import Search from "./UI/components/Search/Search";
 
 
 //Landing Page LazyLoading 
@@ -156,6 +157,14 @@ function App() {
               element={
                 <React.Suspense>
                   <LazyWatchPage />
+                </React.Suspense>
+              }
+            />
+             <Route
+              path="/search"
+              element={
+                <React.Suspense>
+                  <Search />
                 </React.Suspense>
               }
             />

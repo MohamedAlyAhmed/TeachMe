@@ -5,6 +5,75 @@ import "./FeaturedCategory.css";
 import CategoryCard from "../../../components/CategoryCard/CategoryCard";
 import { DataContext } from "../../../../DataContext";
 
+
+
+export const FeaturedCategory = () => {
+  let { categories } = useContext(DataContext);
+
+
+  const settings = {
+    dots: false,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    initialSlide: 0,
+        nextArrow: <SampleNextArrow />,
+           prevArrow: <SamplePrevArrow />,
+           responsive: [
+            {
+              breakpoint: 1250,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                infinite: true,
+                dots: false,
+              },
+            },
+            {
+              breakpoint: 1300,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                infinite: true,
+                dots: false,
+              },
+            },
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                infinite: true,
+                dots: false,
+              },
+            },
+            {
+              breakpoint: 590,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: false,
+                dots: false,
+              },
+            },
+           
+          ],
+  };
+
+ 
+
+  return (
+    <div>
+      <Slider {...settings}>
+        {categories.map((e) => (
+          <CategoryCard category={e} />
+        ))}
+      </Slider>
+    </div>
+  );
+}
+
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
@@ -40,55 +109,3 @@ function SamplePrevArrow(props) {
     />
   );
 }
-
-export const FeaturedCategory = () => {
-  let { categories } = useContext(DataContext);
-  const settings = {
-    dots: true,
-    infinite: true,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
-  };
-  return (
-    <div>
-      <Slider {...settings}>
-        {categories.map((e) => (
-          <CategoryCard category={e} />
-        ))}
-      </Slider>
-    </div>
-  );
-};
-// export  const   FeaturedCategory = () => {
-//   let { categories } = useContext(DataContext);
-
-//       const settings = {
-//         dots: false,
-//         // focusOnSelect: true,
-//         infinite: true,
-//         slidesToShow: 4,
-//         slidesToScroll: 1,
-//         speed: 500,
-//       };
-//       return (
-//         <div>
-//           <Slider {...settings}>
-//             {categories.map((e) => (
-//               <CategoryCard category={e}/>
-//             ))}
-//           </Slider>
-//         </div>
-//       );
-//     }
-
-//   export const HomeWrapper = styled.div`
-//     .slick-arrow {
-//       background-color: #f3f1f1;
-//       height: 100px;
-//       width: 30px;
-//       align-items: center;
-//       justify-content: center;
-//           }
-//   `;
