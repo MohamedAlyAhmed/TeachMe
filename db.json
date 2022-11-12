@@ -1166,39 +1166,40 @@
       "pageViews": 0
     },
     {
-      "id": "7f9b11be-403b-44eb-934d-b52d3e6ca982",
+      "id": "257df85d-639e-4def-a517-aff05ceed659",
+      "name": "Ahmed Gamal",
+      "title": "Singer",
+      "description": "Ahmed is an Egyptian singer who rose to fame as the runner-up of the second season of Arab Idol 2013, broadcast by the MBC network. Gamal was among the top three who reached the finals, but he ended up in second place. Despite his ending as a runner-up, he won the hearts of millions around the Arab world. Before Arab Idol, Gamal caught the attention of many big musicians such as Ammar El Sherei, Hany Mahanna, and Mohammed Elhelw.[6] Gamal likes both Eastern and Western music, especially Egyptian Folk music and House Music. Most of his songs are of his composition. Gamal was distinguished in Arab Idol with his deep strong sensitive voice, which one of the critics said: \"his voice is like a violin and doesn't need music while singing\".",
       "mainUserId": 120,
-      "name": "Ahmed Fikry",
-      "description": "Ahmed Fikry is a Digital Strategy Thought Leader with more than 10 years of experience in digital strategy, portfolio management, customer experience, and emerging technologies serving clients of two of the big four offices in the Middle East, accelerating vision 2030 realization for governments via digital transformation roadmap definition and execution.",
       "image": "https://images.ctfassets.net/9l3tjzgyn9gr/3CZLoGkEw5r7ktvoHsxyzK/3501f87f27c9bb972c30fc1f534f2d3c/jk-rowling-teacher.jpg?fm=jpg&fl=progressive&q=50&w=1200",
       "numberOfCourses": 2,
       "numberOfLearner": 0,
       "permanentLink": "Ahmed-Fikry",
-      "title": "Digital Strategy & Transformation Thought Leader",
       "typeId": 1,
       "courseIds": [
-        333,
-        677
+        725,
+        729
       ],
       "socialChannels": [],
       "mentorXP": [],
       "pageViews": 0
     },
     {
-      "id": "c0a7343a-d120-4b77-b447-34f9058ba389",
-      "mainUserId": 128,
-      "name": "Doha Moustafa",
-      "description": "Doha Moustafa graduated from the Faculty of Fine Arts, Helwan University, in 2011. She worked in the field of fashion design and advertising before moving to the field of arts education. She provided many courses and pieces of training for people of several ages and organized many arts festivals and exhibitions in different cities. Currently, she has her own studio to teach the basics of various arts in the field of plastic art and handicrafts. She continually works hard to raise awareness of the importance of practicing arts to boost psychological health as well as the role and impact of art on our lives.",
-      "image": "https://www.biography.com/.image/t_share/MTIwNjA4NjM0MTIxNzgyNzk2/image-title2.jpg",
+      "id": "2010f3d1-9b60-4558-ae5e-3f603a29ee09",
+      "name": "Amir Hassan",
+      "title": "Head of Digital Marketing and E-Commerce",
+      "description": "Amir Hassan / Strategic marketing expert with extensive digital experience in the areas of growth demand generation and engagement strategies across different verticals and regions. Currently, he is heading digital marketing and E-Commerce for Philips and its brands all across Africa.",
+      "isAskMentor": true,
       "numberOfCourses": 2,
+      "courseIds": [
+        595,
+        666
+      ],
+      "mainUserId": 128,
+      "image": "https://www.biography.com/.image/t_share/MTIwNjA4NjM0MTIxNzgyNzk2/image-title2.jpg",
       "numberOfLearner": 0,
       "permanentLink": "Doha-Moustafa",
-      "title": "Art Teacher & Visual Artist",
       "typeId": 1,
-      "courseIds": [
-        381,
-        422
-      ],
       "socialChannels": [
         null,
         null,
@@ -1211,19 +1212,24 @@
       "pageViews": 0
     },
     {
-      "id": "1e3b02c6-8027-4dee-a045-96532e1a5c33",
+      "id": "512dbe94-b1c4-4c05-aeeb-edd2063783d4",
+      "name": "Ahmad Aly El Dabaa",
+      "title": "Managing Director",
+      "description": "Ahmad Eldabaa is the Managing Director of Ajax Business Solutions Company www.ajaxsolutions-eg.com, specializing in Training & Consulting.",
+      "isAskMentor": true,
+      "numberOfCourses": 5,
+      "courseIds": [
+        313,
+        319,
+        403,
+        737,
+        738
+      ],
       "mainUserId": 76,
-      "name": "Nashwa El Fooly",
-      "description": "Nashwa graduated BSc in Mechanical Power Engineering at Ain Shams University. She is a Positive Discipline in the Classroom Educator at the American Association for Positive Discipline, an Accessing Personal Genius Practitioner at the International Society of Neuro-Semantics, a Group Coach at the International Coaching Federation, a Time Line Therapy Practitioner at The Time Line Therapy Association, and Creator of \"Mama Pristo\" Book Philosophy and Coauthor.\nShe also worked in the Field of piping management in many Power Plant Projects in Egypt, as a designer for character-building and personal development programs in Schools.\nShe trained many teachers and school staff on how to apply Positive Discipline in the Classroom and manage the school.",
       "image": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/celebrity-fitness-trainer-harley-pasternak-helped-introduce-news-photo-518418190-1538158845.jpg",
-      "numberOfCourses": 1,
       "numberOfLearner": 0,
       "permanentLink": "Nashwa-El-Fooly",
-      "title": "Life Coach",
       "typeId": 1,
-      "courseIds": [
-        902
-      ],
       "socialChannels": [
         "",
         "",
@@ -1236,19 +1242,20 @@
       "pageViews": 0
     },
     {
-      "id": "1aaa02f0-f1c5-42f7-8487-6b4c16164948",
-      "mainUserId": 166,
-      "name": "Mohammed Essam",
-      "description": "Mohamed Essam/ Has five years of teaching computer science and AI in a big Programs like Harvard's cs50x and in Egyptian universities.\nhe also works as an associate member at the Faculty of Computers and Information at Modern Academy, in addition to his master’s studies at the Faculty of Artificial Intelligence, Benha University.\n\n",
-      "image": "https://i.insider.com/515b43a6ecad04b058000014?width=400&format=jpeg",
+      "id": "b1e6741e-541d-492e-b9ea-dd495277c383",
+      "name": "Ahmed Gobba",
+      "title": "VFX Director",
+      "description": "Ahmed Gobba is a Filmmaker. He works as a film director and VFX director in high-end Film/TV productions.",
+      "isAskMentor": false,
       "numberOfCourses": 1,
+      "courseIds": [
+        234
+      ],
+      "mainUserId": 166,
+      "image": "https://i.insider.com/515b43a6ecad04b058000014?width=400&format=jpeg",
       "numberOfLearner": 0,
       "permanentLink": "Mohamed-Essam",
-      "title": "Researcher & Assistant Teacher in the field of computer Science and AI",
       "typeId": 1,
-      "courseIds": [
-        745
-      ],
       "socialChannels": [
         null,
         "",
@@ -1322,21 +1329,22 @@
       "pageViews": 0
     },
     {
-      "id": "46cc1be9-8748-4013-a3fe-213a5f7e9af7",
-      "mainUserId": 423,
-      "name": "Khaled Habib",
-      "description": "Khaled Habib is a senior management and Human resources executive as well as a well-rounded academic, enjoying a rich profile of regional and global expertise, with a proven track record in organization design, development, change and performance management, as well as restructuring, talent management, and executive leadership coaching.",
-      "image": "https://cdn.sanity.io/images/4wurd6lm/production/255f680009d3726cb823e59a842fa87b95cd9789-1852x1501.jpg?w=1852&h=1501&auto=format",
+      "id": "1f528ba2-28f7-4735-be62-d5ce52bcf762",
+      "name": "Noha Zahra",
+      "title": "Educational Consultant & Author",
+      "description": "With over 15 years of experience, Zahra has held various positions in the field of education both at the administrative and teaching levels, during which she made many contributions in the field of teacher training.",
+      "isAskMentor": false,
       "numberOfCourses": 3,
+      "courseIds": [
+        279,
+        401,
+        402
+      ],
+      "mainUserId": 423,
+      "image": "https://cdn.sanity.io/images/4wurd6lm/production/255f680009d3726cb823e59a842fa87b95cd9789-1852x1501.jpg?w=1852&h=1501&auto=format",
       "numberOfLearner": 0,
       "permanentLink": "Khaled-Habib",
-      "title": "Professor of Marketing and Management",
       "typeId": 1,
-      "courseIds": [
-        264,
-        4,
-        5
-      ],
       "socialChannels": [],
       "mentorXP": [
         {
@@ -1372,23 +1380,21 @@
       "pageViews": 0
     },
     {
-      "id": "dc1c0ab6-a62d-40cc-801f-01a93835d50a",
+      "id": "dc906a3f-e583-46dc-8b87-f1f8c741520e",
+      "name": "Amr Moustafa",
+      "title": "Consultant & Specialist in Hospitality Industry",
+      "description": "Amr Moustafa is the founder of ''Amr Moustafa Hospitality Management Solutions'' holds MBA (Master of Business Administration) From Eslsca Business School Paris, his Major is General Business Management Track.\nHe has BA in Hotels Management, Faculty of tourism and hotels Alexandria university.  Now he is preparing DBA (Doctoral of Business Administration) in the faculty of commerce Ain Shams University.",
+      "isAskMentor": true,
+      "numberOfCourses": 2,
+      "courseIds": [
+        229,
+        282
+      ],
       "mainUserId": 235,
-      "name": "Mahmoud Qaisiya",
-      "description": "Mahmoud Qaisiya is an engineer in the field of mechatronics engineering with more than 5 years of experience in programming and engineering design.",
       "image": "https://www.nsba.org/-/media/ASBJ/2021/February/features/diverse-teachers-matter.jpg",
-      "numberOfCourses": 5,
       "numberOfLearner": 0,
       "permanentLink": "Mahmoud-Qaisiya",
-      "title": "Mechatronics Engineer",
       "typeId": 1,
-      "courseIds": [
-        806,
-        840,
-        841,
-        973,
-        972
-      ],
       "socialChannels": [
         "",
         "",
@@ -1401,22 +1407,20 @@
       "pageViews": 0
     },
     {
-      "id": "159a4309-e33a-41c7-8105-224f35522ece",
+      "id": "e9b3ff57-67c5-4723-a02e-0998d7e9b175",
+      "name": "Yasser Ghallab",
+      "title": "Digital Marketing Coach",
+      "description": "Yasser Ghallab is an MBA holder, certified professional coach, and academic tutor in the American University in Cairo, and formerly in Cairo University. Yasser has had many remarkable accomplishments in the world of business. He is the head of digital marketing of multiple multinational companies, a business transformation consultant for more than 70 local and international companies, and an expert international trainer who has achieved success in training 45000 leaders from 37 nationalities since 2009. Moreover, he is a certified consultant for several international entities like the United Nations, International Trade Center, and the European Bank for Reconstruction and Development.",
+      "isAskMentor": false,
+      "numberOfCourses": 1,
+      "courseIds": [
+        695
+      ],
       "mainUserId": 379,
-      "name": "Abdelghany Shoair",
-      "description": "Abdelghany Shoair is an Egyptian calligrapher and typographer. At a very young age, he was mentored by many great calligraphers. Their help and support along with his passion for calligraphy led him to his first position at ALMAJD TV station as a calligrapher.",
       "image": "https://www.workitdaily.com/media-library/a-young-teacher-grades-an-assignment-from-one-of-her-students.jpg?id=22146397&width=2000&height=1500&quality=85&coordinates=49%2C0%2C49%2C0",
-      "numberOfCourses": 4,
       "numberOfLearner": 0,
       "permanentLink": "Abdelghany-Shoair",
-      "title": "Calligrapher and Typographer",
       "typeId": 1,
-      "courseIds": [
-        227,
-        214,
-        761,
-        762
-      ],
       "socialChannels": [
         null,
         null,
@@ -1429,22 +1433,22 @@
       "pageViews": 0
     },
     {
-      "id": "be537717-4862-44ef-8d36-30cab5ec50f1",
+      "id": "ffcadff1-6833-4699-970d-07a39e2bcee7",
       "mainUserId": 505,
-      "name": "Rania Abu Rabia",
-      "description": "Rania is an executive coach, facilitator of leadership and team transformation, and keynote speaker.  She has a record of 5200+ coaching hours, working with leaders in Egypt and around the world.  Rania is Past President of the International Coach Federation (ICF) Egypt Chapter, and a faculty member of ICF-credentialed coaching programs.",
+      "name": "Heba El Sawah",
+      "title": "Life Coach/Author",
+      "description": "Researcher, writer and family relations and self-realization life coach, Heba El Sawah is well-known for her “Living on Purpose” training course and “Soulmates” marital workshop.",
+      "isAskMentor": false,
+      "numberOfCourses": 3,
+      "courseIds": [
+        157,
+        265,
+        267
+      ],
       "image": "https://learn.canva.com/wp-content/uploads/2020/01/30-quotes-teachers.jpg",
-      "numberOfCourses": 4,
       "numberOfLearner": 0,
       "permanentLink": "Rania-Abu-Rabia",
-      "title": "Leadership Transformation Specialist & Positive Psychology Coach",
       "typeId": 1,
-      "courseIds": [
-        278,
-        277,
-        421,
-        474
-      ],
       "socialChannels": [
         null,
         null,
@@ -1477,18 +1481,18 @@
       "id": 2
     },
     {
-      "user_id": "6367b173719d000015f8a8c8",
-      "course_id": "903",
-      "date": "2022-11-10T18:29:02.363Z",
-      "progress": 3,
-      "id": 3
-    },
-    {
       "user_id": "63688395f045c50015f60d17",
       "course_id": "908",
       "date": "2022-11-10T20:36:25.532Z",
       "progress": 0,
       "id": 4
+    },
+    {
+      "user_id": "6367b173719d000015f8a8c8",
+      "course_id": "903",
+      "date": "2022-11-11T12:22:52.224Z",
+      "progress": 1,
+      "id": 5
     }
   ],
   "CourseCategories": [
@@ -1575,6 +1579,12 @@
       "image": "https://img.freepik.com/free-photo/cool-geometric-triangular-figure-neon-laser-light-great-backgrounds-wallpapers_181624-9331.jpg?w=2000",
       "permanentLink": "spaceX",
       "id": 14
+    },
+    {
+      "name": "general",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/General_Robert_Kingston%2C_official_military_photo%2C_1984.JPEG/1200px-General_Robert_Kingston%2C_official_military_photo%2C_1984.JPEG",
+      "permanentLink": "general",
+      "id": 15
     }
   ],
   "sections": [

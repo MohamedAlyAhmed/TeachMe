@@ -13,7 +13,8 @@ function LandingPage() {
           <div className="container">
             <div className="row">
               <div className="col-lg-12 background head">
-                <h1 className="display-2 fw-bold">Learn Online</h1>
+                <div style={{ height: 100 }}></div>
+                <h1 className="display-2 fw-bold ">Learn Online</h1>
                 <p>From the biggest Arabic library of video-based courses</p>
 
                 <p>Billed yearly</p>
