@@ -1,37 +1,112 @@
-import React from 'react'
-import './CategoryUpdate.css'
+import Button from "@mui/material/Button";
+import TextField from "@mui/material/TextField";
+import Dialog from "@mui/material/Dialog";
+import DialogActions from "@mui/material/DialogActions";
+import DialogContent from "@mui/material/DialogContent";
+import DialogContentText from "@mui/material/DialogContentText";
+import DialogTitle from "@mui/material/DialogTitle";
+import { useState } from "react";
+import { BASE_URL } from "../../../../../DataContext";
+import CategoryCard from "../../../../components/CategoryCard/CategoryCard";
+import axios from "axios";
+import "./CategoryUpdate.css";
 
-export default function CategoryUpdate({category}) {
+export default function CategoryUpdate({ category }) {
+  // For Update Category
+  const [updatedName, setUpdatedName] = useState(category.name);
+  const [updatedImg, setUpdatedImg] = useState(category.image);
+  const [updatedLink, setUpdatedLink] = useState(category.permanentLink);
+  // For Preview Category
+  const updatedPreview = {
+    name: updatedName,
+    image: updatedImg,
+    permanentLink: updatedLink,
+  };
 
+  const [open, setOpen] = useState(false);
 
-    console.log(category.id);
-  return (<div>
-    <div>From Category Update  : {category.id}</div> 
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
 
+  const handleClose = () => {
+    setOpen(false);
+  };
 
-    
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Launch demo modal : {category.id}
-</button>
+  const updateCategory = (id) => {
+    axios
+      .put(`${BASE_URL}/CourseCategories/${id}`, {
+        name: updatedName,
+        image: updatedImg,
+        permanentLink: updatedLink,
+      })
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+    handleClose();
+    refreshPage();
+  };
 
+  const refreshPage = () => {
+    window.location.reload();
+  };
 
-<div class="modal fade m-5" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title{category.id}</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        {category.name}
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
+  return (
+    <div>
+      <button className="btn btn-primary" onClick={handleClickOpen}>
+        Update
+      </button>
+      <Dialog open={open} onClose={handleClose}>
+        <DialogTitle className="text-center">{category.name}</DialogTitle>
+        <DialogContent>
+          <DialogContentText className="d-flex justify-content-center align-items-center flex-column">
+            <CategoryCard category={updatedPreview} />
+            Link : {updatedLink}
+          </DialogContentText>
+          <TextField
+            autoFocus
+            margin="dense"
+            id="name"
+            label="Name"
+            type="text"
+            fullWidth
+            variant="standard"
+            defaultValue={category.name}
+            onChange={(e) => setUpdatedName(e.target.value)}
+          />
+          <TextField
+            autoFocus
+            margin="dense"
+            id="ImgURL"
+            label="Img URL"
+            type="text"
+            fullWidth
+            variant="standard"
+            defaultValue={category.image}
+            onChange={(e) => setUpdatedImg(e.target.value)}
+          />
+          <TextField
+            autoFocus
+            margin="dense"
+            id="PermanentLink"
+            label="Permanent Link"
+            type="text"
+            fullWidth
+            variant="standard"
+            defaultValue={category.permanentLink}
+            onChange={(e) => setUpdatedLink(e.target.value)}
+          />
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleClose}>Cancel</Button>
+          <Button onClick={() => updateCategory(category.id)}>
+            Save Changes
+          </Button>
+        </DialogActions>
+      </Dialog>
     </div>
-  </div>
-</div>
-
-    </div>)
+  );
 }
