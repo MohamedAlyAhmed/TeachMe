@@ -5,6 +5,7 @@ import { BASE_URL, DataContext } from "../../../../DataContext";
 import { useContext } from "react";
 import CategoryCard from "../../../components/CategoryCard/CategoryCard";
 import { Link } from "react-router-dom";
+import CategoryUpdate from "./Category update/CategoryUpdate";
 
 export default function CategoryPanel() {
   const { categories } = useContext(DataContext);
@@ -168,17 +169,17 @@ export default function CategoryPanel() {
 
       <div className="row">
         {categories.map((e, index) => (
-          <div className=" col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 d-flex align-items-center justify-content-center rounded-2 flex-column my-3">
+          <div key={index} className=" col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 d-flex align-items-center justify-content-center rounded-2 flex-column my-3">
             <div className="bg-light shadow p-3 rounded d-flex flex-column justify-content-center align-items-center">
               <div className="bg-secondary text-light p-2 rounded text-center px-3 w-100">
                 {index + 1} : {e.name}
               </div>
 
-              <h6 className="bg-light text-dark shadow mt-2 p-2 rounded">
+              <h6 className="bg-light text-dark mt-2 p-2 rounded">
                 Before Update
               </h6>
               <CategoryCard category={e} />
-              <h6 className="bg-light text-dark shadow p-2 rounded">
+              <h6 className="bg-light text-dark p-2 rounded">
                 After The Update
               </h6>
               <CategoryCard category={updatedPreview} />
@@ -235,6 +236,9 @@ export default function CategoryPanel() {
                 >
                   update
                 </button>
+
+                <CategoryUpdate category={e} index={index}/>
+
               </div>
             </div>
           </div>

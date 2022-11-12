@@ -1489,6 +1489,13 @@
       "date": "2022-11-10T20:36:25.532Z",
       "progress": 0,
       "id": 4
+    },
+    {
+      "user_id": "63688395f045c50015f60d17",
+      "course_id": "903",
+      "date": "2022-11-11T12:00:40.310Z",
+      "progress": 2,
+      "id": 5
     }
   ],
   "CourseCategories": [
