@@ -15,6 +15,7 @@ import Footer from "./UI/components/Footer/Footer";
 import { InstructorPage } from "./UI/pages/InstructorPage/InstructorPage";
 import UserProfile from "./UI/pages/UserProfile/UserProfile";
 import Dashboard from "./UI/pages/Dashboard/Dashboard";
+import DashboardHome from "./UI/pages/Dashboard/Dashboard Home/DashboardHome";
 import CoursesPanel from "./UI/pages/Dashboard/Courses Panel/CoursesPanel";
 import InstructorsPanel from "./UI/pages/Dashboard/Instructors Panel/InstructorsPanel";
 import CategoryPanel from "./UI/pages/Dashboard/Category Panel/CategoryPanel";
@@ -22,6 +23,7 @@ import AccountInformation from "./UI/pages/UserProfile/Account/AccountInf";
 import PersonalInformation from "./UI/pages/UserProfile/Personal/personalInf";
 import SavesList from "./UI/pages/UserProfile/SavedList/SavesList";
 import MyCourses from "./UI/pages/UserProfile/MyCourses/Mycourses"
+import Search from "./UI/components/Search/Search"
 
 
 //Landing Page LazyLoading 
@@ -181,15 +183,11 @@ function App() {
             />
 
             <Route path='dashboard' element={<Dashboard />}>
-              <Route path='home' element={<DashboardHome />} />
+              <Route path='home' element={<DashboardHome/>} />
               <Route path='courses_panel' element={<CoursesPanel />} />
               <Route path='category_panel' element={<CategoryPanel />} />
               <Route path='instructors_panel' element={<InstructorsPanel />} />
             </Route>
-
-
-
-
 
 
 
