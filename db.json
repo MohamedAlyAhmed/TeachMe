@@ -1575,16 +1575,10 @@
       "permanentLink": "Education"
     },
     {
-      "name": "SpaceX",
-      "image": "https://img.freepik.com/free-photo/cool-geometric-triangular-figure-neon-laser-light-great-backgrounds-wallpapers_181624-9331.jpg?w=2000",
-      "permanentLink": "spaceX",
+      "name": "spaceX",
+      "image": "https://cdn.sanity.io/images/2yyup5mx/production/d5a915cd9db3444998926f61645b6f83a53aced0-5000x2813.jpg",
+      "permanentLink": "live",
       "id": 14
-    },
-    {
-      "name": "general",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/General_Robert_Kingston%2C_official_military_photo%2C_1984.JPEG/1200px-General_Robert_Kingston%2C_official_military_photo%2C_1984.JPEG",
-      "permanentLink": "general",
-      "id": 15
     }
   ],
   "sections": [

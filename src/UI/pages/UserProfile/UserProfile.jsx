@@ -4,7 +4,9 @@ import { Navigate } from "react-router-dom";
 import TextField from '@mui/material/TextField';
 import { DataContext } from '../../../DataContext';
 import countryList from 'react-select-country-list'
-
+import { Link, Outlet } from "react-router-dom";
+import PersonalInformation from "./Personal/personalInf";
+import AccountInformation from "./Account/AccountInf";
 
 
 
@@ -17,15 +19,18 @@ export default function UserProfile() {
         setValue(value)
     }
 
-
+    const sidepageitem = document.querySelectorAll(".side-page-item")
+    function handlebuttonlink(el) {
+        console.log(el);
+        
+    }
 
     const { userData } = useContext(DataContext);
     let fullName;
-    fullName = userData.first_name + " " + userData.last_name
+    fullName = userData.first_name + " " + userData.last_name;
     console.log(userData);
-    function handleSidePage() {
-        const current = document.getElementById('')
-    }
+    
+
 
     return (
         <>
@@ -61,79 +66,20 @@ export default function UserProfile() {
 
                     <div className="setting-page-side-menu">
                         <div className="side-menu">
-                            <a className="side-page-item active-tab" onClick={handleSidePage}>Presonal Information</a>
-                            <a className="side-page-item" onClick={handleSidePage}>Acount Information</a>
+
+                            <Link to="Personal" className="side-page-item active-tab"  >Presonal Information</Link>
+                            <Link to="Account" className="side-page-item" >Acount Information</Link>
+                            <Link to="SavesList" className="side-page-item" >SavesList</Link>
+                            <Link to="MyCourses" className="side-page-item" >MyCourses</Link>
+
                         </div>
                     </div>
 
                     <div className="setting-page-main-page">
                         <div className="main-page">
-                            {/* <div className="personal-page-content">
-                                <div className="personal-page-content-title">
-                                    <h2>Personal Information</h2>
-                                </div>
-                                <div className="personal-info-form">
-                                    <div className="d-inline-flex align-items-center section-name">
-                                        <p className="col-md-3">Name</p>
-                                        <div className="input-feild">
-                                            <input type="text" placeholder={fullName} />
-                                        </div>
-                                    </div>
-                                    <div className="d-inline-flex col-md-12  align-items-center section-gender">
-                                        <p className="col-md-3">Gender</p>
-                                        <div className="input-gender d-flex col-md-9">
-                                            <input type="radio" name="gender" id="male" />
-                                            <label htmlFor="male" id="formale" className="btn btn-outline-tangerine">Male</label>
-                                            <input type="radio" name="gender" id="female" />
-                                            <label htmlFor="female" id="forfemale" className="btn btn-outline-tangerine">Female</label>
-                                        </div>
-                                    </div>
-                                    <div className="d-inline-flex col-md-12 mb-3 align-items-center  ">
-                                        <p className="col-md-3">Age</p>
+                            <Outlet></Outlet>
 
-                                        <input type="number" name="age" id="age" value={userData.age} />
 
-                                    </div>
-                                    <div className="d-inline-flex col-md-12 mb-3 align-items-center ">
-                                        <p className="col-md-3">country</p>
-                                        <div className="d-flex">
-                                            <Select options={options} value={value} onChange={changeHandler} />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> */}
-                            <div>
-                                <div className="acount-page-content-title">
-                                    <h2>Account Information</h2>
-                                </div>
-                                <div class="form-group row cursor-pointer">
-                                    <label for="email" class="col-sm-4 col-form-label cursor-pointer"> Email </label>
-                                    <div class="col-sm-7 col-10 cursor-pointer">
-                                        <input type="email" id="email" value={userData.email} class="form-control cursor-pointer ng-untouched ng-pristine ng-valid" />
-                                    </div>
-                                    <div class="col-sm-1 col-2 cursor-pointer">
-
-                                    </div>
-                                </div>
-                                <div class="form-group row cursor-pointer">
-                                    <label for="email" class="col-sm-4 col-form-label cursor-pointer"> Password </label>
-                                    <div class="col-sm-7 col-10 cursor-pointer">
-                                        <input type="password" id="password" value={userData.password} class="form-control cursor-pointer ng-untouched ng-pristine ng-valid" />
-                                    </div>
-                                    <div class="col-sm-1 col-2 cursor-pointer">
-
-                                    </div>
-                                </div>
-                                <div class="form-group row cursor-pointer">
-                                    <label for="email" class="col-sm-4 col-form-label cursor-pointer"> Mobile Number </label>
-                                    <div class="col-sm-7 col-10 cursor-pointer">
-                                        <input type="number" id="mobile-number" value={userData.password} class="form-control cursor-pointer ng-untouched ng-pristine ng-valid" />
-                                    </div>
-                                    <div class="col-sm-1 col-2 cursor-pointer">
-
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>

@@ -10,7 +10,6 @@ import { Link } from "react-router-dom";
 import "./nav_Bar.css";
 import MyButton from "../Button/Button";
 import { DataContext } from "../../../DataContext";
-import Search from "../Search/Search";
 
 
 
@@ -48,12 +47,12 @@ const Header = (props) => {
             // style={{ maxHeight: "100px" }}
             navbarScroll
           >
-            <a href="/instructors" style={{ color: "black", textDecoration: "none" , marginLeft:"1rem"}}>
+            <a href="/instructors" style={{ color: "black", textDecoration: "none", marginLeft: "1rem" }}>
               <Button variant="">Instructors</Button>
             </a>
 
             <div >
-              <Button onClick={toggleMenus} className="us er-pic" variant="" style={{marginRight:"1rem", marginLeft:"1rem"}}>
+              <Button onClick={toggleMenus} className="us er-pic" variant="" style={{ marginRight: "1rem", marginLeft: "1rem" }}>
                 Courses
                 <i className="fa-solid fa-angle-down"></i>
               </Button>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -117,24 +116,25 @@ const Header = (props) => {
             {/* <a href="/search">
               <MyButton isOutline={true}>Subscribe</MyButton>
             </a>&nbsp; */}
-            <a href="http://localhost:4000/dashboard/">
+            <a href="http://localhost:4000/dashboard/home">
               <MyButton isOutline={true}>DASHBOARD</MyButton>
             </a>&nbsp;
           </Nav>
-         
-          <a href="/search" style={{marginRight:"1rem"}}>
-                <i className="fa fa-search icon-search"></i>
-              </a>
-       
+
+          <a href="/search" style={{ marginRight: "1rem" }}>
+            <i className="fa fa-search icon-search"></i>
+          </a>
+
           {userData ? (
             <>
-              <Button onClick={toggleProfile} className="user-pic" variant="">
-                <img
-                  src="assets/default-avatar.jpg"
-                  alt=""
-                  className="avatar"
-                />
-              </Button>
+                <Button onClick={toggleProfile} className="user-pic" variant="">
+                  <img
+                    src="assets/default-avatar.jpg"
+                    alt=""
+                    className="avatar"
+                  />
+                </Button>
+
               <div className="sub-profile-wrap" id="subProfileMenu">
                 <div className="user-profile-menu-container mat-menu-panel">
 
@@ -147,34 +147,36 @@ const Header = (props) => {
                       </div>
 
                       <div className="info-details">
-                        <h6>{userData.first_name} {userData.last_name}</h6>
-                        <p>{userData.email}</p>
+                        <a href="/profile">
+                          <h6>{userData.first_name} {userData.last_name}</h6>
+                          <p>{userData.email}</p>
+                        </a>
                       </div>
 
                     </div>
                   </div>
                   <div className="user-profile-subscribed ng-star-inserted">
                     <button routerlink="" className="btn btn-outline-light user-profile-subscribe-btn" >
-                      Subscribe
+                      Go To Profile Page
                     </button>
 
                   </div>
                   <div className="user-profile-card__options-menu-list-container">
                     <div className="user-profile-card__user-options-menu-list">
-                      <a className="user-profile-card__user-option-item" href="">
+                      <a className="user-profile-card__user-option-item" href="/my-progress">
                         <i className="fa-regular fa-circle-play"></i>
                         <p>My Progress</p>
                       </a>
-                      <a className="user-profile-card__user-option-item" href="">
+                      <a className="user-profile-card__user-option-item" href="/saved-list">
                         <i className="fa-regular fa-bookmark"></i>
                         <p >Saved Courses</p>
                       </a>
 
-                      <a className="user-profile-card__user-option-item" href="">
+                      <a className="user-profile-card__user-option-item" href="/my-certificates">
                         <i className="fa-solid fa-certificate"></i>
                         <p >Certificates</p>
                       </a>
-                      <a className="user-profile-card__user-option-item " href="">
+                      <a className="user-profile-card__user-option-item " href="/profile">
                         <i className="fa-solid fa-gear"></i>
                         <p >Account settings</p>
                       </a>
@@ -196,22 +198,20 @@ const Header = (props) => {
                     </a>
                   </div>
                 </div>
-
               </div>
-
             </>
-          ) : (
-            <>
-              <Button variant="link"  style={{marginRight:"1rem"}}>
-                <a href="/login" className="loginlink">Login</a>
-              </Button>
+              ) : (
+              <>
+                <Button variant="link" >
+                  <a href="/login" className="loginlink">Login</a>
+                </Button>
 
-              <a style={{marginRight:"1rem"}} href="/register">
-                <MyButton isOutline={false}>sign up</MyButton>
-              </a>
-            </>
+                <a style={{ marginRight: "1rem" }} href="/register">
+                  <MyButton isOutline={false}>sign up</MyButton>
+                </a>
+              </>
           )}
-        </Navbar.Collapse>
+            </Navbar.Collapse>
       </Container>
     </Navbar >
   );
