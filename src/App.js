@@ -18,6 +18,10 @@ import Dashboard from "./UI/pages/Dashboard/Dashboard";
 import CoursesPanel from "./UI/pages/Dashboard/Courses Panel/CoursesPanel";
 import InstructorsPanel from "./UI/pages/Dashboard/Instructors Panel/InstructorsPanel";
 import CategoryPanel from "./UI/pages/Dashboard/Category Panel/CategoryPanel";
+import AccountInformation from "./UI/pages/UserProfile/Account/AccountInf";
+import PersonalInformation from "./UI/pages/UserProfile/Personal/personalInf";
+import SavesList from "./UI/pages/UserProfile/SavedList/SavesList";
+import MyCourses from "./UI/pages/UserProfile/MyCourses/Mycourses"
 
 
 //Landing Page LazyLoading 
@@ -52,7 +56,16 @@ const LazyInstructorsPage = React.lazy(() =>
 const LazyUserProfilePage = React.lazy(() =>
   import("./UI/pages/UserProfile/UserProfile")
 );
-
+const LazyUserMyProgressPage = React.lazy(() =>
+  import("./UI/pages/MyProgress/MyProgress")
+);
+const LazyMyCertificatesPage = React.lazy(() =>
+  import("./UI/components/MyCertificates/MyCertificates")
+);
+const LazyWishlistPage = React.lazy(() =>
+  import("./UI/components/SavedList/SavedList")
+);
+ 
 function App() {
   return (
     <div>
@@ -132,14 +145,13 @@ function App() {
                 </React.Suspense>
               }
             />
-            <Route
-              path="profile"
-              element={
-                <React.Suspense>
-                  <LazyUserProfilePage />
-                </React.Suspense>
-              }
-            />
+            <Route path="profile"  element={<React.Suspense><LazyUserProfilePage /></React.Suspense>}>
+              
+              <Route path='Personal' element={<PersonalInformation />} />
+              <Route path='Account' element={<AccountInformation />} />
+              <Route path='SavesList' element={<SavesList />} />
+              <Route path='MyCourses' element={<MyCourses />} />
+            </Route>
 
 
             <Route
@@ -177,6 +189,30 @@ function App() {
               element={
                 <React.Suspense>
                   <LazyErrorPage />
+                </React.Suspense>
+              }
+            />
+            <Route
+              path="my-progress"
+              element={
+                <React.Suspense>
+                  <LazyUserMyProgressPage />
+                </React.Suspense>
+              }
+            />
+            <Route
+              path="my-certificates"
+              element={
+                <React.Suspense>
+                  <LazyMyCertificatesPage />
+                </React.Suspense>
+              }
+            />
+            <Route
+              path="saved-list"
+              element={
+                <React.Suspense>
+                  <LazyWishlistPage />
                 </React.Suspense>
               }
             />

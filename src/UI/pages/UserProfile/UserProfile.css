@@ -221,7 +221,7 @@ color: #000;
     color: #000;
 }
 input#age{ 
-    height: 50px;
+    height: 40px;
     background-color: rgba(0, 0, 0, 0.06);
     padding: 6px;
 }
@@ -245,4 +245,8 @@ input#age{
 .form-group input{
     background-color: rgb(241, 241, 241);
     border: none;
+}
+.select-country{
+    width: 100%;
+    height: 50px;
 }

@@ -1,0 +1,28 @@
+.empty{
+    padding: 60px 30px 45px;
+    text-align: center;
+    font-weight: 700;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.empty-img{
+    background: url(../../../../public/assets/empty-wishlist-light.png)no-repeat;
+    width: 20rem;
+    height: 15rem;
+    
+}
+.empty-text p{
+    font-size: 14px;
+    font-weight: 400;
+    padding: 0 12%;
+    margin: 0 auto 30px;
+    color: #737c7c
+}
+.empty-btn{
+    border: 1px solid #eb2027;
+    color: #eb2027
+}
