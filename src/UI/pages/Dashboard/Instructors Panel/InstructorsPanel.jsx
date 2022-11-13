@@ -184,7 +184,7 @@ export default function InstructorsPanel() {
         </div>
 
         <div className="bg-dark text-center display-6 text-light p-2 rounded">
-          Update & Delete Instructors
+          Update & Delete Instructor
         </div>
 
         <div className="row">
