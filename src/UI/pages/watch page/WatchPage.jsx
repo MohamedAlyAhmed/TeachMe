@@ -75,7 +75,7 @@ export default function WatchPage() {
                 <YouTube videoId={selectedVedio.vedioUrl} opts={opts} />
             </div>
             <div className="col-12 col-xl-3">
-                <div className='border p-3'>
+                <div className='border border-5 p-3'>
 
                     {
                         containt.map((e, i) =>

@@ -4,8 +4,6 @@ import axios from 'axios';
 import Joi from 'joi';
 import { Navigate, useNavigate } from 'react-router-dom';
 import "./Register.css"
-import Select from 'react-select'
-import countryList from 'react-select-country-list'
 
 export const BASE_URL = "http://localhost:3000";
 

@@ -1,5 +1,4 @@
 import "./InstructorPage.css";
-import MyButton from "../../components/Button/Button";
 import { Card } from "react-bootstrap";
 import InstructorCard from "../../components/InstructorCard/InstructorCard";
 import Picks from "../LandingPage/Picks/Picks";
@@ -7,8 +6,8 @@ import React, { useContext, useState, useEffect } from "react";
 import { DataContext } from "../../../DataContext";
 import CourseCard from "../../components/CourseCard/CourseCard";
 import { useParams } from "react-router-dom";
-import { BASE_URL } from '../../../DataContext';
-import axios from 'axios';
+import { BASE_URL } from "../../../DataContext";
+import axios from "axios";
 
 
 const ReadMore = ({ children }) => {
@@ -34,7 +33,14 @@ export const InstructorPage = () => {
 
   let { mainUserId } = useParams();
   const [instructor, setInstructor] = useState({});
+  // *****
+   const { courses } = useContext(DataContext);
+  //  const { instructor } = useParams();
 
+  // const coursesInstructor = courses.filter((e) => e.courseIds == instructor);
+  // const [courseFilter, setCourseFilter] = useState(coursesInstructor);
+
+  // ****
 
   useEffect(() => {
 
@@ -52,7 +58,7 @@ export const InstructorPage = () => {
 
   return (
     <>
-      <div className="myontainer1">
+      <div className="myontainer1 ">
         <div className="item">
           <img src={instructor.image} alt={instructor.name} className="mb-3 instructor-img" />
           <h4 className="fw-bold mb-3 ">{instructor.name}</h4>
@@ -92,24 +98,19 @@ export const InstructorPage = () => {
         </Card>
       </div>
       {/* *** */}
-      <div className="myontainer2">
-        <h3 className="fw-bold ">About Mentor</h3>
+      <div className="myontainer2 " style={{marginLeft:"7rem" ,marginRight:"7rem"}}>
+      <h4 className="fw-bold text-center mb-3">About Mentor</h4>
 
-        <div className="instructorInfo">
+            <div className="bg-new-color text-secondary shadow mb-4 rounded-3 d-flex justify-content-between align-items-center p-4">
+{instructor.description}
 
-          <h5>
-            <ReadMore>
-              pjesaipfipwe
-              {/* <div>
-          {instructor.description}
 
-          </div> */}
-            </ReadMore>
-          </h5>
-        </div>
+            </div>
+
+       
       </div>
 
-      {/* <div className="container w-100">
+       <div className="container w-100">
           <div className="row ">
             {courses.map((e) => (
               <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 small-screen">
@@ -117,11 +118,9 @@ export const InstructorPage = () => {
               </div>
             ))}
           </div>
-        </div> */}
+        </div> 
     </>
 
 
   );
 };
-
-

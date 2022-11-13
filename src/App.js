@@ -171,8 +171,17 @@ function App() {
                 </React.Suspense>
               }
             />
+             <Route
+              path="/search"
+              element={
+                <React.Suspense>
+                  <Search />
+                </React.Suspense>
+              }
+            />
 
             <Route path='dashboard' element={<Dashboard />}>
+              <Route path='home' element={<DashboardHome />} />
               <Route path='courses_panel' element={<CoursesPanel />} />
               <Route path='category_panel' element={<CategoryPanel />} />
               <Route path='instructors_panel' element={<InstructorsPanel />} />

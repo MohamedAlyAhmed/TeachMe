@@ -3,7 +3,6 @@ import React, { Component, useContext, useEffect, useState, useMemo } from "reac
 import { Navigate } from "react-router-dom";
 import TextField from '@mui/material/TextField';
 import { DataContext } from '../../../DataContext';
-import Select from 'react-select'
 import countryList from 'react-select-country-list'
 import { Link, Outlet } from "react-router-dom";
 import PersonalInformation from "./Personal/personalInf";
