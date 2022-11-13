@@ -9,7 +9,7 @@ import CategoryUpdate from "./Category update/CategoryUpdate";
 export default function CategoryPanel() {
   const { categories } = useContext(DataContext);
   // For Add Category
-  const [name, setName] = useState("Add New");
+  const [name, setName] = useState("Category Name");
   const [image, setImage] = useState(
     "https://img.freepik.com/free-photo/cool-geometric-triangular-figure-neon-laser-light-great-backgrounds-wallpapers_181624-9331.jpg?w=2000"
   );
@@ -54,7 +54,7 @@ export default function CategoryPanel() {
   return (
     <div>
       <div className="bg-dark text-center display-6 text-light rounded">
-        Category Panel
+      Categories Panel
       </div>
 
       <div className="row mb-5 border shadow p-5">
