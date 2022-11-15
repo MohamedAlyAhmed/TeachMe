@@ -1491,7 +1491,7 @@
       "user_id": "6367b173719d000015f8a8c8",
       "course_id": "903",
       "date": "2022-11-11T12:22:52.224Z",
-      "progress": 1,
+      "progress": 3,
       "id": 5
     }
   ],
@@ -2001,6 +2001,60 @@
           "vedioUrl": "zA6UrRd3iRw"
         }
       ]
+    }
+  ],
+  "comments": [
+    {
+      "id": 0,
+      "user": {
+        "first_name": "ahmed",
+        "last_name": "magdy",
+        "password": "123",
+        "email": "ahmed.magdy@gmail.com",
+        "id": 2
+      },
+      "course_id": "903",
+      "date": "2022-11-09T16:51:28.066Z",
+      "containt": "very good course"
+    },
+    {
+      "id": 1,
+      "user": {
+        "first_name": "ahmed",
+        "last_name": "magdy",
+        "password": "123",
+        "email": "ahmed.magdy@gmail.com",
+        "id": 2
+      },
+      "course_id": "903",
+      "date": "2022-11-09T16:51:28.066Z",
+      "containt": " good "
+    },
+    {
+      "id": 2,
+      "user": {
+        "first_name": "ahmed",
+        "last_name": "magdy",
+        "password": "123",
+        "email": "ahmed.magdy@gmail.com",
+        "id": 2
+      },
+      "course_id": "903",
+      "date": "2022-11-09T16:40:28.066Z",
+      "containt": "very "
+    },
+    {
+      "id": 3,
+      "user": {
+        "first_name": "ahmed",
+        "last_name": "magdy",
+        "password": "123",
+        "email": "ahmed.magdy@gmail.com",
+        "id": 2
+      },
+      "course_id": "903",
+      "date": "2022-11-09T16:02:28.066Z",
+      "containt": " course"
     }
   ]
 }

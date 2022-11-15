@@ -12,25 +12,33 @@ export const CoursePage = () => {
     let { id } = useParams();
     const [course, setCourse] = useState({});
     const [menetor, setMenetor] = useState({});
-    let { userData, sections, myEnrollsCourses, setEnrollsCoursesWithUserID } = useContext(DataContext);
+    const [comments, setComments] = useState({});
     const [isLoading, setisLoading] = useState(false);
     const navigate = useNavigate();
+    let { userData,
+        sections,
+        myEnrollsCourses,
+        setEnrollsCoursesWithUserID,
+        getCommentsForCourse,
+    } = useContext(DataContext);
 
 
 
     useEffect(() => {
-        axios.get(`${BASE_URL}/courses/${id}`).then((data) => {
-            setCourse(data.data);
-            document.title = data.data.name;
-            axios.get(`${BASE_URL}/instructors/${data.data.mentors[0].id}`).then((mentorRes) => {
-                setMenetor(mentorRes.data);
-                setisLoading(true);
+        (async () => {
+            axios.get(`${BASE_URL}/courses/${id}`).then((data) => {
+                setCourse(data.data);
+                document.title = data.data.name;
+                axios.get(`${BASE_URL}/instructors/${data.data.mentors[0].id}`).then((mentorRes) => {
+                    setMenetor(mentorRes.data);
+                    setisLoading(true);
+                });
+
+
             });
 
-
-        });
-
-
+            setComments(await getCommentsForCourse(id));
+        })()
     }, [])
 
 
@@ -199,9 +207,43 @@ export const CoursePage = () => {
                         </section>
 
 
+                        {comments.length != 0 ?
+                            <section>
+                                <h4 className='text-start mt-5'>Comments</h4>
+                                <div className=' mt-5 ' >
+
+                                    {
+                                        comments.map((e, i) =>
+                                            <div key={e.id} >
+                                                <div className="d-flex">
+
+                                                    <img src="/assets/default-avatar.jpg" className='avatar' alt="user image  " />
+                                                    <div className='flex-grow-1 px-4'>
+                                                        <p className='fw-bold'>
+                                                            {e.user.first_name + ' ' + e.user.last_name}
+                                                        </p>
+                                                        <p style={{ fontSize: 14 }}>
+
+                                                            {e.containt}
+                                                        </p>
+                                                    </div>
+                                                    <p style={{ fontSize: 10 }} >
+                                                        {new Date(e.date).toLocaleString()}
+                                                    </p>
+                                                </div>
+                                                {
+                                                    i != comments.length - 1 ? <hr /> : ''
+                                                }
+                                            </div>
+                                        )
+                                    }
+                                </div>
+                            </section> : ''
+                        }
                         <section>
+                            <h4 className='text-start mt-5'>Contents</h4>
                             {sections.map((e, n) =>
-                                <div key={n} className='shadow-lg h-100  rounded-3 p-3 my-5'>
+                                <div key={n} className='shadow h-100  rounded-3 p-3 my-3'>
                                     <p className='fs-5'>{e.title}</p>
                                     {e.lessons.map((l, i) =>
                                         <div key={i}>
@@ -214,6 +256,8 @@ export const CoursePage = () => {
                                 </div>
                             )}
                         </section>
+
+
 
                     </div>
                     :
