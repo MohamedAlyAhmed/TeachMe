@@ -1604,12 +1604,6 @@
       "name": "Education",
       "image": "https://www.educationcorner.com/images/featured-importance-education.png",
       "permanentLink": "Education"
-    },
-    {
-      "name": "Space",
-      "image": "https://img.freepik.com/premium-photo/astronaut-outer-open-space-planet-earth-stars-provide-background-erforming-space-planet-earth-sunrise-sunset-our-home-iss-elements-this-image-furnished-by-nasa_150455-16829.jpg?w=2000",
-      "permanentLink": "space",
-      "id": 14
     }
   ],
   "sections": [
