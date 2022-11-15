@@ -218,96 +218,20 @@
       ]
     },
     {
-      "id": 895,
-      "name": "Parents Back to School Guide",
-      "permanentLink": "Parents-back-to-school-guide",
-      "category": "Kids-Development",
-      "courseLanguage": 1,
-      "description": "Unlike many other duties, parenting is a 24/7 job with little-to-no breaks. Simply because parents have to be as much involved as they can to better shape their children’s future and help them become the persons they dream to be. In other words, they have to be there in every aspect of their children’s lives including, but not limited to, education. This training course will exclusively focus on the education-related challenges that many parents face with their children and how to effectively and efficiently tackle them. ",
-      "image": "https://loopnewslive.blob.core.windows.net/liveimage/sites/default/files/2019-09/pskBs5LRQW.jpg",
-      "numberOfLessons": 23,
-      "duration": 4183,
-      "level": 2,
-      "producerType": 1,
-      "isPremium": false,
-      "isSponsored": false,
-      "releasedAt": "2022-10-06T00:00:00",
-      "type": 1,
-      "statusTypeId": 1,
-      "videoId": "50be9756-870e-4fa0-9c15-08323a2deeb7",
-      "learningOutcomes": [
-        {
-          "id": 5250,
-          "body": "How to set effective education goals and learning plans, support your children to love learning, encourage their curiosity, and be a role model they look up to.",
-          "cellSpan": 1,
-          "isImage": false,
-          "order": 1
-        },
-        {
-          "id": 5251,
-          "body": "",
-          "cellSpan": 1,
-          "isImage": true,
-          "order": 2
-        },
-        {
-          "id": 5252,
-          "body": "How to provide a safe home environment, engage your children in solving problems, give them an adequate level of attention, and establish a new routine with them.",
-          "cellSpan": 1,
-          "isImage": false,
-          "order": 3
-        },
-        {
-          "id": 5253,
-          "body": "What effective encouragement is and how it’s done, together with learning how to effectively observe your behaviors and monitor your child’s learning performance.",
-          "cellSpan": 1,
-          "isImage": false,
-          "order": 4
-        },
-        {
-          "id": 5254,
-          "body": "",
-          "cellSpan": 2,
-          "isImage": true,
-          "order": 5
-        }
+      "name": "Course Name",
+      "category": "Category Name",
+      "image": "https://previews.123rf.com/images/melpomen/melpomen1509/melpomen150900104/45650274-hand-pointing-to-online-course-concept-on-light-brown-wall-background.jpg",
+      "duration": "4.30",
+      "numberOfLessons": "4.30",
+      "mentors": "New-Course",
+      "description": "Description of course",
+      "courseIds": [
+        234
       ],
-      "tags": [
-        38,
-        72,
-        35,
-        17
-      ],
-      "conversionRate": 24.25,
-      "currency": "EGP",
-      "discount": 0,
-      "discountedPrice": 0,
-      "finalPriceUSD": 16.494432,
-      "originalPriceUSD": 16.494432,
-      "price": 399.99,
-      "actualProgress": null,
-      "userScorePoints": null,
-      "totalScorePoints": null,
-      "inCart": false,
-      "inWishlist": false,
-      "isLocked": false,
-      "isPurchased": false,
-      "numberOfCompletedLessons": null,
-      "currentLesson": null,
-      "mentors": [
-        {
-          "id": "e58099bd-bb7e-4969-a159-160dd5981d23",
-          "name": "Ivon Moharram",
-          "title": "Positive Discipline Parent Educator",
-          "description": " Ivon is a Family Change Agent and Positive Discipline Parent Educator (Certified from Positive Discipline Organization, U.S.A.). \n She holds a Bsc in Electronics and Communication Engineering and was former Local Delivery Manager at Orange Business Services. Since 2013 Ivon has delivered many parenting workshops and sessions in Egypt and Online. She has trained hundreds of mothers and has established one of the First Mothers' Support Community in Egypt. \n(Parenting 2 Win Community) ",
-          "isAskMentor": false,
-          "numberOfCourses": 2,
-          "courseIds": [
-            731,
-            895
-          ]
-        }
-      ]
+      "courseLanguage": "Arabic",
+      "level": 1,
+      "permanentLink": "Cinematic-Lighting-Masterclass",
+      "id": 895
     },
     {
       "id": 873,
@@ -1137,6 +1061,22 @@
           ]
         }
       ]
+    },
+    {
+      "name": "Soft-Skills",
+      "image": "https://t3.ftcdn.net/jpg/02/94/21/42/360_F_294214205_ZmptWrtSwORSWadAIHSWqwSa319XlQiB.jpg",
+      "mentors": "Ali Ahmed Mohsen",
+      "duration": 23455,
+      "numberOfLessons": 23,
+      "category": "soft-skills",
+      "description": "smfjsogoskgosfogkosdfogosdjgjr",
+      "courseIds": [
+        23
+      ],
+      "courseLanguage": "kldfjpoidsjfopsdkjgo",
+      "level": 2,
+      "permanentLink": "Ali-Ahmed-Mohsen",
+      "id": 909
     }
   ],
   "instructors": [
@@ -1487,15 +1427,15 @@
       "id": "lEO_BAN"
     },
     {
-      "name": "Ali Ahmed Mohsen",
-      "description": "Ahmed Gobba is a Filmmaker. He works as a film director and VFX director in high-end Film/TV productions.",
+      "name": "Ahmed Mohamed Abozied",
+      "description": "asdjfnjasdfpisajdfpi",
       "image": "https://t3.ftcdn.net/jpg/02/94/21/42/360_F_294214205_ZmptWrtSwORSWadAIHSWqwSa319XlQiB.jpg",
-      "permanentLink": "Ali-Ahmed-Mohsen",
-      "title": "Director Of Photography And Light Designer",
+      "permanentLink": "Ahmed-mohamed",
+      "title": "fornt-end",
       "courseIds": [
-        703
+        903
       ],
-      "id": "1L9TjRu"
+      "id": "FLYDFuN"
     }
   ],
   "enrolls": [

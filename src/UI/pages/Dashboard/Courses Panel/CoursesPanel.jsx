@@ -10,6 +10,7 @@ import CoursesUpdate from "./CoursesUpdate/CoursesUpdate";
 
 export default function CoursesPanel() {
   const { courses } = useContext(DataContext);
+  const { instructors } = useContext(DataContext);
   // For Add Course
   const [name, setName] = useState("Course Name");
   const [permanentLink, setPermanentLink] = useState(
@@ -26,7 +27,12 @@ export default function CoursesPanel() {
   const [image, setImage] = useState(
     "https://previews.123rf.com/images/melpomen/melpomen1509/melpomen150900104/45650274-hand-pointing-to-online-course-concept-on-light-brown-wall-background.jpg"
   );
+  const instructorsNames= instructors.map((e)=>{
+console.log('====================================');
+console.log(e.name);
+console.log('====================================');
 
+  })
   const coursePreview = {
     name: name,
     category: category,
@@ -91,16 +97,7 @@ export default function CoursesPanel() {
     window.location.reload();
   };
 
-  function secondsToHms(d) {
-    d = Number(d);
-    var h = Math.floor(d / 3600);
-    var m = Math.floor((d % 3600) / 60);
-    var s = Math.floor((d % 3600) % 60);
-
-    var hDisplay = h > 0 ? h + (h == 1 ? "h " : "h ") : "";
-    var mDisplay = m > 0 ? m + (m == 1 ? "m " : "m ") : "";
-    return hDisplay + mDisplay;
-  }
+ 
   return (
     <>
       <div>
@@ -171,17 +168,50 @@ export default function CoursesPanel() {
             {/* (4)Mentors */}
             <div className="w-100 d-flex">
               <div className="mb-3 w-50">
-                <label for="category_name" className="form-label">
-                  Mentor
-                </label>
-                <input
+                {/* <label for="category_name" className="form-label">
+                  Instructor 
+                  
+                </label> */}
+              
+{/* <select  
+ 
+ >
+  <option >please select instructor</option>
+{
+instructorsNames.map((e)=>(
+<option value={e}
+  className="text-dark">
+  {e}
+
+  </option>
+))}
+
+</select> */}
+  <label for="instructor">Instructor Name:</label>
+
+<select name="instructor" id="instructor">
+<option >please select instructor</option>
+
+  {
+  instructorsNames.map((e)=>
+                <option value={e}> 
+                {e}
+                </option>
+
+            
+
+  )}
+
+</select>
+
+                {/* <input
                   type="text"
                   className="form-control"
                   id="category_name"
                   required
                   onChange={(e) => setmentors(e.target.value)}
-                />
-                <div className="form-text">Please Add Mentor</div>
+                /> */}
+                <div className="form-text">Please Add Instructor</div>
               </div>
               {/* (5) Permanent Link */}
               <div className="mb-3 w-50 ms-3">
@@ -199,7 +229,7 @@ export default function CoursesPanel() {
               </div>
             </div>
             {/*(6) courseIds */}
-            <div className="mb-3">
+            {/* <div className="mb-3">
               <label for="permanentLink" className="form-label">
                 courseIds
               </label>
@@ -211,7 +241,7 @@ export default function CoursesPanel() {
                 onChange={(e) => setCourseIds(parseInt(e.target.value))}
               />
               <div className="form-text">Like : 903</div>
-            </div>
+            </div> */}
             {/*(7) Level */}
             <div className="mb-3">
               <label for="permanentLink" className="form-label">
@@ -319,6 +349,7 @@ export default function CoursesPanel() {
             </div>
           ))}
         </div>
+        
       </div>
       
     </>
