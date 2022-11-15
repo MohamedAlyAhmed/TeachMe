@@ -1466,12 +1466,14 @@
     },
     {
       "name": "Mohamed Aly",
-      "description": "HTML / HTML5 / CSS / CSS3 / Sass / Bootstrap / JavaScript / Reactjs",
+      "description": "HTML / HTML5 / CSS / CSS3  / Bootstrap / JavaScript / Reactjs",
       "image": "https://avatars.hsoubcdn.com/e4dbda8cb8cb7216e917e116025b2078?s=256",
-      "title": "React JS developer",
+      "title": "ReactJS developer",
       "permanentLink": "Mohamed-Aly",
       "courseIds": [
-        903
+        [
+          903
+        ]
       ],
       "id": "SEnPSAz"
     },
@@ -1485,17 +1487,6 @@
         234
       ],
       "id": "lEO_BAN"
-    },
-    {
-      "name": "Ali Ahmed Mohsen",
-      "description": "Ahmed Gobba is a Filmmaker. He works as a film director and VFX director in high-end Film/TV productions.",
-      "image": "https://t3.ftcdn.net/jpg/02/94/21/42/360_F_294214205_ZmptWrtSwORSWadAIHSWqwSa319XlQiB.jpg",
-      "permanentLink": "Ali-Ahmed-Mohsen",
-      "title": "Director Of Photography And Light Designer",
-      "courseIds": [
-        703
-      ],
-      "id": "1L9TjRu"
     }
   ],
   "enrolls": [
@@ -1615,16 +1606,10 @@
       "permanentLink": "Education"
     },
     {
-      "name": "spaceX",
-      "image": "https://cdn.sanity.io/images/2yyup5mx/production/d5a915cd9db3444998926f61645b6f83a53aced0-5000x2813.jpg",
-      "permanentLink": "live",
+      "name": "Space",
+      "image": "https://img.freepik.com/premium-photo/astronaut-outer-open-space-planet-earth-stars-provide-background-erforming-space-planet-earth-sunrise-sunset-our-home-iss-elements-this-image-furnished-by-nasa_150455-16829.jpg?w=2000",
+      "permanentLink": "space",
       "id": 14
-    },
-    {
-      "name": "general",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/General_Robert_Kingston%2C_official_military_photo%2C_1984.JPEG/1200px-General_Robert_Kingston%2C_official_military_photo%2C_1984.JPEG",
-      "permanentLink": "general",
-      "id": 15
     }
   ],
   "sections": [

@@ -83,8 +83,8 @@ export default function CategoryPage() {
           {/* Courses Result  */}
           <div className="container w-100">
             <div className="row ">
-              {courseFilter.map((e) => (
-                <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 small-screen">
+              {courseFilter.map((e , index) => (
+                <div key={index} className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 small-screen">
                   <CourseCard course={e} />
                 </div>
               ))}
@@ -100,8 +100,8 @@ export default function CategoryPage() {
           </div>
           <div className="container w-100">
             <div className="row ">
-              {courses.map((e) => (
-                <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 small-screen">
+              {courses.map((e , index) => (
+                <div key={index} className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 small-screen">
                   <CourseCard course={e} />
                 </div>
               ))}

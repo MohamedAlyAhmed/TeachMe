@@ -19,7 +19,7 @@ export default function DataProvider(props) {
     axios.get(`${BASE_URL}/courses`).then((res) => {
       setCourses(res.data);
     });
-    //get CourseCategories Data
+    //get Categories Data
     axios.get(`${BASE_URL}/CourseCategories`).then((res) => {
       setCourseCategories(res.data);
     });
@@ -70,6 +70,19 @@ export default function DataProvider(props) {
     return res.data;
   }
 
+  const reGetCategories = ()=> {
+    //re get Categories Data
+    axios.get(`${BASE_URL}/CourseCategories`).then((res) => {
+      setCourseCategories(res.data);
+    });
+  }
+
+  const reGetInstructors = ()=> {
+    //re get instructors Data
+    axios.get(`${BASE_URL}/instructors`).then((res) => {
+      setInstructors(res.data);
+    });
+  }
 
   return (
     <DataContext.Provider
@@ -85,6 +98,8 @@ export default function DataProvider(props) {
         myEnrollsCourses,
         setEnrollsCoursesWithUserID,
         getCommentsForCourse,
+        reGetCategories,
+        reGetInstructors,
       }}
     >
       {props.children}
