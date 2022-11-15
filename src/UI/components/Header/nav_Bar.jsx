@@ -11,11 +11,9 @@ import "./nav_Bar.css";
 import MyButton from "../Button/Button";
 import { DataContext } from "../../../DataContext";
 
-
-
-const Header = (props) => {
+const Header = () => {
   // const navegator = useNavigate();
-  const BASE_CATEGORY = 'http://localhost:4000/category';
+  const BASE_CATEGORY = "http://localhost:4000/category";
   const toggleMenus = () => {
     let subMenu = document.getElementById("subMenu");
 
@@ -25,17 +23,19 @@ const Header = (props) => {
 
   const toggleProfile = () => {
     let subProfileMenu = document.getElementById("subProfileMenu");
-    subProfileMenu.classList.toggle("open-menu")
-  }
-
+    subProfileMenu.classList.toggle("open-menu");
+  };
 
   return (
-    <Navbar bg="#fff" expand="lg">
+     <Navbar bg="#fff" expand="lg">
       <Container
         fluid
-        className="d-flex justify-content-between align-items-center"
+        className="d-flex
+         justify-content-between
+          align-items-center"
       >
-        <a href="http://localhost:4000/"> <p className="logo mx-4">
+        <a href="http://localhost:4000/">
+           <p className="logo mx-4">
           Teach <span>Me</span>
         </p></a>
 
@@ -44,7 +44,6 @@ const Header = (props) => {
         <Navbar.Collapse id="navbarScroll">
           <Nav
             className="me-auto my-2 my-lg-0"
-            // style={{ maxHeight: "100px" }}
             navbarScroll
           >
             <a href="/instructors" style={{ color: "black", textDecoration: "none", marginLeft: "1rem" }}>
@@ -54,8 +53,8 @@ const Header = (props) => {
             <div >
               <Button onClick={toggleMenus} className="us er-pic" variant="" style={{ marginRight: "1rem", marginLeft: "1rem" }}>
                 Courses
-                <i className="fa-solid fa-angle-down"></i>
-              </Button>&nbsp;&nbsp;&nbsp;&nbsp;
+                <i style={{marginLeft:"4px"}} className="fa-solid fa-angle-down"></i>
+              </Button>
               <div className="sub-menu-wrap " id="subMenu">
                 <div className="sub-menu shadow">
                   <div className="header">
@@ -112,16 +111,13 @@ const Header = (props) => {
               </div>
             </div>
 
-            {/* <MyButton isOutline={true}>Subscribe</MyButton> */}
-            {/* <a href="/search">
-              <MyButton isOutline={true}>Subscribe</MyButton>
-            </a>&nbsp; */}
+           
             <a href="http://localhost:4000/dashboard/home">
               <MyButton isOutline={true}>DASHBOARD</MyButton>
-            </a>&nbsp;
+            </a>
           </Nav>
 
-          <a href="/search" style={{ marginRight: "1rem" }}>
+          <a href={`${BASE_CATEGORY}`} style={{ marginRight: "1rem" }}>
             <i className="fa fa-search icon-search"></i>
           </a>
 
@@ -214,7 +210,5 @@ const Header = (props) => {
             </Navbar.Collapse>
       </Container>
     </Navbar >
-  );
-};
-
-export default Header;
+  )}
+  export default Header;

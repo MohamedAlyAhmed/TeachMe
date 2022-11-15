@@ -12,18 +12,17 @@ export default function CoursesPanel() {
   const { courses } = useContext(DataContext);
   const { instructors } = useContext(DataContext);
   // For Add Course
-  const [name, setName] = useState("Course Name");
+  const [name, setName] = useState("Course_Name");
   const [permanentLink, setPermanentLink] = useState(
     "Cinematic-Lighting-Masterclass"
   );
-  const [category, setcCategory] = useState("Category Name");
+  const [category, setcCategory] = useState("Category_Name");
   const [level, setLevel] = useState(1);
-  const [courseLanguage, setCourseLanguage] = useState("Arabic");
-  const [courseIds, setCourseIds] = useState(234);
+  const [courseLanguage, setCourseLanguage] = useState(1);
   const [description, setDescription] = useState("Description of course");
-  const [mentors, setmentors] = useState("New-Course");
-  const [duration, setDeuration] = useState("4.30");
-  const [numberOfLessons, setNumberOfLessons] = useState("4.30");
+  const [mentors, setmentors] = useState("Instructor_Name");
+  const [duration, setDeuration] = useState(234556);
+  const [numberOfLessons, setNumberOfLessons] = useState(12);
   const [image, setImage] = useState(
     "https://previews.123rf.com/images/melpomen/melpomen1509/melpomen150900104/45650274-hand-pointing-to-online-course-concept-on-light-brown-wall-background.jpg"
   );
@@ -39,28 +38,39 @@ console.log('====================================');
     image: image,
     duration: duration,
     numberOfLessons: numberOfLessons,
-    mentors: mentors,
+    // mentors: mentors,
     description: description,
-    courseIds: courseIds,
     courseLanguage: courseLanguage,
     level: level,
     permanentLink: permanentLink,
+    mentors: [
+      {
+        name: mentors,
+        
+      }
+    ]
   };
+  
 
   const AddCourse = () => {
     axios
       .post(`${BASE_URL}/courses`, {
         name: name,
         image: image,
-        mentors: mentors,
+        // mentors: mentors,
         duration: duration,
         numberOfLessons: numberOfLessons,
         category: category,
         description: description,
-        courseIds: [courseIds],
         courseLanguage: courseLanguage,
         level: level,
         permanentLink: permanentLink,
+        mentors: [
+          {
+            name: mentors,
+            
+          }
+        ]
       })
       .then((response) => {
         console.log(response);
@@ -106,7 +116,7 @@ console.log('====================================');
         </div>
 
         <div className="row mb-5 border shadow p-3">
-          {/* Category Card Preview  */}
+          {/* Course Card Preview  */}
           <div className="col-xl-3 col-lg-5 col-md-6 col-sm-12  d-flex justify-content-center flex-column align-items-center">
             <h2 className="text-light bg-dark p-2 rounded mt-2">Add Course</h2>
 
@@ -116,7 +126,7 @@ console.log('====================================');
               PermanentLink :<br></br> {permanentLink}
             </div>
           </div>
-          {/*Add Category Form*/}
+          {/*Add Course Form*/}
           <form
             className="col-xl-9 col-lg-7 col-md-6 col-sm-12  mt-5"
             onSubmit={() => AddCourse()}
@@ -228,20 +238,7 @@ instructorsNames.map((e)=>(
                 <div className="form-text">Like : Ayman-Ahmed</div>
               </div>
             </div>
-            {/*(6) courseIds */}
-            {/* <div className="mb-3">
-              <label for="permanentLink" className="form-label">
-                courseIds
-              </label>
-              <input
-                type="number"
-                className="form-control"
-                id="permanentLink"
-                required
-                onChange={(e) => setCourseIds(parseInt(e.target.value))}
-              />
-              <div className="form-text">Like : 903</div>
-            </div> */}
+            
             {/*(7) Level */}
             <div className="mb-3">
               <label for="permanentLink" className="form-label">

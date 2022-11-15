@@ -20,7 +20,6 @@ export default function CoursesUpdate({ course }) {
   const [updtedCategory, setcUpdtedCategory] = useState("Category Name");
   const [updtedLevel, setUpdtedLevel] = useState(1);
   const [updtedCourseLanguage, setUpdtedCourseLanguage] = useState("Arabic");
-  const [updtedCourseIds, setUpdtedCourseIds] = useState(234);
   const [updtedDescription, setUpdtedDescription] = useState("Description of course");
   const [updtedMentors, setUpdtedMentors] = useState("New-Course");
   const [updtedDuration, setUpdtedDuration] = useState("4.30");
@@ -37,7 +36,6 @@ export default function CoursesUpdate({ course }) {
   numberOfLessons: updtedNumberOfLessons,
   mentors: updtedMentors,
   description: updtedDescription,
-  courseIds: [updtedCourseIds],
   courseLanguage: updtedCourseLanguage,
   level: updtedLevel,
   permanentLink: updtedPermanentLink,
@@ -54,14 +52,13 @@ export default function CoursesUpdate({ course }) {
   const updateCourse = (id) => {
     axios
       .put(`${BASE_URL}/courses/${id}`, {
-        name: updtedName,
+    name: updtedName,
   category: updtedCategory,
   image: updtedImage,
   duration: updtedDuration,
   numberOfLessons: updtedNumberOfLessons,
   mentors: updtedMentors,
   description: updtedDescription,
-  courseIds: [updtedCourseIds],
   courseLanguage: updtedCourseLanguage,
   level: updtedLevel,
   permanentLink: updtedPermanentLink,
@@ -155,18 +152,7 @@ export default function CoursesUpdate({ course }) {
           defaultValue={course.courseLanguage}
           onChange={(e) => setUpdtedCourseLanguage(e.target.value)}
         />
-        {/* updtedCourseIds */}
-        <TextField
-          autoFocus
-          margin="dense"
-          id="Course_Ids"
-          label="Course_Ids"
-          type="text"
-          fullWidth
-          variant="standard"
-          defaultValue={course.courseIds}
-          onChange={(e) => setUpdtedCourseIds(e.target.value)}
-        />
+      
         {/* updtedDescription */}
         <TextField
           autoFocus
@@ -188,7 +174,7 @@ export default function CoursesUpdate({ course }) {
           type="text"
           fullWidth
           variant="standard"
-          defaultValue={course.mentors.name}
+          defaultValue={course.mentors[0].name}
           onChange={(e) => setUpdtedMentors(e.target.value)}
         />
         {/* updtedDuration */}

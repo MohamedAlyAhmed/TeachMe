@@ -2,6 +2,7 @@ import "./map.css";
 import MyButton from "../../../components/Button/Button";
 import React from "react";
 import CountUp from "react-countup";
+const BASE_CATEGORY = "http://localhost:4000/category";
 
 function Counter() {
   return (
@@ -17,7 +18,12 @@ export function Map() {
   return (
     <div>
       <div class="text-center mt-5 mb-3">
-        <MyButton isOutline={true}>Browse Courses</MyButton>
+        <a href={`${BASE_CATEGORY}`}>
+                    <MyButton  isOutline={true}>
+                      Browse Courses &nbsp;
+                      <i className="fa-solid fa-arrow-right"></i>
+                    </MyButton>
+                  </a>
       </div>
 
       <header className="myHeader">

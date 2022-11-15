@@ -66,8 +66,8 @@ export const FeaturedCategory = () => {
   return (
     <div>
       <Slider {...settings}>
-        {categories.map((e) => (
-          <CategoryCard category={e} />
+        {categories.map((e,index) => (
+          <CategoryCard category={e} key={index}/>
         ))}
       </Slider>
     </div>
