@@ -30,7 +30,7 @@ export default function Dashboard() {
           <li className="has-subnav">
             <Link to="category_panel">
               <i class=" fa fa-2x fa-solid fa-list"></i>
-              <span className="nav-text">Category Panel</span>
+              <span className="nav-text">Categories Panel</span>
             </Link>
           </li>
           <li className="has-subnav">

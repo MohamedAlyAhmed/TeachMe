@@ -75,8 +75,8 @@ export default function CategoryPage() {
                 <option value={0} selected="selected">
                   All languages
                 </option>
-                <option value={1}>Arabic</option>
-                <option value={2}>English</option>
+                <option value={1}>English</option>
+                <option value={2}>Arabic</option>
               </select>
             </div>
           </div>
