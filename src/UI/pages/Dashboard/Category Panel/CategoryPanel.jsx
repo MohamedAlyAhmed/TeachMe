@@ -7,13 +7,19 @@ import CategoryCard from "../../../components/CategoryCard/CategoryCard";
 import CategoryUpdate from "./Category update/CategoryUpdate";
 
 export default function CategoryPanel() {
-  const { categories } = useContext(DataContext);
+  const { categories,reGetCategories } = useContext(DataContext);
   // For Add Category
   const [name, setName] = useState("Category Name");
   const [image, setImage] = useState(
     "https://img.freepik.com/free-photo/cool-geometric-triangular-figure-neon-laser-light-great-backgrounds-wallpapers_181624-9331.jpg?w=2000"
   );
   const [permanentLink, setPermanentLink] = useState("New-Category");
+
+  const categoryPreview = {
+    name: name,
+    image: image,
+    permanentLink: permanentLink,
+  };
 
   const AddCategory = () => {
     axios
@@ -41,14 +47,10 @@ export default function CategoryPanel() {
           console.log(error);
         });
 
-      refreshPage();
+        reGetCategories();
     } else {
       console.log("Declined");
     }
-  };
-
-  const refreshPage = () => {
-    window.location.reload();
   };
 
   return (
@@ -59,24 +61,13 @@ export default function CategoryPanel() {
 
       <div className="row mb-5 border shadow p-5">
         {/* Category Card Preview  */}
+
         <div className="col-xl-3 col-lg-5 col-md-6 col-sm-12  d-flex justify-content-center flex-column align-items-center">
           <h2 className="text-light bg-dark p-2 rounded mt-2">Add Category</h2>
-
-          <div className="card m-2" style={{ width: "14rem" }}>
-            <div className="linear-grad ">
-              <img
-                src={image}
-                className="card-img-top head-text"
-                alt="Category"
-                style={{ height: "8rem" }}
-              />
-            </div>
-            <div className="text-on-image gradient d-flex align-items-center justify-content-center rounded-2">
-              <h5 className="text-white mx-5 text-center">{name}</h5>
-            </div>
-          </div>
+          <CategoryCard category={categoryPreview} />
           <div className="text-primary">PermanentLink : {permanentLink}</div>
         </div>
+        
         {/*Add Category Form*/}
         <form
           className="col-xl-9 col-lg-7 col-md-6 col-sm-12  mt-5"
