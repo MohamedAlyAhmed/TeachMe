@@ -1526,6 +1526,13 @@
       "date": "2022-11-11T12:22:52.224Z",
       "progress": 3,
       "id": 5
+    },
+    {
+      "user_id": "6367b173719d000015f8a8c8",
+      "course_id": "895",
+      "date": "2022-11-15T13:22:57.859Z",
+      "progress": 0,
+      "id": 6
     }
   ],
   "CourseCategories": [
@@ -1612,6 +1619,12 @@
       "image": "https://cdn.sanity.io/images/2yyup5mx/production/d5a915cd9db3444998926f61645b6f83a53aced0-5000x2813.jpg",
       "permanentLink": "live",
       "id": 14
+    },
+    {
+      "name": "general",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/General_Robert_Kingston%2C_official_military_photo%2C_1984.JPEG/1200px-General_Robert_Kingston%2C_official_military_photo%2C_1984.JPEG",
+      "permanentLink": "general",
+      "id": 15
     }
   ],
   "sections": [
