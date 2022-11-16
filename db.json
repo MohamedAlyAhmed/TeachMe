@@ -1236,6 +1236,55 @@
         }
       ],
       "id": 914
+    },
+    {
+      "name": "Angular_18",
+      "category": "Education",
+      "image": "https://miro.medium.com/max/1400/1*cGDDA2mfYkjiIhGaN8gDoA.png",
+      "duration": 34562,
+      "numberOfLessons": 23,
+      "mentors": [
+        {
+          "id": "1f528ba2-28f7-4735-be62-d5ce52bcf762",
+          "name": "Noha Zahra",
+          "title": "Educational Consultant & Author",
+          "description": "With over 15 years of experience, Zahra has held various positions in the field of education both at the administrative and teaching levels, during which she made many contributions in the field of teacher training.",
+          "isAskMentor": false,
+          "numberOfCourses": 3,
+          "courseIds": [
+            279,
+            401,
+            402
+          ],
+          "mainUserId": 423,
+          "image": "https://www.edpost.com/hubfs/Teacher%20Eval.png",
+          "numberOfLearner": 0,
+          "permanentLink": "Khaled-Habib",
+          "typeId": 1,
+          "socialChannels": [],
+          "mentorXP": [
+            {
+              "body": ""
+            }
+          ],
+          "pageViews": 0
+        }
+      ],
+      "description": "A component-based framework for building scalable web applications A collection of well-integrated libraries that cover a wide variety of features, including routing, forms management, client-server communication, and more A suite of developer tools to help you develop, build, test, and update your code",
+      "courseLanguage": 1,
+      "level": "2",
+      "permanentLink": "Angular",
+      "releasedAt": "2022-12-29T22:00:00.000Z",
+      "learningOutcomes": [
+        {
+          "id": 4940,
+          "body": "All about the history of old and modern cinematic lighting, the role of photography director and the cinematic lighting steps you can follow to get a special cinematic work.",
+          "cellSpan": 1,
+          "isImage": false,
+          "order": 1
+        }
+      ],
+      "id": 915
     }
   ],
   "instructors": [
