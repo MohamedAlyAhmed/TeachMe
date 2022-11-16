@@ -1137,6 +1137,55 @@
           ]
         }
       ]
+    },
+    {
+      "name": "SpaceX",
+      "category": "Soft-Skills",
+      "image": "https://media.istockphoto.com/id/1309328823/photo/headshot-portrait-of-smiling-male-employee-in-office.jpg?b=1&s=170667a&w=0&k=20&c=MRMqc79PuLmQfxJ99fTfGqHL07EDHqHLWg0Tb4rPXQc=",
+      "duration": 4524,
+      "numberOfLessons": 21,
+      "mentors": [
+        {
+          "id": "58316254-9170-44d8-a1db-1aff1ac36881",
+          "mainUserId": 213,
+          "name": "Hebatalla Abdel-halim Mahmoud",
+          "description": "Heba is an international authorized Scrum trainer and practitioner since 2016. She is an architectural engineer with more than 15 years of experience in project management, architectural design, and execution supervision. Besides, Heba is a Scientific Counselor at Egypt Scholars Organization,  she pursues her academic career and research in designing sustainable buildings as a Ph.D. Researcher & Teaching Assistant at the Faculty of Engineering, Cairo University.\nHeba has trained many trainees from local and international organizations and universities including Orange, Vodafone, IBM, Emaar, AL Futtaim, Secure Misr, and The American University in Cairo.\nHeba holds the following qualifications:\n- Scrum Certified Trainer, Scrum Study, The US\n- Scrum Master Certified, Scrum Study, The US\n- Scrum Product Owner Certified, Scrum Study, The US\n- Certified Passive House Designer, Passive House Institute, Germany\n- Master of Science of Architectural Engineering, Architectural Department, Faculty",
+          "image": "https://d19d5sz0wkl0lu.cloudfront.net/dims4/default/b2928d2/2147483647/resize/800x%3E/quality/90/?url=https%3A%2F%2Fatd-brightspot.s3.amazonaws.com%2F7f%2F38%2Fb37d0d6148e48fea8f76209eb3bb%2Fbigstock-pretty-teacher-smiling-at-came-69887626-1.jpg",
+          "numberOfCourses": 1,
+          "numberOfLearner": 0,
+          "permanentLink": "Heb-Abdel-halim",
+          "title": "Architect, Teaching Assistant & Scientific Counselor",
+          "typeId": 1,
+          "courseIds": [
+            873
+          ],
+          "socialChannels": [
+            "",
+            "",
+            "",
+            null,
+            "",
+            ""
+          ],
+          "mentorXP": [],
+          "pageViews": 0
+        }
+      ],
+      "description": "Mohamed Aly",
+      "courseLanguage": 2,
+      "level": 1,
+      "permanentLink": "space",
+      "releasedAt": "2017-12-29T22:00:00.000Z",
+      "learningOutcomes": [
+        {
+          "id": 4940,
+          "body": "All about the history of old and modern cinematic lighting, the role of photography director and the cinematic lighting steps you can follow to get a special cinematic work.",
+          "cellSpan": 1,
+          "isImage": false,
+          "order": 1
+        }
+      ],
+      "id": 909
     }
   ],
   "instructors": [
@@ -1630,7 +1679,7 @@
       "id": 14
     },
     {
-      "name": "general",
+      "name": "generalX",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/General_Robert_Kingston%2C_official_military_photo%2C_1984.JPEG/1200px-General_Robert_Kingston%2C_official_military_photo%2C_1984.JPEG",
       "permanentLink": "general",
       "id": 15

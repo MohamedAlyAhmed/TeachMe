@@ -126,6 +126,7 @@ export default function DataProvider(props) {
         reGetInstructors,
         mySaveCourses,
         setSaveCoursesWithUserID,
+        reGetCourses
       }}
     >
       {props.children}

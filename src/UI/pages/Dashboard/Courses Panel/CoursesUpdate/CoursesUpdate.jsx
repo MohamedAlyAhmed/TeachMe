@@ -28,7 +28,7 @@ export default function CoursesUpdate({ course }) {
   const [updtedDescription, setUpdtedDescription] = useState(
    course.description
   );
-  const [updtedMentors, setUpdtedMentors] = useState(course.mentors);
+  const [updtedMentors, setUpdtedMentors] = useState(course.mentors[0]);
   const [updtedDuration, setUpdtedDuration] = useState(course.duration);
   const [updtedNumberOfLessons, setUpdtedNumberOfLessons] = useState(course.numberOfLessons);
   const [updtedImage, setUpdtedImage] = useState(
@@ -42,7 +42,7 @@ course.image  );
     image: updtedImage,
     duration: updtedDuration,
     numberOfLessons: updtedNumberOfLessons,
-    mentors: updtedMentors,
+    mentors: [updtedMentors],
     description: updtedDescription,
     courseLanguage: updtedCourseLanguage,
     level: updtedLevel,
@@ -66,12 +66,21 @@ course.image  );
         image: updtedImage,
         duration: updtedDuration,
         numberOfLessons: updtedNumberOfLessons,
-        mentors: updtedMentors,
+        mentors: [updtedMentors],
         description: updtedDescription,
         courseLanguage: updtedCourseLanguage,
         level: updtedLevel,
         permanentLink: updtedPermanentLink,
         releasedAt: updateReleasedAt,
+        learningOutcomes : [
+          {
+            id: 4940,
+            body: "All about the history of old and modern cinematic lighting, the role of photography director and the cinematic lighting steps you can follow to get a special cinematic work.",
+            cellSpan: 1,
+            isImage: false,
+            order: 1
+          },
+        ]
       })
 
       .then((response) => {
@@ -98,9 +107,7 @@ course.image  );
         <DialogContent>
           <DialogContentText className="d-flex justify-content-center align-items-center flex-column">
             <CourseCard course={updatedPreview} />
-            Mentor : {updtedMentors}
           </DialogContentText>
-
           {/* course_Name */}
           <TextField
             autoFocus
@@ -167,11 +174,11 @@ course.image  );
             margin="dense"
             id="Course_Language"
             label="Course_Language"
-            type="text"
+            type="number"
             fullWidth
             variant="standard"
             defaultValue={course.courseLanguage}
-            onChange={(e) => setUpdtedCourseLanguage(e.target.value)}
+            onChange={(e) => setUpdtedCourseLanguage(parseInt(e.target.value))}
           />
 
           {/* updtedDescription */}
@@ -185,18 +192,6 @@ course.image  );
             variant="standard"
             defaultValue={course.description}
             onChange={(e) => setUpdtedDescription(e.target.value)}
-          />
-          {/* updtedMentors */}
-          <TextField
-            autoFocus
-            margin="dense"
-            id="Mentor_Name"
-            label="Mentor_Name"
-            type="text"
-            fullWidth
-            variant="standard"
-            defaultValue={course.mentors[0].name}
-            onChange={(e) => setUpdtedMentors(e.target.value)}
           />
           {/* updtedDuration */}
           <TextField

@@ -8,7 +8,7 @@ import { toast } from "react-toastify";
 import CoursesUpdate from "./CoursesUpdate/CoursesUpdate";
 export default function CoursesPanel() {
 
-  const { courses,reGetCourses } = useContext(DataContext);
+  const { courses, reGetCourses } = useContext(DataContext);
   const { instructors } = useContext(DataContext);
 
   // For Add Course
@@ -70,8 +70,6 @@ const selectedMentorName=instructors.filter((e)=>
         permanentLink: permanentLink,
         releasedAt: releasedAt,
         mentors: [ mentors,
-
-          
         ],
         learningOutcomes : [
           {
@@ -92,8 +90,8 @@ const selectedMentorName=instructors.filter((e)=>
         console.log(error);
         toast.error("Courses Added Failed !");
       });
+      
       reGetCourses();
-    
   };
 
   const deleteCourse = (id) => {
@@ -109,10 +107,12 @@ const selectedMentorName=instructors.filter((e)=>
           toast.error("Courses Deleted Failed !");
         });
 
-      reGetCourses();
+      
     } else {
       console.log("Declined");
     }
+
+    reGetCourses();
   };
 
  
@@ -268,14 +268,14 @@ const selectedMentorName=instructors.filter((e)=>
             {/*(10) Course Language */}
             <div className="mb-3">
               <label for="category_name" className="form-label">
-                Description
+              Course Language
               </label>
               <input
-                type="text"
+                type="number"
                 className="form-control"
                 id="category_name"
                 required
-                onChange={(e) => setCourseLanguage(e.target.value)}
+                onChange={(e) => setCourseLanguage(parseInt(e.target.value))}
               />
               <div className="form-text">Please Add Course Language</div>
             </div>
