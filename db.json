@@ -1189,7 +1189,6 @@
       "name": "Amir Hassan",
       "title": "Head of Digital Marketing and E-Commerce",
       "description": "Amir Hassan / Strategic marketing expert with extensive digital experience in the areas of growth demand generation and engagement strategies across different verticals and regions. Currently, he is heading digital marketing and E-Commerce for Philips and its brands all across Africa.",
-     
       "isAskMentor": true,
       "numberOfCourses": 2,
       "courseIds": [
@@ -1197,7 +1196,7 @@
         666
       ],
       "mainUserId": 128,
-    "image":"https://observatory.tec.mx/wp-content/uploads/2020/09/maestroprofesorinstructor.jpg",
+      "image": "https://observatory.tec.mx/wp-content/uploads/2020/09/maestroprofesorinstructor.jpg",
       "numberOfLearner": 0,
       "permanentLink": "Doha-Moustafa",
       "typeId": 1,
@@ -1536,6 +1535,13 @@
       "date": "2022-11-15T13:22:57.859Z",
       "progress": 0,
       "id": 6
+    },
+    {
+      "user_id": "63688395f045c50015f60d17",
+      "course_id": "903",
+      "date": "2022-11-16T15:47:18.189Z",
+      "progress": 0,
+      "id": 7
     }
   ],
   "CourseCategories": [
@@ -2141,6 +2147,41 @@
       "date": "2022-11-16T14:33:28.316Z",
       "progress": 0,
       "id": 5
+    },
+    {
+      "user_id": "63688395f045c50015f60d17",
+      "course_id": 895,
+      "date": "2022-11-16T15:45:04.355Z",
+      "progress": 0,
+      "id": 6
+    },
+    {
+      "user_id": "63688395f045c50015f60d17",
+      "course_id": 873,
+      "date": "2022-11-16T15:45:11.023Z",
+      "progress": 0,
+      "id": 7
+    },
+    {
+      "user_id": "63688395f045c50015f60d17",
+      "course_id": 903,
+      "date": "2022-11-16T15:46:15.808Z",
+      "progress": 0,
+      "id": 8
+    },
+    {
+      "user_id": "63688395f045c50015f60d17",
+      "course_id": 908,
+      "date": "2022-11-16T15:55:33.745Z",
+      "progress": 0,
+      "id": 9
+    },
+    {
+      "user_id": "63688395f045c50015f60d17",
+      "course_id": 666,
+      "date": "2022-11-16T15:55:45.609Z",
+      "progress": 0,
+      "id": 10
     }
   ]
 }

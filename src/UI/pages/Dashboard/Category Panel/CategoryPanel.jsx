@@ -34,6 +34,7 @@ export default function CategoryPanel() {
       .catch((error) => {
         console.log(error);
       });
+      reGetCategories();
   };
 
   const deleteCategory = (id) => {
