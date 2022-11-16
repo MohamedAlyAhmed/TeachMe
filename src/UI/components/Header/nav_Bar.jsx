@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 import "./nav_Bar.css";
 import MyButton from "../Button/Button";
 import { DataContext } from "../../../DataContext";
+import { useEffect } from "react";
 
 const Header = (props) => {
 
@@ -37,7 +38,6 @@ const Header = (props) => {
       >
         {/* logo */}
         <a href="http://localhost:4000/">
-         
           <p className="logo mx-4">
             Teach <span>Me</span>
           </p>
@@ -100,11 +100,14 @@ const Header = (props) => {
               </div>
             </div>
 
-           {/* if idmin login */}
-            {
-            userData ? (
-              <a href="http://localhost:4000/dashboard/home" className="ms-3">
-                <MyButton  isOutline={true}>DASHBOARD</MyButton>
+            {/* <MyButton isOutline={true}>Subscribe</MyButton> */}
+            {/* <a href="/search">
+              <MyButton isOutline={true}>Subscribe</MyButton>
+            </a>&nbsp; */}
+            {userData ?
+             (
+              <a href="http://localhost:4000/dashboard/home">
+                <MyButton isOutline={true}>DASHBOARD</MyButton>
               </a>
             ) : (
               ""
@@ -130,7 +133,7 @@ const Header = (props) => {
                   <div className="user-profile-container">
                     <div className="user-info-card d-flex">
                       <div className="profile-avatar">
-                        <a href="/profile">
+                        <a href="/profile/Personal">
                           <img
                             src="/assets/default-avatar.jpg"
                             className="avatar"
@@ -140,7 +143,7 @@ const Header = (props) => {
                       </div>
 
                       <div className="info-details">
-                        <a href="/profile">
+                        <a href="/profile/Personal">
                           <h6>
                             {userData.first_name} {userData.last_name}
                           </h6>
@@ -150,7 +153,7 @@ const Header = (props) => {
                     </div>
                   </div>
                   <div className="user-profile-subscribed ng-star-inserted">
-                    <a href="/profile">
+                    <a href="/profile/Personal">
                       <button className="btn btn-outline-light user-profile-subscribe-btn">
                         Go To Profile Page
                       </button>

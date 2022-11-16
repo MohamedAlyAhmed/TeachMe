@@ -31,7 +31,6 @@ export default function UserProfile() {
     console.log(userData);
 
 
-
     return (
         <>
             <div className="profile-page">
@@ -67,8 +66,8 @@ export default function UserProfile() {
                     <div className="setting-page-side-menu">
                         <div className="side-menu">
 
-                            <Link to="Personal" className="side-page-item active-tab"  >Presonal Information</Link>
-                            <Link to="Account" className="side-page-item" >Acount Information</Link>
+                            <Link to="Personal" className="side-page-item active-tab" >Personal Information</Link>
+                            <Link to="Account" className="side-page-item " >Account Information</Link>
                             <Link to="SavesList" className="side-page-item" >SavesList</Link>
                             <Link to="MyCourses" className="side-page-item" >MyCourses</Link>
 

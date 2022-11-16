@@ -15,19 +15,17 @@ export default function CourseCard({ course }) {
   }
   return (
     <div>
-      <Link
-        to={`/course/${course.id}`}
-        style={{ textDecoration: "none", color: "black" }}
-      >
         <div
           className="card shadow-sm rounded-3 m-3"
           style={{ width: "14.5rem", height: "16rem" }}
         >
+          <Link to={`/course/${course.id}`} style={{ textDecoration: "none", color: "black" }}>
           <img
             src={course.image}
             className="card-img-top course-image"
             alt="course image"
           />
+          </Link>
           <div className="card-body position-relative">
             <div className=" text-light duration d-flex ">
               <div className="mx-1">
@@ -43,16 +41,17 @@ export default function CourseCard({ course }) {
               >
                 {course.mentors[0].name}
               </p>
+              <Link to={`/category`}>
               <button
                 className="btn btn-light rounded-5 border"
                 title="Save for later"
               >
                 <i className="fa-regular fa-bookmark"></i>
               </button>
+              </Link>
             </div>
           </div>
         </div>
-      </Link>
     </div>
   );
 }

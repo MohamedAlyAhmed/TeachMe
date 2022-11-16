@@ -1137,24 +1137,6 @@
           ]
         }
       ]
-    },
-    {
-      "name": "soft`",
-      "image": "https://www.simplilearn.com/ice9/free_resources_article_thumb/Top_18_Technical_Courses_After_Graduation.jpg",
-      "duration": 4567,
-      "numberOfLessons": 34,
-      "category": "qwoeifjwpiejrfwjwqe",
-      "description": "iohoiuhuohguhguigpipygpiyogyi",
-      "courseLanguage": "poeisfjpwejfiopewmfpoewjfoewr",
-      "level": 1,
-      "permanentLink": "joshnrfoshfriohe",
-      "releasedAt": "2017-12-29T22:00:00.000Z",
-      "mentors": [
-        {
-          "name": "mona ali"
-        }
-      ],
-      "id": 913
     }
   ],
   "instructors": [
@@ -1207,6 +1189,7 @@
       "name": "Amir Hassan",
       "title": "Head of Digital Marketing and E-Commerce",
       "description": "Amir Hassan / Strategic marketing expert with extensive digital experience in the areas of growth demand generation and engagement strategies across different verticals and regions. Currently, he is heading digital marketing and E-Commerce for Philips and its brands all across Africa.",
+     
       "isAskMentor": true,
       "numberOfCourses": 2,
       "courseIds": [
@@ -1214,7 +1197,7 @@
         666
       ],
       "mainUserId": 128,
-      "image": "https://scontent.fcai19-8.fna.fbcdn.net/v/t39.30808-6/311180476_6206417252704937_2740638162538491726_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeGdxQ1WRY6nUXwF4dC5Qn1KBCK7Y1WyPBsEIrtjVbI8G6lQEUHsaXWHU_I2f-Q_GBkti1a6pp0N0FTJMmyILrt7&_nc_ohc=bUz5IQAYd9EAX-kvDT-&tn=_f0ABLTLgHLgEK-d&_nc_ht=scontent.fcai19-8.fna&oh=00_AfC-chB1JoOkERFrxgVF7S3A_cXudMPGQHUQZN5qukaaWw&oe=6374432C",
+    "image":"https://observatory.tec.mx/wp-content/uploads/2020/09/maestroprofesorinstructor.jpg",
       "numberOfLearner": 0,
       "permanentLink": "Doha-Moustafa",
       "typeId": 1,
