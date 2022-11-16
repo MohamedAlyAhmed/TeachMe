@@ -1493,6 +1493,20 @@
       "date": "2022-11-11T12:22:52.224Z",
       "progress": 1,
       "id": 5
+    },
+    {
+      "user_id": "636dabf8beed310015d612e8",
+      "course_id": "903",
+      "date": "2022-11-13T02:04:48.020Z",
+      "progress": 0,
+      "id": 6
+    },
+    {
+      "user_id": "636dabf8beed310015d612e8",
+      "course_id": "895",
+      "date": "2022-11-13T02:17:12.898Z",
+      "progress": 0,
+      "id": 7
     }
   ],
   "CourseCategories": [
