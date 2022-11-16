@@ -2286,17 +2286,17 @@
     },
     {
       "user_id": "6373d702b4164c00154d3baa",
-      "course_id": 913,
-      "date": "2022-11-16T23:16:07.156Z",
-      "progress": 0,
-      "id": 12
-    },
-    {
-      "user_id": "6373d702b4164c00154d3baa",
       "course_id": 914,
       "date": "2022-11-16T23:17:16.642Z",
       "progress": 0,
       "id": 13
+    },
+    {
+      "user_id": "6373d702b4164c00154d3baa",
+      "course_id": 157,
+      "date": "2022-11-16T23:35:48.040Z",
+      "progress": 0,
+      "id": 14
     }
   ]
 }
