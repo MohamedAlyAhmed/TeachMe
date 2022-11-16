@@ -21,7 +21,7 @@ export default function CoursesPanel() {
   const [releasedAt, setReleasedAt] = useState("Release_Date");
   const [courseLanguage, setCourseLanguage] = useState(1);
   const [description, setDescription] = useState("Description of course");
-  const [mentors, setmentors] = useState("instructor_name");
+  const [mentors, setmentors] = useState({});
   const [duration, setDeuration] = useState(234556);
   const [numberOfLessons, setNumberOfLessons] = useState(12);
   
@@ -36,7 +36,7 @@ export default function CoursesPanel() {
 const selectedId=e.target.value;
 const selectedMentorName=instructors.filter((e)=>
   e.id==selectedId)[0];
- setmentors(selectedMentorName.name)
+ setmentors(selectedMentorName)
 
  }
   const coursePreview = {
@@ -51,9 +51,8 @@ const selectedMentorName=instructors.filter((e)=>
     level: level,
     permanentLink: permanentLink,
     mentors: [
-      {
-        name: mentors,
-      },
+       mentors,
+      
     ],
   };
 
@@ -70,12 +69,19 @@ const selectedMentorName=instructors.filter((e)=>
         level: level,
         permanentLink: permanentLink,
         releasedAt: releasedAt,
-        mentors: [
-          {
-            name: mentors,
+        mentors: [ mentors,
 
-          },
+          
         ],
+        learningOutcomes : [
+          {
+            id: 4940,
+            body: "All about the history of old and modern cinematic lighting, the role of photography director and the cinematic lighting steps you can follow to get a special cinematic work.",
+            cellSpan: 1,
+            isImage: false,
+            order: 1
+          },
+        ]
        
       })
       .then((response) => {

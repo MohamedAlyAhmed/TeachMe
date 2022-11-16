@@ -28,7 +28,7 @@ export default function CoursesUpdate({ course }) {
   const [updtedDescription, setUpdtedDescription] = useState(
    course.description
   );
-  const [updtedMentors, setUpdtedMentors] = useState(course.mentors[0].name);
+  const [updtedMentors, setUpdtedMentors] = useState(course.mentors);
   const [updtedDuration, setUpdtedDuration] = useState(course.duration);
   const [updtedNumberOfLessons, setUpdtedNumberOfLessons] = useState(course.numberOfLessons);
   const [updtedImage, setUpdtedImage] = useState(
@@ -42,11 +42,7 @@ course.image  );
     image: updtedImage,
     duration: updtedDuration,
     numberOfLessons: updtedNumberOfLessons,
-    mentors: [
-      {
-        name: updtedMentors,
-      },
-    ],
+    mentors: updtedMentors,
     description: updtedDescription,
     courseLanguage: updtedCourseLanguage,
     level: updtedLevel,
@@ -70,12 +66,7 @@ course.image  );
         image: updtedImage,
         duration: updtedDuration,
         numberOfLessons: updtedNumberOfLessons,
-        mentors: [
-          {
-            name: updtedMentors,
-          },
-        ],
-        
+        mentors: updtedMentors,
         description: updtedDescription,
         courseLanguage: updtedCourseLanguage,
         level: updtedLevel,
