@@ -18,7 +18,6 @@ export default function InstructorsPanel() {
   );
   const [permanentLink, setPermanentLink] = useState("Ayman-Abou-elMakarem");
   const [title, setTitle] = useState("Instructor Title");
-  const [courseIds, setCourseIds] = useState(234);
 
   const instructorPreview = {
     name: name,
@@ -26,7 +25,6 @@ export default function InstructorsPanel() {
     image: image,
     permanentLink: permanentLink,
     title: title,
-    courseIds: courseIds,
   };
 
   const AddInstructor = () => {
@@ -37,7 +35,6 @@ export default function InstructorsPanel() {
         image: image,
         permanentLink: permanentLink,
         title: title,
-        courseIds: [courseIds],
       })
       .then((response) => {
         console.log(response);
@@ -161,19 +158,6 @@ export default function InstructorsPanel() {
                 />
                 <div className="form-text">Like : Ayman-Ahmed</div>
               </div>
-            </div>
-            <div className="mb-3">
-              <label for="permanentLink" className="form-label">
-                courseIds
-              </label>
-              <input
-                type="number"
-                className="form-control"
-                id="permanentLink"
-                required
-                onChange={(e) => setCourseIds(parseInt(e.target.value))}
-              />
-              <div className="form-text">Like : 903</div>
             </div>
 
             <button type="submit" className="btn btn-success">
