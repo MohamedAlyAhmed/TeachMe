@@ -19,7 +19,7 @@ export default function DataProvider(props) {
     axios.get(`${BASE_URL}/courses`).then((res) => {
       setCourses(res.data);
     });
-    //get CourseCategories Data
+    //get Categories Data
     axios.get(`${BASE_URL}/CourseCategories`).then((res) => {
       setCourseCategories(res.data);
     });
@@ -65,9 +65,42 @@ export default function DataProvider(props) {
     useNavigate('/login')
   }
 
+  const getCommentsForCourse = async (courseID) => {
+    let res = await axios.get(`${BASE_URL}/comments?course_id=${courseID}`)
+    return res.data;
+  }
+
+  const reGetCategories = ()=> {
+    //re get Categories Data
+    axios.get(`${BASE_URL}/CourseCategories`).then((res) => {
+      setCourseCategories(res.data);
+    });
+  }
+
+  const reGetInstructors = ()=> {
+    //re get instructors Data
+    axios.get(`${BASE_URL}/instructors`).then((res) => {
+      setInstructors(res.data);
+    });
+  }
+
   return (
     <DataContext.Provider
-      value={{ userData, courses, categories, instructors, users, sections, LogOut, getUserData, myEnrollsCourses, setEnrollsCoursesWithUserID }}
+      value={{
+        userData,
+        courses,
+        categories,
+        instructors,
+        users,
+        sections,
+        LogOut,
+        getUserData,
+        myEnrollsCourses,
+        setEnrollsCoursesWithUserID,
+        getCommentsForCourse,
+        reGetCategories,
+        reGetInstructors,
+      }}
     >
       {props.children}
     </DataContext.Provider>

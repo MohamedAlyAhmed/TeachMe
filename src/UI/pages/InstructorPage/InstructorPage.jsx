@@ -9,7 +9,6 @@ import { useParams } from "react-router-dom";
 import { BASE_URL } from "../../../DataContext";
 import axios from "axios";
 
-
 const ReadMore = ({ children }) => {
   const text = children;
   const [isReadMore, setIsReadMore] = useState(true);
@@ -33,52 +32,60 @@ export const InstructorPage = () => {
 
   let { mainUserId } = useParams();
   const [instructor, setInstructor] = useState({});
+  const [instractorCourses, setInstractorCourses] = useState([]);
   // *****
-   const { courses } = useContext(DataContext);
+  const { courses } = useContext(DataContext);
   //  const { instructor } = useParams();
 
-  // const coursesInstructor = courses.filter((e) => e.courseIds == instructor);
   // const [courseFilter, setCourseFilter] = useState(coursesInstructor);
 
   // ****
 
   useEffect(() => {
-
-
     axios.get(`${BASE_URL}/instructors/${mainUserId}`).then((instructors) => {
       setInstructor(instructors.data);
+
+      let res = [];
+
+      for (let i = 0; i < instructors.data.courseIds.length; i++) {
+        const theID = instructors.data.courseIds[i];
+        console.log(theID);
+        console.log(courses.length);
+        for (let x = 0; x < courses.length; x++) {
+          console.log(courses[x].id);
+          if (courses[x].id == theID) {
+            res.push(courses[x]);
+          }
+        }
+        console.log("====================================");
+      }
+      setInstractorCourses(res);
     });
-
-
-
-
-
-  }, [])
-
+  }, []);
 
   return (
     <>
       <div className="myontainer1 ">
         <div className="item">
-          <img src={instructor.image} alt={instructor.name} className="mb-3 instructor-img" />
+          <img
+            src={instructor.image}
+            alt={instructor.name}
+            className="mb-3 instructor-img"
+          />
           <h4 className="fw-bold mb-3 ">{instructor.name}</h4>
           <p className="tx-accentColor ">{instructor.title}</p>
-
         </div>
         <Card
           className="cardInfo mb-2"
-          style={{ width: '20rem', height: '13rem' }}
+          style={{ width: "20rem", height: "13rem" }}
         >
           <Card.Body>
-
             <div className="myrow">
               <div className="viewRow">
                 <div className="icon1">
                   <i className="fa-solid fa-eye"></i>
-
                 </div>
-                <Card.Title> Views  </Card.Title>
-
+                <Card.Title> Views </Card.Title>
               </div>
               <h5>2,324</h5>
             </div>
@@ -86,11 +93,9 @@ export const InstructorPage = () => {
               <div className="viewRow">
                 <div className="icon2">
                   <i className="fa-solid fa-graduation-cap"></i>
-
                 </div>
 
                 <Card.Title> Learners </Card.Title>
-
               </div>
               <h5>5,400</h5>
             </div>
@@ -98,29 +103,26 @@ export const InstructorPage = () => {
         </Card>
       </div>
       {/* *** */}
-      <div className="myontainer2 " style={{marginLeft:"7rem" ,marginRight:"7rem"}}>
-      <h4 className="fw-bold text-center mb-3">About Mentor</h4>
+      <div
+        className="myontainer2 "
+        style={{ marginLeft: "7rem", marginRight: "7rem" }}
+      >
+        <h4 className="fw-bold text-center mb-3">About Mentor</h4>
 
-            <div className="bg-new-color text-secondary shadow mb-4 rounded-3 d-flex justify-content-between align-items-center p-4">
-{instructor.description}
-
-
-            </div>
-
-       
+        <div className="bg-new-color text-secondary shadow mb-4 rounded-3 d-flex justify-content-between align-items-center p-4">
+          {instructor.description}
+        </div>
       </div>
 
-       <div className="container w-100">
-          <div className="row ">
-            {courses.map((e) => (
-              <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 small-screen">
-                <CourseCard course={e} />
-              </div>
-            ))}
-          </div>
-        </div> 
+      <div className="container w-100">
+        <div className="row ">
+          {instractorCourses.map((e) => (
+            <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 small-screen">
+              <CourseCard course={e} />
+            </div>
+          ))}
+        </div>
+      </div>
     </>
-
-
   );
 };

@@ -28,14 +28,14 @@ export default function MyProgress() {
                             <div className="weekly-state-details">
                                 <div className="spent-hour">
                                     <p className="state-content">
-                                        <i class="fa-regular fa-clock"></i>
+                                        <i className="fa-regular fa-clock"></i>
                                         00:00
                                     </p>
                                     <p className="state-note">Hours spent learning</p>
                                 </div>
                                 <div className="finished">
                                     <p className="state-content">
-                                        <i class="fa-regular fa-clock"></i>
+                                        <i className="fa-regular fa-clock"></i>
                                         0
                                     </p>
                                     <p className="state-note">Lessons finished</p>
@@ -48,28 +48,28 @@ export default function MyProgress() {
                             <div className="courses-state-details">
                                 <div className="courses-state-item">
                                     <div className="item-count">
-                                        <i class="fa-solid fa-hourglass-start"></i>
+                                        <i className="fa-solid fa-hourglass-start"></i>
                                         <p>0</p>
                                     </div>
                                     <p className='course-state-title'>In progress courses</p>
                                 </div>
                                 <div className="courses-state-item">
                                     <div className="item-count">
-                                        <i class="fa-solid fa-clock"></i>
+                                        <i className="fa-solid fa-clock"></i>
                                         <p>0</p>
                                     </div>
                                     <p className='course-state-title'>Completed courses</p>
                                 </div>
                                 <div className="courses-state-item">
                                     <div className="item-count">
-                                        <i class="fa-solid fa-certificate"></i>
+                                        <i className="fa-solid fa-certificate"></i>
                                         <p>0</p>
                                     </div>
                                     <p className='course-state-title'>Earned certificates</p>
                                 </div>
                                 <div className="courses-state-item">
                                     <div className="item-count">
-                                        <i class="fa-solid fa-bookmark"></i>
+                                        <i className="fa-solid fa-bookmark"></i>
                                         <p>0</p>
                                     </div>
                                     <p className='course-state-title'>Saved courses    </p>
@@ -79,10 +79,10 @@ export default function MyProgress() {
                     </div>
                 </div>
             </div>
-            
-            <MyCourses/>
 
-            <MyCertificates/>
+            <MyCourses />
+
+            <MyCertificates />
 
 
         </>

@@ -22,17 +22,13 @@ export default function UserProfile() {
     const sidepageitem = document.querySelectorAll(".side-page-item")
     function handlebuttonlink(el) {
         console.log(el);
-        
+
     }
 
     const { userData } = useContext(DataContext);
     let fullName;
     fullName = userData.first_name + " " + userData.last_name;
     console.log(userData);
-    
-    function togglle(){
-        console.log();
-    }
 
 
     return (
@@ -43,7 +39,7 @@ export default function UserProfile() {
 
                         <div className="user-profile-info">
                             <div className="user-profile-avatar">
-                                <img src="assets/default-avatar.jpg" />
+                                <img src="/assets/default-avatar.jpg" />
                             </div>
                             <div className="user-profile-info-details">
                                 <h2>{userData.first_name} {userData.last_name}</h2>
