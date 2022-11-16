@@ -9,7 +9,7 @@ import CoursesUpdate from "./CoursesUpdate/CoursesUpdate";
 export default function CoursesPanel() {
 
   const { courses, reGetCourses } = useContext(DataContext);
-  const { instructors } = useContext(DataContext);
+  const { instructors, categories } = useContext(DataContext);
 
   // For Add Course
   const [name, setName] = useState("Course_Name");
@@ -21,7 +21,8 @@ export default function CoursesPanel() {
   const [releasedAt, setReleasedAt] = useState("Release_Date");
   const [courseLanguage, setCourseLanguage] = useState(1);
   const [description, setDescription] = useState("Description of course");
-  const [mentors, setmentors] = useState({});
+  const [mentors, setmentors] = useState({name:"instructor_name"});
+  const [categoryName, setCategoryName] = useState("Category_Name");
   const [duration, setDeuration] = useState(234556);
   const [numberOfLessons, setNumberOfLessons] = useState(12);
   
@@ -32,6 +33,7 @@ export default function CoursesPanel() {
   const instructorsNames = instructors.map((e, index) => {
     return <p key={index}>{e.name}</p>;
   });
+
  const onChangeMentor=(e)=>{
 const selectedId=e.target.value;
 const selectedMentorName=instructors.filter((e)=>
@@ -39,6 +41,19 @@ const selectedMentorName=instructors.filter((e)=>
  setmentors(selectedMentorName)
 
  }
+
+ const categoriesNames = categories.map((e, index) => {
+  return <p key={index}>{e.name}</p>;
+});
+
+ const onChangeCategory = (e)=> {
+  const selectedId=e.target.value;
+  const categoriesN=categories.filter((e)=>
+    e.id==selectedId)[0].permanentLink;
+    // setCategoryName(categoriesN)
+    setcCategory(categoriesN)
+ }
+
   const coursePreview = {
     name: name,
     category: category,
@@ -295,7 +310,26 @@ const selectedMentorName=instructors.filter((e)=>
             </div>
             {/*(12) Categoty */}
 
-            <div className="mb-3">
+            
+            <div className="mb-3 w-50">
+                <label for="instructor">Category Name:</label>
+
+                <select
+                options={categoriesNames}
+                  className="form-select mt-2"
+                  name="instructor"
+                  id="instructor"
+                   onChange={(e) =>{onChangeCategory(e)}}
+                >
+                  {categories.map((e) => (
+                    <option value={e.id} key={e.id}>
+                      {e.name}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+            {/* <div className="mb-3">
               <label for="category" className="form-label">
                 Categoty
               </label>
@@ -307,7 +341,8 @@ const selectedMentorName=instructors.filter((e)=>
                 onChange={(e) => setcCategory(e.target.value)}
               />
               <div className="form-text">Like : Soft-Skills</div>
-            </div>
+            </div> */}
+
             <button type="submit" className="btn btn-success">
               Add Course
             </button>
