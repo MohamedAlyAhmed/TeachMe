@@ -1139,18 +1139,22 @@
       ]
     },
     {
-      "name": "Course Name",
-      "category": "Category Name",
-      "image": "https://previews.123rf.com/images/melpomen/melpomen1509/melpomen150900104/45650274-hand-pointing-to-online-course-concept-on-light-brown-wall-background.jpg",
-      "duration": "4.30",
-      "numberOfLessons": "4.30",
-      "mentors": "New-Course",
-      "description": "Description of course",
-      "courseLanguage": "Arabic",
+      "name": "seee",
+      "image": "https://t3.ftcdn.net/jpg/02/94/21/42/360_F_294214205_ZmptWrtSwORSWadAIHSWqwSa319XlQiB.jpg",
+      "duration": 32435,
+      "numberOfLessons": 23,
+      "category": "soft-skills",
+      "description": "see",
+      "courseLanguage": "jnon",
       "level": 1,
-      "permanentLink": "Cinematic-Lighting-Masterclass",
-      "releasedAt": "Release_Date",
-      "id": 910
+      "permanentLink": "jkndefnewn",
+      "releasedAt": "2017-12-29T22:00:00.000Z",
+      "mentors": [
+        {
+          "name": "Hebatalla Abdel-halim Mahmoud"
+        }
+      ],
+      "id": 911
     }
   ],
   "instructors": [
@@ -2140,6 +2144,13 @@
       "date": "2022-11-16T17:26:04.946Z",
       "progress": 0,
       "id": 5
+    },
+    {
+      "user_id": "6373d702b4164c00154d3baa",
+      "course_id": 910,
+      "date": "2022-11-16T20:21:07.251Z",
+      "progress": 0,
+      "id": 6
     }
   ]
 }

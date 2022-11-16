@@ -17,24 +17,23 @@ export default function CoursesUpdate({ course }) {
   const { reGetCourses } = useContext(DataContext);
 
   // For Update course
-  const [updtedName, setUpdtedName] = useState("Course Name");
+  const [updtedName, setUpdtedName] = useState(course.name);
   const [updtedPermanentLink, setUpdtedPermanentLink] = useState(
-    "Cinematic-Lighting-Masterclass"
+   course.permanentLink
   );
-  const [updtedCategory, setcUpdtedCategory] = useState("Category Name");
-  const [updtedLevel, setUpdtedLevel] = useState(1);
-  const [updtedCourseLanguage, setUpdtedCourseLanguage] = useState("Arabic");
+  const [updtedCategory, setcUpdtedCategory] = useState(course.category);
+  const [updtedLevel, setUpdtedLevel] = useState(course.level);
+  const [updtedCourseLanguage, setUpdtedCourseLanguage] = useState(course.courseLanguage);
 
   const [updtedDescription, setUpdtedDescription] = useState(
-    "Description of course"
+   course.description
   );
-  const [updtedMentors, setUpdtedMentors] = useState("New-Course");
-  const [updtedDuration, setUpdtedDuration] = useState("4.30");
-  const [updtedNumberOfLessons, setUpdtedNumberOfLessons] = useState("4.30");
+  const [updtedMentors, setUpdtedMentors] = useState(course.mentors[0].name);
+  const [updtedDuration, setUpdtedDuration] = useState(course.duration);
+  const [updtedNumberOfLessons, setUpdtedNumberOfLessons] = useState(course.numberOfLessons);
   const [updtedImage, setUpdtedImage] = useState(
-    "https://previews.123rf.com/images/melpomen/melpomen1509/melpomen150900104/45650274-hand-pointing-to-online-course-concept-on-light-brown-wall-background.jpg"
-  );
-  const [updateReleasedAt, setUpdateReleasedAt] = useState("Release_Date");
+course.image  );
+  const [updateReleasedAt, setUpdateReleasedAt] = useState(course.releasedAt);
 
   // For Preview course
   const updatedPreview = {
@@ -43,7 +42,11 @@ export default function CoursesUpdate({ course }) {
     image: updtedImage,
     duration: updtedDuration,
     numberOfLessons: updtedNumberOfLessons,
-    mentors: updtedMentors,
+    mentors: [
+      {
+        name: updtedMentors,
+      },
+    ],
     description: updtedDescription,
     courseLanguage: updtedCourseLanguage,
     level: updtedLevel,
@@ -67,7 +70,12 @@ export default function CoursesUpdate({ course }) {
         image: updtedImage,
         duration: updtedDuration,
         numberOfLessons: updtedNumberOfLessons,
-        mentors: updtedMentors,
+        mentors: [
+          {
+            name: updtedMentors,
+          },
+        ],
+        
         description: updtedDescription,
         courseLanguage: updtedCourseLanguage,
         level: updtedLevel,

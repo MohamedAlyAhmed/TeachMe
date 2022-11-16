@@ -13,7 +13,6 @@ import { DataContext } from "../../../DataContext";
 import { useEffect } from "react";
 
 const Header = (props) => {
-
   const { categories } = useContext(DataContext);
   const BASE_CATEGORY = "http://localhost:4000/category";
   const toggleMenus = () => {
@@ -29,7 +28,7 @@ const Header = (props) => {
   };
 
   return (
-     <Navbar bg="#fff" expand="lg">
+    <Navbar bg="#fff" expand="lg">
       <Container
         fluid
         className="d-flex
@@ -46,10 +45,7 @@ const Header = (props) => {
         <Navbar.Toggle aria-controls="navbarScroll" />
 
         <Navbar.Collapse id="navbarScroll">
-          <Nav
-            className="me-auto my-2 my-lg-0"
-            navbarScroll
-          >
+          <Nav className="me-auto my-2 my-lg-0" navbarScroll>
             {/* instructor Button */}
             <a
               href="/instructors"
@@ -62,7 +58,7 @@ const Header = (props) => {
               <Button variant="">Instructors</Button>
             </a>
 
-{/* courses list */}
+            {/* courses list */}
             <div>
               <Button
                 onClick={toggleMenus}
@@ -99,25 +95,23 @@ const Header = (props) => {
                 </div>
               </div>
             </div>
-
-            {/* <MyButton isOutline={true}>Subscribe</MyButton> */}
-            {/* <a href="/search">
-              <MyButton isOutline={true}>Subscribe</MyButton>
-            </a>&nbsp; */}
-            {userData ?
-             (
-              <a href="http://localhost:4000/dashboard/home">
-                <MyButton isOutline={true}>DASHBOARD</MyButton>
-              </a>
+            {userData ? (
+              userData.email == "teachme@gmail.com"? (
+                <a href="http://localhost:4000/dashboard/home">
+                  <MyButton isOutline={true}>DASHBOARD</MyButton>
+                </a>
+              ) : (
+               ""
+              )
             ) : (
-              ""
+             ""
             )}
           </Nav>
-{/* search icon */}
+          {/* search icon */}
           <a href={`${BASE_CATEGORY}`} style={{ marginRight: "1rem" }}>
             <i className="fa fa-search icon-search"></i>
           </a>
-{/* if user login */}
+          {/* if user login */}
           {userData ? (
             <>
               <Button onClick={toggleProfile} className="user-pic" variant="">

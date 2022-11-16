@@ -109,9 +109,7 @@ const selectedMentorName=instructors.filter((e)=>
     }
   };
 
-  // const refreshPage = () => {
-  //   window.location.reload();
-  // };
+ 
 
   return (
     <>
