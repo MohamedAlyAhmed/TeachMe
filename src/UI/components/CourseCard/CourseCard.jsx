@@ -8,7 +8,6 @@ import { BASE_URL } from '../../../DataContext';
 
 export default function CourseCard({ course }) {
 
-  let { id } = useParams();
   let [courses, setCourses] = useState([]);
   let { userData,
     mySaveCourses,
@@ -49,13 +48,21 @@ export default function CourseCard({ course }) {
     for (let i = 0; i < mySaveCourses.length; i++) {
       if (course.id == mySaveCourses[i].course_id) {
         return true;
+
       }
     }
     return false;
   }
 
-  const onClickContenueWatch = () => {
-    navigate(`/saved-lis`);
+  const deleteSaved = () => {
+
+    let current = mySaveCourses.filter((e) =>
+      e.course_id == course.id
+    )
+    console.log(current[0].id);
+    axios.delete(`${BASE_URL}/savedList/${current[0].id}`)
+    
+
   }
 
 
@@ -89,12 +96,12 @@ export default function CourseCard({ course }) {
             </p>
             <Link to={`/category`}>
               <button
-                onClick={isCourseEnroled() ? onClickContenueWatch : onClickEnroll}
+                onClick={isCourseEnroled() ? deleteSaved : onClickEnroll}
                 className="btn btn-light rounded-5 border"
                 title="Save for later"
               >
                 {isCourseEnroled() ? <i class="fa-solid fa-bookmark"></i> : <i className="fa-regular fa-bookmark"></i>}
-                
+
               </button>
             </Link>
           </div>
