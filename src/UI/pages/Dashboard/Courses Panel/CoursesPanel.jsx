@@ -6,11 +6,11 @@ import { useContext } from "react";
 import CourseCard from "../../../components/CourseCard/CourseCard";
 import { toast } from "react-toastify";
 import CoursesUpdate from "./CoursesUpdate/CoursesUpdate";
-
 export default function CoursesPanel() {
 
-  const { courses } = useContext(DataContext);
+  const { courses,reGetCourses } = useContext(DataContext);
   const { instructors } = useContext(DataContext);
+
   // For Add Course
   const [name, setName] = useState("Course_Name");
   const [permanentLink, setPermanentLink] = useState(
@@ -86,6 +86,8 @@ const selectedMentorName=instructors.filter((e)=>
         console.log(error);
         toast.error("Courses Added Failed !");
       });
+      reGetCourses();
+    
   };
 
   const deleteCourse = (id) => {
@@ -101,15 +103,15 @@ const selectedMentorName=instructors.filter((e)=>
           toast.error("Courses Deleted Failed !");
         });
 
-      refreshPage();
+      reGetCourses();
     } else {
       console.log("Declined");
     }
   };
 
-  const refreshPage = () => {
-    window.location.reload();
-  };
+  // const refreshPage = () => {
+  //   window.location.reload();
+  // };
 
   return (
     <>

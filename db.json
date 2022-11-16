@@ -1139,7 +1139,7 @@
       ]
     },
     {
-      "name": "sporttt",
+      "name": "Course Name",
       "category": "Category Name",
       "image": "https://previews.123rf.com/images/melpomen/melpomen1509/melpomen150900104/45650274-hand-pointing-to-online-course-concept-on-light-brown-wall-background.jpg",
       "duration": "4.30",
@@ -1150,7 +1150,7 @@
       "level": 1,
       "permanentLink": "Cinematic-Lighting-Masterclass",
       "releasedAt": "Release_Date",
-      "id": 909
+      "id": 910
     }
   ],
   "instructors": [
