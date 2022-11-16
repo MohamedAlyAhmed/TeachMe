@@ -3,34 +3,38 @@ import React, { Component, useContext, useEffect, useState, useMemo } from "reac
 import { Navigate } from "react-router-dom";
 import TextField from '@mui/material/TextField';
 import { DataContext } from '../../../DataContext';
-import countryList from 'react-select-country-list'
 import { Link, Outlet } from "react-router-dom";
 import PersonalInformation from "./Personal/personalInf";
-import AccountInformation from "./Account/AccountInf";
+
 
 
 
 
 export default function UserProfile() {
 
-    const [value, setValue] = useState('')
-    const options = useMemo(() => countryList().getData(), [])
-    const changeHandler = value => {
-        setValue(value)
-    }
-
-    const sidepageitem = document.querySelectorAll(".side-page-item")
-    function handlebuttonlink(el) {
-        console.log(el);
-
-    }
-
+ 
     const { userData } = useContext(DataContext);
     let fullName;
     fullName = userData.first_name + " " + userData.last_name;
-    console.log(userData);
 
 
+
+    var btnContainer = document.getElementById("side-menu");
+    var btns = document.getElementsByClassName("side-page-item");
+    for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+          var current = document.getElementsByClassName("active-tab");
+      
+          // If there's no active class
+          if (current.length > 0) {
+            current[0].className = current[0].className.replace("active-tab", "");
+          }
+      
+          // Add the active class to the current/clicked button
+          this.className += " active-tab";
+        });
+      }
+    
     return (
         <>
             <div className="profile-page">
@@ -64,10 +68,9 @@ export default function UserProfile() {
                 <div className="setting-page-content">
 
                     <div className="setting-page-side-menu">
-                        <div className="side-menu">
+                        <div className="side-menu" id="side-menu">
 
                             <Link to="Personal" className="side-page-item active-tab" >Personal Information</Link>
-                            <Link to="Account" className="side-page-item " >Account Information</Link>
                             <Link to="SavesList" className="side-page-item" >SavesList</Link>
                             <Link to="MyCourses" className="side-page-item" >MyCourses</Link>
 

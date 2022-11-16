@@ -13,6 +13,7 @@ export default function DataProvider(props) {
   let [users, setUsers] = useState([]);
   let [sections, setSections] = useState([]);
   let [myEnrollsCourses, setMyEnrollsCourses] = useState([]);
+  let [mySaveCourses, setMySaveCourses] = useState([]);
 
   useEffect(() => {
     //get Courses Data
@@ -46,6 +47,7 @@ export default function DataProvider(props) {
       let decodedToken = jwtDecode(localStorage.getItem("userToken"));
       setUserData(decodedToken);
       setEnrollsCourses(decodedToken._id);
+      setSaveCourses(decodedToken._id);
     }
   }
 
@@ -56,6 +58,15 @@ export default function DataProvider(props) {
   const setEnrollsCourses = (userID) => {
     axios.get(`${BASE_URL}/enrolls?user_id=${userID}`).then((res) => {
       setMyEnrollsCourses(res.data);
+    });
+  }
+  const setSaveCoursesWithUserID = () => {
+    setSaveCourses(userData._id);
+  }
+
+  const setSaveCourses = (userID) => {
+    axios.get(`${BASE_URL}/savedList?user_id=${userID}`).then((res) => {
+      setMySaveCourses(res.data);
     });
   }
 
@@ -100,6 +111,8 @@ export default function DataProvider(props) {
         getCommentsForCourse,
         reGetCategories,
         reGetInstructors,
+        mySaveCourses,
+        setSaveCoursesWithUserID
       }}
     >
       {props.children}
