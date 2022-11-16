@@ -62,8 +62,8 @@ export const FeaturedInstructors = () => {
   return (
     <div>
       <Slider {...settings}>
-        {instructors.map((e) => (
-          <InstructorCard instructor={e} />
+        {instructors.map((e,index) => (
+          <InstructorCard instructor={e} key={index}/>
         ))}
       </Slider>
     </div>

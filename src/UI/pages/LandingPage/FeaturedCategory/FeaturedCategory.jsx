@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import Slider from "react-slick";
-import styled from "styled-components";
 import "./FeaturedCategory.css";
 import CategoryCard from "../../../components/CategoryCard/CategoryCard";
 import { DataContext } from "../../../../DataContext";
@@ -66,8 +65,8 @@ export const FeaturedCategory = () => {
   return (
     <div>
       <Slider {...settings}>
-        {categories.map((e) => (
-          <CategoryCard category={e} />
+        {categories.map((e,index) => (
+          <CategoryCard category={e} key={index}/>
         ))}
       </Slider>
     </div>

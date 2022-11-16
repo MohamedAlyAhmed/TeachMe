@@ -4,61 +4,27 @@ import Picks from "./Picks/Picks";
 import { Map } from "./map/map";
 import InstructorsPicks from "./InstructorPicks/InstructorsPicks";
 import MyButton from "../../components/Button/Button";
-import Search from "../../components/Search/Search";
 import { useState, useEffect } from "react";
 import axios from "axios";
+const BASE_CATEGORY = "http://localhost:4000/category";
+
 function LandingPage() {
-  // const [data, setData] = useState([]);
-  // //search
-  // useEffect(() => {
-  //   loadBlogsData();
-  // }, []);
-
-  // const loadBlogsData = async () => {
-  //   const response = await axios.get("http://localhost:5000/blogs");
-  //   if (response.status === 200) {
-  //     setData(response.data);
-  //   } else {
-  //     console.log("error");
-  //   }
-  // };
-  // const [searchValue, setSearchValue] = useState("");
-
-  // const onInputChange = (e) => {
-  //   if (!e.target.value) {
-  //     <LandingPage />;
-  //     loadBlogsData();
-  //   }
-  //   setSearchValue(e.target.value);
-  // };
-  // const handleSearch = async (e) => {
-  //   e.preventDefault();
-  //   const response = await axios.get(
-  //     `http://localhost:3000/courses?q=${searchValue}`
-  //   );
-  //   if (response.status === 200) {
-  //     console.log('====================================');
-  //     console.log(response.data);
-  //     console.log('====================================');
-  //     setData(response.data);
-  //   } else {
-  //     console.log("errrorrrr");
-  //   }
-  // };
+ 
   return (
     <>
-      {/* <Search
-        searchValue={searchValue}
-        onInputChange={onInputChange}
-        handleSearch={handleSearch}
-      /> */}
+     
       <header>
         <div className="hero-image">
           <div className="hero-content">
             <div className="hero-content-inner">
               <h1 className="display-2 fw-bold">Learn Online</h1>
               <p>From the biggest Arabic library of video-based courses</p>
-              <MyButton>Subscribe now</MyButton>
+              <a href={`${BASE_CATEGORY}`}>
+                    <MyButton>
+                      Browse Courses &nbsp;
+                      <i className="fa-solid fa-arrow-right"></i>
+                    </MyButton>
+                  </a>
             </div>
           </div>
         </div>

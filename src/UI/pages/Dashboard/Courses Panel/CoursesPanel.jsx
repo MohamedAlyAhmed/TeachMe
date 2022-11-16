@@ -4,44 +4,51 @@ import axios from "axios";
 import { BASE_URL, DataContext } from "../../../../DataContext";
 import { useContext } from "react";
 import CourseCard from "../../../components/CourseCard/CourseCard";
-// import CoursesUpdate from './CoursesUpdate/CoursesUpdate';
 import { toast } from "react-toastify";
 import CoursesUpdate from "./CoursesUpdate/CoursesUpdate";
 
 export default function CoursesPanel() {
+
   const { courses } = useContext(DataContext);
   const { instructors } = useContext(DataContext);
   // For Add Course
-  const [name, setName] = useState("Course Name");
+  const [name, setName] = useState("Course_Name");
   const [permanentLink, setPermanentLink] = useState(
     "Cinematic-Lighting-Masterclass"
   );
-  const [category, setcCategory] = useState("Category Name");
+  const [category, setcCategory] = useState("Category_Name");
   const [level, setLevel] = useState(1);
-  const [courseLanguage, setCourseLanguage] = useState("Arabic");
-  const [courseIds, setCourseIds] = useState(234);
+  const [releasedAt, setReleasedAt] = useState("Release_Date");
+  const [courseLanguage, setCourseLanguage] = useState(1);
   const [description, setDescription] = useState("Description of course");
-  const [mentors, setmentors] = useState("New-Course");
-  const [duration, setDeuration] = useState("4.30");
-  const [numberOfLessons, setNumberOfLessons] = useState("4.30");
+  const [mentors, setmentors] = useState(instructors);
+  const [duration, setDeuration] = useState(234556);
+  const [numberOfLessons, setNumberOfLessons] = useState(12);
+  
   const [image, setImage] = useState(
     "https://previews.123rf.com/images/melpomen/melpomen1509/melpomen150900104/45650274-hand-pointing-to-online-course-concept-on-light-brown-wall-background.jpg"
   );
-  const instructorsNames = instructors.map((e) => {
-    return e.name;
-  })
+  
+  const instructorsNames = instructors.map((e, index) => {
+    return <p key={index}>{e.name}</p>;
+  });
+ 
   const coursePreview = {
     name: name,
     category: category,
+    releasedAt: releasedAt,
     image: image,
     duration: duration,
     numberOfLessons: numberOfLessons,
-    mentors: mentors,
     description: description,
-    courseIds: courseIds,
     courseLanguage: courseLanguage,
     level: level,
     permanentLink: permanentLink,
+    mentors: [
+      {
+        name: mentors,
+      },
+    ],
   };
 
   const AddCourse = () => {
@@ -49,26 +56,30 @@ export default function CoursesPanel() {
       .post(`${BASE_URL}/courses`, {
         name: name,
         image: image,
-        mentors: mentors,
         duration: duration,
         numberOfLessons: numberOfLessons,
         category: category,
         description: description,
-        courseIds: [courseIds],
         courseLanguage: courseLanguage,
         level: level,
         permanentLink: permanentLink,
+        releasedAt: releasedAt,
+        mentors: [
+          {
+            name: mentors,
+
+          },
+        ],
+       
       })
       .then((response) => {
         console.log(response);
         toast.success("Courses Added Successefully");
-
       })
       .catch((error) => {
         console.log(error);
         toast.error("Courses Added Failed !");
       });
-
   };
 
   const deleteCourse = (id) => {
@@ -94,7 +105,6 @@ export default function CoursesPanel() {
     window.location.reload();
   };
 
-
   return (
     <>
       <div>
@@ -103,7 +113,7 @@ export default function CoursesPanel() {
         </div>
 
         <div className="row mb-5 border shadow p-3">
-          {/* Category Card Preview  */}
+          {/* Course Card Preview  */}
           <div className="col-xl-3 col-lg-5 col-md-6 col-sm-12  d-flex justify-content-center flex-column align-items-center">
             <h2 className="text-light bg-dark p-2 rounded mt-2">Add Course</h2>
 
@@ -113,7 +123,7 @@ export default function CoursesPanel() {
               PermanentLink :<br></br> {permanentLink}
             </div>
           </div>
-          {/*Add Category Form*/}
+          {/*Add Course Form*/}
           <form
             className="col-xl-9 col-lg-7 col-md-6 col-sm-12  mt-5"
             onSubmit={() => AddCourse()}
@@ -164,51 +174,24 @@ export default function CoursesPanel() {
             </div>
             {/* (4)Mentors */}
             <div className="w-100 d-flex">
+          
+         
               <div className="mb-3 w-50">
-                {/* <label for="category_name" className="form-label">
-                  Instructor 
-                  
-                </label> */}
-
-                {/* <select  
- 
- >
-  <option >please select instructor</option>
-{
-instructorsNames.map((e)=>(
-<option value={e}
-  className="text-dark">
-  {e}
-
-  </option>
-))}
-
-</select> */}
                 <label for="instructor">Instructor Name:</label>
 
-                <select name="instructor" id="instructor">
-                  <option >please select instructor</option>
-
-                  {
-                    instructorsNames.map((e) =>
-                      <option value={e}>
-                        {e}
-                      </option>
-
-
-
-                    )}
-
+                <select
+                options={instructorsNames}
+                  class="form-select mt-2"
+                  name="instructor"
+                  id="instructor"
+                  onChange={(e) => setmentors(instructorsNames)}
+                >
+                  {instructors.map((e, index) => (
+                    <option value={e } key={index}>
+                      {e.name}
+                    </option>
+                  ))}
                 </select>
-
-                {/* <input
-                  type="text"
-                  className="form-control"
-                  id="category_name"
-                  required
-                  onChange={(e) => setmentors(e.target.value)}
-                /> */}
-                <div className="form-text">Please Add Instructor</div>
               </div>
               {/* (5) Permanent Link */}
               <div className="mb-3 w-50 ms-3">
@@ -222,23 +205,12 @@ instructorsNames.map((e)=>(
                   required
                   onChange={(e) => setPermanentLink(e.target.value)}
                 />
-                <div className="form-text">Like : Ayman-Ahmed</div>
+                <div className="form-text">
+                  Like : Parents-back-to-school-guide
+                </div>
               </div>
             </div>
-            {/*(6) courseIds */}
-            {/* <div className="mb-3">
-              <label for="permanentLink" className="form-label">
-                courseIds
-              </label>
-              <input
-                type="number"
-                className="form-control"
-                id="permanentLink"
-                required
-                onChange={(e) => setCourseIds(parseInt(e.target.value))}
-              />
-              <div className="form-text">Like : 903</div>
-            </div> */}
+
             {/*(7) Level */}
             <div className="mb-3">
               <label for="permanentLink" className="form-label">
@@ -265,12 +237,12 @@ instructorsNames.map((e)=>(
                 required
                 onChange={(e) => setNumberOfLessons(parseInt(e.target.value))}
               />
-              <div className="form-text">Like : 1</div>
+              <div className="form-text">Like : 26</div>
             </div>
             {/*(9) Deuration */}
             <div className="mb-3">
               <label for="permanentLink" className="form-label">
-                Deuration
+              Duration
               </label>
               <input
                 type="number"
@@ -279,7 +251,7 @@ instructorsNames.map((e)=>(
                 required
                 onChange={(e) => setDeuration(parseInt(e.target.value))}
               />
-              <div className="form-text">Like : 1</div>
+              <div className="form-text">Number of seconds</div>
             </div>
             {/*(10) Course Language */}
             <div className="mb-3">
@@ -295,7 +267,21 @@ instructorsNames.map((e)=>(
               />
               <div className="form-text">Please Add Course Language</div>
             </div>
-            {/*(11) Categoty */}
+            {/*(11) Date */}
+            <div className="mb-3">
+              <label for="permanentLink" className="form-label">
+                Date
+              </label>
+              <input
+                type="text"
+                className="form-control"
+                id="permanentLink"
+                required
+                onChange={(e) => setReleasedAt(new Date(e.target.value))}
+              />
+              <div className="form-text">Like :Sat Dec 30 2017</div>
+            </div>
+            {/*(12) Categoty */}
 
             <div className="mb-3">
               <label for="category" className="form-label">
@@ -346,10 +332,7 @@ instructorsNames.map((e)=>(
             </div>
           ))}
         </div>
-
       </div>
-
     </>
-
   );
 }

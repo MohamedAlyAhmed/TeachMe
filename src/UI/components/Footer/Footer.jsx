@@ -65,15 +65,6 @@ export default function Footer() {
                 </a>
               </p>
             </MDBCol>
-
-            <MDBCol md="3" lg="2" xl="2" className="mx-auto mb-4">
-              <h6 className="text-uppercase fw-bold mb-4">Buisness</h6>
-              <p>
-                <a href="#!" className="d-flex text-reset footerlinks">
-                 Become instructor
-                </a>
-              </p>
-            </MDBCol>
           </MDBRow>
         </MDBContainer>
       </section>
@@ -86,11 +77,8 @@ export default function Footer() {
         <Nav.Item>
           <Nav.Link eventKey="link-1">Privacy policy</Nav.Link>
         </Nav.Item>
-        {/* <Nav.Item>
-          <Nav.Link eventKey="link-1">Terms of use</Nav.Link>
-        </Nav.Item> */}
+
         <span>
-          {" "}
           <a className="text-reset fw-bold" href="#">
             Help Center
           </a>
@@ -105,11 +93,11 @@ export default function Footer() {
           <a href="" className="me-4 text-reset">
             <MDBIcon fab icon="google" />
           </a>
-         
+
           <a href="" className="me-4 text-reset">
             <MDBIcon fab icon="linkedin" />
           </a>
-          <ScrollToTop smooth color="black"  />
+          <ScrollToTop smooth color="black" />
         </div>
       </section>
     </MDBFooter>

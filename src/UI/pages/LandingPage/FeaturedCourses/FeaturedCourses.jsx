@@ -65,8 +65,8 @@ export const FeaturedCourses = () => {
   return (
     <div>
       <Slider {...settings}>
-        {courses.map((e) => (
-          <CourseCard course={e} />
+        {courses.map((e,index) => (
+          <CourseCard course={e} key={index}/>
         ))}
       </Slider>
     </div>

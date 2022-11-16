@@ -22,7 +22,6 @@ import CategoryPanel from "./UI/pages/Dashboard/Category Panel/CategoryPanel";
 import PersonalInformation from "./UI/pages/UserProfile/Personal/personalInf";
 import SavesList from "./UI/pages/UserProfile/SavedList/SavesList";
 import MyCourses from "./UI/pages/UserProfile/MyCourses/Mycourses"
-import Search from "./UI/components/Search/Search"
 
 
 //Landing Page LazyLoading 
@@ -168,14 +167,6 @@ function App() {
               element={
                 <React.Suspense>
                   <LazyWatchPage />
-                </React.Suspense>
-              }
-            />
-             <Route
-              path="/search"
-              element={
-                <React.Suspense>
-                  <Search />
                 </React.Suspense>
               }
             />

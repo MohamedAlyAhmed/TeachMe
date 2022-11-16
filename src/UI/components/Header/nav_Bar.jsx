@@ -29,11 +29,14 @@ const Header = (props) => {
   };
 
   return (
-    <Navbar bg="#fff" expand="lg">
+     <Navbar bg="#fff" expand="lg">
       <Container
         fluid
-        className="d-flex justify-content-between align-items-center"
+        className="d-flex
+         justify-content-between
+          align-items-center"
       >
+        {/* logo */}
         <a href="http://localhost:4000/">
           <p className="logo mx-4">
             Teach <span>Me</span>
@@ -45,9 +48,9 @@ const Header = (props) => {
         <Navbar.Collapse id="navbarScroll">
           <Nav
             className="me-auto my-2 my-lg-0"
-            // style={{ maxHeight: "100px" }}
             navbarScroll
           >
+            {/* instructor Button */}
             <a
               href="/instructors"
               style={{
@@ -59,17 +62,18 @@ const Header = (props) => {
               <Button variant="">Instructors</Button>
             </a>
 
+{/* courses list */}
             <div>
               <Button
                 onClick={toggleMenus}
-                className="us er-pic"
+                className="us er-pic "
                 variant=""
                 style={{ marginRight: "1rem", marginLeft: "1rem" }}
               >
                 Courses
                 <i className="fa-solid fa-angle-down"></i>
               </Button>
-              &nbsp;&nbsp;&nbsp;&nbsp;
+              {/* &nbsp;&nbsp;&nbsp;&nbsp; */}
               <div className="sub-menu-wrap " id="subMenu">
                 <div className="sub-menu shadow">
                   <div className="header">
@@ -109,11 +113,11 @@ const Header = (props) => {
               ""
             )}
           </Nav>
-
-          <a href="/search" style={{ marginRight: "1rem" }}>
+{/* search icon */}
+          <a href={`${BASE_CATEGORY}`} style={{ marginRight: "1rem" }}>
             <i className="fa fa-search icon-search"></i>
           </a>
-
+{/* if user login */}
           {userData ? (
             <>
               <Button onClick={toggleProfile} className="user-pic" variant="">
@@ -215,6 +219,7 @@ const Header = (props) => {
               </div>
             </>
           ) : (
+            // if user not login
             <>
               <Button variant="link">
                 <a href="/login" className="loginlink">
