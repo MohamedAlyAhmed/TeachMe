@@ -7,7 +7,9 @@ import React, { useContext } from "react";
 import { DataContext } from "../../../DataContext";
 
 export default function InstructorsPage() {
+  // title
   document.title = `Instructors`;
+  // get all instructors
   let { instructors } = useContext(DataContext);
   return (
     <div>

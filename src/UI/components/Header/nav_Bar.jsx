@@ -1,4 +1,4 @@
-import React, { Component, useContext } from "react";
+import React, { useContext } from "react";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
@@ -11,8 +11,9 @@ import "./nav_Bar.css";
 import MyButton from "../Button/Button";
 import { DataContext } from "../../../DataContext";
 
-const Header = () => {
-  // const navegator = useNavigate();
+const Header = (props) => {
+
+  const { categories } = useContext(DataContext);
   const BASE_CATEGORY = "http://localhost:4000/category";
   const toggleMenus = () => {
     let subMenu = document.getElementById("subMenu");
@@ -34,10 +35,13 @@ const Header = () => {
          justify-content-between
           align-items-center"
       >
+        {/* logo */}
         <a href="http://localhost:4000/">
-           <p className="logo mx-4">
-          Teach <span>Me</span>
-        </p></a>
+         
+          <p className="logo mx-4">
+            Teach <span>Me</span>
+          </p>
+        </a>
 
         <Navbar.Toggle aria-controls="navbarScroll" />
 
@@ -46,61 +50,46 @@ const Header = () => {
             className="me-auto my-2 my-lg-0"
             navbarScroll
           >
-            <a href="/instructors" style={{ color: "black", textDecoration: "none", marginLeft: "1rem" }}>
+            {/* instructor Button */}
+            <a
+              href="/instructors"
+              style={{
+                color: "black",
+                textDecoration: "none",
+                marginLeft: "1rem",
+              }}
+            >
               <Button variant="">Instructors</Button>
             </a>
 
-            <div >
-              <Button onClick={toggleMenus} className="us er-pic" variant="" style={{ marginRight: "1rem", marginLeft: "1rem" }}>
+{/* courses list */}
+            <div>
+              <Button
+                onClick={toggleMenus}
+                className="us er-pic "
+                variant=""
+                style={{ marginRight: "1rem", marginLeft: "1rem" }}
+              >
                 Courses
-                <i style={{marginLeft:"4px"}} className="fa-solid fa-angle-down"></i>
+                <i className="fa-solid fa-angle-down"></i>
               </Button>
+              {/* &nbsp;&nbsp;&nbsp;&nbsp; */}
               <div className="sub-menu-wrap " id="subMenu">
                 <div className="sub-menu shadow">
                   <div className="header">
                     <h3>Categories</h3>
                   </div>
-                  <a href={`${BASE_CATEGORY}/Languages`} className="sub-menu-link">
-                    <p>Languages</p>
-                  </a>
-                  <a href={`${BASE_CATEGORY}/Arts-&-Design`} className="sub-menu-link">
-                    <p>Arts & Design</p>
-                  </a>
-                  <a href={`${BASE_CATEGORY}/Soft-Skills`} className="sub-menu-link">
-                    <p>Soft Skills</p>
-                  </a>
-                  <a href={`${BASE_CATEGORY}/Media,-Photography-&-Film`} className="sub-menu-link">
-                    <p>Medis, Phogrphy & Film</p>
-                  </a>
-                  <a href={`${BASE_CATEGORY}/Business-Management`} className="sub-menu-link">
-                    <p>Business Management</p>
-                  </a>
-                  <a href={`${BASE_CATEGORY}/Sales-&-Marketing`} className="sub-menu-link">
-                    <p>Sales & Marketing</p>
-                  </a>
-                  <a href={`${BASE_CATEGORY}/Technology,-Science-&-Productivity`} className="sub-menu-link">
 
-                    <p>Technology, Science & Productivity</p>
-
-                  </a>
-                  <a href={`${BASE_CATEGORY}/Parenting-&-Relationships`} className="sub-menu-link">
-                    <p>Parenting & Relationships</p>
-                  </a>
-                  <a href={`${BASE_CATEGORY}/Kids-Development`} className="sub-menu-link">
-                    <p>Kids Development</p>
-                  </a>
-                  <a href={`${BASE_CATEGORY}/Lifestyle-&-Health`} className="sub-menu-link">
-                    <p>Lifestyle & Health</p>
-                  </a>
-                  <a href={`${BASE_CATEGORY}/Entrepreneurship`} className="sub-menu-link">
-                    <p>Entrepreneurship</p>
-                  </a>
-                  <a href={`${BASE_CATEGORY}/Mental-Health-&-Wellness`} className="sub-menu-link">
-                    <p>Mental Health & Wellness</p>
-                  </a>
-                  <a href={`${BASE_CATEGORY}/Education`} className="sub-menu-link">
-                    <p>Education</p>
-                  </a>
+                  {/* Get Categories Links */}
+                  {categories.map((e, index) => (
+                    <a
+                      key={index}
+                      href={`${BASE_CATEGORY}/${e.permanentLink}`}
+                      className="sub-menu-link"
+                    >
+                      <p>{e.name}</p>
+                    </a>
+                  ))}
                   <a href={`${BASE_CATEGORY}`}>
                     <MyButton>
                       Browse Courses &nbsp;
@@ -111,21 +100,26 @@ const Header = () => {
               </div>
             </div>
 
-           
-            <a href="http://localhost:4000/dashboard/home">
-              <MyButton isOutline={true}>DASHBOARD</MyButton>
-            </a>
+           {/* if idmin login */}
+            {
+            userData ? (
+              <a href="http://localhost:4000/dashboard/home" className="ms-3">
+                <MyButton  isOutline={true}>DASHBOARD</MyButton>
+              </a>
+            ) : (
+              ""
+            )}
           </Nav>
-
+{/* search icon */}
           <a href={`${BASE_CATEGORY}`} style={{ marginRight: "1rem" }}>
             <i className="fa fa-search icon-search"></i>
           </a>
-
+{/* if user login */}
           {userData ? (
             <>
               <Button onClick={toggleProfile} className="user-pic" variant="">
                 <img
-                  src="assets/default-avatar.jpg"
+                  src="/assets/default-avatar.jpg"
                   alt=""
                   className="avatar"
                 />
@@ -133,62 +127,87 @@ const Header = () => {
 
               <div className="sub-profile-wrap" id="subProfileMenu">
                 <div className="user-profile-menu-container mat-menu-panel">
-
                   <div className="user-profile-container">
                     <div className="user-info-card d-flex">
-                      <div className="profile-avatar" >
-
-                        <a href="/profile"><img src="/assets/default-avatar.jpg" className="avatar" alt="" /></a>
-
+                      <div className="profile-avatar">
+                        <a href="/profile">
+                          <img
+                            src="/assets/default-avatar.jpg"
+                            className="avatar"
+                            alt=""
+                          />
+                        </a>
                       </div>
 
                       <div className="info-details">
                         <a href="/profile">
-                          <h6>{userData.first_name} {userData.last_name}</h6>
+                          <h6>
+                            {userData.first_name} {userData.last_name}
+                          </h6>
                           <p>{userData.email}</p>
                         </a>
                       </div>
-
                     </div>
                   </div>
                   <div className="user-profile-subscribed ng-star-inserted">
-                    <button routerlink="" className="btn btn-outline-light user-profile-subscribe-btn" >
-                      Go To Profile Page
-                    </button>
-
+                    <a href="/profile">
+                      <button className="btn btn-outline-light user-profile-subscribe-btn">
+                        Go To Profile Page
+                      </button>
+                    </a>
                   </div>
                   <div className="user-profile-card__options-menu-list-container">
                     <div className="user-profile-card__user-options-menu-list">
-                      <a className="user-profile-card__user-option-item" href="/my-progress">
+                      <a
+                        className="user-profile-card__user-option-item"
+                        href="/my-progress"
+                      >
                         <i className="fa-regular fa-circle-play"></i>
                         <p>My Progress</p>
                       </a>
-                      <a className="user-profile-card__user-option-item" href="/saved-list">
+                      <a
+                        className="user-profile-card__user-option-item"
+                        href="/saved-list"
+                      >
                         <i className="fa-regular fa-bookmark"></i>
-                        <p >Saved Courses</p>
+                        <p>Saved Courses</p>
                       </a>
 
-                      <a className="user-profile-card__user-option-item" href="/my-certificates">
+                      <a
+                        className="user-profile-card__user-option-item"
+                        href="/my-certificates"
+                      >
                         <i className="fa-solid fa-certificate"></i>
-                        <p >Certificates</p>
+                        <p>Certificates</p>
                       </a>
-                      <a className="user-profile-card__user-option-item " href="/profile">
+                      <a
+                        className="user-profile-card__user-option-item "
+                        href="/profile"
+                      >
                         <i className="fa-solid fa-gear"></i>
-                        <p >Account settings</p>
+                        <p>Account settings</p>
                       </a>
-                      <a className="user-profile-card__user-option-item " href="">
+                      <a
+                        className="user-profile-card__user-option-item "
+                        href=""
+                      >
                         <i className="fa-solid fa-comments"></i>
-                        <p >Messages</p>
-
+                        <p>Messages</p>
                       </a>
                     </div>
-                    <a className="user-profile-card__purchase-log user-profile-card__user-option-item " href="">
+                    <a
+                      className="user-profile-card__purchase-log user-profile-card__user-option-item "
+                      href=""
+                    >
                       <i className="fa-solid fa-clipboard"></i>
                       <p> Purchase Log </p>
                     </a>
                   </div>
                   <div className="btn-logout ">
-                    <a className="btn btn-link user-profile-card__user-option-item user-profile-card__btn-logout" onClick={LogOut}>
+                    <a
+                      className="btn btn-link user-profile-card__user-option-item user-profile-card__btn-logout"
+                      onClick={LogOut}
+                    >
                       <i className="fa-solid fa-right-from-bracket"></i>
                       <p>Logout</p>
                     </a>
@@ -197,9 +216,12 @@ const Header = () => {
               </div>
             </>
           ) : (
+            // if user not login
             <>
-              <Button variant="link" >
-                <a href="/login" className="loginlink">Login</a>
+              <Button variant="link">
+                <a href="/login" className="loginlink">
+                  Login
+                </a>
               </Button>
 
               <a style={{ marginRight: "1rem" }} href="/register">
@@ -209,6 +231,8 @@ const Header = () => {
           )}
         </Navbar.Collapse>
       </Container>
-    </Navbar >
-  )}
-  export default Header;
+    </Navbar>
+  );
+};
+
+export default Header;

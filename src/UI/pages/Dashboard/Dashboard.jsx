@@ -7,9 +7,8 @@ export default function Dashboard() {
   return (
     <div>
       <div className="dashboard_header text-danger p-4 display-6 text-center">
-        Welcome To Dashboard
+      <i class="fa-solid fa-gear"></i>  Welcome To Dashboard 
       </div>
-
       <div className="area">
         <Outlet></Outlet>
       </div>

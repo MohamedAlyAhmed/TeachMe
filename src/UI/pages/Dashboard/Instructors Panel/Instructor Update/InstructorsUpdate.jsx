@@ -7,12 +7,14 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 import { useState } from "react";
-import { BASE_URL } from "../../../../../DataContext";
+import { BASE_URL, DataContext } from "../../../../../DataContext";
 import "./InstructorsUpdate.css";
 import axios from "axios";
 import InstructorCard from "../../../../components/InstructorCard/InstructorCard";
+import { useContext } from "react";
 
 export default function InstructorsUpdate({ instructor }) {
+  const { reGetInstructors } = useContext(DataContext);
   // For Update instructor
   const [updatedName, setUpdatedName] = useState(instructor.name);
   const [updatedDescription, setUpdatedDescription] = useState(
@@ -61,11 +63,7 @@ export default function InstructorsUpdate({ instructor }) {
         console.log(error);
       });
     handleClose();
-    refreshPage();
-  };
-
-  const refreshPage = () => {
-    window.location.reload();
+    reGetInstructors();
   };
 
   return (

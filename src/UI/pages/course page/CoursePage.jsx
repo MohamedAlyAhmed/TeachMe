@@ -54,7 +54,10 @@ export const CoursePage = () => {
     }
 
     const onClickEnroll = () => {
-        console.log("onClickEnroll");
+        if (!userData) {
+            navigate(`/login`);
+            return;
+        }
         axios.post(`${BASE_URL}/enrolls`, {
             "user_id": userData._id,
             "course_id": id,

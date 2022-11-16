@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import Slider from "react-slick";
-import styled from "styled-components";
 import "./FeaturedCategory.css";
 import CategoryCard from "../../../components/CategoryCard/CategoryCard";
 import { DataContext } from "../../../../DataContext";

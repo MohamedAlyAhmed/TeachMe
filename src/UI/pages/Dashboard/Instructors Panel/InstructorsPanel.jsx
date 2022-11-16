@@ -7,7 +7,7 @@ import InstructorCard from "../../../components/InstructorCard/InstructorCard";
 import InstructorsUpdate from "./Instructor Update/InstructorsUpdate";
 
 export default function InstructorsPanel() {
-  const { instructors } = useContext(DataContext);
+  const { instructors, reGetInstructors } = useContext(DataContext);
 
   const [name, setName] = useState("Instructor Name");
   const [description, setDescription] = useState(
@@ -57,16 +57,14 @@ export default function InstructorsPanel() {
         .catch((error) => {
           console.log(error);
         });
-
-      refreshPage();
+        reGetInstructors();
+      
     } else {
       console.log("Declined");
     }
   };
 
-  const refreshPage = () => {
-    window.location.reload();
-  };
+
 
   return (
     <>

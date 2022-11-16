@@ -25,7 +25,6 @@ nav.main-menu.expanded {
 
 .main-menu {
   background: #ffffff;
-
   position: fixed !important;
   top: 0 !important;
   bottom: 0 !important;
@@ -125,11 +124,7 @@ nav.main-menu li.active > a,
 }
 
 .area {
-  float: left;
-  background: #ffffff;
-  width: 100%;
-  height: 100%;
-  padding: 0 8rem ;
+  padding: 0 8rem;
 }
 
 li {

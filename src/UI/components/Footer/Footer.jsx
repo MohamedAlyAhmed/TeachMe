@@ -65,8 +65,6 @@ export default function Footer() {
                 </a>
               </p>
             </MDBCol>
-
-           
           </MDBRow>
         </MDBContainer>
       </section>
@@ -79,9 +77,8 @@ export default function Footer() {
         <Nav.Item>
           <Nav.Link eventKey="link-1">Privacy policy</Nav.Link>
         </Nav.Item>
-       
+
         <span>
-         
           <a className="text-reset fw-bold" href="#">
             Help Center
           </a>
@@ -96,11 +93,11 @@ export default function Footer() {
           <a href="" className="me-4 text-reset">
             <MDBIcon fab icon="google" />
           </a>
-         
+
           <a href="" className="me-4 text-reset">
             <MDBIcon fab icon="linkedin" />
           </a>
-          <ScrollToTop smooth color="black"  />
+          <ScrollToTop smooth color="black" />
         </div>
       </section>
     </MDBFooter>

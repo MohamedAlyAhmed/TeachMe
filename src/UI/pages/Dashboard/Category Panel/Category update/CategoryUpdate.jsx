@@ -6,12 +6,15 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 import { useState } from "react";
-import { BASE_URL } from "../../../../../DataContext";
+import { BASE_URL, DataContext } from "../../../../../DataContext";
 import CategoryCard from "../../../../components/CategoryCard/CategoryCard";
 import axios from "axios";
+
 import "./CategoryUpdate.css";
+import { useContext } from "react";
 
 export default function CategoryUpdate({ category }) {
+  const { reGetCategories } = useContext(DataContext);
   // For Update Category
   const [updatedName, setUpdatedName] = useState(category.name);
   const [updatedImg, setUpdatedImg] = useState(category.image);
@@ -47,11 +50,7 @@ export default function CategoryUpdate({ category }) {
         console.log(error);
       });
     handleClose();
-    refreshPage();
-  };
-
-  const refreshPage = () => {
-    window.location.reload();
+    reGetCategories();
   };
 
   return (

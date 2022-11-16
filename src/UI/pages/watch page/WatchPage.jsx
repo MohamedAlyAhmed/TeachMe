@@ -1,7 +1,7 @@
 
 import axios from 'axios';
 import React, { useContext, useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import YouTube from 'react-youtube';
 import { DataContext } from '../../../DataContext';
 import { BASE_URL } from '../Register/Register';
@@ -13,15 +13,19 @@ export default function WatchPage() {
     let [selectedVedio, setselectedVedio] = useState('');
     const [containt, setContaint] = useState([]);
     let enroll = {};
-
+    const navigate = useNavigate();
 
 
     useEffect(() => {
 
         (async function anyNameFunction() {
 
+            if (!userData) {
+                navigate(`/login`);
+                return;
+            }
+
             let enrollRes = await axios.get(BASE_URL + "/enrolls?course_id=" + courseId + "&user_id=" + userData._id)
-            console.log(enrollRes.data);
             enroll = enrollRes.data[0];
 
             let res = await axios.get(BASE_URL + "/courseContaint?courseID=" + courseId)
@@ -50,7 +54,6 @@ export default function WatchPage() {
 
     const UpdateCourseProgres = (newVar) => {
         setTimeout(() => {
-            console.log(enroll);
             if (enroll.progress < newVar) {
                 axios.put(BASE_URL + "/enrolls/" + enroll.id, {
                     ...enroll,

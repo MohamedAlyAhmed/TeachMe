@@ -27,6 +27,8 @@ export default function CoursesUpdate({ course }) {
   const [updtedImage, setUpdtedImage] = useState(
     "https://previews.123rf.com/images/melpomen/melpomen1509/melpomen150900104/45650274-hand-pointing-to-online-course-concept-on-light-brown-wall-background.jpg"
   );
+  const [updateReleasedAt, setUpdateReleasedAt] = useState("Release_Date");
+
     // For Preview course
  const updatedPreview = {
   name: updtedName,
@@ -39,6 +41,7 @@ export default function CoursesUpdate({ course }) {
   courseLanguage: updtedCourseLanguage,
   level: updtedLevel,
   permanentLink: updtedPermanentLink,
+  releasedAt:updateReleasedAt
 };
   const [open, setOpen] = useState(false);
 
@@ -62,7 +65,9 @@ export default function CoursesUpdate({ course }) {
   courseLanguage: updtedCourseLanguage,
   level: updtedLevel,
   permanentLink: updtedPermanentLink,
+  releasedAt:updateReleasedAt
       })
+
       .then((response) => {
         console.log(response);
         toast.success("Courses Updated Successefully")
@@ -139,6 +144,18 @@ export default function CoursesUpdate({ course }) {
           variant="standard"
           defaultValue={course.level}
           onChange={(e) => setUpdtedLevel(e.target.value)}
+        />
+           {/* Date */}
+           <TextField
+          autoFocus
+          margin="dense"
+          id="date"
+          label="date"
+          type="text"
+          fullWidth
+          variant="standard"
+          defaultValue={course.releasedAt}
+          onChange={(e) => setUpdateReleasedAt(e.target.value)}
         />
          {/* updtedCourseLanguage */}
          <TextField
