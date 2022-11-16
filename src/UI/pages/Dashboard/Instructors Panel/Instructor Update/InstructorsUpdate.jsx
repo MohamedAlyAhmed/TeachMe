@@ -23,9 +23,7 @@ export default function InstructorsUpdate({ instructor }) {
   const [updatedImg, setUpdatedImg] = useState(instructor.image);
   const [updatedTitle, setUpdatedTitle] = useState(instructor.title);
   const [updatedLink, setUpdatedLink] = useState(instructor.permanentLink);
-  const [updatedCourseIds, setUpdatedCourseIds] = useState(
-    instructor.courseIds
-  );
+
   // For Preview instructor
   const updatedPreview = {
     name: updatedName,
@@ -33,7 +31,6 @@ export default function InstructorsUpdate({ instructor }) {
     image: updatedImg,
     title: updatedTitle,
     permanentLink: updatedLink,
-    courseIds: [updatedCourseIds],
   };
 
   const [open, setOpen] = useState(false);
@@ -54,7 +51,6 @@ export default function InstructorsUpdate({ instructor }) {
         image: updatedImg,
         title: updatedTitle,
         permanentLink: updatedLink,
-        courseIds: [updatedCourseIds],
       })
       .then((response) => {
         console.log(response);
@@ -132,17 +128,6 @@ export default function InstructorsUpdate({ instructor }) {
             variant="standard"
             defaultValue={instructor.permanentLink}
             onChange={(e) => setUpdatedLink(e.target.value)}
-          />
-          <TextField
-            autoFocus
-            margin="dense"
-            id="courseIds"
-            label="CourseIds"
-            type="number"
-            fullWidth
-            variant="standard"
-            defaultValue={instructor.courseIds}
-            onChange={(e) => setUpdatedCourseIds(parseInt(e.target.value))}
           />
         </DialogContent>
         <DialogActions>
