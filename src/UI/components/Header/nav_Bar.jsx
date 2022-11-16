@@ -10,8 +10,10 @@ import { Link } from "react-router-dom";
 import "./nav_Bar.css";
 import MyButton from "../Button/Button";
 import { DataContext } from "../../../DataContext";
+import { useEffect } from "react";
 
 const Header = (props) => {
+
   const { categories } = useContext(DataContext);
   const BASE_CATEGORY = "http://localhost:4000/category";
   const toggleMenus = () => {
@@ -33,7 +35,6 @@ const Header = (props) => {
         className="d-flex justify-content-between align-items-center"
       >
         <a href="http://localhost:4000/">
-          {" "}
           <p className="logo mx-4">
             Teach <span>Me</span>
           </p>
@@ -99,7 +100,8 @@ const Header = (props) => {
             {/* <a href="/search">
               <MyButton isOutline={true}>Subscribe</MyButton>
             </a>&nbsp; */}
-            {userData ? (
+            {userData ?
+             (
               <a href="http://localhost:4000/dashboard/home">
                 <MyButton isOutline={true}>DASHBOARD</MyButton>
               </a>
