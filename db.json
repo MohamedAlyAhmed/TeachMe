@@ -1137,6 +1137,20 @@
           ]
         }
       ]
+    },
+    {
+      "name": "Course Name",
+      "category": "Category Name",
+      "image": "https://previews.123rf.com/images/melpomen/melpomen1509/melpomen150900104/45650274-hand-pointing-to-online-course-concept-on-light-brown-wall-background.jpg",
+      "duration": "4.30",
+      "numberOfLessons": "4.30",
+      "mentors": "New-Course",
+      "description": "Description of course",
+      "courseLanguage": "Arabic",
+      "level": 1,
+      "permanentLink": "Cinematic-Lighting-Masterclass",
+      "releasedAt": "Release_Date",
+      "id": 910
     }
   ],
   "instructors": [
@@ -2115,36 +2129,22 @@
   "savedList": [
     {
       "user_id": "636dabf8beed310015d612e8",
-      "course_id": 903,
-      "date": "2022-11-16T14:17:21.663Z",
+      "course_id": 895,
+      "date": "2022-11-16T17:22:48.554Z",
       "progress": 0,
       "id": 1
     },
     {
       "user_id": "636dabf8beed310015d612e8",
-      "course_id": 908,
-      "date": "2022-11-16T14:17:22.853Z",
-      "progress": 0,
-      "id": 2
-    },
-    {
-      "user_id": "636dabf8beed310015d612e8",
-      "course_id": 895,
-      "date": "2022-11-16T14:17:23.999Z",
-      "progress": 0,
-      "id": 3
-    },
-    {
-      "user_id": "636dabf8beed310015d612e8",
-      "course_id": 873,
-      "date": "2022-11-16T14:17:24.766Z",
+      "course_id": 903,
+      "date": "2022-11-16T17:25:21.937Z",
       "progress": 0,
       "id": 4
     },
     {
       "user_id": "636dabf8beed310015d612e8",
-      "course_id": 666,
-      "date": "2022-11-16T14:33:28.316Z",
+      "course_id": 313,
+      "date": "2022-11-16T17:26:04.946Z",
       "progress": 0,
       "id": 5
     },

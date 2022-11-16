@@ -6,11 +6,11 @@ import { useContext } from "react";
 import CourseCard from "../../../components/CourseCard/CourseCard";
 import { toast } from "react-toastify";
 import CoursesUpdate from "./CoursesUpdate/CoursesUpdate";
-
 export default function CoursesPanel() {
 
-  const { courses } = useContext(DataContext);
+  const { courses,reGetCourses } = useContext(DataContext);
   const { instructors } = useContext(DataContext);
+
   // For Add Course
   const [name, setName] = useState("Course_Name");
   const [permanentLink, setPermanentLink] = useState(
@@ -21,7 +21,7 @@ export default function CoursesPanel() {
   const [releasedAt, setReleasedAt] = useState("Release_Date");
   const [courseLanguage, setCourseLanguage] = useState(1);
   const [description, setDescription] = useState("Description of course");
-  const [mentors, setmentors] = useState(instructors);
+  const [mentors, setmentors] = useState("instructor_name");
   const [duration, setDeuration] = useState(234556);
   const [numberOfLessons, setNumberOfLessons] = useState(12);
   
@@ -32,7 +32,13 @@ export default function CoursesPanel() {
   const instructorsNames = instructors.map((e, index) => {
     return <p key={index}>{e.name}</p>;
   });
- 
+ const onChangeMentor=(e)=>{
+const selectedId=e.target.value;
+const selectedMentorName=instructors.filter((e)=>
+  e.id==selectedId)[0];
+ setmentors(selectedMentorName.name)
+
+ }
   const coursePreview = {
     name: name,
     category: category,
@@ -80,6 +86,8 @@ export default function CoursesPanel() {
         console.log(error);
         toast.error("Courses Added Failed !");
       });
+      reGetCourses();
+    
   };
 
   const deleteCourse = (id) => {
@@ -95,15 +103,15 @@ export default function CoursesPanel() {
           toast.error("Courses Deleted Failed !");
         });
 
-      refreshPage();
+      reGetCourses();
     } else {
       console.log("Declined");
     }
   };
 
-  const refreshPage = () => {
-    window.location.reload();
-  };
+  // const refreshPage = () => {
+  //   window.location.reload();
+  // };
 
   return (
     <>
@@ -181,13 +189,13 @@ export default function CoursesPanel() {
 
                 <select
                 options={instructorsNames}
-                  class="form-select mt-2"
+                  className="form-select mt-2"
                   name="instructor"
                   id="instructor"
-                  onChange={(e) => setmentors(instructorsNames)}
+                   onChange={(e) =>{onChangeMentor(e)}}
                 >
-                  {instructors.map((e, index) => (
-                    <option value={e } key={index}>
+                  {instructors.map((e) => (
+                    <option value={e.id} key={e.id}>
                       {e.name}
                     </option>
                   ))}

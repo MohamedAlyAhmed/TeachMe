@@ -70,6 +70,7 @@ export default function DataProvider(props) {
     });
   }
 
+
   const LogOut = () => {
     localStorage.removeItem('userToken');
     setUserData(null)
@@ -81,14 +82,26 @@ export default function DataProvider(props) {
     return res.data;
   }
 
-  const reGetCategories = ()=> {
+  const reGetCategories = () => {
     //re get Categories Data
     axios.get(`${BASE_URL}/CourseCategories`).then((res) => {
       setCourseCategories(res.data);
     });
   }
+  const reGetCourses = () => {
+    //reget Courses Data
+    axios.get(`${BASE_URL}/courses`).then((res) => {
+      setCourses(res.data);
+    });
+  }
+  const reGetEnroll = (userID) => {
+    //reGetEnroll Courses Data
+    axios.get(`${BASE_URL}/savedList?user_id=${userID}`).then((res) => {
+      setMySaveCourses(res.data);
+    });
+  }
 
-  const reGetInstructors = ()=> {
+  const reGetInstructors = () => {
     //re get instructors Data
     axios.get(`${BASE_URL}/instructors`).then((res) => {
       setInstructors(res.data);
@@ -112,7 +125,7 @@ export default function DataProvider(props) {
         reGetCategories,
         reGetInstructors,
         mySaveCourses,
-        setSaveCoursesWithUserID
+        setSaveCoursesWithUserID,
       }}
     >
       {props.children}
