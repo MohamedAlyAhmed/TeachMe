@@ -2105,5 +2105,42 @@
       "date": "2022-11-09T16:02:28.066Z",
       "containt": " course"
     }
+  ],
+  "savedList": [
+    {
+      "user_id": "636dabf8beed310015d612e8",
+      "course_id": 903,
+      "date": "2022-11-16T14:17:21.663Z",
+      "progress": 0,
+      "id": 1
+    },
+    {
+      "user_id": "636dabf8beed310015d612e8",
+      "course_id": 908,
+      "date": "2022-11-16T14:17:22.853Z",
+      "progress": 0,
+      "id": 2
+    },
+    {
+      "user_id": "636dabf8beed310015d612e8",
+      "course_id": 895,
+      "date": "2022-11-16T14:17:23.999Z",
+      "progress": 0,
+      "id": 3
+    },
+    {
+      "user_id": "636dabf8beed310015d612e8",
+      "course_id": 873,
+      "date": "2022-11-16T14:17:24.766Z",
+      "progress": 0,
+      "id": 4
+    },
+    {
+      "user_id": "636dabf8beed310015d612e8",
+      "course_id": 666,
+      "date": "2022-11-16T14:33:28.316Z",
+      "progress": 0,
+      "id": 5
+    }
   ]
 }

@@ -115,7 +115,11 @@ export const CoursePage = () => {
                                         <p className='d-inline ms-2'>Course Language: Arabic</p>
                                     </div>
                                     <div className='mt-5'>
-                                        <MyButton onClick={isCourseEnroled() ? onClickContenueWatch : onClickEnroll} fillWidth={true} >{isCourseEnroled() ? "continue watching" : "Enroll now"}</MyButton>
+                                        <MyButton
+                                            onClick={isCourseEnroled() ? onClickContenueWatch : onClickEnroll}
+                                            fillWidth={true} >
+                                            {isCourseEnroled() ? "continue watching" : "Enroll now"}
+                                        </MyButton>
                                     </div>
                                     <p className='text-center mt-2' style={{ fontSize: 10 }}>Get access to all courses only for 91.67 EGP /mo</p>
                                     <hr />

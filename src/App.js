@@ -19,7 +19,6 @@ import DashboardHome from "./UI/pages/Dashboard/Dashboard Home/DashboardHome";
 import CoursesPanel from "./UI/pages/Dashboard/Courses Panel/CoursesPanel";
 import InstructorsPanel from "./UI/pages/Dashboard/Instructors Panel/InstructorsPanel";
 import CategoryPanel from "./UI/pages/Dashboard/Category Panel/CategoryPanel";
-import AccountInformation from "./UI/pages/UserProfile/Account/AccountInf";
 import PersonalInformation from "./UI/pages/UserProfile/Personal/personalInf";
 import SavesList from "./UI/pages/UserProfile/SavedList/SavesList";
 import MyCourses from "./UI/pages/UserProfile/MyCourses/Mycourses"
@@ -149,7 +148,6 @@ function App() {
             <Route path="profile"  element={<React.Suspense><LazyUserProfilePage /></React.Suspense>}>
               
               <Route path='Personal' element={<PersonalInformation />} />
-              <Route path='Account' element={<AccountInformation />} />
               <Route path='SavesList' element={<SavesList />} />
               <Route path='MyCourses' element={<MyCourses />} />
             </Route>
