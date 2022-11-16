@@ -45,6 +45,7 @@ export default function InstructorsPanel() {
       .catch((error) => {
         console.log(error);
       });
+      reGetInstructors();
   };
 
   const deleteInstructor = (id) => {
