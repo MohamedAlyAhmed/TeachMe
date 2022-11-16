@@ -1554,11 +1554,18 @@
       "id": 10
     },
     {
-      "user_id": "63739429b4164c00154d3b34",
-      "course_id": "666",
-      "date": "2022-11-15T21:41:58.835Z",
+      "user_id": "636dabf8beed310015d612e8",
+      "course_id": "903",
+      "date": "2022-11-16T04:08:18.129Z",
       "progress": 0,
       "id": 11
+    },
+    {
+      "user_id": "636dabf8beed310015d612e8",
+      "course_id": "908",
+      "date": "2022-11-16T04:09:06.017Z",
+      "progress": 0,
+      "id": 12
     }
   ],
   "CourseCategories": [

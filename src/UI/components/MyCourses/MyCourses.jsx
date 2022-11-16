@@ -5,24 +5,21 @@ import { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import { useParams } from "react-router-dom";
 import { BASE_URL } from '../../../DataContext';
+import CourseCard from '../CourseCard/CourseCard';
 
 export default function MyCourses() {
-
-
-
-    const courses = []
-
-    const { myEnrollsCourses } = useContext(DataContext);
-
-
-    for (let i of myEnrollsCourses) {
-        courses.push(<div className='m-3'>
-            <h3>course id = {i.course_id}</h3>
-            <p>date : {i.date}</p>
-        </div>)
-        console.log(i);
-    }
-
+   
+    const { myEnrollsCourses,courses } = useContext(DataContext);
+    // let coursesEnroll = [];
+    // myEnrollsCourses.forEach( element => {
+    //     let filtercourses = courses.filter((e)=>{
+    //         element.course_id = e.id
+    //     })
+    //     coursesEnroll.push(filtercourses)
+    //     console.log(filtercourses);
+    // });
+    
+    
 
     return (
         <div>
@@ -34,8 +31,15 @@ export default function MyCourses() {
                     <>
                         <h2>My Courses</h2>
                         <div className='courses'>
-                            {courses}
-
+                            <div className="container w-100">
+                                <div className="row ">
+                                    {/* {coursesEnroll.map((e, index) => (
+                                        <div key={index} className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 small-screen">
+                                            <CourseCard course={e} />
+                                        </div>
+                                    ))} */}
+                                </div>
+                            </div>
                         </div>
 
                     </>

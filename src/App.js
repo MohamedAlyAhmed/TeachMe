@@ -23,7 +23,6 @@ import AccountInformation from "./UI/pages/UserProfile/Account/AccountInf";
 import PersonalInformation from "./UI/pages/UserProfile/Personal/personalInf";
 import SavesList from "./UI/pages/UserProfile/SavedList/SavesList";
 import MyCourses from "./UI/pages/UserProfile/MyCourses/Mycourses"
-import DashboardHome from "./UI/pages/Dashboard/Dashboard Home/DashboardHome"
 import Search from "./UI/components/Search/Search"
 
 

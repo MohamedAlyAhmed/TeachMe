@@ -37,6 +37,7 @@ export default function Register() {
         password: "",
         email: "",
         age: "",
+        
     })
 
     function getUser(e) {
