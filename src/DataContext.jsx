@@ -65,9 +65,27 @@ export default function DataProvider(props) {
     useNavigate('/login')
   }
 
+  const getCommentsForCourse = async (courseID) => {
+    let res = await axios.get(`${BASE_URL}/comments?course_id=${courseID}`)
+    return res.data;
+  }
+
+
   return (
     <DataContext.Provider
-      value={{ userData, courses, categories, instructors, users, sections, LogOut, getUserData, myEnrollsCourses, setEnrollsCoursesWithUserID }}
+      value={{
+        userData,
+        courses,
+        categories,
+        instructors,
+        users,
+        sections,
+        LogOut,
+        getUserData,
+        myEnrollsCourses,
+        setEnrollsCoursesWithUserID,
+        getCommentsForCourse,
+      }}
     >
       {props.children}
     </DataContext.Provider>

@@ -17,13 +17,8 @@ function Counter() {
 export function Map() {
   return (
     <div>
-      <div class="text-center mt-5 mb-3">
-        <a href={`${BASE_CATEGORY}`}>
-                    <MyButton  isOutline={true}>
-                      Browse Courses &nbsp;
-                      <i className="fa-solid fa-arrow-right"></i>
-                    </MyButton>
-                  </a>
+      <div className="text-center mt-5 mb-5">
+        <MyButton isOutline={true}>Browse Courses</MyButton>
       </div>
 
       <header className="myHeader">

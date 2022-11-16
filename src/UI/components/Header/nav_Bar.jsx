@@ -123,13 +123,13 @@ const Header = () => {
 
           {userData ? (
             <>
-                <Button onClick={toggleProfile} className="user-pic" variant="">
-                  <img
-                    src="assets/default-avatar.jpg"
-                    alt=""
-                    className="avatar"
-                  />
-                </Button>
+              <Button onClick={toggleProfile} className="user-pic" variant="">
+                <img
+                  src="assets/default-avatar.jpg"
+                  alt=""
+                  className="avatar"
+                />
+              </Button>
 
               <div className="sub-profile-wrap" id="subProfileMenu">
                 <div className="user-profile-menu-container mat-menu-panel">
@@ -138,7 +138,7 @@ const Header = () => {
                     <div className="user-info-card d-flex">
                       <div className="profile-avatar" >
 
-                        <a href="/profile"><img src="assets/default-avatar.jpg" className="avatar" alt="" /></a>
+                        <a href="/profile"><img src="/assets/default-avatar.jpg" className="avatar" alt="" /></a>
 
                       </div>
 
@@ -196,18 +196,18 @@ const Header = () => {
                 </div>
               </div>
             </>
-              ) : (
-              <>
-                <Button variant="link" >
-                  <a href="/login" className="loginlink">Login</a>
-                </Button>
+          ) : (
+            <>
+              <Button variant="link" >
+                <a href="/login" className="loginlink">Login</a>
+              </Button>
 
-                <a style={{ marginRight: "1rem" }} href="/register">
-                  <MyButton isOutline={false}>sign up</MyButton>
-                </a>
-              </>
+              <a style={{ marginRight: "1rem" }} href="/register">
+                <MyButton isOutline={false}>sign up</MyButton>
+              </a>
+            </>
           )}
-            </Navbar.Collapse>
+        </Navbar.Collapse>
       </Container>
     </Navbar >
   )}

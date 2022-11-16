@@ -26,11 +26,8 @@ export default function CoursesPanel() {
   const [image, setImage] = useState(
     "https://previews.123rf.com/images/melpomen/melpomen1509/melpomen150900104/45650274-hand-pointing-to-online-course-concept-on-light-brown-wall-background.jpg"
   );
-  const instructorsNames= instructors.map((e)=>{
-console.log('====================================');
-console.log(e.name);
-console.log('====================================');
-
+  const instructorsNames = instructors.map((e) => {
+    return e.name;
   })
   const coursePreview = {
     name: name,
@@ -107,7 +104,7 @@ console.log('====================================');
     window.location.reload();
   };
 
- 
+
   return (
     <>
       <div>
@@ -182,8 +179,8 @@ console.log('====================================');
                   Instructor 
                   
                 </label> */}
-              
-{/* <select  
+
+                {/* <select  
  
  >
   <option >please select instructor</option>
@@ -197,22 +194,22 @@ instructorsNames.map((e)=>(
 ))}
 
 </select> */}
-  <label for="instructor">Instructor Name:</label>
+                <label for="instructor">Instructor Name:</label>
 
-<select name="instructor" id="instructor">
-<option >please select instructor</option>
+                <select name="instructor" id="instructor">
+                  <option >please select instructor</option>
 
-  {
-  instructorsNames.map((e)=>
-                <option value={e}> 
-                {e}
-                </option>
+                  {
+                    instructorsNames.map((e) =>
+                      <option value={e}>
+                        {e}
+                      </option>
 
-            
 
-  )}
 
-</select>
+                    )}
+
+                </select>
 
                 {/* <input
                   type="text"
@@ -242,7 +239,7 @@ instructorsNames.map((e)=>(
             {/*(7) Level */}
             <div className="mb-3">
               <label for="permanentLink" className="form-label">
-              Level
+                Level
               </label>
               <input
                 type="number"
@@ -299,7 +296,7 @@ instructorsNames.map((e)=>(
 
             <div className="mb-3">
               <label for="category" className="form-label">
-              Categoty
+                Categoty
               </label>
               <input
                 type="text"
@@ -346,10 +343,10 @@ instructorsNames.map((e)=>(
             </div>
           ))}
         </div>
-        
+
       </div>
-      
+
     </>
-   
+
   );
 }

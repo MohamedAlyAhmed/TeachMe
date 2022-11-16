@@ -15,30 +15,30 @@ export default function AccountInformation() {
                 <div className="acount-page-content-title">
                     <h2>Account Information</h2>
                 </div>
-                <div class="form-group row cursor-pointer">
-                    <label for="email" class="col-sm-4 col-form-label cursor-pointer"> Email </label>
-                    <div class="col-sm-7 col-10 cursor-pointer">
-                        <input type="email" id="email" value={userData.email} class="form-control cursor-pointer ng-untouched ng-pristine ng-valid" />
+                <div className="form-group row cursor-pointer">
+                    <label for="email" className="col-sm-4 col-form-label cursor-pointer"> Email </label>
+                    <div className="col-sm-7 col-10 cursor-pointer">
+                        <input type="email" id="email" value={userData.email} className="form-control cursor-pointer ng-untouched ng-pristine ng-valid" />
                     </div>
-                    <div class="col-sm-1 col-2 cursor-pointer">
+                    <div className="col-sm-1 col-2 cursor-pointer">
 
                     </div>
                 </div>
-                <div class="form-group row cursor-pointer">
-                    <label for="email" class="col-sm-4 col-form-label cursor-pointer"> Password </label>
-                    <div class="col-sm-7 col-10 cursor-pointer">
-                        <input type="password" id="password" value={userData.password} class="form-control cursor-pointer ng-untouched ng-pristine ng-valid" />
+                <div className="form-group row cursor-pointer">
+                    <label for="email" className="col-sm-4 col-form-label cursor-pointer"> Password </label>
+                    <div className="col-sm-7 col-10 cursor-pointer">
+                        <input type="password" id="password" value={userData.password} className="form-control cursor-pointer ng-untouched ng-pristine ng-valid" />
                     </div>
-                    <div class="col-sm-1 col-2 cursor-pointer">
+                    <div className="col-sm-1 col-2 cursor-pointer">
 
                     </div>
                 </div>
-                <div class="form-group row cursor-pointer">
-                    <label for="email" class="col-sm-4 col-form-label cursor-pointer"> Mobile Number </label>
-                    <div class="col-sm-7 col-10 cursor-pointer">
-                        <input type="number" id="mobile-number" value={userData.password} class="form-control cursor-pointer ng-untouched ng-pristine ng-valid" />
+                <div className="form-group row cursor-pointer">
+                    <label for="email" className="col-sm-4 col-form-label cursor-pointer"> Mobile Number </label>
+                    <div className="col-sm-7 col-10 cursor-pointer">
+                        <input type="number" id="mobile-number" value={userData.password} className="form-control cursor-pointer ng-untouched ng-pristine ng-valid" />
                     </div>
-                    <div class="col-sm-1 col-2 cursor-pointer">
+                    <div className="col-sm-1 col-2 cursor-pointer">
 
                     </div>
                 </div>
