@@ -18,7 +18,9 @@ export function Map() {
   return (
     <div>
       <div className="text-center mt-5 mb-5">
-        <MyButton isOutline={true}>Browse Courses</MyButton>
+        <a href={`${BASE_CATEGORY}`}>
+          <MyButton isOutline={true}>Browse Courses</MyButton>
+        </a>
       </div>
 
       <header className="myHeader">
