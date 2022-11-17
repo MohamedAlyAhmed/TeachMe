@@ -12,7 +12,8 @@ import "./InstructorsUpdate.css";
 import axios from "axios";
 import InstructorCard from "../../../../components/InstructorCard/InstructorCard";
 import { useContext } from "react";
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 export default function InstructorsUpdate({ instructor }) {
   const { reGetInstructors } = useContext(DataContext);
   // For Update instructor
@@ -23,9 +24,7 @@ export default function InstructorsUpdate({ instructor }) {
   const [updatedImg, setUpdatedImg] = useState(instructor.image);
   const [updatedTitle, setUpdatedTitle] = useState(instructor.title);
   const [updatedLink, setUpdatedLink] = useState(instructor.permanentLink);
-  const [updatedCourseIds, setUpdatedCourseIds] = useState(
-    instructor.courseIds
-  );
+
   // For Preview instructor
   const updatedPreview = {
     name: updatedName,
@@ -33,7 +32,6 @@ export default function InstructorsUpdate({ instructor }) {
     image: updatedImg,
     title: updatedTitle,
     permanentLink: updatedLink,
-    courseIds: [updatedCourseIds],
   };
 
   const [open, setOpen] = useState(false);
@@ -54,13 +52,18 @@ export default function InstructorsUpdate({ instructor }) {
         image: updatedImg,
         title: updatedTitle,
         permanentLink: updatedLink,
-        courseIds: [updatedCourseIds],
       })
       .then((response) => {
         console.log(response);
+        toast.success('Instructor Updated Successefully', {
+          position: toast.POSITION.BOTTOM_RIGHT
+      });
       })
       .catch((error) => {
         console.log(error);
+        toast.error('Instructor Updated Failed', {
+          position: toast.POSITION.BOTTOM_RIGHT
+      });
       });
     handleClose();
     reGetInstructors();
@@ -133,17 +136,6 @@ export default function InstructorsUpdate({ instructor }) {
             defaultValue={instructor.permanentLink}
             onChange={(e) => setUpdatedLink(e.target.value)}
           />
-          <TextField
-            autoFocus
-            margin="dense"
-            id="courseIds"
-            label="CourseIds"
-            type="number"
-            fullWidth
-            variant="standard"
-            defaultValue={instructor.courseIds}
-            onChange={(e) => setUpdatedCourseIds(parseInt(e.target.value))}
-          />
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose}>Cancel</Button>
@@ -152,6 +144,7 @@ export default function InstructorsUpdate({ instructor }) {
           </Button>
         </DialogActions>
       </Dialog>
+      <ToastContainer/>
     </div>
   );
 }

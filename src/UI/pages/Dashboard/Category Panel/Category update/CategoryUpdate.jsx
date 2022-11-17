@@ -9,7 +9,8 @@ import { useState } from "react";
 import { BASE_URL, DataContext } from "../../../../../DataContext";
 import CategoryCard from "../../../../components/CategoryCard/CategoryCard";
 import axios from "axios";
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import "./CategoryUpdate.css";
 import { useContext } from "react";
 
@@ -45,9 +46,15 @@ export default function CategoryUpdate({ category }) {
       })
       .then((response) => {
         console.log(response);
+        toast.success('Category Updated Successefully', {
+          position: toast.POSITION.BOTTOM_RIGHT
+      });
       })
       .catch((error) => {
         console.log(error);
+        toast.error('Category Updated Failed', {
+          position: toast.POSITION.BOTTOM_RIGHT
+      });
       });
     handleClose();
     reGetCategories();
@@ -106,6 +113,7 @@ export default function CategoryUpdate({ category }) {
           </Button>
         </DialogActions>
       </Dialog>
+      <ToastContainer/>
     </div>
   );
 }

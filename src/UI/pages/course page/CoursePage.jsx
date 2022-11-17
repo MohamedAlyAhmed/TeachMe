@@ -98,7 +98,7 @@ export const CoursePage = () => {
                                         <span>
                                             <i className="fa-solid fa-stairs "></i>
                                         </span>
-                                        <p className='d-inline ms-2'>  Level : General </p>
+                                        <p className='d-inline ms-2'>  Level : {course.level == 1 ? "General" : 'Specialized'}</p>
                                     </div>
 
                                     <div className='mt-2'>
@@ -112,7 +112,7 @@ export const CoursePage = () => {
                                         <span>
                                             <i className="fa-solid fa-volume-high"></i>
                                         </span>
-                                        <p className='d-inline ms-2'>Course Language: Arabic</p>
+                                        <p className='d-inline ms-2'>Course Language: {course.courseLanguage == 1 ? "English" : 'Arabic'}</p>
                                     </div>
                                     <div className='mt-5'>
                                         <MyButton
@@ -133,7 +133,7 @@ export const CoursePage = () => {
                             </div>
                         </div>
 
-                        <p>Categories : Media, Photography & Film</p>
+                        <p>Categories : {course.category}</p>
 
                         <h4 className='text-start mt-5'>About this course</h4>
 
@@ -156,7 +156,7 @@ export const CoursePage = () => {
                                 </span>
                                 <span>
                                     <i className="fa-solid fa-volume-high me-1"></i>
-                                    Course Language: Arabic
+                                    Course Language: {course.courseLanguage == 1 ? "English" : 'Arabic'}
 
                                 </span>
                                 <span>
@@ -268,7 +268,12 @@ export const CoursePage = () => {
 
                     </div>
                     :
-                    <h2>Is Loading</h2>
+                    // <h2>Is Loading</h2>
+                    <div class="d-flex justify-content-center ">
+  <div class="spinner-border" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>
 
             }
         </div >

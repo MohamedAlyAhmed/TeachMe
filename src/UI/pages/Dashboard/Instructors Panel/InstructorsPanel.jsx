@@ -5,7 +5,8 @@ import { BASE_URL, DataContext } from "../../../../DataContext";
 import { useContext } from "react";
 import InstructorCard from "../../../components/InstructorCard/InstructorCard";
 import InstructorsUpdate from "./Instructor Update/InstructorsUpdate";
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 export default function InstructorsPanel() {
   const { instructors, reGetInstructors } = useContext(DataContext);
 
@@ -18,7 +19,6 @@ export default function InstructorsPanel() {
   );
   const [permanentLink, setPermanentLink] = useState("Ayman-Abou-elMakarem");
   const [title, setTitle] = useState("Instructor Title");
-  const [courseIds, setCourseIds] = useState(234);
 
   const instructorPreview = {
     name: name,
@@ -26,7 +26,6 @@ export default function InstructorsPanel() {
     image: image,
     permanentLink: permanentLink,
     title: title,
-    courseIds: courseIds,
   };
 
   const AddInstructor = () => {
@@ -37,14 +36,20 @@ export default function InstructorsPanel() {
         image: image,
         permanentLink: permanentLink,
         title: title,
-        courseIds: [courseIds],
       })
       .then((response) => {
         console.log(response);
+        toast.success('Instructor Added Successefully', {
+          position: toast.POSITION.BOTTOM_RIGHT
+      });
       })
       .catch((error) => {
         console.log(error);
+        toast.error('Instructor Added Failed', {
+          position: toast.POSITION.BOTTOM_RIGHT
       });
+      });
+      reGetInstructors();
   };
 
   const deleteInstructor = (id) => {
@@ -53,9 +58,15 @@ export default function InstructorsPanel() {
         .delete(`${BASE_URL}/instructors/${id}`)
         .then((response) => {
           console.log(response);
+          toast.success('Instructor Deleted Successefully', {
+            position: toast.POSITION.BOTTOM_RIGHT
+        });
         })
         .catch((error) => {
           console.log(error);
+          toast.error('Instructor Deleted failed', {
+            position: toast.POSITION.BOTTOM_RIGHT
+        });
         });
         reGetInstructors();
       
@@ -161,19 +172,6 @@ export default function InstructorsPanel() {
                 <div className="form-text">Like : Ayman-Ahmed</div>
               </div>
             </div>
-            <div className="mb-3">
-              <label for="permanentLink" className="form-label">
-                courseIds
-              </label>
-              <input
-                type="number"
-                className="form-control"
-                id="permanentLink"
-                required
-                onChange={(e) => setCourseIds(parseInt(e.target.value))}
-              />
-              <div className="form-text">Like : 903</div>
-            </div>
 
             <button type="submit" className="btn btn-success">
               Add Instructor
@@ -212,6 +210,7 @@ export default function InstructorsPanel() {
           ))}
         </div>
       </div>
+      <ToastContainer/>
     </>
   );
 }

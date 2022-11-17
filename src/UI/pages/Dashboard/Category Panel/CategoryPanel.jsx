@@ -5,9 +5,10 @@ import { BASE_URL, DataContext } from "../../../../DataContext";
 import { useContext } from "react";
 import CategoryCard from "../../../components/CategoryCard/CategoryCard";
 import CategoryUpdate from "./Category update/CategoryUpdate";
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 export default function CategoryPanel() {
-  const { categories,reGetCategories } = useContext(DataContext);
+  const { categories, reGetCategories } = useContext(DataContext);
   // For Add Category
   const [name, setName] = useState("Category Name");
   const [image, setImage] = useState(
@@ -30,10 +31,17 @@ export default function CategoryPanel() {
       })
       .then((response) => {
         console.log(response);
+        toast.success("Category Added Successefully", {
+          position: toast.POSITION.BOTTOM_RIGHT,
+        });
       })
       .catch((error) => {
         console.log(error);
+        toast.error("Category Added Failed", {
+          position: toast.POSITION.BOTTOM_RIGHT,
+        });
       });
+    reGetCategories();
   };
 
   const deleteCategory = (id) => {
@@ -42,12 +50,18 @@ export default function CategoryPanel() {
         .delete(`${BASE_URL}/CourseCategories/${id}`)
         .then((response) => {
           console.log(response);
+          toast.success("Category Deleted Successefully", {
+            position: toast.POSITION.BOTTOM_RIGHT,
+          });
         })
         .catch((error) => {
           console.log(error);
+          toast.error("Category Deleted Failed", {
+            position: toast.POSITION.BOTTOM_RIGHT,
+          });
         });
 
-        reGetCategories();
+      reGetCategories();
     } else {
       console.log("Declined");
     }
@@ -56,7 +70,7 @@ export default function CategoryPanel() {
   return (
     <div>
       <div className="bg-dark text-center display-6 text-light rounded">
-      Categories Panel
+        Categories Panel
       </div>
 
       <div className="row mb-5 border shadow p-5">
@@ -67,7 +81,7 @@ export default function CategoryPanel() {
           <CategoryCard category={categoryPreview} />
           <div className="text-primary">PermanentLink : {permanentLink}</div>
         </div>
-        
+
         {/*Add Category Form*/}
         <form
           className="col-xl-9 col-lg-7 col-md-6 col-sm-12  mt-5"
@@ -150,6 +164,7 @@ export default function CategoryPanel() {
           </div>
         ))}
       </div>
+      <ToastContainer />
     </div>
   );
 }

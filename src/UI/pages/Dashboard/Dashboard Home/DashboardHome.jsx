@@ -64,21 +64,7 @@ export default function DashboardHome() {
           </div>
         </div>
       </div>
-      <div className="card" style={{ width: "18rem" }}>
-        <div className="card-body bg-dark text-white rounded p-4">
-          <h5 className="card-title display-6">Users</h5>
-          <h6 className="card-text">
-            Now We Have{" "}
-            <span className="fw-bold fs-3 text-warning">{users.length}</span>{" "}
-            User
-          </h6>
-          <div className="mt-3">
-            <Link to="/profile/Account" className="btn btn-light">
-              Users Panel
-            </Link>
-          </div>
-        </div>
-      </div>
+     
     </div>
   );
 }
