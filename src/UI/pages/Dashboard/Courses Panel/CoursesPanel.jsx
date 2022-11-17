@@ -4,10 +4,10 @@ import axios from "axios";
 import { BASE_URL, DataContext } from "../../../../DataContext";
 import { useContext } from "react";
 import CourseCard from "../../../components/CourseCard/CourseCard";
-import { toast } from "react-toastify";
 import CoursesUpdate from "./CoursesUpdate/CoursesUpdate";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 export default function CoursesPanel() {
-
   const { courses, reGetCourses } = useContext(DataContext);
   const { instructors, categories } = useContext(DataContext);
 
@@ -21,38 +21,35 @@ export default function CoursesPanel() {
   const [releasedAt, setReleasedAt] = useState("Release_Date");
   const [courseLanguage, setCourseLanguage] = useState(1);
   const [description, setDescription] = useState("Description of course");
-  const [mentors, setmentors] = useState({name:"instructor_name"});
+  const [mentors, setmentors] = useState({ name: "instructor_name" });
   const [categoryName, setCategoryName] = useState("Category_Name");
   const [duration, setDeuration] = useState(234556);
   const [numberOfLessons, setNumberOfLessons] = useState(12);
-  
+
   const [image, setImage] = useState(
     "https://previews.123rf.com/images/melpomen/melpomen1509/melpomen150900104/45650274-hand-pointing-to-online-course-concept-on-light-brown-wall-background.jpg"
   );
-  
+
   const instructorsNames = instructors.map((e, index) => {
     return <p key={index}>{e.name}</p>;
   });
 
- const onChangeMentor=(e)=>{
-const selectedId=e.target.value;
-const selectedMentorName=instructors.filter((e)=>
-  e.id==selectedId)[0];
- setmentors(selectedMentorName)
+  const onChangeMentor = (e) => {
+    const selectedId = e.target.value;
+    const selectedMentorName = instructors.filter((e) => e.id == selectedId)[0];
+    setmentors(selectedMentorName);
+  };
 
- }
+  const categoriesNames = categories.map((e, index) => {
+    return <p key={index}>{e.name}</p>;
+  });
 
- const categoriesNames = categories.map((e, index) => {
-  return <p key={index}>{e.name}</p>;
-});
-
- const onChangeCategory = (e)=> {
-  const selectedId=e.target.value;
-  const categoriesN=categories.filter((e)=>
-    e.id==selectedId)[0].permanentLink;
-    // setCategoryName(categoriesN)
-    setcCategory(categoriesN)
- }
+  const onChangeCategory = (e) => {
+    const selectedId = e.target.value;
+    const categoriesN = categories.filter((e) => e.id == selectedId)[0]
+      .permanentLink;
+    setcCategory(categoriesN);
+  };
 
   const coursePreview = {
     name: name,
@@ -65,10 +62,7 @@ const selectedMentorName=instructors.filter((e)=>
     courseLanguage: courseLanguage,
     level: level,
     permanentLink: permanentLink,
-    mentors: [
-       mentors,
-      
-    ],
+    mentors: [mentors],
   };
 
   const AddCourse = () => {
@@ -84,29 +78,33 @@ const selectedMentorName=instructors.filter((e)=>
         level: level,
         permanentLink: permanentLink,
         releasedAt: releasedAt,
-        mentors: [ mentors,
-        ],
-        learningOutcomes : [
+        mentors: [mentors],
+        learningOutcomes: [
           {
             id: 4940,
             body: "All about the history of old and modern cinematic lighting, the role of photography director and the cinematic lighting steps you can follow to get a special cinematic work.",
             cellSpan: 1,
             isImage: false,
-            order: 1
+            order: 1,
           },
-        ]
-       
+        ],
       })
       .then((response) => {
+        toast.success("Courses Added Successefully", {
+          position: toast.POSITION.BOTTOM_RIGHT,
+        });
         console.log(response);
-        toast.success("Courses Added Successefully");
+      
       })
       .catch((error) => {
         console.log(error);
-        toast.error("Courses Added Failed !");
+        toast.error("Courses Added Failed !",{
+          position: toast.POSITION.BOTTOM_RIGHT,
+
+        });
       });
-      
-      reGetCourses();
+     
+    reGetCourses();
   };
 
   const deleteCourse = (id) => {
@@ -115,22 +113,23 @@ const selectedMentorName=instructors.filter((e)=>
         .delete(`${BASE_URL}/courses/${id}`)
         .then((response) => {
           console.log(response);
-          toast.success("Courses Deleted Successefully");
+          toast.success("Courses Deleted Successefully", {
+            position: toast.POSITION.BOTTOM_RIGHT,
+          });
         })
         .catch((error) => {
           console.log(error);
-          toast.error("Courses Deleted Failed !");
-        });
+          toast.error("Courses Deleted Failed !",{
+            position: toast.POSITION.BOTTOM_RIGHT,
 
-      
+          });
+        });
     } else {
       console.log("Declined");
     }
 
     reGetCourses();
   };
-
- 
 
   return (
     <>
@@ -201,17 +200,17 @@ const selectedMentorName=instructors.filter((e)=>
             </div>
             {/* (4)Mentors */}
             <div className="w-100 d-flex">
-          
-         
               <div className="mb-3 w-50">
                 <label for="instructor">Instructor Name:</label>
 
                 <select
-                options={instructorsNames}
+                  options={instructorsNames}
                   className="form-select mt-2"
                   name="instructor"
                   id="instructor"
-                   onChange={(e) =>{onChangeMentor(e)}}
+                  onChange={(e) => {
+                    onChangeMentor(e);
+                  }}
                 >
                   {instructors.map((e) => (
                     <option value={e.id} key={e.id}>
@@ -269,7 +268,7 @@ const selectedMentorName=instructors.filter((e)=>
             {/*(9) Deuration */}
             <div className="mb-3">
               <label for="permanentLink" className="form-label">
-              Duration
+                Duration
               </label>
               <input
                 type="number"
@@ -283,7 +282,7 @@ const selectedMentorName=instructors.filter((e)=>
             {/*(10) Course Language */}
             <div className="mb-3">
               <label for="category_name" className="form-label">
-              Course Language
+                Course Language
               </label>
               <input
                 type="number"
@@ -310,38 +309,25 @@ const selectedMentorName=instructors.filter((e)=>
             </div>
             {/*(12) Categoty */}
 
-            
             <div className="mb-3 w-50">
-                <label for="instructor">Category Name:</label>
+              <label for="instructor">Category Name:</label>
 
-                <select
+              <select
                 options={categoriesNames}
-                  className="form-select mt-2"
-                  name="instructor"
-                  id="instructor"
-                   onChange={(e) =>{onChangeCategory(e)}}
-                >
-                  {categories.map((e) => (
-                    <option value={e.id} key={e.id}>
-                      {e.name}
-                    </option>
-                  ))}
-                </select>
-              </div>
-
-            {/* <div className="mb-3">
-              <label for="category" className="form-label">
-                Categoty
-              </label>
-              <input
-                type="text"
-                className="form-control"
-                id="category"
-                required
-                onChange={(e) => setcCategory(e.target.value)}
-              />
-              <div className="form-text">Like : Soft-Skills</div>
-            </div> */}
+                className="form-select mt-2"
+                name="instructor"
+                id="instructor"
+                onChange={(e) => {
+                  onChangeCategory(e);
+                }}
+              >
+                {categories.map((e) => (
+                  <option value={e.id} key={e.id}>
+                    {e.name}
+                  </option>
+                ))}
+              </select>
+            </div>
 
             <button type="submit" className="btn btn-success">
               Add Course
@@ -380,6 +366,7 @@ const selectedMentorName=instructors.filter((e)=>
           ))}
         </div>
       </div>
+      <ToastContainer />
     </>
   );
 }

@@ -10,9 +10,10 @@ import { BASE_URL } from "../../../../../DataContext";
 import CourseCard from "../../../../components/CourseCard/CourseCard";
 import axios from "axios";
 import "./CoursesUpdate.css";
-import {  toast } from "react-toastify";
 import { useContext } from "react";
 import { DataContext } from "../../../../../DataContext";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 export default function CoursesUpdate({ course }) {
   const { reGetCourses } = useContext(DataContext);
 
@@ -54,7 +55,7 @@ course.image  );
   const handleClickOpen = () => {
     setOpen(true);
   };
-
+// function close
   const handleClose = () => {
     setOpen(false);
   };
@@ -85,11 +86,15 @@ course.image  );
 
       .then((response) => {
         console.log(response);
-        toast.success("Courses Updated Successefully");
+        toast.success('Courses Updated Successefully', {
+          position: toast.POSITION.BOTTOM_RIGHT
+      });
       })
       .catch((error) => {
         console.log(error);
-        toast.error("Failed updated Course!");
+        toast.error('Courses Updated Failed ', {
+          position: toast.POSITION.BOTTOM_RIGHT
+      });
       });
     handleClose();
     reGetCourses();
@@ -235,6 +240,7 @@ course.image  );
           <Button onClick={() => updateCourse(course.id)}>Save Changes</Button>
         </DialogActions>
       </Dialog>
+      <ToastContainer/>
     </div>
   );
 }

@@ -5,7 +5,8 @@ import { BASE_URL, DataContext } from "../../../../DataContext";
 import { useContext } from "react";
 import CategoryCard from "../../../components/CategoryCard/CategoryCard";
 import CategoryUpdate from "./Category update/CategoryUpdate";
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 export default function CategoryPanel() {
   const { categories,reGetCategories } = useContext(DataContext);
   // For Add Category
@@ -30,9 +31,15 @@ export default function CategoryPanel() {
       })
       .then((response) => {
         console.log(response);
+        toast.success('Category Added Successefully', {
+          position: toast.POSITION.BOTTOM_RIGHT
+      });
       })
       .catch((error) => {
         console.log(error);
+        toast.error('Category Added Failed', {
+          position: toast.POSITION.BOTTOM_RIGHT
+      });
       });
       reGetCategories();
   };
@@ -43,9 +50,15 @@ export default function CategoryPanel() {
         .delete(`${BASE_URL}/CourseCategories/${id}`)
         .then((response) => {
           console.log(response);
+          toast.success('Category Deleted Successefully', {
+            position: toast.POSITION.BOTTOM_RIGHT
+        });
         })
         .catch((error) => {
           console.log(error);
+          toast.error('Category Deleted Failed', {
+            position: toast.POSITION.BOTTOM_RIGHT
+        });
         });
 
         reGetCategories();
@@ -151,6 +164,8 @@ export default function CategoryPanel() {
           </div>
         ))}
       </div>
+      <ToastContainer />
+
     </div>
   );
 }

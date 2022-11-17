@@ -12,7 +12,8 @@ import "./InstructorsUpdate.css";
 import axios from "axios";
 import InstructorCard from "../../../../components/InstructorCard/InstructorCard";
 import { useContext } from "react";
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 export default function InstructorsUpdate({ instructor }) {
   const { reGetInstructors } = useContext(DataContext);
   // For Update instructor
@@ -54,9 +55,15 @@ export default function InstructorsUpdate({ instructor }) {
       })
       .then((response) => {
         console.log(response);
+        toast.success('Instructor Updated Successefully', {
+          position: toast.POSITION.BOTTOM_RIGHT
+      });
       })
       .catch((error) => {
         console.log(error);
+        toast.error('Instructor Updated Failed', {
+          position: toast.POSITION.BOTTOM_RIGHT
+      });
       });
     handleClose();
     reGetInstructors();
@@ -137,6 +144,7 @@ export default function InstructorsUpdate({ instructor }) {
           </Button>
         </DialogActions>
       </Dialog>
+      <ToastContainer/>
     </div>
   );
 }

@@ -5,7 +5,8 @@ import { BASE_URL, DataContext } from "../../../../DataContext";
 import { useContext } from "react";
 import InstructorCard from "../../../components/InstructorCard/InstructorCard";
 import InstructorsUpdate from "./Instructor Update/InstructorsUpdate";
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 export default function InstructorsPanel() {
   const { instructors, reGetInstructors } = useContext(DataContext);
 
@@ -38,9 +39,15 @@ export default function InstructorsPanel() {
       })
       .then((response) => {
         console.log(response);
+        toast.success('Instructor Added Successefully', {
+          position: toast.POSITION.BOTTOM_RIGHT
+      });
       })
       .catch((error) => {
         console.log(error);
+        toast.error('Instructor Added Failed', {
+          position: toast.POSITION.BOTTOM_RIGHT
+      });
       });
       reGetInstructors();
   };
@@ -51,9 +58,15 @@ export default function InstructorsPanel() {
         .delete(`${BASE_URL}/instructors/${id}`)
         .then((response) => {
           console.log(response);
+          toast.success('Instructor Deleted Successefully', {
+            position: toast.POSITION.BOTTOM_RIGHT
+        });
         })
         .catch((error) => {
           console.log(error);
+          toast.error('Instructor Deleted failed', {
+            position: toast.POSITION.BOTTOM_RIGHT
+        });
         });
         reGetInstructors();
       
@@ -197,6 +210,7 @@ export default function InstructorsPanel() {
           ))}
         </div>
       </div>
+      <ToastContainer/>
     </>
   );
 }
