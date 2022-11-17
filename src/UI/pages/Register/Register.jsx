@@ -1,8 +1,8 @@
 import { TextField } from '@mui/material'
-import React, { useState, useMemo } from 'react'
+import React, { useState } from 'react'
 import axios from 'axios';
 import Joi from 'joi';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import "./Register.css"
 
 export const BASE_URL = "http://localhost:3000";
