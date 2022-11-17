@@ -108,7 +108,7 @@ course.image  );
         Update
       </button>
       <Dialog open={open} onClose={handleClose}>
-        <DialogTitle className="text-center">{course.name}</DialogTitle>
+        {/* <DialogTitle className="text-center mt-3">{course.name}</DialogTitle> */}
         <DialogContent>
           <DialogContentText className="d-flex justify-content-center align-items-center flex-column">
             <CourseCard course={updatedPreview} />

@@ -67,7 +67,7 @@ const Header = (props) => {
                 style={{ marginRight: "1rem", marginLeft: "1rem" }}
               >
                 Courses
-                <i className="fa-solid fa-angle-down"></i>
+                <i  className="fa-solid fa-angle-down ms-1"></i>
               </Button>
               {/* &nbsp;&nbsp;&nbsp;&nbsp; */}
               <div className="sub-menu-wrap " id="subMenu">
