@@ -27,7 +27,7 @@ export default function SavedList() {
 
     return (
         <div>
-            <h2>Saved Courses</h2>
+            <div className='gradient-div1'><h3>Saved Courses</h3></div>
             {CoursesFilter.length > 0 ? (
                 <>  
                     <div className="courses">

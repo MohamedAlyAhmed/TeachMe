@@ -94,7 +94,7 @@ export default function CourseCard({ course }) {
             >
               {course.mentors[0].name}
             </p>
-            <Link to={`/saved-list`}>
+            <Link >
               <button
                 onClick={isCourseEnroled() ? deleteSaved : onClickEnroll}
                 className="btn btn-light rounded-5 border"

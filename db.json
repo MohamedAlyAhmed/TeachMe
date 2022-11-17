@@ -2385,20 +2385,6 @@
       "id": 1
     },
     {
-      "user_id": "636dabf8beed310015d612e8",
-      "course_id": 903,
-      "date": "2022-11-16T17:25:21.937Z",
-      "progress": 0,
-      "id": 4
-    },
-    {
-      "user_id": "636dabf8beed310015d612e8",
-      "course_id": 313,
-      "date": "2022-11-16T17:26:04.946Z",
-      "progress": 0,
-      "id": 5
-    },
-    {
       "user_id": "63688395f045c50015f60d17",
       "course_id": 895,
       "date": "2022-11-16T15:45:04.355Z",
@@ -2453,6 +2439,27 @@
       "date": "2022-11-16T23:35:48.040Z",
       "progress": 0,
       "id": 14
+    },
+    {
+      "user_id": "636dabf8beed310015d612e8",
+      "course_id": 725,
+      "date": "2022-11-17T10:44:44.212Z",
+      "progress": 0,
+      "id": 15
+    },
+    {
+      "user_id": "636dabf8beed310015d612e8",
+      "course_id": 903,
+      "date": "2022-11-17T10:47:58.135Z",
+      "progress": 0,
+      "id": 16
+    },
+    {
+      "user_id": "636dabf8beed310015d612e8",
+      "course_id": 908,
+      "date": "2022-11-17T10:48:24.425Z",
+      "progress": 0,
+      "id": 17
     }
   ]
 }
