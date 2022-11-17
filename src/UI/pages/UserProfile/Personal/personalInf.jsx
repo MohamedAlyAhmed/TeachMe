@@ -53,24 +53,7 @@ export default function PersonalInformation() {
 
                         </div>
                     </div>
-                    <div className="d-inline-flex col-md-12 mb-3 align-items-center  ">
-                        <label for="password" className="col-sm-3 col-form-label "> Password </label>
-                        <div className="col-sm-9 col-10 ">
-                            <input type="password" id="password" value={userData.password} className="form-control  ng-untouched ng-pristine ng-valid" readOnly />
-                        </div>
-                        <div className="col-sm-1 col-2 ">
-
-                        </div>
-                    </div>
-                    <div className="d-inline-flex col-md-12 mb-3 align-items-center  ">
-                        <label for="mobile-number" className="col-sm-3 col-form-label "> Mobile Number </label>
-                        <div className="col-sm-9 col-10 ">
-                            <input type="text" id="mobile-number" value={userData.password} className="form-control ng-untouched ng-pristine ng-valid" readOnly />
-                        </div>
-                        <div className="col-sm-1 col-2 ">
-
-                        </div>
-                    </div>
+                   
                 </div>
             </div>
         </>
