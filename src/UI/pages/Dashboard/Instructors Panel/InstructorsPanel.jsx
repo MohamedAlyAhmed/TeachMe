@@ -41,15 +41,16 @@ export default function InstructorsPanel() {
         console.log(response);
         toast.success('Instructor Added Successefully', {
           position: toast.POSITION.BOTTOM_RIGHT
-      });
+        });
+        reGetInstructors();
       })
       .catch((error) => {
         console.log(error);
         toast.error('Instructor Added Failed', {
           position: toast.POSITION.BOTTOM_RIGHT
+        });
       });
-      });
-      reGetInstructors();
+
   };
 
   const deleteInstructor = (id) => {
@@ -60,16 +61,16 @@ export default function InstructorsPanel() {
           console.log(response);
           toast.success('Instructor Deleted Successefully', {
             position: toast.POSITION.BOTTOM_RIGHT
-        });
+          });
         })
         .catch((error) => {
           console.log(error);
           toast.error('Instructor Deleted failed', {
             position: toast.POSITION.BOTTOM_RIGHT
+          });
         });
-        });
-        reGetInstructors();
-      
+      reGetInstructors();
+
     } else {
       console.log("Declined");
     }
@@ -210,7 +211,7 @@ export default function InstructorsPanel() {
           ))}
         </div>
       </div>
-      <ToastContainer/>
+      <ToastContainer />
     </>
   );
 }

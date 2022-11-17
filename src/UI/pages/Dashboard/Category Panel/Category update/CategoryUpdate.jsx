@@ -48,16 +48,17 @@ export default function CategoryUpdate({ category }) {
         console.log(response);
         toast.success('Category Updated Successefully', {
           position: toast.POSITION.BOTTOM_RIGHT
-      });
+        });
+        handleClose();
+        reGetCategories();
       })
       .catch((error) => {
         console.log(error);
         toast.error('Category Updated Failed', {
           position: toast.POSITION.BOTTOM_RIGHT
+        });
       });
-      });
-    handleClose();
-    reGetCategories();
+
   };
 
   return (
@@ -113,7 +114,7 @@ export default function CategoryUpdate({ category }) {
           </Button>
         </DialogActions>
       </Dialog>
-      <ToastContainer/>
+      <ToastContainer />
     </div>
   );
 }

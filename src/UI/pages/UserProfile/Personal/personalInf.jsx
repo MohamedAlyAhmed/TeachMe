@@ -28,16 +28,7 @@ export default function PersonalInformation() {
                             <input type="text" value={fullName} readOnly />
                         </div>
                     </div>
-                    <div className="d-inline-flex col-md-12  align-items-center section-gender">
-                        <p className="col-md-3">Gender</p>
-                        <div className="input-gender d-flex col-md-9">
-                            <input type="radio" name="gender" id="male" checked="checked" readOnly />
-                            <label htmlFor="male" id="formale" className="btn btn-outline-tangerine">Male</label>
-                            <input type="radio" name="gender" id="female" readOnly />
-                            <label htmlFor="female" id="forfemale" className="btn btn-outline-tangerine">Female</label>
-                        </div>
-                    </div>
-                    <div className="d-inline-flex col-md-12 mb-3 align-items-center  ">
+                    <div className="mt-3 d-inline-flex col-md-12 mb-3 align-items-center  ">
                         <p className="col-md-3">Age</p>
 
                         <input type="number" name="age" id="age" value={userData.age} readOnly />
@@ -53,7 +44,7 @@ export default function PersonalInformation() {
 
                         </div>
                     </div>
-                   
+
                 </div>
             </div>
         </>

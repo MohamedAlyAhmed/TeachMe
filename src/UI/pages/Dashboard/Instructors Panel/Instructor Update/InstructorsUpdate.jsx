@@ -57,16 +57,17 @@ export default function InstructorsUpdate({ instructor }) {
         console.log(response);
         toast.success('Instructor Updated Successefully', {
           position: toast.POSITION.BOTTOM_RIGHT
-      });
+        });
+        handleClose();
+        reGetInstructors();
       })
       .catch((error) => {
         console.log(error);
         toast.error('Instructor Updated Failed', {
           position: toast.POSITION.BOTTOM_RIGHT
+        });
       });
-      });
-    handleClose();
-    reGetInstructors();
+
   };
 
   return (
@@ -144,7 +145,7 @@ export default function InstructorsUpdate({ instructor }) {
           </Button>
         </DialogActions>
       </Dialog>
-      <ToastContainer/>
+      <ToastContainer />
     </div>
   );
 }

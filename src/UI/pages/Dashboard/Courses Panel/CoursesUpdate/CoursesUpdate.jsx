@@ -20,20 +20,20 @@ export default function CoursesUpdate({ course }) {
   // For Update course
   const [updtedName, setUpdtedName] = useState(course.name);
   const [updtedPermanentLink, setUpdtedPermanentLink] = useState(
-   course.permanentLink
+    course.permanentLink
   );
   const [updtedCategory, setcUpdtedCategory] = useState(course.category);
   const [updtedLevel, setUpdtedLevel] = useState(course.level);
   const [updtedCourseLanguage, setUpdtedCourseLanguage] = useState(course.courseLanguage);
 
   const [updtedDescription, setUpdtedDescription] = useState(
-   course.description
+    course.description
   );
   const [updtedMentors, setUpdtedMentors] = useState(course.mentors[0]);
   const [updtedDuration, setUpdtedDuration] = useState(course.duration);
   const [updtedNumberOfLessons, setUpdtedNumberOfLessons] = useState(course.numberOfLessons);
   const [updtedImage, setUpdtedImage] = useState(
-course.image  );
+    course.image);
   const [updateReleasedAt, setUpdateReleasedAt] = useState(course.releasedAt);
 
   // For Preview course
@@ -55,7 +55,7 @@ course.image  );
   const handleClickOpen = () => {
     setOpen(true);
   };
-// function close
+  // function close
   const handleClose = () => {
     setOpen(false);
   };
@@ -73,7 +73,7 @@ course.image  );
         level: updtedLevel,
         permanentLink: updtedPermanentLink,
         releasedAt: updateReleasedAt,
-        learningOutcomes : [
+        learningOutcomes: [
           {
             id: 4940,
             body: "All about the history of old and modern cinematic lighting, the role of photography director and the cinematic lighting steps you can follow to get a special cinematic work.",
@@ -88,19 +88,20 @@ course.image  );
         console.log(response);
         toast.success('Courses Updated Successefully', {
           position: toast.POSITION.BOTTOM_RIGHT
-      });
+        });
+        handleClose();
+        reGetCourses();
       })
       .catch((error) => {
         console.log(error);
         toast.error('Courses Updated Failed ', {
           position: toast.POSITION.BOTTOM_RIGHT
+        });
       });
-      });
-    handleClose();
-    reGetCourses();
+
   };
 
-  
+
 
   return (
     <div>
@@ -240,7 +241,7 @@ course.image  );
           <Button onClick={() => updateCourse(course.id)}>Save Changes</Button>
         </DialogActions>
       </Dialog>
-      <ToastContainer/>
+      <ToastContainer />
     </div>
   );
 }

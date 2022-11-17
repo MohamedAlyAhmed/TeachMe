@@ -94,17 +94,18 @@ export default function CoursesPanel() {
           position: toast.POSITION.BOTTOM_RIGHT,
         });
         console.log(response);
-      
+        reGetCourses();
+
       })
       .catch((error) => {
         console.log(error);
-        toast.error("Courses Added Failed !",{
+        toast.error("Courses Added Failed !", {
           position: toast.POSITION.BOTTOM_RIGHT,
 
         });
       });
-     
-    reGetCourses();
+
+
   };
 
   const deleteCourse = (id) => {
@@ -116,10 +117,11 @@ export default function CoursesPanel() {
           toast.success("Courses Deleted Successefully", {
             position: toast.POSITION.BOTTOM_RIGHT,
           });
+          reGetCourses();
         })
         .catch((error) => {
           console.log(error);
-          toast.error("Courses Deleted Failed !",{
+          toast.error("Courses Deleted Failed !", {
             position: toast.POSITION.BOTTOM_RIGHT,
 
           });
@@ -128,7 +130,7 @@ export default function CoursesPanel() {
       console.log("Declined");
     }
 
-    reGetCourses();
+
   };
 
   return (

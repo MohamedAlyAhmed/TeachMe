@@ -34,6 +34,7 @@ export default function CategoryPanel() {
         toast.success("Category Added Successefully", {
           position: toast.POSITION.BOTTOM_RIGHT,
         });
+        reGetCategories();
       })
       .catch((error) => {
         console.log(error);
@@ -41,7 +42,7 @@ export default function CategoryPanel() {
           position: toast.POSITION.BOTTOM_RIGHT,
         });
       });
-    reGetCategories();
+
   };
 
   const deleteCategory = (id) => {
