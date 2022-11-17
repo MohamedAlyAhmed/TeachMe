@@ -179,14 +179,14 @@ const Header = (props) => {
                       </a>
                       <a
                         className="user-profile-card__user-option-item "
-                        href="/profile"
+                        href="/profile/Personal"
                       >
                         <i className="fa-solid fa-gear"></i>
                         <p>Account settings</p>
                       </a>
                       <a
                         className="user-profile-card__user-option-item "
-                        href=""
+                        href="/"
                       >
                         <i className="fa-solid fa-comments"></i>
                         <p>Messages</p>
