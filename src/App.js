@@ -74,12 +74,12 @@ function App() {
     <div>
       <DataProvider>
         <Header />
-        <Router >
+        <Router basename={'/TeachMe'}>
           <Routes>
             {/* .... any other path routing create it here .... */}
 
             <Route
-              path="/"
+              path="/TeachMe"
               element={
                 <React.Suspense>
                   <LazyLandingPage />
@@ -97,7 +97,7 @@ function App() {
             />
 
             <Route
-              path="login"
+              path="/TeachMe/login"
               element={
                 <React.Suspense>
                   <Login />
