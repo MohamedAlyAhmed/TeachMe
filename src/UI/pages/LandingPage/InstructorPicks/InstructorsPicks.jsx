@@ -12,7 +12,7 @@ class InstructorsPicks extends Component {
               <HomeWrapper>
                 <FeaturedInstructors />
                 <div className="text-center mb-5 pb-5 mt-5">
-                  <a href="http://localhost:4000/instructors">
+                  <a href="https://mohamedalyahmed.github.io/TeachMe/instructors">
                     <MyButton isOutline={true}>See all instructors</MyButton>
                   </a>
                 </div>

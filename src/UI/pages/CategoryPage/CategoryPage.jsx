@@ -14,7 +14,7 @@ export default function CategoryPage() {
   const [coursess, setCourses] = useState(null);
 
   useEffect(()=>{
-   fetch("http://localhost:3000/courses").
+   fetch("https://teachme-iti.glitch.me/courses").
    then(response=>{
      console.log(response.ok);
  if (!response.ok) {

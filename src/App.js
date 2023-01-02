@@ -74,7 +74,7 @@ function App() {
     <div>
       <DataProvider>
         <Header />
-        <Router basename={"/TeachMe"}>
+        <Router basename={"/TeachMe/"}>
           <Routes>
             {/* .... any other path routing create it here .... */}
 

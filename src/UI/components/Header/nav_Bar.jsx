@@ -14,7 +14,7 @@ import { useEffect } from "react";
 
 const Header = (props) => {
   const { categories } = useContext(DataContext);
-  const BASE_CATEGORY = "http://localhost:4000/category";
+  const BASE_CATEGORY = "https://mohamedalyahmed.github.io/TeachMe/category";
   const toggleMenus = () => {
     let subMenu = document.getElementById("subMenu");
 
@@ -36,7 +36,7 @@ const Header = (props) => {
           align-items-center"
       >
         {/* logo */}
-        <a href="http://localhost:4000/">
+        <a href="https://mohamedalyahmed.github.io/TeachMe/">
           <p className="logo mx-4">
             Teach <span>Me</span>
           </p>
@@ -97,7 +97,7 @@ const Header = (props) => {
             </div>
             {userData ? (
               userData.email == "teachme@gmail.com" ? (
-                <a href="http://localhost:4000/dashboard/home">
+                <a href="https://mohamedalyahmed.github.io/TeachMe/dashboard/home">
                   <MyButton isOutline={true}>DASHBOARD</MyButton>
                 </a>
               ) : (

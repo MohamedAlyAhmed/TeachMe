@@ -2,7 +2,7 @@ import "./map.css";
 import MyButton from "../../../components/Button/Button";
 import React from "react";
 import CountUp from "react-countup";
-const BASE_CATEGORY = "http://localhost:4000/category";
+const BASE_CATEGORY = "https://mohamedalyahmed.github.io/TeachMe/category";
 
 function Counter() {
   return (

@@ -5,7 +5,7 @@ import Joi from 'joi';
 import { useNavigate } from 'react-router-dom';
 import "./Register.css"
 
-export const BASE_URL = "http://localhost:3000";
+export const BASE_URL = "https://teachme-iti.glitch.me";
 
 
 function registerValidtion(user) {
