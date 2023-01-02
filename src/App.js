@@ -1,6 +1,11 @@
 import "./App.css";
 import React, { useEffect, useState } from "react";
-import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useNavigate,
+} from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Register from "./UI/pages/Register/Register";
@@ -21,19 +26,19 @@ import InstructorsPanel from "./UI/pages/Dashboard/Instructors Panel/Instructors
 import CategoryPanel from "./UI/pages/Dashboard/Category Panel/CategoryPanel";
 import PersonalInformation from "./UI/pages/UserProfile/Personal/personalInf";
 import SavesList from "./UI/pages/UserProfile/SavedList/SavesList";
-import MyCourses from "./UI/pages/UserProfile/MyCourses/Mycourses"
+import MyCourses from "./UI/pages/UserProfile/MyCourses/Mycourses";
 
-
-//Landing Page LazyLoading 
+//Landing Page LazyLoading
 const LazyLandingPage = React.lazy(() =>
   import("./UI/pages/LandingPage/langingPage")
 );
 
 // Course Page LazyLoading
 const LazyCoursePage = React.lazy(() =>
-  import("./UI/pages/course page/CoursePage"));
+  import("./UI/pages/course page/CoursePage")
+);
 
-//Category LazyLoading 
+//Category LazyLoading
 const LazyCategoryPage = React.lazy(() =>
   import("./UI/pages/CategoryPage/CategoryPage")
 );
@@ -44,9 +49,7 @@ const LazyWatchPage = React.lazy(() =>
 );
 
 //Error LazyLoading
-const LazyErrorPage = React.lazy(() =>
-  import("./UI/pages/Error Page/Error")
-);
+const LazyErrorPage = React.lazy(() => import("./UI/pages/Error Page/Error"));
 
 //Instructors LazyLoading Page
 const LazyInstructorsPage = React.lazy(() =>
@@ -65,13 +68,13 @@ const LazyMyCertificatesPage = React.lazy(() =>
 const LazyWishlistPage = React.lazy(() =>
   import("./UI/components/SavedList/SavedList")
 );
- 
+
 function App() {
   return (
     <div>
       <DataProvider>
         <Header />
-        <Router basename={'/TeachMe'}>
+        <Router basename={"/TeachMe"}>
           <Routes>
             {/* .... any other path routing create it here .... */}
 
@@ -101,7 +104,6 @@ function App() {
                 </React.Suspense>
               }
             />
-
 
             <Route
               path="course/:id"
@@ -145,13 +147,18 @@ function App() {
                 </React.Suspense>
               }
             />
-            <Route path="profile"  element={<React.Suspense><LazyUserProfilePage /></React.Suspense>}>
-              
-              <Route path='Personal' element={<PersonalInformation />} />
-              <Route path='SavesList' element={<SavesList />} />
-              <Route path='MyCourses' element={<MyCourses />} />
+            <Route
+              path="profile"
+              element={
+                <React.Suspense>
+                  <LazyUserProfilePage />
+                </React.Suspense>
+              }
+            >
+              <Route path="Personal" element={<PersonalInformation />} />
+              <Route path="SavesList" element={<SavesList />} />
+              <Route path="MyCourses" element={<MyCourses />} />
             </Route>
-
 
             <Route
               path="watch/:courseId/:vedioID"
@@ -171,14 +178,12 @@ function App() {
               }
             />
 
-            <Route path='dashboard' element={<Dashboard />}>
-              <Route path='home' element={<DashboardHome/>} />
-              <Route path='courses_panel' element={<CoursesPanel />} />
-              <Route path='category_panel' element={<CategoryPanel />} />
-              <Route path='instructors_panel' element={<InstructorsPanel />} />
+            <Route path="dashboard" element={<Dashboard />}>
+              <Route path="home" element={<DashboardHome />} />
+              <Route path="courses_panel" element={<CoursesPanel />} />
+              <Route path="category_panel" element={<CategoryPanel />} />
+              <Route path="instructors_panel" element={<InstructorsPanel />} />
             </Route>
-
-
 
             <Route
               path="*"
@@ -212,9 +217,6 @@ function App() {
                 </React.Suspense>
               }
             />
-
-
-
           </Routes>
         </Router>
         <Footer />
