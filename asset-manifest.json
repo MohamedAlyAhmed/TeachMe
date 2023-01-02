@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/TeachMe/static/css/main.9e9b4e91.css",
-    "main.js": "/TeachMe/static/js/main.cc1e3a52.js",
+    "main.js": "/TeachMe/static/js/main.3db5ac2d.js",
     "static/css/731.aba41485.chunk.css": "/TeachMe/static/css/731.aba41485.chunk.css",
-    "static/js/731.d88b8553.chunk.js": "/TeachMe/static/js/731.d88b8553.chunk.js",
+    "static/js/731.4b2179b5.chunk.js": "/TeachMe/static/js/731.4b2179b5.chunk.js",
     "static/js/993.09d9460d.chunk.js": "/TeachMe/static/js/993.09d9460d.chunk.js",
     "static/css/7.5ebc31cc.chunk.css": "/TeachMe/static/css/7.5ebc31cc.chunk.css",
-    "static/js/7.9cc29c7f.chunk.js": "/TeachMe/static/js/7.9cc29c7f.chunk.js",
+    "static/js/7.26fa7976.chunk.js": "/TeachMe/static/js/7.26fa7976.chunk.js",
     "static/js/468.6c42d3f9.chunk.js": "/TeachMe/static/js/468.6c42d3f9.chunk.js",
     "static/css/639.f3f867a5.chunk.css": "/TeachMe/static/css/639.f3f867a5.chunk.css",
     "static/js/639.9f447b48.chunk.js": "/TeachMe/static/js/639.9f447b48.chunk.js",
@@ -33,12 +33,12 @@
     "static/media/slick.woff": "/TeachMe/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/TeachMe/index.html",
     "main.9e9b4e91.css.map": "/TeachMe/static/css/main.9e9b4e91.css.map",
-    "main.cc1e3a52.js.map": "/TeachMe/static/js/main.cc1e3a52.js.map",
+    "main.3db5ac2d.js.map": "/TeachMe/static/js/main.3db5ac2d.js.map",
     "731.aba41485.chunk.css.map": "/TeachMe/static/css/731.aba41485.chunk.css.map",
-    "731.d88b8553.chunk.js.map": "/TeachMe/static/js/731.d88b8553.chunk.js.map",
+    "731.4b2179b5.chunk.js.map": "/TeachMe/static/js/731.4b2179b5.chunk.js.map",
     "993.09d9460d.chunk.js.map": "/TeachMe/static/js/993.09d9460d.chunk.js.map",
     "7.5ebc31cc.chunk.css.map": "/TeachMe/static/css/7.5ebc31cc.chunk.css.map",
-    "7.9cc29c7f.chunk.js.map": "/TeachMe/static/js/7.9cc29c7f.chunk.js.map",
+    "7.26fa7976.chunk.js.map": "/TeachMe/static/js/7.26fa7976.chunk.js.map",
     "468.6c42d3f9.chunk.js.map": "/TeachMe/static/js/468.6c42d3f9.chunk.js.map",
     "639.f3f867a5.chunk.css.map": "/TeachMe/static/css/639.f3f867a5.chunk.css.map",
     "639.9f447b48.chunk.js.map": "/TeachMe/static/js/639.9f447b48.chunk.js.map",
@@ -51,6 +51,6 @@
   },
   "entrypoints": [
     "static/css/main.9e9b4e91.css",
-    "static/js/main.cc1e3a52.js"
+    "static/js/main.3db5ac2d.js"
   ]
 }
