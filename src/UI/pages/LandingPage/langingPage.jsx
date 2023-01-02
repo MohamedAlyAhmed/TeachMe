@@ -6,7 +6,7 @@ import InstructorsPicks from "./InstructorPicks/InstructorsPicks";
 import MyButton from "../../components/Button/Button";
 import { useState, useEffect } from "react";
 import axios from "axios";
-const BASE_CATEGORY = "https://mohamedalyahmed.github.io/TeachMe/category";
+const BASE_CATEGORY = "/category";
 
 function LandingPage() {
   return (

@@ -14,7 +14,7 @@ import { useEffect } from "react";
 
 const Header = (props) => {
   const { categories } = useContext(DataContext);
-  const BASE_CATEGORY = "https://mohamedalyahmed.github.io/TeachMe/category";
+  const BASE_CATEGORY = "/category";
   const toggleMenus = () => {
     let subMenu = document.getElementById("subMenu");
 
@@ -97,7 +97,7 @@ const Header = (props) => {
             </div>
             {userData ? (
               userData.email == "teachme@gmail.com" ? (
-                <a href="https://mohamedalyahmed.github.io/TeachMe/dashboard/home">
+                <a href="/dashboard/home">
                   <MyButton isOutline={true}>DASHBOARD</MyButton>
                 </a>
               ) : (

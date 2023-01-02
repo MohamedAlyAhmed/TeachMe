@@ -73,8 +73,8 @@ function App() {
   return (
     <div>
       <DataProvider>
-        <Router basename={"/TeachMe/"}>
         <Header />
+        <Router basename={'/TeachMe'}>
           <Routes>
             {/* .... any other path routing create it here .... */}
 
@@ -218,8 +218,8 @@ function App() {
               }
             />
           </Routes>
-        <Footer />
         </Router>
+        <Footer />
       </DataProvider>
     </div>
   );
