@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/TeachMe/static/css/main.9e9b4e91.css",
-    "main.js": "/TeachMe/static/js/main.a8a4f430.js",
+    "main.js": "/TeachMe/static/js/main.08fb8358.js",
     "static/css/731.aba41485.chunk.css": "/TeachMe/static/css/731.aba41485.chunk.css",
     "static/js/731.4292decb.chunk.js": "/TeachMe/static/js/731.4292decb.chunk.js",
     "static/js/993.09d9460d.chunk.js": "/TeachMe/static/js/993.09d9460d.chunk.js",
@@ -33,7 +33,7 @@
     "static/media/slick.woff": "/TeachMe/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/TeachMe/index.html",
     "main.9e9b4e91.css.map": "/TeachMe/static/css/main.9e9b4e91.css.map",
-    "main.a8a4f430.js.map": "/TeachMe/static/js/main.a8a4f430.js.map",
+    "main.08fb8358.js.map": "/TeachMe/static/js/main.08fb8358.js.map",
     "731.aba41485.chunk.css.map": "/TeachMe/static/css/731.aba41485.chunk.css.map",
     "731.4292decb.chunk.js.map": "/TeachMe/static/js/731.4292decb.chunk.js.map",
     "993.09d9460d.chunk.js.map": "/TeachMe/static/js/993.09d9460d.chunk.js.map",
@@ -51,6 +51,6 @@
   },
   "entrypoints": [
     "static/css/main.9e9b4e91.css",
-    "static/js/main.a8a4f430.js"
+    "static/js/main.08fb8358.js"
   ]
 }
