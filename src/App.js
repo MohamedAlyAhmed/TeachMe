@@ -79,7 +79,7 @@ function App() {
             {/* .... any other path routing create it here .... */}
 
             <Route
-              path="/TeachMe"
+              path="/"
               element={
                 <React.Suspense>
                   <LazyLandingPage />
@@ -97,7 +97,7 @@ function App() {
             />
 
             <Route
-              path="/TeachMe/login"
+              path="login"
               element={
                 <React.Suspense>
                   <Login />
