@@ -9,10 +9,8 @@ import axios from "axios";
 const BASE_CATEGORY = "http://localhost:4000/category";
 
 function LandingPage() {
- 
   return (
     <>
-     
       <header>
         <div className="hero-image">
           <div className="hero-content">
@@ -20,11 +18,11 @@ function LandingPage() {
               <h1 className="display-2 fw-bold">Learn Online</h1>
               <p>From the biggest Arabic library of video-based courses</p>
               <a href={`${BASE_CATEGORY}`}>
-                    <MyButton>
-                      Browse Courses &nbsp;
-                      <i className="fa-solid fa-arrow-right"></i>
-                    </MyButton>
-                  </a>
+                <MyButton>
+                  Browse Courses &nbsp;
+                  <i className="fa-solid fa-arrow-right"></i>
+                </MyButton>
+              </a>
             </div>
           </div>
         </div>

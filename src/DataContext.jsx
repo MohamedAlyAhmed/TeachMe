@@ -2,7 +2,7 @@ import React, { createContext, useState, useEffect } from "react";
 import { useNavigate } from 'react-router-dom'
 import axios from "axios";
 import jwtDecode from "jwt-decode";
-export const BASE_URL = "http://localhost:3000";
+export const BASE_URL = "https://teachme-iti.glitch.me";
 export let DataContext = createContext([]);
 
 export default function DataProvider(props) {

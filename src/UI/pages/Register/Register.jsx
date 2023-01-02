@@ -66,7 +66,7 @@ export default function Register() {
             setIsLoading(false)
         }
         else {
-            let { data } = await axios.post(`https://route-egypt-api.herokuapp.com/signup`, user);
+            let { data } = await axios.post(`https://route-movies-api.vercel.app/signup`, user);
             console.log(data);
 
 
