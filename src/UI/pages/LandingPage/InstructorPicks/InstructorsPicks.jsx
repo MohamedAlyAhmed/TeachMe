@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import { HomeWrapper } from "../FeaturedCourses/FeaturedCourses";
 import { FeaturedInstructors } from "../feauredInstructors/feauredInstructors";
 import MyButton from "../../../components/Button/Button";
@@ -12,9 +13,9 @@ class InstructorsPicks extends Component {
               <HomeWrapper>
                 <FeaturedInstructors />
                 <div className="text-center mb-5 pb-5 mt-5">
-                  <a href="/instructors">
+                  <Link to="/instructors">
                     <MyButton isOutline={true}>See all instructors</MyButton>
-                  </a>
+                  </Link>
                 </div>
               </HomeWrapper>
             </div>

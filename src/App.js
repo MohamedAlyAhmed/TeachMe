@@ -70,12 +70,13 @@ const LazyWishlistPage = React.lazy(() =>
   import("./UI/components/SavedList/SavedList")
 );
 
+// basename={'/TeachMe'}
 function App() {
   return (
     <div>
       <DataProvider>
         <Header />
-        <Router basename={'/TeachMe'}>
+        {/* <Router > */}
           <Routes>
             {/* .... any other path routing create it here .... */}
 
@@ -219,7 +220,7 @@ function App() {
               }
             />
           </Routes>
-        </Router>
+        {/* </Router> */}
         <Footer />
       </DataProvider>
     </div>

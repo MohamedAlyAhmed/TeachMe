@@ -1,16 +1,13 @@
 import React, { useContext } from "react";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
-import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
-import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
 import "./nav_Bar.css";
 import MyButton from "../Button/Button";
 import { DataContext } from "../../../DataContext";
-import { useEffect } from "react";
+
 
 const Header = (props) => {
   const { categories } = useContext(DataContext);
@@ -36,28 +33,27 @@ const Header = (props) => {
           align-items-center"
       >
         {/* logo */}
-        <a href="https://mohamedalyahmed.github.io/TeachMe/">
+        <Link to={`/`}>
           <p className="logo mx-4">
             Teach <span>Me</span>
           </p>
-        </a>
+        </Link>
 
         <Navbar.Toggle aria-controls="navbarScroll" />
 
         <Navbar.Collapse id="navbarScroll">
           <Nav className="me-auto my-2 my-lg-0" navbarScroll>
             {/* instructor Button */}
-            <a
-              href="/instructors"
+            <Link
+              to={`instructors`}
               style={{
-                color: "black",
                 textDecoration: "none",
+                color: "black",
                 marginLeft: "1rem",
               }}
             >
               <Button variant="">Instructors</Button>
-            </a>
-
+            </Link>
             {/* courses list */}
             <div>
               <Button
@@ -78,28 +74,28 @@ const Header = (props) => {
 
                   {/* Get Categories Links */}
                   {categories.map((e, index) => (
-                    <a
+                    <Link
                       key={index}
-                      href={`${BASE_CATEGORY}/${e.permanentLink}`}
+                      to={`${BASE_CATEGORY}/${e.permanentLink}`}
                       className="sub-menu-link"
                     >
                       <p>{e.name}</p>
-                    </a>
+                    </Link>
                   ))}
-                  <a href={`${BASE_CATEGORY}`}>
+                  <Link to={`${BASE_CATEGORY}`}>
                     <MyButton>
                       Browse Courses &nbsp;
                       <i className="fa-solid fa-arrow-right"></i>
                     </MyButton>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
             {userData ? (
               userData.email == "teachme@gmail.com" ? (
-                <a href="/dashboard/home">
+                <Link to={`/dashboard/home`}>
                   <MyButton isOutline={true}>DASHBOARD</MyButton>
-                </a>
+                </Link>
               ) : (
                 ""
               )
@@ -108,9 +104,9 @@ const Header = (props) => {
             )}
           </Nav>
           {/* search icon */}
-          <a href={`${BASE_CATEGORY}`} style={{ marginRight: "1rem" }}>
+          <Link to={`${BASE_CATEGORY}`} style={{ marginRight: "1rem" }}>
             <i className="fa fa-search icon-search"></i>
-          </a>
+          </Link>
           {/* if user login */}
           {userData ? (
             <>
@@ -127,87 +123,84 @@ const Header = (props) => {
                   <div className="user-profile-container">
                     <div className="user-info-card d-flex">
                       <div className="profile-avatar">
-                        <a href="/profile/Personal">
+                        <Link to={`/profile/Personal`}>
                           <img
                             src="/assets/default-avatar.jpg"
                             className="avatar"
                             alt=""
                           />
-                        </a>
+                        </Link>
                       </div>
 
                       <div className="info-details">
-                        <a href="/profile/Personal">
+                        <Link to={`/profile/Personal`}>
                           <h6>
                             {userData.first_name} {userData.last_name}
                           </h6>
                           <p>{userData.email}</p>
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
                   <div className="user-profile-subscribed ng-star-inserted">
-                    <a href="/profile/Personal">
+                    <Link to="/profile/Personal">
                       <button className="btn btn-outline-light user-profile-subscribe-btn">
                         Go To Profile Page
                       </button>
-                    </a>
+                    </Link>
                   </div>
                   <div className="user-profile-card__options-menu-list-container">
                     <div className="user-profile-card__user-options-menu-list">
-                      <a
+                      <Link
                         className="user-profile-card__user-option-item"
-                        href="/my-progress"
+                        to="/my-progress"
                       >
                         <i className="fa-regular fa-circle-play"></i>
                         <p>My Progress</p>
-                      </a>
-                      <a
+                      </Link>
+                      <Link
                         className="user-profile-card__user-option-item"
-                        href="/saved-list"
+                        to="/saved-list"
                       >
                         <i className="fa-regular fa-bookmark"></i>
                         <p>Saved Courses</p>
-                      </a>
+                      </Link>
 
-                      <a
+                      <Link
                         className="user-profile-card__user-option-item"
-                        href="/my-certificates"
+                        to="/my-certificates"
                       >
                         <i className="fa-solid fa-certificate"></i>
                         <p>Certificates</p>
-                      </a>
-                      <a
+                      </Link>
+                      <Link
                         className="user-profile-card__user-option-item "
-                        href="/profile/Personal"
+                        to="/profile/Personal"
                       >
                         <i className="fa-solid fa-gear"></i>
                         <p>Account settings</p>
-                      </a>
-                      <a
+                      </Link>
+                      <Link
                         className="user-profile-card__user-option-item "
-                        href="/"
+                        to="/"
                       >
                         <i className="fa-solid fa-comments"></i>
                         <p>Messages</p>
-                      </a>
+                      </Link>
                     </div>
-                    <a
-                      className="user-profile-card__purchase-log user-profile-card__user-option-item "
-                      href=""
-                    >
+                    <Link className="user-profile-card__purchase-log user-profile-card__user-option-item ">
                       <i className="fa-solid fa-clipboard"></i>
                       <p> Purchase Log </p>
-                    </a>
+                    </Link>
                   </div>
                   <div className="btn-logout ">
-                    <a
+                    <Link
                       className="btn btn-link user-profile-card__user-option-item user-profile-card__btn-logout"
                       onClick={LogOut}
                     >
                       <i className="fa-solid fa-right-from-bracket"></i>
                       <p>Logout</p>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -216,14 +209,14 @@ const Header = (props) => {
             // if user not login
             <>
               <Button variant="link">
-                <a href="/login" className="loginlink">
+                <Link to="/login" className="loginlink">
                   Login
-                </a>
+                </Link>
               </Button>
 
-              <a style={{ marginRight: "1rem" }} href="/register">
+              <Link style={{ marginRight: "1rem" }} to="/register">
                 <MyButton isOutline={false}>sign up</MyButton>
-              </a>
+              </Link>
             </>
           )}
         </Navbar.Collapse>

@@ -1,6 +1,7 @@
 import React from "react";
 import "./landingPage.css";
 import Picks from "./Picks/Picks";
+import { Link } from "react-router-dom";
 import { Map } from "./map/map";
 import InstructorsPicks from "./InstructorPicks/InstructorsPicks";
 import MyButton from "../../components/Button/Button";
@@ -17,12 +18,12 @@ function LandingPage() {
             <div className="hero-content-inner">
               <h1 className="display-2 fw-bold">Learn Online</h1>
               <p>From the biggest Arabic library of video-based courses</p>
-              <a href={`${BASE_CATEGORY}`}>
+              <Link to={`${BASE_CATEGORY}`}>
                 <MyButton>
                   Browse Courses &nbsp;
                   <i className="fa-solid fa-arrow-right"></i>
                 </MyButton>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

@@ -1,4 +1,5 @@
 import "./map.css";
+import { Link } from "react-router-dom";
 import MyButton from "../../../components/Button/Button";
 import React from "react";
 import CountUp from "react-countup";
@@ -18,9 +19,9 @@ export function Map() {
   return (
     <div>
       <div className="text-center mt-5 mb-5">
-        <a href={`${BASE_CATEGORY}`}>
+        <Link to={`${BASE_CATEGORY}`}>
           <MyButton isOutline={true}>Browse Courses</MyButton>
-        </a>
+        </Link>
       </div>
 
       <header className="myHeader">
