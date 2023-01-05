@@ -28,6 +28,7 @@ import PersonalInformation from "./UI/pages/UserProfile/Personal/personalInf";
 import SavesList from "./UI/pages/UserProfile/SavedList/SavesList";
 import MyCourses from "./UI/pages/UserProfile/MyCourses/Mycourses";
 
+
 //Landing Page LazyLoading
 const LazyLandingPage = React.lazy(() =>
   import("./UI/pages/LandingPage/langingPage")
