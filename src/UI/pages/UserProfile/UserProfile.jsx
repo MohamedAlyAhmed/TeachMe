@@ -43,7 +43,7 @@ export default function UserProfile() {
 
                         <div className="user-profile-info">
                             <div className="user-profile-avatar">
-                                <img src="/assets/default-avatar.jpg" />
+                                <img src={`https://t4.ftcdn.net/jpg/03/59/58/91/360_F_359589186_JDLl8dIWoBNf1iqEkHxhUeeOulx0wOC5.jpg`} />
                             </div>
                             <div className="user-profile-info-details">
                                 <h2>{userData.first_name} {userData.last_name}</h2>
