@@ -2,8 +2,6 @@
 
 #### A website with an admin dashboard that enables the user to sign up and enroll in courses. 
 
-![Alt text](/assets/bg.png "Landing Page")
-
 ## Live Demo
 [Click me to go to Live Demo](https://mohamedalyahmed.github.io/TeachMe/)
 
