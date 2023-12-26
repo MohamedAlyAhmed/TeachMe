@@ -1,8 +1,8 @@
-import React, { createContext, useState, useEffect } from "react";
-import { useNavigate } from 'react-router-dom'
 import axios from "axios";
 import jwtDecode from "jwt-decode";
-export const BASE_URL = "https://teachme-iti.glitch.me";
+import React, { createContext, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+export const BASE_URL = "https://teach-me-api-new.glitch.me";
 export let DataContext = createContext([]);
 
 export default function DataProvider(props) {
@@ -15,7 +15,16 @@ export default function DataProvider(props) {
   let [myEnrollsCourses, setMyEnrollsCourses] = useState([]);
   let [mySaveCourses, setMySaveCourses] = useState([]);
 
-  useEffect(() => {
+  const getUserData = () => {
+    if (localStorage.getItem("userToken")) {
+      let decodedToken = jwtDecode(localStorage.getItem("userToken"));
+      setUserData(decodedToken);
+      setEnrollsCourses(decodedToken._id);
+      setSaveCourses(decodedToken._id);
+    }
+  };
+
+  const getAllData = () => {
     //get Courses Data
     axios.get(`${BASE_URL}/courses`).then((res) => {
       setCourses(res.data);
@@ -36,76 +45,65 @@ export default function DataProvider(props) {
     axios.get(`${BASE_URL}/sections`).then((res) => {
       setSections(res.data);
     });
+  };
 
-    getUserData()
+  useEffect(() => {
+    getAllData();
   }, []);
 
-
-  const getUserData = () => {
-    if (localStorage.getItem('userToken')) {
-      let decodedToken = jwtDecode(localStorage.getItem("userToken"));
-      setUserData(decodedToken);
-      setEnrollsCourses(decodedToken._id);
-      setSaveCourses(decodedToken._id);
-    }
-  }
+  useEffect(() => {
+    getUserData();
+  });
 
   const setEnrollsCoursesWithUserID = () => {
     setEnrollsCourses(userData._id);
-  }
+  };
 
   const setEnrollsCourses = (userID) => {
     axios.get(`${BASE_URL}/enrolls?user_id=${userID}`).then((res) => {
       setMyEnrollsCourses(res.data);
     });
-  }
+  };
   const setSaveCoursesWithUserID = () => {
     setSaveCourses(userData._id);
-  }
+  };
 
   const setSaveCourses = (userID) => {
     axios.get(`${BASE_URL}/savedList?user_id=${userID}`).then((res) => {
       setMySaveCourses(res.data);
     });
-  }
-
+  };
 
   const LogOut = () => {
-    localStorage.removeItem('userToken');
-    setUserData(null)
-    useNavigate('/login')
-  }
+    localStorage.removeItem("userToken");
+    setUserData(null);
+    useNavigate("/login");
+  };
 
   const getCommentsForCourse = async (courseID) => {
-    let res = await axios.get(`${BASE_URL}/comments?course_id=${courseID}`)
+    let res = await axios.get(`${BASE_URL}/comments?course_id=${courseID}`);
     return res.data;
-  }
+  };
 
   const reGetCategories = () => {
     //re get Categories Data
     axios.get(`${BASE_URL}/CourseCategories`).then((res) => {
       setCourseCategories(res.data);
     });
-  }
+  };
   const reGetCourses = () => {
     //reget Courses Data
     axios.get(`${BASE_URL}/courses`).then((res) => {
       setCourses(res.data);
     });
-  }
-  const reGetEnroll = (userID) => {
-    //reGetEnroll Courses Data
-    axios.get(`${BASE_URL}/savedList?user_id=${userID}`).then((res) => {
-      setMySaveCourses(res.data);
-    });
-  }
+  };
 
   const reGetInstructors = () => {
     //re get instructors Data
     axios.get(`${BASE_URL}/instructors`).then((res) => {
       setInstructors(res.data);
     });
-  }
+  };
 
   return (
     <DataContext.Provider
@@ -125,7 +123,7 @@ export default function DataProvider(props) {
         reGetInstructors,
         mySaveCourses,
         setSaveCoursesWithUserID,
-        reGetCourses
+        reGetCourses,
       }}
     >
       {props.children}

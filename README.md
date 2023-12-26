@@ -7,7 +7,7 @@
 ## Technology Used
 - HTML5
 - CSS3
-- Boostrap v5.2
+- Bootstrap v5.2
 - React.js
 - Material UI
 - Joi
@@ -15,8 +15,8 @@
 - Postman
 - Fontawesome
 
-## Live Demo
-[Click me to go to Live Demo](https://mohamedalyahmed.github.io/TeachMe/)
+<!-- ## Live Demo
+[Click me to go to Live Demo](https://mohamedalyahmed.github.io/TeachMe/) -->
 
 ## Installation 
 

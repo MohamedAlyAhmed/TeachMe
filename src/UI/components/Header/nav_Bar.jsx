@@ -92,7 +92,7 @@ const Header = (props) => {
               </div>
             </div>
             {userData ? (
-              userData.email == "teachme@gmail.com" ? (
+              userData?.email?.toLowerCase() === "mohamedalyahmed@aol.com" ? (
                 <Link to={`/dashboard/home`}>
                   <MyButton isOutline={true}>DASHBOARD</MyButton>
                 </Link>
@@ -104,7 +104,7 @@ const Header = (props) => {
             )}
           </Nav>
           {/* search icon */}
-          <Link to={`${BASE_CATEGORY}`} style={{ marginRight: "1rem" }}>
+          <Link to={`${BASE_CATEGORY}`}>
             <i className="fa fa-search icon-search"></i>
           </Link>
           {/* if user login */}
@@ -116,6 +116,7 @@ const Header = (props) => {
                   alt=""
                   className="avatar"
                 />
+                <p>{`Hi, ${userData?.first_name}`}</p>
               </Button>
 
               <div className="sub-profile-wrap" id="subProfileMenu">

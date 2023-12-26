@@ -1,15 +1,13 @@
 import React, { useContext } from "react";
 import Slider from "react-slick";
-import "./FeaturedCourses.css";
 import styled from "styled-components";
-import CourseCard from "../../../components/CourseCard/CourseCard";
 import { DataContext } from "../../../../DataContext";
-
-
+import CourseCard from "../../../components/CourseCard/CourseCard";
+import "./FeaturedCourses.css";
+import { CircularProgress } from "@mui/material";
 
 export const FeaturedCourses = () => {
   let { courses } = useContext(DataContext);
-
 
   const settings = {
     dots: false,
@@ -56,24 +54,23 @@ export const FeaturedCourses = () => {
           dots: false,
         },
       },
-    
     ],
   };
 
- 
-
   return (
     <div>
-      <Slider {...settings}>
-        {courses.map((e,index) => (
-          <CourseCard course={e} key={index}/>
-        ))}
-      </Slider>
+      {courses.length > 0 ? (
+        <Slider {...settings}>
+          {courses.map((e, index) => (
+            <CourseCard course={e} key={index} />
+          ))}
+        </Slider>
+      ) : (
+        <CircularProgress />
+      )}
     </div>
   );
-}
-
-
+};
 
 export const HomeWrapper = styled.div`
   .slick-arrow {

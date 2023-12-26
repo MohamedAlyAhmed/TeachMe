@@ -5,7 +5,7 @@ import Joi from 'joi';
 import { useNavigate } from 'react-router-dom';
 import "./Register.css"
 
-export const BASE_URL = "https://teachme-iti.glitch.me";
+export const BASE_URL = "https://teach-me-api-new.glitch.me";
 
 
 function registerValidtion(user) {
@@ -66,7 +66,7 @@ export default function Register() {
             setIsLoading(false)
         }
         else {
-            let { data } = await axios.post(`https://route-movies-api.vercel.app/signup`, user);
+            let { data } = await axios.post(`https://movies-api.routemisr.com/signup`, user);
             console.log(data);
 
 

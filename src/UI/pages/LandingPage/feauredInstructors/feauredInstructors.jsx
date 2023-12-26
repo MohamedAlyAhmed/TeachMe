@@ -1,12 +1,11 @@
 import React, { useContext } from "react";
+import { CircularProgress } from "@mui/material";
 import Slider from "react-slick";
-import styled from "styled-components";
-import InstructorCard from "../../../components/InstructorCard/InstructorCard";
 import { DataContext } from "../../../../DataContext";
+import InstructorCard from "../../../components/InstructorCard/InstructorCard";
 
 export const FeaturedInstructors = () => {
   let { instructors } = useContext(DataContext);
-
 
   const settings = {
     dots: false,
@@ -52,21 +51,20 @@ export const FeaturedInstructors = () => {
           dots: false,
         },
       },
-     
-     
     ],
   };
 
- 
-
   return (
     <div>
-      <Slider {...settings}>
-        {instructors.map((e,index) => (
-          <InstructorCard instructor={e} key={index}/>
-        ))}
-      </Slider>
+      {instructors.length > 0 ? (
+        <Slider {...settings}>
+          {instructors.map((e, index) => (
+            <InstructorCard instructor={e} key={index} />
+          ))}
+        </Slider>
+      ) : (
+        <CircularProgress />
+      )}
     </div>
   );
-}
-
+};

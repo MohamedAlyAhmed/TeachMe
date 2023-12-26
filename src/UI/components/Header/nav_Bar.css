@@ -73,10 +73,12 @@ nav ul li {
   margin: 1rem 1.2rem;
 }
 
-/* .user-pic {
-  width: 120px;
-  margin-left: 30px;
-} */
+.user-pic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
 .sub-menu-wrap {
   position: absolute;
   top: 3.2rem;

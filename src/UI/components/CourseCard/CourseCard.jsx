@@ -1,30 +1,21 @@
-import React, { useContext, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import axios from "axios";
+import React, { useContext, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { BASE_URL, DataContext } from "../../../DataContext";
 import "./CourseCard.css";
-import { useNavigate, useParams } from 'react-router-dom';
-import { DataContext } from '../../../DataContext';
-import axios from 'axios';
-import { BASE_URL } from '../../../DataContext';
 
 export default function CourseCard({ course }) {
-
-  let [courses, setCourses] = useState([]);
-  let { userData,
-    mySaveCourses,
-    setSaveCoursesWithUserID,
-  } = useContext(DataContext)
+  let { userData, mySaveCourses, setSaveCoursesWithUserID } =
+    useContext(DataContext);
   const navigate = useNavigate();
-
-
 
   function secondsToHms(d) {
     d = Number(d);
-    var h = Math.floor(d / 3600);
-    var m = Math.floor((d % 3600) / 60);
-    var s = Math.floor((d % 3600) % 60);
+    let h = Math.floor(d / 3600);
+    let m = Math.floor((d % 3600) / 60);
 
-    var hDisplay = h > 0 ? h + (h == 1 ? "h " : "h ") : "";
-    var mDisplay = m > 0 ? m + (m == 1 ? "m " : "m ") : "";
+    let hDisplay = h > 0 ? h + (h == 1 ? "h " : "h ") : "";
+    let mDisplay = m > 0 ? m + (m == 1 ? "m " : "m ") : "";
     return hDisplay + mDisplay;
   }
 
@@ -33,38 +24,33 @@ export default function CourseCard({ course }) {
       navigate(`/login`);
       return;
     }
-    axios.post(`${BASE_URL}/savedList`, {
-      "user_id": userData._id,
-      "course_id": course.id,
-      "date": new Date().toISOString(),
-      "progress": 0
-    }).then(() => {
-      setSaveCoursesWithUserID();
-    });
-    console.log(course.id)
-  }
+    axios
+      .post(`${BASE_URL}/savedList`, {
+        user_id: userData._id,
+        course_id: course.id,
+        date: new Date().toISOString(),
+        progress: 0,
+      })
+      .then(() => {
+        setSaveCoursesWithUserID();
+      });
+    console.log(course.id);
+  };
 
   const isCourseEnroled = () => {
     for (let i = 0; i < mySaveCourses.length; i++) {
       if (course.id == mySaveCourses[i].course_id) {
         return true;
-
       }
     }
     return false;
-  }
+  };
 
   const deleteSaved = () => {
-
-    let current = mySaveCourses.filter((e) =>
-      e.course_id == course.id
-    )
+    let current = mySaveCourses.filter((e) => e.course_id == course.id);
     console.log(current[0].id);
-    axios.delete(`${BASE_URL}/savedList/${current[0].id}`)
-    
-
-  }
-
+    axios.delete(`${BASE_URL}/savedList/${current[0].id}`);
+  };
 
   return (
     <div>
@@ -72,7 +58,10 @@ export default function CourseCard({ course }) {
         className="card shadow-sm rounded-3 m-3"
         style={{ width: "14.5rem", height: "16rem" }}
       >
-        <Link to={`/course/${course.id}`} style={{ textDecoration: "none", color: "black" }}>
+        <Link
+          to={`/course/${course.id}`}
+          style={{ textDecoration: "none", color: "black" }}
+        >
           <img
             src={course.image}
             className="card-img-top course-image"
@@ -94,14 +83,17 @@ export default function CourseCard({ course }) {
             >
               {course.mentors[0].name}
             </p>
-            <Link >
+            <Link>
               <button
                 onClick={isCourseEnroled() ? deleteSaved : onClickEnroll}
                 className="btn btn-light rounded-5 border"
                 title="Save for later"
               >
-                {isCourseEnroled() ? <i class="fa-solid fa-bookmark"></i> : <i className="fa-regular fa-bookmark"></i>}
-
+                {isCourseEnroled() ? (
+                  <i class="fa-solid fa-bookmark"></i>
+                ) : (
+                  <i className="fa-regular fa-bookmark"></i>
+                )}
               </button>
             </Link>
           </div>

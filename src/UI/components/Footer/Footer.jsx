@@ -72,7 +72,7 @@ export default function Footer() {
         style={{ backgroundColor: "rgba(0, 0, 0, 0.05)" }}
         className="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
       >
-        <span>© 2022 TeachMe.net</span>
+        <span>© 2024 TeachMe.net</span>
 
         <Nav.Item>
           <Nav.Link eventKey="link-1">Privacy policy</Nav.Link>

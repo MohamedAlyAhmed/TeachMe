@@ -47,7 +47,7 @@ export default function Login() {
         if (localStorage.getItem('userToken')) {
             navigate('/')
         }
-    }, [])
+    }, [navigate])
 
 
     function gotoSignup() {
@@ -71,7 +71,7 @@ export default function Login() {
             setIsLoading(false)
         }
         else {
-            let { data } = await axios.post(`https://route-movies-api.vercel.app/signin`, user);
+            let { data } = await axios.post(`https://movies-api.routemisr.com/signin`, user);
             console.log(data);
 
             if (data.message === 'success') {
@@ -151,7 +151,7 @@ export default function Login() {
                     {error ? <div className='alert alert-danger' >{error} </div> : ''}
                     {errorList.map((error, index) => {
 
-                        if (error.context.key == 'password') {
+                        if (error.context.key === 'password') {
                             return <div key={index} className='alert alert-danger' >Wrong Password</div>
                         }
                         else {
