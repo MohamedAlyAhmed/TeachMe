@@ -53,7 +53,7 @@ export default function DataProvider(props) {
 
   useEffect(() => {
     getUserData();
-  });
+  }, []);
 
   const setEnrollsCoursesWithUserID = () => {
     setEnrollsCourses(userData._id);
